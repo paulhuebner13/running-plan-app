@@ -310,35 +310,58 @@ button {
 
 .block-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 7px;
+  grid-template-columns: 0.9fr 1.55fr 1fr 0.85fr;
+  gap: 8px;
+  align-items: stretch;
 }
 
-.block-grid div {
+.metric-tile {
   min-width: 0;
-  border-radius: 14px;
-  padding: 9px 6px;
+  border-radius: 16px;
+  padding: 10px 8px;
   background: #fff7d2;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 72px;
 }
 
-.block-grid span {
+.metric-tile span {
   display: block;
   color: var(--muted);
-  font-size: 0.68rem;
-  font-weight: 850;
+  font-size: 0.67rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.035em;
 }
 
-.block-grid strong {
+.metric-tile strong {
   display: block;
-  margin-top: 4px;
-  font-size: 0.83rem;
-  line-height: 1.1;
+  margin-top: 5px;
+  font-size: 0.98rem;
+  line-height: 1.08;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.hr-tile {
+  background: #ffefaa;
+}
+
+.hr-tile strong {
+  font-size: 1.12rem;
+}
+
+.hr-tile em {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.76rem;
+  font-weight: 850;
+  white-space: nowrap;
 }
 
 .modal-check-button {
@@ -418,12 +441,29 @@ button {
   }
 
   .block-grid {
-    grid-template-columns: repeat(5, minmax(54px, 1fr));
-    overflow-x: auto;
-    padding-bottom: 2px;
+    grid-template-columns: 0.82fr 1.45fr 0.9fr 0.72fr;
+    gap: 6px;
   }
 
-  .block-grid div {
-    min-width: 54px;
+  .metric-tile {
+    min-height: 66px;
+    padding: 8px 5px;
+    border-radius: 14px;
+  }
+
+  .metric-tile span {
+    font-size: 0.58rem;
+  }
+
+  .metric-tile strong {
+    font-size: 0.82rem;
+  }
+
+  .hr-tile strong {
+    font-size: 0.94rem;
+  }
+
+  .hr-tile em {
+    font-size: 0.64rem;
   }
 }

@@ -32,110 +32,20 @@ function getInitialWeekIndex() {
   return index >= 0 ? index : 0;
 }
 
-function parsePaceToMinutes(pace) {
-  const match = String(pace || '').match(/(\d+):(\d+)/);
-  if (!match) return 7.5;
-  return Number(match[1]) + Number(match[2]) / 60;
-}
-
-function parseKm(text) {
-  const match = String(text || '').replace(',', '.').match(/(\d+(?:\.\d+)?)\s*km/i);
-  return match ? Number(match[1]) : null;
-}
-
-function parseMinutes(text) {
-  const match = String(text || '').match(/(\d+)\s*min/i);
-  return match ? Number(match[1]) : null;
-}
-
-function formatKm(value) {
-  if (!Number.isFinite(value)) return '0.0';
-  return value.toFixed(1);
-}
-
-function estimateMinutes(km, pace) {
-  return Math.max(1, Math.round(km * parsePaceToMinutes(pace)));
-}
-
-function extractHrValue(hrText, fallback) {
-  const text = String(hrText || '');
-  const optimalMatch = text.match(/optimal\s*(\d+)/i);
-  if (optimalMatch) return Number(optimalMatch[1]);
-  const numbers = text.match(/\d+/g);
-  if (!numbers || numbers.length === 0) return fallback;
-  if (numbers.length >= 2) {
-    return Math.round((Number(numbers[0]) + Number(numbers[1])) / 2);
-  }
-  return Number(numbers[0]);
-}
-
-function extractHrRange(hrText, fallback) {
-  const text = String(hrText || '');
-  const range = text.match(/(\d+)\s*[–-]\s*(\d+)/);
-  if (range) return `${range[1]}–${range[2]} bpm`;
-  return fallback;
+function formatNumber(value) {
+  if (!Number.isFinite(Number(value))) return value;
+  return Number(value).toFixed(Number(value) % 1 === 0 ? 0 : 1);
 }
 
 function makeWorkoutBlocks(run) {
-  const simpleTypes = new Set(['easy', 'recovery', 'long', 'optional']);
-
-  if (simpleTypes.has(run.type)) {
-    const minutes = estimateMinutes(run.distanceKm, run.pace);
-    return [{
-      label: 'Laufen',
-      minutes,
-      hr: run.optimalHr,
-      hrRange: run.hrRange,
-      pace: run.pace,
-      km: run.distanceKm
-    }];
-  }
-
-  let usedKm = 0;
-  let usedMinutes = 0;
-  const totalMinutes = estimateMinutes(run.distanceKm, run.pace);
-
-  const blocks = run.steps.map((step, index) => {
-    const stepPace = step.pace || run.pace;
-    let km = parseKm(step.detail);
-    let minutes = parseMinutes(step.detail);
-
-    if (km !== null && minutes === null) {
-      minutes = estimateMinutes(km, stepPace);
-    }
-
-    if (minutes !== null && km === null) {
-      km = minutes / parsePaceToMinutes(stepPace);
-    }
-
-    if (String(step.detail || '').toLowerCase().includes('restdistanz')) {
-      km = Math.max(0, run.distanceKm - usedKm);
-      minutes = estimateMinutes(km, stepPace);
-    }
-
-    if (km === null) km = Math.max(0.5, run.distanceKm / run.steps.length);
-    if (minutes === null) minutes = estimateMinutes(km, stepPace);
-
-    // Keep the last block from becoming unrealistic if previous estimates exceeded the run.
-    if (index === run.steps.length - 1 && usedMinutes + minutes > totalMinutes + 5) {
-      minutes = Math.max(3, totalMinutes - usedMinutes);
-      km = minutes / parsePaceToMinutes(stepPace);
-    }
-
-    usedKm += km;
-    usedMinutes += minutes;
-
-    return {
-      label: step.label,
-      minutes,
-      hr: extractHrValue(step.hr, run.optimalHr),
-      hrRange: extractHrRange(step.hr, run.hrRange),
-      pace: stepPace,
-      km
-    };
-  });
-
-  return blocks;
+  return (run.steps || []).map((step) => ({
+    label: step.label,
+    minutes: step.minutes,
+    hr: step.hr ?? run.optimalHr,
+    hrRange: step.hrRange ?? run.hrRange,
+    pace: step.pace ?? run.pace,
+    km: step.km ?? run.distanceKm
+  }));
 }
 
 export default function App() {
@@ -254,7 +164,7 @@ export default function App() {
         <section className="km-progress-card">
           <div className="km-progress-label">
             <span>Zielumfang</span>
-            <strong>{formatKm(completedMandatoryKm)} / {formatKm(totalMandatoryKm)} km</strong>
+            <strong>{formatNumber(completedMandatoryKm)} / {formatNumber(totalMandatoryKm)} km</strong>
           </div>
           <div className="km-progress-track" aria-label="Kilometer-Fortschritt">
             <div className="km-progress-fill" style={{ width: `${progressPercent}%` }} />
@@ -298,25 +208,22 @@ export default function App() {
                 <article className="workout-block" key={`${selectedRun.id}-${index}`}>
                   <div className="block-title">{block.label}</div>
                   <div className="block-grid">
-                    <div>
+                    <div className="metric-tile minutes-tile">
                       <span>Minuten</span>
                       <strong>{block.minutes}</strong>
                     </div>
-                    <div>
+                    <div className="metric-tile hr-tile">
                       <span>HF</span>
-                      <strong>{block.hr}</strong>
+                      <strong>{block.hr} bpm</strong>
+                      <em>{block.hrRange}</em>
                     </div>
-                    <div>
-                      <span>HF okay</span>
-                      <strong>{block.hrRange}</strong>
-                    </div>
-                    <div>
+                    <div className="metric-tile pace-tile">
                       <span>Pace</span>
                       <strong>{block.pace}</strong>
                     </div>
-                    <div>
+                    <div className="metric-tile km-tile">
                       <span>km</span>
-                      <strong>{formatKm(block.km)}</strong>
+                      <strong>{formatNumber(block.km)}</strong>
                     </div>
                   </div>
                 </article>
