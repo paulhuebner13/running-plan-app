@@ -34,7 +34,15 @@ function getInitialWeekIndex() {
 
 function formatNumber(value) {
   if (!Number.isFinite(Number(value))) return value;
-  return Number(value).toFixed(Number(value) % 1 === 0 ? 0 : 1);
+  return Number(value).toFixed(1);
+}
+
+function formatHr(value) {
+  return String(value ?? '').replace(/\s*bpm/gi, '').trim();
+}
+
+function formatPace(value) {
+  return String(value ?? '').replace(/\s*\/?km/gi, '').trim();
 }
 
 function makeWorkoutBlocks(run) {
@@ -184,7 +192,7 @@ export default function App() {
               <div className="run-number">{run.optional ? '+' : run.order}</div>
               <div className="run-summary">
                 <strong>{run.title}</strong>
-                <span>{run.distanceKm} km · {run.pace} · {run.optimalHr} bpm</span>
+                <span>{formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HF {formatHr(run.optimalHr)}</span>
               </div>
               <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'offen'}</div>
             </button>
@@ -214,12 +222,12 @@ export default function App() {
                     </div>
                     <div className="metric-tile hr-tile">
                       <span>HF</span>
-                      <strong>{block.hr} bpm</strong>
-                      <em>{block.hrRange}</em>
+                      <strong>{formatHr(block.hr)}</strong>
+                      <em>{formatHr(block.hrRange)}</em>
                     </div>
                     <div className="metric-tile pace-tile">
                       <span>Pace</span>
-                      <strong>{block.pace}</strong>
+                      <strong>{formatPace(block.pace)}</strong>
                     </div>
                     <div className="metric-tile km-tile">
                       <span>km</span>
