@@ -45,15 +45,35 @@ function formatPace(value) {
   return String(value ?? '').replace(/\s*\/?km/gi, '').trim();
 }
 
+function parseRepeatedStep(step) {
+  const label = String(step.label || '');
+  const match = label.match(/(\d+)\s*[×x]\s*(\d+)\s*min/i);
+  if (!match) return null;
+
+  const reps = Number(match[1]);
+  const minutesPerRep = Number(match[2]);
+  const kmPerRep = Number(step.km || 0) / reps;
+
+  return {
+    reps,
+    minutesPerRep,
+    kmPerRep: Number.isFinite(kmPerRep) ? kmPerRep : step.km
+  };
+}
+
 function makeWorkoutBlocks(run) {
-  return (run.steps || []).map((step) => ({
-    label: step.label,
-    minutes: step.minutes,
-    hr: step.hr ?? run.optimalHr,
-    hrRange: step.hrRange ?? run.hrRange,
-    pace: step.pace ?? run.pace,
-    km: step.km ?? run.distanceKm
-  }));
+  return (run.steps || []).map((step) => {
+    const repeated = parseRepeatedStep(step);
+
+    return {
+      label: step.label,
+      minutes: repeated ? repeated.minutesPerRep : step.minutes,
+      hr: step.hr ?? run.optimalHr,
+      hrRange: step.hrRange ?? run.hrRange,
+      pace: step.pace ?? run.pace,
+      km: repeated ? repeated.kmPerRep : (step.km ?? run.distanceKm)
+    };
+  });
 }
 
 export default function App() {

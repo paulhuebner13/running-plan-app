@@ -95,11 +95,11 @@ export const trainingPlan = [
         ]
       },
       {
-        id: "kw26-lauf2", order: 2, title: "Intervalle", subtitle: "5 × 3 min · 6.0 km", type: "interval", distanceKm: 6.0, optimalHr: 184, hrRange: "178–190 bpm", pace: "5:12/km",
+        id: "kw26-lauf2", order: 2, title: "Intervalle", subtitle: "4 × 4 min · 6.0 km", type: "interval", distanceKm: 6.0, optimalHr: 184, hrRange: "178–190 bpm", pace: "5:12/km",
         steps: [
           { label: "Einlaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "7:29/km", km: 1.1 },
-          { label: "5 × 3 min", minutes: 15, hr: 184, hrRange: "178–190 bpm", pace: "5:12/km", km: 2.9 },
-          { label: "4 × 2 min Trabpause", minutes: 8, hr: 145, hrRange: "138–152 bpm", pace: "8:16/km", km: 1.0 },
+          { label: "4 × 4 min", minutes: 15, hr: 184, hrRange: "178–190 bpm", pace: "5:12/km", km: 2.9 },
+          { label: "3 × 3 min Trabpause", minutes: 8, hr: 145, hrRange: "138–152 bpm", pace: "8:16/km", km: 1.0 },
           { label: "Auslaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "8:16/km", km: 1.0 }
         ]
       },
@@ -219,11 +219,11 @@ export const trainingPlan = [
         ]
       },
       {
-        id: "kw29-lauf2", order: 2, title: "Intervalle", subtitle: "5 × 3 min · 6.1 km", type: "interval", distanceKm: 6.1, optimalHr: 184, hrRange: "178–190 bpm", pace: "5:03/km",
+        id: "kw29-lauf2", order: 2, title: "Intervalle", subtitle: "4 × 4 min · 6.1 km", type: "interval", distanceKm: 6.1, optimalHr: 184, hrRange: "178–190 bpm", pace: "5:03/km",
         steps: [
           { label: "Einlaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "7:20/km", km: 1.1 },
-          { label: "5 × 3 min", minutes: 15, hr: 184, hrRange: "178–190 bpm", pace: "5:03/km", km: 3.0 },
-          { label: "4 × 2 min Trabpause", minutes: 8, hr: 145, hrRange: "138–152 bpm", pace: "8:10/km", km: 1.0 },
+          { label: "4 × 4 min", minutes: 15, hr: 184, hrRange: "178–190 bpm", pace: "5:03/km", km: 3.0 },
+          { label: "3 × 3 min Trabpause", minutes: 8, hr: 145, hrRange: "138–152 bpm", pace: "8:10/km", km: 1.0 },
           { label: "Auslaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "8:10/km", km: 1.0 }
         ]
       },
@@ -343,11 +343,11 @@ export const trainingPlan = [
         ]
       },
       {
-        id: "kw32-lauf2", order: 2, title: "Intervalle", subtitle: "6 × 3 min · 7.0 km", type: "interval", distanceKm: 7.0, optimalHr: 184, hrRange: "178–190 bpm", pace: "4:54/km",
+        id: "kw32-lauf2", order: 2, title: "Intervalle", subtitle: "4 × 4 min · 7.0 km", type: "interval", distanceKm: 7.0, optimalHr: 184, hrRange: "178–190 bpm", pace: "4:54/km",
         steps: [
           { label: "Einlaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "7:11/km", km: 1.1 },
-          { label: "6 × 3 min", minutes: 18, hr: 184, hrRange: "178–190 bpm", pace: "4:54/km", km: 3.7 },
-          { label: "5 × 2 min Trabpause", minutes: 10, hr: 145, hrRange: "138–152 bpm", pace: "8:04/km", km: 1.2 },
+          { label: "4 × 4 min", minutes: 18, hr: 184, hrRange: "178–190 bpm", pace: "4:54/km", km: 3.7 },
+          { label: "3 × 3 min Trabpause", minutes: 10, hr: 145, hrRange: "138–152 bpm", pace: "8:04/km", km: 1.2 },
           { label: "Auslaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "8:04/km", km: 1.0 }
         ]
       },
@@ -426,11 +426,11 @@ export const trainingPlan = [
         ]
       },
       {
-        id: "kw34-lauf2", order: 2, title: "Intervalle", subtitle: "6 × 4 min · 8.3 km", type: "interval", distanceKm: 8.3, optimalHr: 184, hrRange: "178–190 bpm", pace: "4:48/km",
+        id: "kw34-lauf2", order: 2, title: "Intervalle", subtitle: "4 × 4 min · 8.3 km", type: "interval", distanceKm: 8.3, optimalHr: 184, hrRange: "178–190 bpm", pace: "4:48/km",
         steps: [
           { label: "Einlaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "7:05/km", km: 1.1 },
-          { label: "6 × 4 min", minutes: 24, hr: 184, hrRange: "178–190 bpm", pace: "4:48/km", km: 5.0 },
-          { label: "5 × 2 min Trabpause", minutes: 10, hr: 145, hrRange: "138–152 bpm", pace: "8:00/km", km: 1.2 },
+          { label: "4 × 4 min", minutes: 24, hr: 184, hrRange: "178–190 bpm", pace: "4:48/km", km: 5.0 },
+          { label: "3 × 3 min Trabpause", minutes: 10, hr: 145, hrRange: "138–152 bpm", pace: "8:00/km", km: 1.2 },
           { label: "Auslaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "8:00/km", km: 1.0 }
         ]
       },
@@ -550,11 +550,11 @@ export const trainingPlan = [
         ]
       },
       {
-        id: "kw37-lauf2", order: 2, title: "Intervalle", subtitle: "6 × 4 min · 8.7 km", type: "interval", distanceKm: 8.7, optimalHr: 184, hrRange: "178–190 bpm", pace: "4:39/km",
+        id: "kw37-lauf2", order: 2, title: "Intervalle", subtitle: "4 × 4 min · 8.7 km", type: "interval", distanceKm: 8.7, optimalHr: 184, hrRange: "178–190 bpm", pace: "4:39/km",
         steps: [
           { label: "Einlaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "6:56/km", km: 1.2 },
-          { label: "6 × 4 min", minutes: 24, hr: 184, hrRange: "178–190 bpm", pace: "4:39/km", km: 5.2 },
-          { label: "5 × 2 min Trabpause", minutes: 10, hr: 145, hrRange: "138–152 bpm", pace: "7:54/km", km: 1.3 },
+          { label: "4 × 4 min", minutes: 24, hr: 184, hrRange: "178–190 bpm", pace: "4:39/km", km: 5.2 },
+          { label: "3 × 3 min Trabpause", minutes: 10, hr: 145, hrRange: "138–152 bpm", pace: "7:54/km", km: 1.3 },
           { label: "Auslaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "7:54/km", km: 1.0 }
         ]
       },
@@ -675,11 +675,11 @@ export const trainingPlan = [
         ]
       },
       {
-        id: "kw40-lauf2", order: 2, title: "Intervalle", subtitle: "7 × 4 min · 9.9 km", type: "interval", distanceKm: 9.9, optimalHr: 184, hrRange: "178–190 bpm", pace: "4:33/km",
+        id: "kw40-lauf2", order: 2, title: "Intervalle", subtitle: "4 × 4 min · 9.9 km", type: "interval", distanceKm: 9.9, optimalHr: 184, hrRange: "178–190 bpm", pace: "4:33/km",
         steps: [
           { label: "Einlaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "6:50/km", km: 1.2 },
-          { label: "7 × 4 min", minutes: 28, hr: 184, hrRange: "178–190 bpm", pace: "4:33/km", km: 6.2 },
-          { label: "6 × 2 min Trabpause", minutes: 12, hr: 145, hrRange: "138–152 bpm", pace: "7:50/km", km: 1.5 },
+          { label: "4 × 4 min", minutes: 28, hr: 184, hrRange: "178–190 bpm", pace: "4:33/km", km: 6.2 },
+          { label: "3 × 3 min Trabpause", minutes: 12, hr: 145, hrRange: "138–152 bpm", pace: "7:50/km", km: 1.5 },
           { label: "Auslaufen", minutes: 8, hr: 145, hrRange: "138–150 bpm", pace: "7:50/km", km: 1.0 }
         ]
       },

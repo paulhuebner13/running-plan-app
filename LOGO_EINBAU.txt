@@ -1,0 +1,16 @@
+So bindest du das Logo als Icon ein:
+
+1. Speichere dein Logo als:
+   public/logo.png
+
+2. In index.html sind die Links bereits vorbereitet:
+   <link rel="icon" type="image/png" href="/logo.png" />
+   <link rel="apple-touch-icon" href="/logo.png" />
+
+3. Danach lokal testen:
+   npm.cmd run dev
+
+4. Dann deployen:
+   git add .
+   git commit -m "Add logo"
+   git push
