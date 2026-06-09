@@ -1,5 +1,8 @@
-Zu den Intervallen:
-Die Intervall-Einheiten sind jetzt als 4 x 4 Minuten gestaltet. In der Detailansicht zeigt die Minuten-Kachel die Dauer einer einzelnen Wiederholung, also 4 Minuten, nicht die Gesamtdauer aller Wiederholungen.
+Trainingslogik dieser Version
 
-Zu Recovery / Zone 2:
-Der Plan ist nicht als extremes 80/20-Programm gedacht. Bei ca. 35 bis 45 km pro Woche reicht normalerweise eine klare harte Einheit pro Woche plus ein langer Lauf und sonst überwiegend locker. Der Sinn ist nicht, alles langsam zu machen, sondern zu vermeiden, dass zu viele Läufe im mittelharten Bereich landen.
+- Keine starke Taper-Phase am Ende, weil kein fixes Rennen geplant ist.
+- Die letzten Wochen bleiben deshalb stabil im Bereich ca. 60 bis 64 km.
+- Longruns über 24 km sind nur gelegentlich eingeplant. Für Halbmarathon bringen 24 bis 26 km etwas für aerobe Robustheit, aber regelmäßige Läufe deutlich darüber haben für dein Ziel nur begrenzten Zusatznutzen und erhöhen die Belastung.
+- Deshalb: maximal 26 km im Plan, meistens 20 bis 25 km.
+- 1 Qualitätseinheit pro Woche, 1 Longrun, sonst kontrollierte Zone-2/lockere Kilometer.
+- Extra-Läufe bleiben optional und sollen locker bleiben.
