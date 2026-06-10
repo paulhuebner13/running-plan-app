@@ -34,7 +34,7 @@ function getInitialWeekIndex() {
 
 function formatNumber(value) {
   if (!Number.isFinite(Number(value))) return value;
-  return Number(value).toFixed(1);
+  return Number(value).toFixed(2);
 }
 
 function formatHr(value) {

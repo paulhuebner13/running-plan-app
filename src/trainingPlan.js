@@ -1,17 +1,21 @@
+// Auto-corrected training plan.
+// Distances are calculated from minutes and pace.
+// Formula: km = minutes / pace_in_minutes_per_km.
+
 export const trainingPlan = [
   {
     "kw": 24,
     "year": 2026,
     "startDate": "2026-06-08",
     "endDate": "2026-06-14",
-    "targetKm": 42.0,
+    "targetKm": 39.75,
     "runs": [
       {
         "id": "kw24-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 9.7,
+        "distanceKm": 9.01,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:33/km",
@@ -22,7 +26,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:33/km",
-            "km": 9.7
+            "km": 9.01
           }
         ]
       },
@@ -31,7 +35,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 7.1,
+        "distanceKm": 6.44,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:47/km",
@@ -42,7 +46,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:33/km",
-            "km": 1.5
+            "km": 1.32
           },
           {
             "label": "Schwelle",
@@ -50,7 +54,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:47/km",
-            "km": 4.6
+            "km": 4.15
           },
           {
             "label": "Auslaufen",
@@ -58,7 +62,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:15/km",
-            "km": 1.0
+            "km": 0.97
           }
         ]
       },
@@ -67,7 +71,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.2,
+        "distanceKm": 8.97,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:15/km",
@@ -78,7 +82,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:15/km",
-            "km": 9.2
+            "km": 8.97
           }
         ]
       },
@@ -87,7 +91,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 16.0,
+        "distanceKm": 15.33,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:30/km",
@@ -98,7 +102,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:30/km",
-            "km": 16.0
+            "km": 15.33
           }
         ]
       },
@@ -107,7 +111,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.85,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:15/km",
@@ -118,7 +122,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:15/km",
-            "km": 5.0
+            "km": 4.85
           }
         ],
         "optional": true
@@ -130,14 +134,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-15",
     "endDate": "2026-06-21",
-    "targetKm": 46.0,
+    "targetKm": 43.1,
     "runs": [
       {
         "id": "kw25-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 10.6,
+        "distanceKm": 9.82,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:32/km",
@@ -148,7 +152,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:32/km",
-            "km": 10.6
+            "km": 9.82
           }
         ]
       },
@@ -157,7 +161,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 7.8,
+        "distanceKm": 6.66,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:54/km",
@@ -168,7 +172,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:32/km",
-            "km": 1.5
+            "km": 1.33
           },
           {
             "label": "4 × 4 min",
@@ -176,7 +180,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:54/km",
-            "km": 3.6
+            "km": 3.27
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -184,7 +188,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "8:14/km",
-            "km": 1.7
+            "km": 1.09
           },
           {
             "label": "Auslaufen",
@@ -192,7 +196,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:14/km",
-            "km": 1.0
+            "km": 0.97
           }
         ]
       },
@@ -201,7 +205,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.6,
+        "distanceKm": 10.32,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:14/km",
@@ -212,7 +216,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:14/km",
-            "km": 10.6
+            "km": 10.32
           }
         ]
       },
@@ -221,7 +225,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 17.0,
+        "distanceKm": 16.3,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:29/km",
@@ -232,7 +236,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:29/km",
-            "km": 17.0
+            "km": 16.3
           }
         ]
       },
@@ -241,7 +245,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.86,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:14/km",
@@ -252,7 +256,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:14/km",
-            "km": 5.0
+            "km": 4.86
           }
         ],
         "optional": true
@@ -264,14 +268,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-22",
     "endDate": "2026-06-28",
-    "targetKm": 38.0,
+    "targetKm": 35.99,
     "runs": [
       {
         "id": "kw26-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 8.7,
+        "distanceKm": 8.12,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:31/km",
@@ -282,7 +286,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:31/km",
-            "km": 8.7
+            "km": 8.12
           }
         ]
       },
@@ -291,7 +295,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 7.0,
+        "distanceKm": 6.31,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "5:44/km",
@@ -302,7 +306,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:31/km",
-            "km": 1.5
+            "km": 1.33
           },
           {
             "label": "Schwelle",
@@ -310,7 +314,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:44/km",
-            "km": 4.5
+            "km": 4.01
           },
           {
             "label": "Auslaufen",
@@ -318,7 +322,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:13/km",
-            "km": 1.0
+            "km": 0.97
           }
         ]
       },
@@ -327,7 +331,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 8.3,
+        "distanceKm": 8.03,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:13/km",
@@ -338,7 +342,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:13/km",
-            "km": 8.3
+            "km": 8.03
           }
         ]
       },
@@ -347,7 +351,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 14.0,
+        "distanceKm": 13.53,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:28/km",
@@ -358,7 +362,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:28/km",
-            "km": 14.0
+            "km": 13.53
           }
         ]
       },
@@ -367,7 +371,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.87,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:13/km",
@@ -378,7 +382,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:13/km",
-            "km": 5.0
+            "km": 4.87
           }
         ],
         "optional": true
@@ -390,14 +394,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-29",
     "endDate": "2026-07-05",
-    "targetKm": 50.0,
+    "targetKm": 47.52,
     "runs": [
       {
         "id": "kw27-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.5,
+        "distanceKm": 10.67,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:30/km",
@@ -408,7 +412,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:30/km",
-            "km": 11.5
+            "km": 10.67
           }
         ]
       },
@@ -417,7 +421,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 8.5,
+        "distanceKm": 7.73,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:43/km",
@@ -428,7 +432,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:30/km",
-            "km": 1.5
+            "km": 1.33
           },
           {
             "label": "Schwelle",
@@ -436,7 +440,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:43/km",
-            "km": 6.0
+            "km": 5.42
           },
           {
             "label": "Auslaufen",
@@ -444,7 +448,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:12/km",
-            "km": 1.0
+            "km": 0.98
           }
         ]
       },
@@ -453,7 +457,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 12.0,
+        "distanceKm": 11.71,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:12/km",
@@ -464,7 +468,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:12/km",
-            "km": 12.0
+            "km": 11.71
           }
         ]
       },
@@ -473,7 +477,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 18.0,
+        "distanceKm": 17.41,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:28/km",
@@ -484,7 +488,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:28/km",
-            "km": 18.0
+            "km": 17.41
           }
         ]
       },
@@ -493,7 +497,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.88,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:12/km",
@@ -504,7 +508,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:12/km",
-            "km": 5.0
+            "km": 4.88
           }
         ],
         "optional": true
@@ -516,14 +520,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-06",
     "endDate": "2026-07-12",
-    "targetKm": 53.0,
+    "targetKm": 50.65,
     "runs": [
       {
         "id": "kw28-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.2,
+        "distanceKm": 11.36,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:29/km",
@@ -534,7 +538,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:29/km",
-            "km": 12.2
+            "km": 11.36
           }
         ]
       },
@@ -543,7 +547,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 9.0,
+        "distanceKm": 8.44,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:41/km",
@@ -554,7 +558,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:29/km",
-            "km": 2.0
+            "km": 1.87
           },
           {
             "label": "Schwelle",
@@ -562,7 +566,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:41/km",
-            "km": 5.5
+            "km": 5.1
           },
           {
             "label": "Auslaufen",
@@ -570,7 +574,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:11/km",
-            "km": 1.5
+            "km": 1.47
           }
         ]
       },
@@ -579,7 +583,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 12.8,
+        "distanceKm": 12.46,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:11/km",
@@ -590,7 +594,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:11/km",
-            "km": 12.8
+            "km": 12.46
           }
         ]
       },
@@ -599,7 +603,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 19.0,
+        "distanceKm": 18.39,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:27/km",
@@ -610,7 +614,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:27/km",
-            "km": 19.0
+            "km": 18.39
           }
         ]
       },
@@ -619,7 +623,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.89,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:11/km",
@@ -630,7 +634,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:11/km",
-            "km": 5.0
+            "km": 4.89
           }
         ],
         "optional": true
@@ -642,14 +646,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-13",
     "endDate": "2026-07-19",
-    "targetKm": 56.0,
+    "targetKm": 52.56,
     "runs": [
       {
         "id": "kw29-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 10.6,
+        "distanceKm": 9.91,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:28/km",
@@ -660,7 +664,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:28/km",
-            "km": 10.6
+            "km": 9.91
           }
         ]
       },
@@ -669,7 +673,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 9.5,
+        "distanceKm": 8,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:50/km",
@@ -680,7 +684,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:28/km",
-            "km": 2.0
+            "km": 1.88
           },
           {
             "label": "4 × 4 min",
@@ -688,7 +692,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:50/km",
-            "km": 3.6
+            "km": 3.31
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -696,7 +700,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "8:10/km",
-            "km": 2.2
+            "km": 1.1
           },
           {
             "label": "Auslaufen",
@@ -704,7 +708,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:10/km",
-            "km": 1.7
+            "km": 1.71
           }
         ]
       },
@@ -713,7 +717,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 8.4,
+        "distanceKm": 8.2,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:10/km",
@@ -724,7 +728,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:10/km",
-            "km": 8.4
+            "km": 8.2
           }
         ]
       },
@@ -733,7 +737,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 20.0,
+        "distanceKm": 19.1,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:26/km",
@@ -744,7 +748,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:26/km",
-            "km": 20.0
+            "km": 19.1
           }
         ]
       },
@@ -753,7 +757,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.5,
+        "distanceKm": 7.35,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:10/km",
@@ -764,7 +768,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:10/km",
-            "km": 7.5
+            "km": 7.35
           }
         ]
       },
@@ -773,7 +777,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.9,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:10/km",
@@ -784,7 +788,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:10/km",
-            "km": 5.0
+            "km": 4.9
           }
         ],
         "optional": true
@@ -796,14 +800,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-20",
     "endDate": "2026-07-26",
-    "targetKm": 58.0,
+    "targetKm": 54.65,
     "runs": [
       {
         "id": "kw30-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.0,
+        "distanceKm": 10.34,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:27/km",
@@ -814,7 +818,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:27/km",
-            "km": 11.0
+            "km": 10.34
           }
         ]
       },
@@ -823,7 +827,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 9.9,
+        "distanceKm": 8.39,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:49/km",
@@ -834,7 +838,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:27/km",
-            "km": 2.0
+            "km": 1.88
           },
           {
             "label": "4 × 4 min",
@@ -842,7 +846,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:49/km",
-            "km": 3.6
+            "km": 3.32
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -850,7 +854,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "8:09/km",
-            "km": 2.2
+            "km": 1.1
           },
           {
             "label": "Auslaufen",
@@ -858,7 +862,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:09/km",
-            "km": 2.1
+            "km": 2.09
           }
         ]
       },
@@ -867,7 +871,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 8.7,
+        "distanceKm": 8.59,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:09/km",
@@ -878,7 +882,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:09/km",
-            "km": 8.7
+            "km": 8.59
           }
         ]
       },
@@ -887,7 +891,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 21.0,
+        "distanceKm": 20.09,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:25/km",
@@ -898,7 +902,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:25/km",
-            "km": 21.0
+            "km": 20.09
           }
         ]
       },
@@ -907,7 +911,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.4,
+        "distanceKm": 7.24,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:09/km",
@@ -918,7 +922,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:09/km",
-            "km": 7.4
+            "km": 7.24
           }
         ]
       },
@@ -927,7 +931,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.91,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:09/km",
@@ -938,7 +942,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:09/km",
-            "km": 5.0
+            "km": 4.91
           }
         ],
         "optional": true
@@ -950,14 +954,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-27",
     "endDate": "2026-08-02",
-    "targetKm": 45.0,
+    "targetKm": 43.21,
     "runs": [
       {
         "id": "kw31-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 10.4,
+        "distanceKm": 9.82,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:26/km",
@@ -968,7 +972,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:26/km",
-            "km": 10.4
+            "km": 9.82
           }
         ]
       },
@@ -977,7 +981,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 7.0,
+        "distanceKm": 6.42,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "5:37/km",
@@ -988,7 +992,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:26/km",
-            "km": 1.5
+            "km": 1.35
           },
           {
             "label": "Schwelle",
@@ -996,7 +1000,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:37/km",
-            "km": 4.5
+            "km": 4.09
           },
           {
             "label": "Auslaufen",
@@ -1004,7 +1008,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:08/km",
-            "km": 1.0
+            "km": 0.98
           }
         ]
       },
@@ -1013,7 +1017,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.6,
+        "distanceKm": 11.43,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:08/km",
@@ -1024,7 +1028,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:08/km",
-            "km": 11.6
+            "km": 11.43
           }
         ]
       },
@@ -1033,7 +1037,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 16.0,
+        "distanceKm": 15.54,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:24/km",
@@ -1044,7 +1048,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:24/km",
-            "km": 16.0
+            "km": 15.54
           }
         ]
       },
@@ -1053,7 +1057,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.92,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:08/km",
@@ -1064,7 +1068,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:08/km",
-            "km": 5.0
+            "km": 4.92
           }
         ],
         "optional": true
@@ -1076,14 +1080,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-03",
     "endDate": "2026-08-09",
-    "targetKm": 60.0,
+    "targetKm": 57.63,
     "runs": [
       {
         "id": "kw32-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.4,
+        "distanceKm": 10.79,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:25/km",
@@ -1094,7 +1098,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:25/km",
-            "km": 11.4
+            "km": 10.79
           }
         ]
       },
@@ -1103,7 +1107,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 10.2,
+        "distanceKm": 9.62,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:36/km",
@@ -1114,7 +1118,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:25/km",
-            "km": 2.0
+            "km": 1.89
           },
           {
             "label": "Schwelle",
@@ -1122,7 +1126,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:36/km",
-            "km": 6.7
+            "km": 6.25
           },
           {
             "label": "Auslaufen",
@@ -1130,7 +1134,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:07/km",
-            "km": 1.5
+            "km": 1.48
           }
         ]
       },
@@ -1139,7 +1143,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.0,
+        "distanceKm": 8.87,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:07/km",
@@ -1150,7 +1154,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:07/km",
-            "km": 9.0
+            "km": 8.87
           }
         ]
       },
@@ -1159,7 +1163,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 22.0,
+        "distanceKm": 21.08,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:24/km",
@@ -1170,7 +1174,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:24/km",
-            "km": 22.0
+            "km": 21.08
           }
         ]
       },
@@ -1179,7 +1183,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.4,
+        "distanceKm": 7.27,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:07/km",
@@ -1190,7 +1194,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:07/km",
-            "km": 7.4
+            "km": 7.27
           }
         ]
       },
@@ -1199,7 +1203,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.93,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:07/km",
@@ -1210,7 +1214,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:07/km",
-            "km": 5.0
+            "km": 4.93
           }
         ],
         "optional": true
@@ -1222,14 +1226,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-10",
     "endDate": "2026-08-16",
-    "targetKm": 62.0,
+    "targetKm": 58.8,
     "runs": [
       {
         "id": "kw33-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.8,
+        "distanceKm": 11.22,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:24/km",
@@ -1240,7 +1244,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:24/km",
-            "km": 11.8
+            "km": 11.22
           }
         ]
       },
@@ -1249,7 +1253,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 10.5,
+        "distanceKm": 9.08,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:46/km",
@@ -1260,7 +1264,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:24/km",
-            "km": 2.0
+            "km": 1.89
           },
           {
             "label": "4 × 4 min",
@@ -1268,7 +1272,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:46/km",
-            "km": 3.6
+            "km": 3.36
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -1276,7 +1280,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "8:06/km",
-            "km": 2.2
+            "km": 1.11
           },
           {
             "label": "Auslaufen",
@@ -1284,7 +1288,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:06/km",
-            "km": 2.7
+            "km": 2.72
           }
         ]
       },
@@ -1293,7 +1297,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.3,
+        "distanceKm": 9.14,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:06/km",
@@ -1304,7 +1308,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:06/km",
-            "km": 9.3
+            "km": 9.14
           }
         ]
       },
@@ -1313,7 +1317,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 23.0,
+        "distanceKm": 22.08,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:23/km",
@@ -1324,7 +1328,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:23/km",
-            "km": 23.0
+            "km": 22.08
           }
         ]
       },
@@ -1333,7 +1337,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.4,
+        "distanceKm": 7.28,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:06/km",
@@ -1344,7 +1348,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:06/km",
-            "km": 7.4
+            "km": 7.28
           }
         ]
       },
@@ -1353,7 +1357,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.94,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:06/km",
@@ -1364,7 +1368,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:06/km",
-            "km": 5.0
+            "km": 4.94
           }
         ],
         "optional": true
@@ -1376,14 +1380,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-17",
     "endDate": "2026-08-23",
-    "targetKm": 64.0,
+    "targetKm": 60.77,
     "runs": [
       {
         "id": "kw34-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.2,
+        "distanceKm": 11.51,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:23/km",
@@ -1394,7 +1398,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:23/km",
-            "km": 12.2
+            "km": 11.51
           }
         ]
       },
@@ -1403,7 +1407,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 10.9,
+        "distanceKm": 9.47,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:45/km",
@@ -1414,7 +1418,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:23/km",
-            "km": 2.0
+            "km": 1.9
           },
           {
             "label": "4 × 4 min",
@@ -1422,7 +1426,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:45/km",
-            "km": 3.6
+            "km": 3.37
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -1430,7 +1434,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "8:05/km",
-            "km": 2.2
+            "km": 1.11
           },
           {
             "label": "Auslaufen",
@@ -1438,7 +1442,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:05/km",
-            "km": 3.1
+            "km": 3.09
           }
         ]
       },
@@ -1447,7 +1451,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.6,
+        "distanceKm": 9.53,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:05/km",
@@ -1458,7 +1462,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:05/km",
-            "km": 9.6
+            "km": 9.53
           }
         ]
       },
@@ -1467,7 +1471,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 24.0,
+        "distanceKm": 23.08,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:22/km",
@@ -1478,7 +1482,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:22/km",
-            "km": 24.0
+            "km": 23.08
           }
         ]
       },
@@ -1487,7 +1491,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.3,
+        "distanceKm": 7.18,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:05/km",
@@ -1498,7 +1502,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:05/km",
-            "km": 7.3
+            "km": 7.18
           }
         ]
       },
@@ -1507,7 +1511,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.95,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:05/km",
@@ -1518,7 +1522,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:05/km",
-            "km": 5.0
+            "km": 4.95
           }
         ],
         "optional": true
@@ -1530,14 +1534,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-24",
     "endDate": "2026-08-30",
-    "targetKm": 50.0,
+    "targetKm": 48.49,
     "runs": [
       {
         "id": "kw35-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.5,
+        "distanceKm": 10.86,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:22/km",
@@ -1548,7 +1552,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:22/km",
-            "km": 11.5
+            "km": 10.86
           }
         ]
       },
@@ -1557,7 +1561,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 7.5,
+        "distanceKm": 7.05,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "5:32/km",
@@ -1568,7 +1572,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:22/km",
-            "km": 1.5
+            "km": 1.36
           },
           {
             "label": "Schwelle",
@@ -1576,7 +1580,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:32/km",
-            "km": 5.0
+            "km": 4.7
           },
           {
             "label": "Auslaufen",
@@ -1584,7 +1588,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:04/km",
-            "km": 1.0
+            "km": 0.99
           }
         ]
       },
@@ -1593,7 +1597,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 13.0,
+        "distanceKm": 12.89,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:04/km",
@@ -1604,7 +1608,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:04/km",
-            "km": 13.0
+            "km": 12.89
           }
         ]
       },
@@ -1613,7 +1617,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 18.0,
+        "distanceKm": 17.69,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:21/km",
@@ -1624,7 +1628,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:21/km",
-            "km": 18.0
+            "km": 17.69
           }
         ]
       },
@@ -1633,7 +1637,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.96,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:04/km",
@@ -1644,7 +1648,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:04/km",
-            "km": 5.0
+            "km": 4.96
           }
         ],
         "optional": true
@@ -1656,14 +1660,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-31",
     "endDate": "2026-09-06",
-    "targetKm": 65.0,
+    "targetKm": 62.96,
     "runs": [
       {
         "id": "kw36-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.4,
+        "distanceKm": 11.81,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:22/km",
@@ -1674,7 +1678,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:22/km",
-            "km": 12.4
+            "km": 11.81
           }
         ]
       },
@@ -1683,7 +1687,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 11.1,
+        "distanceKm": 10.66,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:30/km",
@@ -1694,7 +1698,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:22/km",
-            "km": 2.0
+            "km": 1.9
           },
           {
             "label": "Schwelle",
@@ -1702,7 +1706,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:30/km",
-            "km": 7.6
+            "km": 7.27
           },
           {
             "label": "Auslaufen",
@@ -1710,7 +1714,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:04/km",
-            "km": 1.5
+            "km": 1.49
           }
         ]
       },
@@ -1719,7 +1723,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.8,
+        "distanceKm": 9.67,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:04/km",
@@ -1730,7 +1734,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:04/km",
-            "km": 9.8
+            "km": 9.67
           }
         ]
       },
@@ -1739,7 +1743,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 24.0,
+        "distanceKm": 23.13,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:21/km",
@@ -1750,7 +1754,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:21/km",
-            "km": 24.0
+            "km": 23.13
           }
         ]
       },
@@ -1759,7 +1763,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.7,
+        "distanceKm": 7.69,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:04/km",
@@ -1770,7 +1774,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:04/km",
-            "km": 7.7
+            "km": 7.69
           }
         ]
       },
@@ -1779,7 +1783,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.96,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:04/km",
@@ -1790,7 +1794,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:04/km",
-            "km": 5.0
+            "km": 4.96
           }
         ],
         "optional": true
@@ -1802,14 +1806,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-07",
     "endDate": "2026-09-13",
-    "targetKm": 67.0,
+    "targetKm": 64.16,
     "runs": [
       {
         "id": "kw37-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.7,
+        "distanceKm": 12.11,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:21/km",
@@ -1820,7 +1824,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:21/km",
-            "km": 12.7
+            "km": 12.11
           }
         ]
       },
@@ -1829,7 +1833,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 11.4,
+        "distanceKm": 10.02,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:42/km",
@@ -1840,7 +1844,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:21/km",
-            "km": 2.0
+            "km": 1.9
           },
           {
             "label": "4 × 4 min",
@@ -1848,7 +1852,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:42/km",
-            "km": 3.6
+            "km": 3.4
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -1856,7 +1860,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "8:03/km",
-            "km": 2.2
+            "km": 1.12
           },
           {
             "label": "Auslaufen",
@@ -1873,7 +1877,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.1,
+        "distanceKm": 10.06,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:03/km",
@@ -1884,7 +1888,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:03/km",
-            "km": 10.1
+            "km": 10.06
           }
         ]
       },
@@ -1893,7 +1897,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 25.0,
+        "distanceKm": 24.27,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:20/km",
@@ -1904,7 +1908,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:20/km",
-            "km": 25.0
+            "km": 24.27
           }
         ]
       },
@@ -1913,7 +1917,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.8,
+        "distanceKm": 7.7,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:03/km",
@@ -1924,7 +1928,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:03/km",
-            "km": 7.8
+            "km": 7.7
           }
         ]
       },
@@ -1933,7 +1937,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.97,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:03/km",
@@ -1944,7 +1948,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:03/km",
-            "km": 5.0
+            "km": 4.97
           }
         ],
         "optional": true
@@ -1956,14 +1960,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-14",
     "endDate": "2026-09-20",
-    "targetKm": 69.0,
+    "targetKm": 66.23,
     "runs": [
       {
         "id": "kw38-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.1,
+        "distanceKm": 12.55,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:20/km",
@@ -1974,7 +1978,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:20/km",
-            "km": 13.1
+            "km": 12.55
           }
         ]
       },
@@ -1983,7 +1987,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 11.7,
+        "distanceKm": 10.31,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:41/km",
@@ -1994,7 +1998,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:20/km",
-            "km": 2.0
+            "km": 1.91
           },
           {
             "label": "4 × 4 min",
@@ -2002,7 +2006,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:41/km",
-            "km": 3.6
+            "km": 3.42
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -2010,7 +2014,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "8:02/km",
-            "km": 2.2
+            "km": 1.12
           },
           {
             "label": "Auslaufen",
@@ -2018,7 +2022,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:02/km",
-            "km": 3.9
+            "km": 3.86
           }
         ]
       },
@@ -2027,7 +2031,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.4,
+        "distanceKm": 10.33,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:02/km",
@@ -2038,7 +2042,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:02/km",
-            "km": 10.4
+            "km": 10.33
           }
         ]
       },
@@ -2047,7 +2051,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 25.0,
+        "distanceKm": 24.33,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:19/km",
@@ -2058,7 +2062,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:19/km",
-            "km": 25.0
+            "km": 24.33
           }
         ]
       },
@@ -2067,7 +2071,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.8,
+        "distanceKm": 8.71,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:02/km",
@@ -2078,7 +2082,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:02/km",
-            "km": 8.8
+            "km": 8.71
           }
         ]
       },
@@ -2087,7 +2091,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.98,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:02/km",
@@ -2098,7 +2102,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:02/km",
-            "km": 5.0
+            "km": 4.98
           }
         ],
         "optional": true
@@ -2110,14 +2114,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-21",
     "endDate": "2026-09-27",
-    "targetKm": 54.0,
+    "targetKm": 52.8,
     "runs": [
       {
         "id": "kw39-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.4,
+        "distanceKm": 11.89,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:19/km",
@@ -2128,7 +2132,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:19/km",
-            "km": 12.4
+            "km": 11.89
           }
         ]
       },
@@ -2137,7 +2141,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 8.1,
+        "distanceKm": 7.71,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "5:26/km",
@@ -2148,7 +2152,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:19/km",
-            "km": 1.5
+            "km": 1.37
           },
           {
             "label": "Schwelle",
@@ -2156,7 +2160,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:26/km",
-            "km": 5.6
+            "km": 5.34
           },
           {
             "label": "Auslaufen",
@@ -2164,7 +2168,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "8:01/km",
-            "km": 1.0
+            "km": 1
           }
         ]
       },
@@ -2173,7 +2177,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 13.5,
+        "distanceKm": 13.47,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:01/km",
@@ -2184,7 +2188,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:01/km",
-            "km": 13.5
+            "km": 13.47
           }
         ]
       },
@@ -2193,7 +2197,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 20.0,
+        "distanceKm": 19.73,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:18/km",
@@ -2204,7 +2208,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:18/km",
-            "km": 20.0
+            "km": 19.73
           }
         ]
       },
@@ -2213,7 +2217,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 4.99,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:01/km",
@@ -2224,7 +2228,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:01/km",
-            "km": 5.0
+            "km": 4.99
           }
         ],
         "optional": true
@@ -2236,14 +2240,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-28",
     "endDate": "2026-10-04",
-    "targetKm": 68.0,
+    "targetKm": 66.44,
     "runs": [
       {
         "id": "kw40-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.9,
+        "distanceKm": 12.33,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:18/km",
@@ -2254,7 +2258,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:18/km",
-            "km": 12.9
+            "km": 12.33
           }
         ]
       },
@@ -2263,7 +2267,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 11.6,
+        "distanceKm": 11.17,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:25/km",
@@ -2274,7 +2278,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:18/km",
-            "km": 2.0
+            "km": 1.92
           },
           {
             "label": "Schwelle",
@@ -2282,7 +2286,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:25/km",
-            "km": 8.1
+            "km": 7.75
           },
           {
             "label": "Auslaufen",
@@ -2299,7 +2303,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.2,
+        "distanceKm": 10.25,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "8:00/km",
@@ -2310,7 +2314,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "8:00/km",
-            "km": 10.2
+            "km": 10.25
           }
         ]
       },
@@ -2319,7 +2323,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 25.0,
+        "distanceKm": 24.44,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:17/km",
@@ -2330,7 +2334,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:17/km",
-            "km": 25.0
+            "km": 24.44
           }
         ]
       },
@@ -2339,7 +2343,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.3,
+        "distanceKm": 8.25,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "8:00/km",
@@ -2350,7 +2354,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "8:00/km",
-            "km": 8.3
+            "km": 8.25
           }
         ]
       },
@@ -2359,7 +2363,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "8:00/km",
@@ -2370,7 +2374,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "8:00/km",
-            "km": 5.0
+            "km": 5
           }
         ],
         "optional": true
@@ -2382,14 +2386,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-05",
     "endDate": "2026-10-11",
-    "targetKm": 70.0,
+    "targetKm": 67.58,
     "runs": [
       {
         "id": "kw41-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.3,
+        "distanceKm": 12.77,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:17/km",
@@ -2400,7 +2404,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:17/km",
-            "km": 13.3
+            "km": 12.77
           }
         ]
       },
@@ -2409,7 +2413,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 11.9,
+        "distanceKm": 10.62,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:39/km",
@@ -2420,7 +2424,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:17/km",
-            "km": 2.0
+            "km": 1.92
           },
           {
             "label": "4 × 4 min",
@@ -2428,7 +2432,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:39/km",
-            "km": 3.6
+            "km": 3.44
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -2436,7 +2440,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:59/km",
-            "km": 2.2
+            "km": 1.13
           },
           {
             "label": "Auslaufen",
@@ -2444,7 +2448,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:59/km",
-            "km": 4.1
+            "km": 4.13
           }
         ]
       },
@@ -2453,7 +2457,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.5,
+        "distanceKm": 10.52,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:59/km",
@@ -2464,7 +2468,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:59/km",
-            "km": 10.5
+            "km": 10.52
           }
         ]
       },
@@ -2473,7 +2477,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 25.4,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:17/km",
@@ -2484,7 +2488,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:17/km",
-            "km": 26.0
+            "km": 25.4
           }
         ]
       },
@@ -2493,7 +2497,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.3,
+        "distanceKm": 8.27,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:59/km",
@@ -2504,7 +2508,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:59/km",
-            "km": 8.3
+            "km": 8.27
           }
         ]
       },
@@ -2513,7 +2517,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.01,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:59/km",
@@ -2524,7 +2528,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:59/km",
-            "km": 6.0
+            "km": 6.01
           }
         ],
         "optional": true
@@ -2536,14 +2540,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-12",
     "endDate": "2026-10-18",
-    "targetKm": 72.0,
+    "targetKm": 69.65,
     "runs": [
       {
         "id": "kw42-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.7,
+        "distanceKm": 13.21,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:16/km",
@@ -2554,7 +2558,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:16/km",
-            "km": 13.7
+            "km": 13.21
           }
         ]
       },
@@ -2563,7 +2567,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 12.2,
+        "distanceKm": 10.9,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:38/km",
@@ -2574,7 +2578,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:16/km",
-            "km": 2.0
+            "km": 1.93
           },
           {
             "label": "4 × 4 min",
@@ -2582,7 +2586,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:38/km",
-            "km": 3.6
+            "km": 3.45
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -2590,7 +2594,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:58/km",
-            "km": 2.2
+            "km": 1.13
           },
           {
             "label": "Auslaufen",
@@ -2598,7 +2602,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:58/km",
-            "km": 4.4
+            "km": 4.39
           }
         ]
       },
@@ -2607,7 +2611,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.8,
+        "distanceKm": 10.79,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:58/km",
@@ -2618,7 +2622,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:58/km",
-            "km": 10.8
+            "km": 10.79
           }
         ]
       },
@@ -2627,7 +2631,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 25.46,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:16/km",
@@ -2638,7 +2642,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:16/km",
-            "km": 26.0
+            "km": 25.46
           }
         ]
       },
@@ -2647,7 +2651,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.3,
+        "distanceKm": 9.29,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:58/km",
@@ -2658,7 +2662,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:58/km",
-            "km": 9.3
+            "km": 9.29
           }
         ]
       },
@@ -2667,7 +2671,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.03,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:58/km",
@@ -2678,7 +2682,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:58/km",
-            "km": 6.0
+            "km": 6.03
           }
         ],
         "optional": true
@@ -2690,14 +2694,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-19",
     "endDate": "2026-10-25",
-    "targetKm": 58.0,
+    "targetKm": 57.03,
     "runs": [
       {
         "id": "kw43-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.0,
+        "distanceKm": 10.62,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:15/km",
@@ -2708,7 +2712,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:15/km",
-            "km": 11.0
+            "km": 10.62
           }
         ]
       },
@@ -2717,7 +2721,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 8.7,
+        "distanceKm": 8.37,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "5:21/km",
@@ -2728,7 +2732,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:15/km",
-            "km": 1.5
+            "km": 1.38
           },
           {
             "label": "Schwelle",
@@ -2736,7 +2740,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:21/km",
-            "km": 6.2
+            "km": 5.98
           },
           {
             "label": "Auslaufen",
@@ -2744,7 +2748,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:57/km",
-            "km": 1.0
+            "km": 1.01
           }
         ]
       },
@@ -2753,7 +2757,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 8.7,
+        "distanceKm": 8.81,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:57/km",
@@ -2764,7 +2768,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:57/km",
-            "km": 8.7
+            "km": 8.81
           }
         ]
       },
@@ -2773,7 +2777,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 21.0,
+        "distanceKm": 20.55,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:15/km",
@@ -2784,7 +2788,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:15/km",
-            "km": 21.0
+            "km": 20.55
           }
         ]
       },
@@ -2793,7 +2797,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.6,
+        "distanceKm": 8.68,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:57/km",
@@ -2804,7 +2808,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:57/km",
-            "km": 8.6
+            "km": 8.68
           }
         ]
       },
@@ -2813,7 +2817,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.03,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:57/km",
@@ -2824,7 +2828,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:57/km",
-            "km": 5.0
+            "km": 5.03
           }
         ],
         "optional": true
@@ -2836,14 +2840,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 70.0,
+    "targetKm": 69.05,
     "runs": [
       {
         "id": "kw44-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.3,
+        "distanceKm": 12.86,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:14/km",
@@ -2854,7 +2858,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:14/km",
-            "km": 13.3
+            "km": 12.86
           }
         ]
       },
@@ -2863,7 +2867,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 11.9,
+        "distanceKm": 11.7,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:20/km",
@@ -2874,7 +2878,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:14/km",
-            "km": 2.0
+            "km": 1.94
           },
           {
             "label": "Schwelle",
@@ -2882,7 +2886,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:20/km",
-            "km": 8.4
+            "km": 8.25
           },
           {
             "label": "Auslaufen",
@@ -2890,7 +2894,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:56/km",
-            "km": 1.5
+            "km": 1.51
           }
         ]
       },
@@ -2899,7 +2903,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.5,
+        "distanceKm": 10.59,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:56/km",
@@ -2910,7 +2914,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:56/km",
-            "km": 10.5
+            "km": 10.59
           }
         ]
       },
@@ -2919,7 +2923,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 25.58,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:14/km",
@@ -2930,7 +2934,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:14/km",
-            "km": 26.0
+            "km": 25.58
           }
         ]
       },
@@ -2939,7 +2943,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.3,
+        "distanceKm": 8.32,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:56/km",
@@ -2950,7 +2954,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:56/km",
-            "km": 8.3
+            "km": 8.32
           }
         ]
       },
@@ -2959,7 +2963,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.05,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:56/km",
@@ -2970,7 +2974,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:56/km",
-            "km": 6.0
+            "km": 6.05
           }
         ],
         "optional": true
@@ -2982,14 +2986,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-02",
     "endDate": "2026-11-08",
-    "targetKm": 72.0,
+    "targetKm": 70.14,
     "runs": [
       {
         "id": "kw45-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.7,
+        "distanceKm": 13.3,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:13/km",
@@ -3000,7 +3004,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:13/km",
-            "km": 13.7
+            "km": 13.3
           }
         ]
       },
@@ -3009,7 +3013,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 12.2,
+        "distanceKm": 10.99,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:35/km",
@@ -3020,7 +3024,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:13/km",
-            "km": 2.0
+            "km": 1.94
           },
           {
             "label": "4 × 4 min",
@@ -3028,7 +3032,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:35/km",
-            "km": 3.6
+            "km": 3.49
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -3036,7 +3040,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:55/km",
-            "km": 2.2
+            "km": 1.14
           },
           {
             "label": "Auslaufen",
@@ -3044,7 +3048,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:55/km",
-            "km": 4.4
+            "km": 4.42
           }
         ]
       },
@@ -3053,7 +3057,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.8,
+        "distanceKm": 10.86,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:55/km",
@@ -3064,7 +3068,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:55/km",
-            "km": 10.8
+            "km": 10.86
           }
         ]
       },
@@ -3073,7 +3077,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 25.64,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:13/km",
@@ -3084,7 +3088,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:13/km",
-            "km": 26.0
+            "km": 25.64
           }
         ]
       },
@@ -3093,7 +3097,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.3,
+        "distanceKm": 9.35,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:55/km",
@@ -3104,7 +3108,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:55/km",
-            "km": 9.3
+            "km": 9.35
           }
         ]
       },
@@ -3113,7 +3117,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.06,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:55/km",
@@ -3124,7 +3128,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:55/km",
-            "km": 6.0
+            "km": 6.06
           }
         ],
         "optional": true
@@ -3136,14 +3140,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 74.0,
+    "targetKm": 72.39,
     "runs": [
       {
         "id": "kw46-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.1,
+        "distanceKm": 13.75,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:12/km",
@@ -3154,7 +3158,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:12/km",
-            "km": 14.1
+            "km": 13.75
           }
         ]
       },
@@ -3163,7 +3167,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 12.6,
+        "distanceKm": 11.39,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:34/km",
@@ -3174,7 +3178,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:12/km",
-            "km": 2.0
+            "km": 1.94
           },
           {
             "label": "4 × 4 min",
@@ -3182,7 +3186,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:34/km",
-            "km": 3.6
+            "km": 3.5
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -3190,7 +3194,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:54/km",
-            "km": 2.2
+            "km": 1.14
           },
           {
             "label": "Auslaufen",
@@ -3198,7 +3202,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:54/km",
-            "km": 4.8
+            "km": 4.81
           }
         ]
       },
@@ -3207,7 +3211,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.1,
+        "distanceKm": 11.27,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:54/km",
@@ -3218,7 +3222,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:54/km",
-            "km": 11.1
+            "km": 11.27
           }
         ]
       },
@@ -3227,7 +3231,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 27.0,
+        "distanceKm": 26.61,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:13/km",
@@ -3238,7 +3242,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:13/km",
-            "km": 27.0
+            "km": 26.61
           }
         ]
       },
@@ -3247,7 +3251,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.2,
+        "distanceKm": 9.37,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:54/km",
@@ -3258,7 +3262,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:54/km",
-            "km": 9.2
+            "km": 9.37
           }
         ]
       },
@@ -3267,7 +3271,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.08,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:54/km",
@@ -3278,7 +3282,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:54/km",
-            "km": 6.0
+            "km": 6.08
           }
         ],
         "optional": true
@@ -3290,14 +3294,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-16",
     "endDate": "2026-11-22",
-    "targetKm": 60.0,
+    "targetKm": 59.68,
     "runs": [
       {
         "id": "kw47-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.4,
+        "distanceKm": 11.14,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:11/km",
@@ -3308,7 +3312,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:11/km",
-            "km": 11.4
+            "km": 11.14
           }
         ]
       },
@@ -3317,7 +3321,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 9.0,
+        "distanceKm": 8.99,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "5:15/km",
@@ -3328,7 +3332,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:11/km",
-            "km": 2.0
+            "km": 1.95
           },
           {
             "label": "Schwelle",
@@ -3336,7 +3340,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:15/km",
-            "km": 5.5
+            "km": 5.52
           },
           {
             "label": "Auslaufen",
@@ -3344,7 +3348,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:53/km",
-            "km": 1.5
+            "km": 1.52
           }
         ]
       },
@@ -3353,7 +3357,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.0,
+        "distanceKm": 9.13,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:53/km",
@@ -3364,7 +3368,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:53/km",
-            "km": 9.0
+            "km": 9.13
           }
         ]
       },
@@ -3373,7 +3377,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 22.0,
+        "distanceKm": 21.67,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:12/km",
@@ -3384,7 +3388,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:12/km",
-            "km": 22.0
+            "km": 21.67
           }
         ]
       },
@@ -3393,7 +3397,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.6,
+        "distanceKm": 8.75,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:53/km",
@@ -3404,7 +3408,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:53/km",
-            "km": 8.6
+            "km": 8.75
           }
         ]
       },
@@ -3413,7 +3417,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.07,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:53/km",
@@ -3424,7 +3428,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:53/km",
-            "km": 5.0
+            "km": 5.07
           }
         ],
         "optional": true
@@ -3436,14 +3440,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-23",
     "endDate": "2026-11-29",
-    "targetKm": 72.0,
+    "targetKm": 71.57,
     "runs": [
       {
         "id": "kw48-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.7,
+        "distanceKm": 13.4,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:10/km",
@@ -3454,7 +3458,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:10/km",
-            "km": 13.7
+            "km": 13.4
           }
         ]
       },
@@ -3463,7 +3467,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 12.2,
+        "distanceKm": 12.08,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:14/km",
@@ -3474,7 +3478,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:10/km",
-            "km": 2.0
+            "km": 1.95
           },
           {
             "label": "Schwelle",
@@ -3482,7 +3486,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:14/km",
-            "km": 8.7
+            "km": 8.6
           },
           {
             "label": "Auslaufen",
@@ -3490,7 +3494,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:52/km",
-            "km": 1.5
+            "km": 1.53
           }
         ]
       },
@@ -3499,7 +3503,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.8,
+        "distanceKm": 10.93,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:52/km",
@@ -3510,7 +3514,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:52/km",
-            "km": 10.8
+            "km": 10.93
           }
         ]
       },
@@ -3519,7 +3523,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 25.75,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:11/km",
@@ -3530,7 +3534,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:11/km",
-            "km": 26.0
+            "km": 25.75
           }
         ]
       },
@@ -3539,7 +3543,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.3,
+        "distanceKm": 9.41,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:52/km",
@@ -3550,7 +3554,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:52/km",
-            "km": 9.3
+            "km": 9.41
           }
         ]
       },
@@ -3559,7 +3563,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.1,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:52/km",
@@ -3570,7 +3574,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:52/km",
-            "km": 6.0
+            "km": 6.1
           }
         ],
         "optional": true
@@ -3582,14 +3586,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-30",
     "endDate": "2026-12-06",
-    "targetKm": 74.0,
+    "targetKm": 72.9,
     "runs": [
       {
         "id": "kw49-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.1,
+        "distanceKm": 13.85,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:09/km",
@@ -3600,7 +3604,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:09/km",
-            "km": 14.1
+            "km": 13.85
           }
         ]
       },
@@ -3609,7 +3613,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 12.6,
+        "distanceKm": 11.49,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:31/km",
@@ -3620,7 +3624,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:09/km",
-            "km": 2.0
+            "km": 1.96
           },
           {
             "label": "4 × 4 min",
@@ -3628,7 +3632,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:31/km",
-            "km": 3.6
+            "km": 3.54
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -3636,7 +3640,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:51/km",
-            "km": 2.2
+            "km": 1.15
           },
           {
             "label": "Auslaufen",
@@ -3644,7 +3648,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:51/km",
-            "km": 4.8
+            "km": 4.84
           }
         ]
       },
@@ -3653,7 +3657,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.1,
+        "distanceKm": 11.34,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:51/km",
@@ -3664,7 +3668,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:51/km",
-            "km": 11.1
+            "km": 11.34
           }
         ]
       },
@@ -3673,7 +3677,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 27.0,
+        "distanceKm": 26.79,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:10/km",
@@ -3684,7 +3688,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:10/km",
-            "km": 27.0
+            "km": 26.79
           }
         ]
       },
@@ -3693,7 +3697,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.2,
+        "distanceKm": 9.43,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:51/km",
@@ -3704,7 +3708,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:51/km",
-            "km": 9.2
+            "km": 9.43
           }
         ]
       },
@@ -3713,7 +3717,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.11,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:51/km",
@@ -3724,7 +3728,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:51/km",
-            "km": 6.0
+            "km": 6.11
           }
         ],
         "optional": true
@@ -3736,14 +3740,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 76.0,
+    "targetKm": 75,
     "runs": [
       {
         "id": "kw50-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.4,
+        "distanceKm": 14.16,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:08/km",
@@ -3754,7 +3758,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:08/km",
-            "km": 14.4
+            "km": 14.16
           }
         ]
       },
@@ -3763,7 +3767,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 12.9,
+        "distanceKm": 11.9,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:30/km",
@@ -3774,7 +3778,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:08/km",
-            "km": 2.0
+            "km": 1.96
           },
           {
             "label": "4 × 4 min",
@@ -3782,7 +3786,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:30/km",
-            "km": 3.6
+            "km": 3.56
           },
           {
             "label": "3 × 3 min Trabpause",
@@ -3790,7 +3794,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:50/km",
-            "km": 2.2
+            "km": 1.15
           },
           {
             "label": "Auslaufen",
@@ -3798,7 +3802,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:50/km",
-            "km": 5.1
+            "km": 5.23
           }
         ]
       },
@@ -3807,7 +3811,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.4,
+        "distanceKm": 11.62,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:50/km",
@@ -3818,7 +3822,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:50/km",
-            "km": 11.4
+            "km": 11.62
           }
         ]
       },
@@ -3827,7 +3831,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 27.0,
+        "distanceKm": 26.85,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:09/km",
@@ -3838,7 +3842,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:09/km",
-            "km": 27.0
+            "km": 26.85
           }
         ]
       },
@@ -3847,7 +3851,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 10.3,
+        "distanceKm": 10.47,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:50/km",
@@ -3858,7 +3862,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:50/km",
-            "km": 10.3
+            "km": 10.47
           }
         ]
       },
@@ -3867,7 +3871,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.13,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:50/km",
@@ -3878,7 +3882,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:50/km",
-            "km": 6.0
+            "km": 6.13
           }
         ],
         "optional": true
@@ -3890,14 +3894,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-14",
     "endDate": "2026-12-20",
-    "targetKm": 60.0,
+    "targetKm": 60.22,
     "runs": [
       {
         "id": "kw51-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.4,
+        "distanceKm": 11.24,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:07/km",
@@ -3908,7 +3912,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:07/km",
-            "km": 11.4
+            "km": 11.24
           }
         ]
       },
@@ -3917,7 +3921,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 9.0,
+        "distanceKm": 9.12,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "5:10/km",
@@ -3928,7 +3932,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:07/km",
-            "km": 2.0
+            "km": 1.97
           },
           {
             "label": "Schwelle",
@@ -3936,7 +3940,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:10/km",
-            "km": 5.5
+            "km": 5.61
           },
           {
             "label": "Auslaufen",
@@ -3944,7 +3948,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:49/km",
-            "km": 1.5
+            "km": 1.54
           }
         ]
       },
@@ -3953,7 +3957,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.0,
+        "distanceKm": 9.21,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:49/km",
@@ -3964,7 +3968,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:49/km",
-            "km": 9.0
+            "km": 9.21
           }
         ]
       },
@@ -3973,7 +3977,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 22.0,
+        "distanceKm": 21.82,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:09/km",
@@ -3984,7 +3988,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:09/km",
-            "km": 22.0
+            "km": 21.82
           }
         ]
       },
@@ -3993,7 +3997,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.6,
+        "distanceKm": 8.83,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:49/km",
@@ -4004,7 +4008,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:49/km",
-            "km": 8.6
+            "km": 8.83
           }
         ]
       },
@@ -4013,7 +4017,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.12,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:49/km",
@@ -4024,7 +4028,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:49/km",
-            "km": 5.0
+            "km": 5.12
           }
         ],
         "optional": true
@@ -4036,14 +4040,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 66.0,
+    "targetKm": 66.22,
     "runs": [
       {
         "id": "kw52-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.5,
+        "distanceKm": 12.39,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:06/km",
@@ -4054,7 +4058,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:06/km",
-            "km": 12.5
+            "km": 12.39
           }
         ]
       },
@@ -4063,7 +4067,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 11.2,
+        "distanceKm": 11.28,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:09/km",
@@ -4074,7 +4078,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:06/km",
-            "km": 2.0
+            "km": 1.97
           },
           {
             "label": "Schwelle",
@@ -4082,7 +4086,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:09/km",
-            "km": 7.7
+            "km": 7.77
           },
           {
             "label": "Auslaufen",
@@ -4090,7 +4094,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:48/km",
-            "km": 1.5
+            "km": 1.54
           }
         ]
       },
@@ -4099,7 +4103,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.9,
+        "distanceKm": 10.13,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:48/km",
@@ -4110,7 +4114,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:48/km",
-            "km": 9.9
+            "km": 10.13
           }
         ]
       },
@@ -4119,7 +4123,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 24.0,
+        "distanceKm": 23.83,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:08/km",
@@ -4130,7 +4134,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:08/km",
-            "km": 24.0
+            "km": 23.83
           }
         ]
       },
@@ -4139,7 +4143,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.4,
+        "distanceKm": 8.59,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:48/km",
@@ -4150,7 +4154,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:48/km",
-            "km": 8.4
+            "km": 8.59
           }
         ]
       },
@@ -4159,7 +4163,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.13,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:48/km",
@@ -4170,7 +4174,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:48/km",
-            "km": 5.0
+            "km": 5.13
           }
         ],
         "optional": true
@@ -4182,14 +4186,14 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-28",
     "endDate": "2027-01-03",
-    "targetKm": 70.0,
+    "targetKm": 69.79,
     "runs": [
       {
         "id": "kw53-2026-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.3,
+        "distanceKm": 13.13,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:05/km",
@@ -4200,7 +4204,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:05/km",
-            "km": 13.3
+            "km": 13.13
           }
         ]
       },
@@ -4209,7 +4213,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 11.9,
+        "distanceKm": 11.35,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:27/km",
@@ -4220,7 +4224,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:05/km",
-            "km": 2.0
+            "km": 1.98
           },
           {
             "label": "5 × 4 min",
@@ -4228,7 +4232,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:27/km",
-            "km": 4.5
+            "km": 4.49
           },
           {
             "label": "4 × 3 min Trabpause",
@@ -4236,7 +4240,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:47/km",
-            "km": 2.2
+            "km": 1.54
           },
           {
             "label": "Auslaufen",
@@ -4244,7 +4248,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:47/km",
-            "km": 3.2
+            "km": 3.34
           }
         ]
       },
@@ -4253,7 +4257,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.5,
+        "distanceKm": 10.79,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:47/km",
@@ -4264,7 +4268,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:47/km",
-            "km": 10.5
+            "km": 10.79
           }
         ]
       },
@@ -4273,7 +4277,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 25.0,
+        "distanceKm": 25.01,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:07/km",
@@ -4284,7 +4288,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:07/km",
-            "km": 25.0
+            "km": 25.01
           }
         ]
       },
@@ -4293,7 +4297,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.3,
+        "distanceKm": 9.51,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:47/km",
@@ -4304,7 +4308,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:47/km",
-            "km": 9.3
+            "km": 9.51
           }
         ]
       },
@@ -4313,7 +4317,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.17,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:47/km",
@@ -4324,7 +4328,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:47/km",
-            "km": 6.0
+            "km": 6.17
           }
         ],
         "optional": true
@@ -4336,14 +4340,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-04",
     "endDate": "2027-01-10",
-    "targetKm": 72.0,
+    "targetKm": 71.89,
     "runs": [
       {
         "id": "kw1-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.7,
+        "distanceKm": 13.58,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:04/km",
@@ -4354,7 +4358,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:04/km",
-            "km": 13.7
+            "km": 13.58
           }
         ]
       },
@@ -4363,7 +4367,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 12.2,
+        "distanceKm": 11.65,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:26/km",
@@ -4374,7 +4378,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:04/km",
-            "km": 2.0
+            "km": 1.98
           },
           {
             "label": "5 × 4 min",
@@ -4382,7 +4386,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:26/km",
-            "km": 4.5
+            "km": 4.51
           },
           {
             "label": "4 × 3 min Trabpause",
@@ -4390,7 +4394,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:46/km",
-            "km": 2.2
+            "km": 1.55
           },
           {
             "label": "Auslaufen",
@@ -4398,7 +4402,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:46/km",
-            "km": 3.5
+            "km": 3.61
           }
         ]
       },
@@ -4407,7 +4411,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 10.8,
+        "distanceKm": 11.07,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:46/km",
@@ -4418,7 +4422,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:46/km",
-            "km": 10.8
+            "km": 11.07
           }
         ]
       },
@@ -4427,7 +4431,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 26.06,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:06/km",
@@ -4438,7 +4442,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:06/km",
-            "km": 26.0
+            "km": 26.06
           }
         ]
       },
@@ -4447,7 +4451,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.3,
+        "distanceKm": 9.53,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:46/km",
@@ -4458,7 +4462,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:46/km",
-            "km": 9.3
+            "km": 9.53
           }
         ]
       },
@@ -4467,7 +4471,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.18,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:46/km",
@@ -4478,7 +4482,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:46/km",
-            "km": 6.0
+            "km": 6.18
           }
         ],
         "optional": true
@@ -4490,14 +4494,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 74.0,
+    "targetKm": 75.01,
     "runs": [
       {
         "id": "kw2-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.1,
+        "distanceKm": 14.04,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:03/km",
@@ -4508,7 +4512,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:03/km",
-            "km": 14.1
+            "km": 14.04
           }
         ]
       },
@@ -4517,7 +4521,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle",
         "type": "threshold",
-        "distanceKm": 12.6,
+        "distanceKm": 12.79,
         "optimalHr": 176,
         "hrRange": "172-180 bpm",
         "pace": "5:05/km",
@@ -4528,7 +4532,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:03/km",
-            "km": 2.0
+            "km": 1.99
           },
           {
             "label": "Schwelle",
@@ -4536,7 +4540,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:05/km",
-            "km": 9.1
+            "km": 9.25
           },
           {
             "label": "Auslaufen",
@@ -4544,7 +4548,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:45/km",
-            "km": 1.5
+            "km": 1.55
           }
         ]
       },
@@ -4553,7 +4557,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.1,
+        "distanceKm": 11.48,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:45/km",
@@ -4564,7 +4568,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:45/km",
-            "km": 11.1
+            "km": 11.48
           }
         ]
       },
@@ -4573,7 +4577,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 26.12,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:05/km",
@@ -4584,7 +4588,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:05/km",
-            "km": 26.0
+            "km": 26.12
           }
         ]
       },
@@ -4593,7 +4597,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 10.2,
+        "distanceKm": 10.58,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:45/km",
@@ -4604,7 +4608,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:45/km",
-            "km": 10.2
+            "km": 10.58
           }
         ]
       },
@@ -4613,7 +4617,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.19,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:45/km",
@@ -4624,7 +4628,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:45/km",
-            "km": 6.0
+            "km": 6.19
           }
         ],
         "optional": true
@@ -4636,14 +4640,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-18",
     "endDate": "2027-01-24",
-    "targetKm": 60.0,
+    "targetKm": 60.9,
     "runs": [
       {
         "id": "kw3-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.4,
+        "distanceKm": 11.37,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:02/km",
@@ -4654,7 +4658,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:02/km",
-            "km": 11.4
+            "km": 11.37
           }
         ]
       },
@@ -4663,7 +4667,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 9.0,
+        "distanceKm": 9.28,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "5:03/km",
@@ -4674,7 +4678,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:02/km",
-            "km": 2.0
+            "km": 1.99
           },
           {
             "label": "Schwelle",
@@ -4682,7 +4686,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "5:03/km",
-            "km": 5.5
+            "km": 5.74
           },
           {
             "label": "Auslaufen",
@@ -4690,7 +4694,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:44/km",
-            "km": 1.5
+            "km": 1.55
           }
         ]
       },
@@ -4699,7 +4703,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.0,
+        "distanceKm": 9.31,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:44/km",
@@ -4710,7 +4714,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:44/km",
-            "km": 9.0
+            "km": 9.31
           }
         ]
       },
@@ -4719,7 +4723,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 22.0,
+        "distanceKm": 22.02,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:05/km",
@@ -4730,7 +4734,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:05/km",
-            "km": 22.0
+            "km": 22.02
           }
         ]
       },
@@ -4739,7 +4743,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.6,
+        "distanceKm": 8.92,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:44/km",
@@ -4750,7 +4754,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:44/km",
-            "km": 8.6
+            "km": 8.92
           }
         ]
       },
@@ -4759,7 +4763,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.17,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:44/km",
@@ -4770,7 +4774,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:44/km",
-            "km": 5.0
+            "km": 5.17
           }
         ],
         "optional": true
@@ -4782,14 +4786,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-25",
     "endDate": "2027-01-31",
-    "targetKm": 74.0,
+    "targetKm": 74.86,
     "runs": [
       {
         "id": "kw4-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.1,
+        "distanceKm": 14.11,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:01/km",
@@ -4800,7 +4804,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:01/km",
-            "km": 14.1
+            "km": 14.11
           }
         ]
       },
@@ -4809,7 +4813,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "HM-Pace",
         "type": "hm_pace",
-        "distanceKm": 12.6,
+        "distanceKm": 12.69,
         "optimalHr": 176,
         "hrRange": "170-184 bpm",
         "pace": "4:49/km",
@@ -4820,7 +4824,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:01/km",
-            "km": 2.0
+            "km": 2
           },
           {
             "label": "HM-Pace Block",
@@ -4836,7 +4840,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:43/km",
-            "km": 0.5
+            "km": 0.52
           },
           {
             "label": "Auslaufen",
@@ -4844,7 +4848,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:43/km",
-            "km": 2.0
+            "km": 2.07
           }
         ]
       },
@@ -4853,7 +4857,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.1,
+        "distanceKm": 11.53,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:43/km",
@@ -4864,7 +4868,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:43/km",
-            "km": 11.1
+            "km": 11.53
           }
         ]
       },
@@ -4873,7 +4877,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun mit Finish",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 25.9,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:04/km",
@@ -4884,7 +4888,7 @@ export const trainingPlan = [
             "hr": 150,
             "hrRange": "145-154 bpm",
             "pace": "7:04/km",
-            "km": 20.0
+            "km": 19.81
           },
           {
             "label": "Endbeschleunigung",
@@ -4892,7 +4896,7 @@ export const trainingPlan = [
             "hr": 165,
             "hrRange": "158-174 bpm",
             "pace": "5:09/km",
-            "km": 5.0
+            "km": 5.05
           },
           {
             "label": "Auslaufen",
@@ -4900,7 +4904,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:43/km",
-            "km": 1.0
+            "km": 1.04
           }
         ]
       },
@@ -4909,7 +4913,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 10.2,
+        "distanceKm": 10.63,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:43/km",
@@ -4920,7 +4924,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:43/km",
-            "km": 10.2
+            "km": 10.63
           }
         ]
       },
@@ -4929,7 +4933,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.22,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:43/km",
@@ -4940,7 +4944,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:43/km",
-            "km": 6.0
+            "km": 6.22
           }
         ],
         "optional": true
@@ -4952,14 +4956,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-01",
     "endDate": "2027-02-07",
-    "targetKm": 76.0,
+    "targetKm": 76.7,
     "runs": [
       {
         "id": "kw5-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.4,
+        "distanceKm": 14.39,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:01/km",
@@ -4970,7 +4974,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:01/km",
-            "km": 14.4
+            "km": 14.39
           }
         ]
       },
@@ -4979,7 +4983,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "HM-Pace",
         "type": "hm_pace",
-        "distanceKm": 16.0,
+        "distanceKm": 16.06,
         "optimalHr": 176,
         "hrRange": "170-184 bpm",
         "pace": "4:48/km",
@@ -4990,7 +4994,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:01/km",
-            "km": 2.0
+            "km": 2
           },
           {
             "label": "Langer HM-Pace Block",
@@ -4998,7 +5002,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "170-184 bpm",
             "pace": "4:48/km",
-            "km": 11.5
+            "km": 11.46
           },
           {
             "label": "Trabpause",
@@ -5006,7 +5010,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:43/km",
-            "km": 1.0
+            "km": 1.04
           },
           {
             "label": "Auslaufen",
@@ -5014,7 +5018,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:43/km",
-            "km": 1.5
+            "km": 1.56
           }
         ]
       },
@@ -5023,7 +5027,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.4,
+        "distanceKm": 11.79,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:43/km",
@@ -5034,7 +5038,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:43/km",
-            "km": 11.4
+            "km": 11.79
           }
         ]
       },
@@ -5043,7 +5047,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun mit Finish",
         "type": "long",
-        "distanceKm": 27.0,
+        "distanceKm": 26.94,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:03/km",
@@ -5054,7 +5058,7 @@ export const trainingPlan = [
             "hr": 150,
             "hrRange": "145-154 bpm",
             "pace": "7:03/km",
-            "km": 21.0
+            "km": 20.85
           },
           {
             "label": "Endbeschleunigung",
@@ -5062,7 +5066,7 @@ export const trainingPlan = [
             "hr": 165,
             "hrRange": "158-174 bpm",
             "pace": "5:09/km",
-            "km": 5.0
+            "km": 5.05
           },
           {
             "label": "Auslaufen",
@@ -5070,7 +5074,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:43/km",
-            "km": 1.0
+            "km": 1.04
           }
         ]
       },
@@ -5079,7 +5083,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.2,
+        "distanceKm": 7.52,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:43/km",
@@ -5090,7 +5094,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:43/km",
-            "km": 7.2
+            "km": 7.52
           }
         ]
       },
@@ -5099,7 +5103,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.22,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:43/km",
@@ -5110,7 +5114,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:43/km",
-            "km": 6.0
+            "km": 6.22
           }
         ],
         "optional": true
@@ -5122,14 +5126,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-08",
     "endDate": "2027-02-14",
-    "targetKm": 76.0,
+    "targetKm": 76.43,
     "runs": [
       {
         "id": "kw6-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.4,
+        "distanceKm": 14.43,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "7:00/km",
@@ -5140,7 +5144,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "7:00/km",
-            "km": 14.4
+            "km": 14.43
           }
         ]
       },
@@ -5149,7 +5153,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 12.9,
+        "distanceKm": 12.58,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:21/km",
@@ -5160,7 +5164,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:00/km",
-            "km": 2.0
+            "km": 2
           },
           {
             "label": "5 × 4 min",
@@ -5168,7 +5172,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:21/km",
-            "km": 4.5
+            "km": 4.6
           },
           {
             "label": "4 × 3 min Trabpause",
@@ -5176,7 +5180,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:42/km",
-            "km": 2.2
+            "km": 1.56
           },
           {
             "label": "Auslaufen",
@@ -5184,7 +5188,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:42/km",
-            "km": 4.2
+            "km": 4.42
           }
         ]
       },
@@ -5193,7 +5197,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.4,
+        "distanceKm": 11.82,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:42/km",
@@ -5204,7 +5208,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:42/km",
-            "km": 11.4
+            "km": 11.82
           }
         ]
       },
@@ -5213,7 +5217,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun mit Finish",
         "type": "long",
-        "distanceKm": 28.0,
+        "distanceKm": 27.99,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:02/km",
@@ -5224,7 +5228,7 @@ export const trainingPlan = [
             "hr": 150,
             "hrRange": "145-154 bpm",
             "pace": "7:02/km",
-            "km": 22.0
+            "km": 21.9
           },
           {
             "label": "Endbeschleunigung",
@@ -5232,7 +5236,7 @@ export const trainingPlan = [
             "hr": 165,
             "hrRange": "158-174 bpm",
             "pace": "5:09/km",
-            "km": 5.0
+            "km": 5.05
           },
           {
             "label": "Auslaufen",
@@ -5240,7 +5244,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:42/km",
-            "km": 1.0
+            "km": 1.04
           }
         ]
       },
@@ -5249,7 +5253,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.3,
+        "distanceKm": 9.61,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:42/km",
@@ -5260,7 +5264,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:42/km",
-            "km": 9.3
+            "km": 9.61
           }
         ]
       },
@@ -5269,7 +5273,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.23,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:42/km",
@@ -5280,7 +5284,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:42/km",
-            "km": 6.0
+            "km": 6.23
           }
         ],
         "optional": true
@@ -5292,14 +5296,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-15",
     "endDate": "2027-02-21",
-    "targetKm": 62.0,
+    "targetKm": 63.28,
     "runs": [
       {
         "id": "kw7-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 11.8,
+        "distanceKm": 11.89,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "6:59/km",
@@ -5310,7 +5314,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "6:59/km",
-            "km": 11.8
+            "km": 11.89
           }
         ]
       },
@@ -5319,7 +5323,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 9.3,
+        "distanceKm": 9.6,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "4:58/km",
@@ -5330,7 +5334,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:59/km",
-            "km": 2.0
+            "km": 2
           },
           {
             "label": "Schwelle",
@@ -5338,7 +5342,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "4:58/km",
-            "km": 5.8
+            "km": 6.04
           },
           {
             "label": "Auslaufen",
@@ -5346,7 +5350,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:41/km",
-            "km": 1.5
+            "km": 1.56
           }
         ]
       },
@@ -5355,7 +5359,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.3,
+        "distanceKm": 9.63,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:41/km",
@@ -5366,7 +5370,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:41/km",
-            "km": 9.3
+            "km": 9.63
           }
         ]
       },
@@ -5375,7 +5379,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 23.0,
+        "distanceKm": 23.18,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:02/km",
@@ -5386,7 +5390,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "7:02/km",
-            "km": 23.0
+            "km": 23.18
           }
         ]
       },
@@ -5395,7 +5399,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 8.6,
+        "distanceKm": 8.98,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:41/km",
@@ -5406,7 +5410,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:41/km",
-            "km": 8.6
+            "km": 8.98
           }
         ]
       },
@@ -5415,7 +5419,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.21,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:41/km",
@@ -5426,7 +5430,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:41/km",
-            "km": 5.0
+            "km": 5.21
           }
         ],
         "optional": true
@@ -5438,14 +5442,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-22",
     "endDate": "2027-02-28",
-    "targetKm": 74.0,
+    "targetKm": 75.36,
     "runs": [
       {
         "id": "kw8-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.1,
+        "distanceKm": 14.21,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "6:58/km",
@@ -5456,7 +5460,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "6:58/km",
-            "km": 14.1
+            "km": 14.21
           }
         ]
       },
@@ -5465,7 +5469,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "HM-Pace",
         "type": "hm_pace",
-        "distanceKm": 12.6,
+        "distanceKm": 12.8,
         "optimalHr": 176,
         "hrRange": "170-184 bpm",
         "pace": "4:46/km",
@@ -5476,7 +5480,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:58/km",
-            "km": 2.0
+            "km": 2.01
           },
           {
             "label": "HM-Pace Block",
@@ -5484,7 +5488,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "170-184 bpm",
             "pace": "4:46/km",
-            "km": 8.1
+            "km": 8.18
           },
           {
             "label": "Trabpause",
@@ -5492,7 +5496,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:40/km",
-            "km": 0.5
+            "km": 0.52
           },
           {
             "label": "Auslaufen",
@@ -5500,7 +5504,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:40/km",
-            "km": 2.0
+            "km": 2.09
           }
         ]
       },
@@ -5509,7 +5513,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.1,
+        "distanceKm": 11.61,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:40/km",
@@ -5520,7 +5524,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:40/km",
-            "km": 11.1
+            "km": 11.61
           }
         ]
       },
@@ -5529,7 +5533,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun mit Finish",
         "type": "long",
-        "distanceKm": 26.0,
+        "distanceKm": 26.04,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:01/km",
@@ -5540,7 +5544,7 @@ export const trainingPlan = [
             "hr": 150,
             "hrRange": "145-154 bpm",
             "pace": "7:01/km",
-            "km": 20.0
+            "km": 19.95
           },
           {
             "label": "Endbeschleunigung",
@@ -5548,7 +5552,7 @@ export const trainingPlan = [
             "hr": 165,
             "hrRange": "158-174 bpm",
             "pace": "5:09/km",
-            "km": 5.0
+            "km": 5.05
           },
           {
             "label": "Auslaufen",
@@ -5556,7 +5560,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:40/km",
-            "km": 1.0
+            "km": 1.04
           }
         ]
       },
@@ -5565,7 +5569,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 10.2,
+        "distanceKm": 10.7,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:40/km",
@@ -5576,7 +5580,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:40/km",
-            "km": 10.2
+            "km": 10.7
           }
         ]
       },
@@ -5585,7 +5589,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.26,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:40/km",
@@ -5596,7 +5600,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:40/km",
-            "km": 6.0
+            "km": 6.26
           }
         ],
         "optional": true
@@ -5608,14 +5612,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-01",
     "endDate": "2027-03-07",
-    "targetKm": 76.0,
+    "targetKm": 77.32,
     "runs": [
       {
         "id": "kw9-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.4,
+        "distanceKm": 14.53,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "6:57/km",
@@ -5626,7 +5630,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "6:57/km",
-            "km": 14.4
+            "km": 14.53
           }
         ]
       },
@@ -5635,7 +5639,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "HM-Pace",
         "type": "hm_pace",
-        "distanceKm": 16.0,
+        "distanceKm": 16.21,
         "optimalHr": 176,
         "hrRange": "170-184 bpm",
         "pace": "4:45/km",
@@ -5646,7 +5650,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:57/km",
-            "km": 2.0
+            "km": 2.01
           },
           {
             "label": "Langer HM-Pace Block",
@@ -5654,7 +5658,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "170-184 bpm",
             "pace": "4:45/km",
-            "km": 11.5
+            "km": 11.58
           },
           {
             "label": "Trabpause",
@@ -5662,7 +5666,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:39/km",
-            "km": 1.0
+            "km": 1.05
           },
           {
             "label": "Auslaufen",
@@ -5670,7 +5674,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:39/km",
-            "km": 1.5
+            "km": 1.57
           }
         ]
       },
@@ -5679,7 +5683,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.4,
+        "distanceKm": 11.9,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:39/km",
@@ -5690,7 +5694,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:39/km",
-            "km": 11.4
+            "km": 11.9
           }
         ]
       },
@@ -5699,7 +5703,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun mit Finish",
         "type": "long",
-        "distanceKm": 27.0,
+        "distanceKm": 27.1,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "7:00/km",
@@ -5710,7 +5714,7 @@ export const trainingPlan = [
             "hr": 150,
             "hrRange": "145-154 bpm",
             "pace": "7:00/km",
-            "km": 21.0
+            "km": 21
           },
           {
             "label": "Endbeschleunigung",
@@ -5718,7 +5722,7 @@ export const trainingPlan = [
             "hr": 165,
             "hrRange": "158-174 bpm",
             "pace": "5:09/km",
-            "km": 5.0
+            "km": 5.05
           },
           {
             "label": "Auslaufen",
@@ -5726,7 +5730,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:39/km",
-            "km": 1.0
+            "km": 1.05
           }
         ]
       },
@@ -5735,7 +5739,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.2,
+        "distanceKm": 7.58,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:39/km",
@@ -5746,7 +5750,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:39/km",
-            "km": 7.2
+            "km": 7.58
           }
         ]
       },
@@ -5755,7 +5759,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.27,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:39/km",
@@ -5766,7 +5770,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:39/km",
-            "km": 6.0
+            "km": 6.27
           }
         ],
         "optional": true
@@ -5778,14 +5782,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-08",
     "endDate": "2027-03-14",
-    "targetKm": 77.0,
+    "targetKm": 78.11,
     "runs": [
       {
         "id": "kw10-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 14.6,
+        "distanceKm": 14.71,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "6:56/km",
@@ -5796,7 +5800,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "6:56/km",
-            "km": 14.6
+            "km": 14.71
           }
         ]
       },
@@ -5805,7 +5809,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Intervalle",
         "type": "interval",
-        "distanceKm": 13.1,
+        "distanceKm": 12.85,
         "optimalHr": 184,
         "hrRange": "178-190 bpm",
         "pace": "4:17/km",
@@ -5816,7 +5820,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:56/km",
-            "km": 2.0
+            "km": 2.02
           },
           {
             "label": "5 × 4 min",
@@ -5824,7 +5828,7 @@ export const trainingPlan = [
             "hr": 184,
             "hrRange": "178-190 bpm",
             "pace": "4:17/km",
-            "km": 4.5
+            "km": 4.67
           },
           {
             "label": "4 × 3 min Trabpause",
@@ -5832,7 +5836,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:38/km",
-            "km": 2.2
+            "km": 1.57
           },
           {
             "label": "Auslaufen",
@@ -5840,7 +5844,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:38/km",
-            "km": 4.4
+            "km": 4.59
           }
         ]
       },
@@ -5849,7 +5853,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 11.6,
+        "distanceKm": 12.18,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:38/km",
@@ -5860,7 +5864,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:38/km",
-            "km": 11.6
+            "km": 12.18
           }
         ]
       },
@@ -5869,7 +5873,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun mit Finish",
         "type": "long",
-        "distanceKm": 28.0,
+        "distanceKm": 28.15,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "6:59/km",
@@ -5880,7 +5884,7 @@ export const trainingPlan = [
             "hr": 150,
             "hrRange": "145-154 bpm",
             "pace": "6:59/km",
-            "km": 22.0
+            "km": 22.05
           },
           {
             "label": "Endbeschleunigung",
@@ -5888,7 +5892,7 @@ export const trainingPlan = [
             "hr": 165,
             "hrRange": "158-174 bpm",
             "pace": "5:09/km",
-            "km": 5.0
+            "km": 5.05
           },
           {
             "label": "Auslaufen",
@@ -5896,7 +5900,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:38/km",
-            "km": 1.0
+            "km": 1.05
           }
         ]
       },
@@ -5905,7 +5909,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 9.7,
+        "distanceKm": 10.22,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:38/km",
@@ -5916,7 +5920,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:38/km",
-            "km": 9.7
+            "km": 10.22
           }
         ]
       },
@@ -5925,7 +5929,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.29,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:38/km",
@@ -5936,7 +5940,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:38/km",
-            "km": 6.0
+            "km": 6.29
           }
         ],
         "optional": true
@@ -5948,14 +5952,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-15",
     "endDate": "2027-03-21",
-    "targetKm": 66.0,
+    "targetKm": 67.81,
     "runs": [
       {
         "id": "kw11-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.5,
+        "distanceKm": 12.72,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "6:55/km",
@@ -5966,7 +5970,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "6:55/km",
-            "km": 12.5
+            "km": 12.72
           }
         ]
       },
@@ -5975,7 +5979,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "HM-Pace",
         "type": "hm_pace",
-        "distanceKm": 13.9,
+        "distanceKm": 14.19,
         "optimalHr": 176,
         "hrRange": "170-184 bpm",
         "pace": "4:43/km",
@@ -5986,7 +5990,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:55/km",
-            "km": 2.0
+            "km": 2.02
           },
           {
             "label": "Langer HM-Pace Block",
@@ -5994,7 +5998,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "170-184 bpm",
             "pace": "4:43/km",
-            "km": 9.4
+            "km": 9.54
           },
           {
             "label": "Trabpause",
@@ -6002,7 +6006,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-152 bpm",
             "pace": "7:37/km",
-            "km": 1.0
+            "km": 1.05
           },
           {
             "label": "Auslaufen",
@@ -6010,7 +6014,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:37/km",
-            "km": 1.5
+            "km": 1.58
           }
         ]
       },
@@ -6019,7 +6023,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 9.9,
+        "distanceKm": 10.37,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:37/km",
@@ -6030,7 +6034,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:37/km",
-            "km": 9.9
+            "km": 10.37
           }
         ]
       },
@@ -6039,7 +6043,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 22.0,
+        "distanceKm": 22.39,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "6:58/km",
@@ -6050,7 +6054,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "6:58/km",
-            "km": 22.0
+            "km": 22.39
           }
         ]
       },
@@ -6059,7 +6063,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Locker extra",
         "type": "easy",
-        "distanceKm": 7.7,
+        "distanceKm": 8.14,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:37/km",
@@ -6070,7 +6074,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:37/km",
-            "km": 7.7
+            "km": 8.14
           }
         ]
       },
@@ -6079,7 +6083,7 @@ export const trainingPlan = [
         "order": 6,
         "title": "Bonus sehr locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.25,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:37/km",
@@ -6090,7 +6094,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:37/km",
-            "km": 5.0
+            "km": 5.25
           }
         ],
         "optional": true
@@ -6102,14 +6106,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-22",
     "endDate": "2027-03-28",
-    "targetKm": 60.0,
+    "targetKm": 62.28,
     "runs": [
       {
         "id": "kw12-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 13.0,
+        "distanceKm": 13.19,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "6:54/km",
@@ -6120,7 +6124,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "6:54/km",
-            "km": 13.0
+            "km": 13.19
           }
         ]
       },
@@ -6129,7 +6133,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 9.5,
+        "distanceKm": 10,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "4:51/km",
@@ -6140,7 +6144,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:54/km",
-            "km": 2.0
+            "km": 2.03
           },
           {
             "label": "Schwelle",
@@ -6148,7 +6152,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "4:51/km",
-            "km": 6.0
+            "km": 6.39
           },
           {
             "label": "Auslaufen",
@@ -6156,7 +6160,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:36/km",
-            "km": 1.5
+            "km": 1.58
           }
         ]
       },
@@ -6165,7 +6169,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 17.5,
+        "distanceKm": 18.42,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:36/km",
@@ -6176,7 +6180,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:36/km",
-            "km": 17.5
+            "km": 18.42
           }
         ]
       },
@@ -6185,7 +6189,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 20.0,
+        "distanceKm": 20.67,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "6:58/km",
@@ -6196,7 +6200,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "6:58/km",
-            "km": 20.0
+            "km": 20.67
           }
         ]
       },
@@ -6205,7 +6209,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 6.0,
+        "distanceKm": 6.32,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:36/km",
@@ -6216,7 +6220,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:36/km",
-            "km": 6.0
+            "km": 6.32
           }
         ],
         "optional": true
@@ -6228,14 +6232,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-29",
     "endDate": "2027-04-04",
-    "targetKm": 54.0,
+    "targetKm": 56.29,
     "runs": [
       {
         "id": "kw13-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 12.4,
+        "distanceKm": 12.64,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "6:53/km",
@@ -6246,7 +6250,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "6:53/km",
-            "km": 12.4
+            "km": 12.64
           }
         ]
       },
@@ -6255,7 +6259,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 8.6,
+        "distanceKm": 9.12,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "4:50/km",
@@ -6266,7 +6270,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:53/km",
-            "km": 1.5
+            "km": 1.45
           },
           {
             "label": "Schwelle",
@@ -6274,7 +6278,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "4:50/km",
-            "km": 6.1
+            "km": 6.62
           },
           {
             "label": "Auslaufen",
@@ -6282,7 +6286,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:35/km",
-            "km": 1.0
+            "km": 1.05
           }
         ]
       },
@@ -6291,7 +6295,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 15.0,
+        "distanceKm": 15.82,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:35/km",
@@ -6302,7 +6306,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:35/km",
-            "km": 15.0
+            "km": 15.82
           }
         ]
       },
@@ -6311,7 +6315,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 18.0,
+        "distanceKm": 18.71,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "6:57/km",
@@ -6322,7 +6326,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "6:57/km",
-            "km": 18.0
+            "km": 18.71
           }
         ]
       },
@@ -6331,7 +6335,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.27,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:35/km",
@@ -6342,7 +6346,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:35/km",
-            "km": 5.0
+            "km": 5.27
           }
         ],
         "optional": true
@@ -6354,14 +6358,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-05",
     "endDate": "2027-04-11",
-    "targetKm": 45.0,
+    "targetKm": 46.81,
     "runs": [
       {
         "id": "kw14-2027-lauf1",
         "order": 1,
         "title": "Zone 2",
         "type": "easy",
-        "distanceKm": 10.4,
+        "distanceKm": 10.63,
         "optimalHr": 146,
         "hrRange": "140-150 bpm",
         "pace": "6:52/km",
@@ -6372,7 +6376,7 @@ export const trainingPlan = [
             "hr": 146,
             "hrRange": "140-150 bpm",
             "pace": "6:52/km",
-            "km": 10.4
+            "km": 10.63
           }
         ]
       },
@@ -6381,7 +6385,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Schwelle kontrolliert",
         "type": "deload",
-        "distanceKm": 7.2,
+        "distanceKm": 7.52,
         "optimalHr": 174,
         "hrRange": "168-176 bpm",
         "pace": "4:48/km",
@@ -6392,7 +6396,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:52/km",
-            "km": 1.5
+            "km": 1.46
           },
           {
             "label": "Schwelle",
@@ -6400,7 +6404,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "172-180 bpm",
             "pace": "4:48/km",
-            "km": 4.7
+            "km": 5
           },
           {
             "label": "Auslaufen",
@@ -6408,7 +6412,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:34/km",
-            "km": 1.0
+            "km": 1.06
           }
         ]
       },
@@ -6417,7 +6421,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 15.4,
+        "distanceKm": 16.26,
         "optimalHr": 142,
         "hrRange": "136-146 bpm",
         "pace": "7:34/km",
@@ -6428,7 +6432,7 @@ export const trainingPlan = [
             "hr": 142,
             "hrRange": "136-146 bpm",
             "pace": "7:34/km",
-            "km": 15.4
+            "km": 16.26
           }
         ]
       },
@@ -6437,7 +6441,7 @@ export const trainingPlan = [
         "order": 4,
         "title": "Longrun",
         "type": "long",
-        "distanceKm": 12.0,
+        "distanceKm": 12.4,
         "optimalHr": 152,
         "hrRange": "148-155 bpm",
         "pace": "6:56/km",
@@ -6448,7 +6452,7 @@ export const trainingPlan = [
             "hr": 152,
             "hrRange": "148-155 bpm",
             "pace": "6:56/km",
-            "km": 12.0
+            "km": 12.4
           }
         ]
       },
@@ -6457,7 +6461,7 @@ export const trainingPlan = [
         "order": 5,
         "title": "Extra locker",
         "type": "optional",
-        "distanceKm": 5.0,
+        "distanceKm": 5.29,
         "optimalHr": 143,
         "hrRange": "138-148 bpm",
         "pace": "7:34/km",
@@ -6468,7 +6472,7 @@ export const trainingPlan = [
             "hr": 143,
             "hrRange": "138-148 bpm",
             "pace": "7:34/km",
-            "km": 5.0
+            "km": 5.29
           }
         ],
         "optional": true
@@ -6480,14 +6484,14 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-12",
     "endDate": "2027-04-18",
-    "targetKm": 39.1,
+    "targetKm": 39.52,
     "runs": [
       {
         "id": "kw15-2027-lauf1",
         "order": 1,
         "title": "Locker",
         "type": "easy",
-        "distanceKm": 8.0,
+        "distanceKm": 8.18,
         "optimalHr": 145,
         "hrRange": "138-150 bpm",
         "pace": "6:51/km",
@@ -6498,7 +6502,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:51/km",
-            "km": 8.0
+            "km": 8.18
           }
         ]
       },
@@ -6507,7 +6511,7 @@ export const trainingPlan = [
         "order": 2,
         "title": "Aktivierung",
         "type": "taper",
-        "distanceKm": 6.0,
+        "distanceKm": 6.13,
         "optimalHr": 160,
         "hrRange": "150-176 bpm",
         "pace": "6:15/km",
@@ -6518,7 +6522,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "6:51/km",
-            "km": 2.5
+            "km": 2.63
           },
           {
             "label": "3 × 3 min HM-Pace",
@@ -6526,7 +6530,7 @@ export const trainingPlan = [
             "hr": 176,
             "hrRange": "170-184 bpm",
             "pace": "4:43/km",
-            "km": 1.9
+            "km": 1.91
           },
           {
             "label": "Auslaufen",
@@ -6534,7 +6538,7 @@ export const trainingPlan = [
             "hr": 145,
             "hrRange": "138-150 bpm",
             "pace": "7:33/km",
-            "km": 1.6
+            "km": 1.59
           }
         ]
       },
@@ -6543,7 +6547,7 @@ export const trainingPlan = [
         "order": 3,
         "title": "Shakeout",
         "type": "taper",
-        "distanceKm": 4.0,
+        "distanceKm": 4.11,
         "optimalHr": 140,
         "hrRange": "132-145 bpm",
         "pace": "7:33/km",
@@ -6554,7 +6558,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-145 bpm",
             "pace": "7:33/km",
-            "km": 4.0
+            "km": 4.11
           }
         ]
       },
@@ -6570,7 +6574,7 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Halbmarathon",
-            "minutes": 100,
+            "minutes": 99.5,
             "hr": 181,
             "hrRange": "174-188 bpm",
             "pace": "4:43/km",
