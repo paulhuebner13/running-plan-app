@@ -22,6 +22,16 @@ function formatDate(value) {
   }).format(new Date(`${value}T12:00:00`));
 }
 
+
+function getRunMinutes(run) {
+  return (run.steps || []).reduce((sum, step) => sum + Number(step.minutes || 0), 0);
+}
+
+function formatMinutes(value) {
+  if (!Number.isFinite(Number(value))) return value;
+  return Math.round(Number(value));
+}
+
 function getInitialWeekIndex() {
   const today = new Date();
   const index = trainingPlan.findIndex((week) => {
@@ -212,7 +222,7 @@ export default function App() {
               <div className="run-number">{run.optional ? '+' : run.order}</div>
               <div className="run-summary">
                 <strong>{run.title}</strong>
-                <span>{formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HF {formatHr(run.optimalHr)}</span>
+                <span>{formatMinutes(getRunMinutes(run))} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HF {formatHr(run.optimalHr)}</span>
               </div>
               <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'offen'}</div>
             </button>
