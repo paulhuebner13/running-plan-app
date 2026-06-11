@@ -29,7 +29,12 @@ function getRunMinutes(run) {
 
 function formatMinutes(value) {
   if (!Number.isFinite(Number(value))) return value;
-  return Math.round(Number(value));
+  const number = Number(value);
+  return Number.isInteger(number) ? number : number.toFixed(1);
+}
+
+function hasHeartRate(value) {
+  return value !== null && value !== undefined && value !== '';
 }
 
 function getInitialWeekIndex() {
@@ -78,10 +83,11 @@ function makeWorkoutBlocks(run) {
     return {
       label: step.label,
       minutes: repeated ? repeated.minutesPerRep : step.minutes,
-      hr: step.hr ?? run.optimalHr,
-      hrRange: step.hrRange ?? run.hrRange,
+      hr: step.hr ?? null,
+      hrRange: step.hrRange ?? '',
       pace: step.pace ?? run.pace,
-      km: repeated ? repeated.kmPerRep : (step.km ?? run.distanceKm)
+      km: repeated ? repeated.kmPerRep : (step.km ?? run.distanceKm),
+      note: step.note ?? ''
     };
   });
 }
@@ -191,26 +197,26 @@ export default function App() {
     <main className="app-shell">
       <header className="hero-card">
         <div className="week-nav compact">
-          <button aria-label="Vorherige Kalenderwoche" onClick={previousWeek} disabled={weekIndex === 0}>‹</button>
+          <button aria-label="Previous calendar week" onClick={previousWeek} disabled={weekIndex === 0}>‹</button>
           <div>
             <h1>KW {week.kw}</h1>
-            <p>{formatDate(week.startDate)} bis {formatDate(week.endDate)}</p>
+            <p>{formatDate(week.startDate)} to {formatDate(week.endDate)}</p>
           </div>
-          <button aria-label="Nächste Kalenderwoche" onClick={nextWeek} disabled={weekIndex === trainingPlan.length - 1}>›</button>
+          <button aria-label="Next calendar week" onClick={nextWeek} disabled={weekIndex === trainingPlan.length - 1}>›</button>
         </div>
 
         <section className="km-progress-card">
           <div className="km-progress-label">
-            <span>Zielumfang</span>
+            <span>Target volume</span>
             <strong>{formatNumber(completedMandatoryKm)} / {formatNumber(totalMandatoryKm)} km</strong>
           </div>
-          <div className="km-progress-track" aria-label="Kilometer-Fortschritt">
+          <div className="km-progress-track" aria-label="Kilometre progress">
             <div className="km-progress-fill" style={{ width: `${progressPercent}%` }} />
           </div>
         </section>
       </header>
 
-      <section className="run-list" aria-label="Läufe dieser Kalenderwoche">
+      <section className="run-list" aria-label="Runs this week">
         {week.runs.map((run) => {
           const status = statusFor(run);
           return (
@@ -222,9 +228,9 @@ export default function App() {
               <div className="run-number">{run.optional ? '+' : run.order}</div>
               <div className="run-summary">
                 <strong>{run.title}</strong>
-                <span>{formatMinutes(getRunMinutes(run))} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HF {formatHr(run.optimalHr)}</span>
+                <span>{formatMinutes(getRunMinutes(run))} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HR {formatHr(run.optimalHr)}</span>
               </div>
-              <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'offen'}</div>
+              <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
             </button>
           );
         })}
@@ -235,10 +241,10 @@ export default function App() {
           <article className="run-modal" onClick={(event) => event.stopPropagation()}>
             <div className="modal-header">
               <div>
-                <span>{selectedRun.optional ? 'Extra' : `Lauf ${selectedRun.order}`}</span>
+                <span>{selectedRun.optional ? 'Extra' : `Run ${selectedRun.order}`}</span>
                 <h2>{selectedRun.title}</h2>
               </div>
-              <button className="close-button" onClick={() => setSelectedRunId(null)} aria-label="Schließen">×</button>
+              <button className="close-button" onClick={() => setSelectedRunId(null)} aria-label="Close">×</button>
             </div>
 
             <div className="workout-blocks">
@@ -247,14 +253,21 @@ export default function App() {
                   <div className="block-title">{block.label}</div>
                   <div className="block-grid">
                     <div className="metric-tile minutes-tile">
-                      <span>Minuten</span>
-                      <strong>{block.minutes}</strong>
+                      <span>Minutes</span>
+                      <strong>{formatMinutes(block.minutes)}</strong>
                     </div>
-                    <div className="metric-tile hr-tile">
-                      <span>HF</span>
-                      <strong>{formatHr(block.hr)}</strong>
-                      <em>{formatHr(block.hrRange)}</em>
-                    </div>
+                    {hasHeartRate(block.hr) ? (
+                      <div className="metric-tile hr-tile">
+                        <span>HR</span>
+                        <strong>{formatHr(block.hr)}</strong>
+                        <em>{formatHr(block.hrRange)}</em>
+                      </div>
+                    ) : (
+                      <div className="metric-tile note-tile">
+                        <span>Notes</span>
+                        <strong>{block.note || 'No HR target'}</strong>
+                      </div>
+                    )}
                     <div className="metric-tile pace-tile">
                       <span>Pace</span>
                       <strong>{formatPace(block.pace)}</strong>
@@ -272,7 +285,7 @@ export default function App() {
               className={`modal-check-button ${progress[selectedRun.id] ? 'checked' : ''}`}
               onClick={() => updateRun(selectedRun.id, !progress[selectedRun.id])}
             >
-              {progress[selectedRun.id] ? 'Erledigt' : 'Abhaken'}
+              {progress[selectedRun.id] ? 'Done' : 'Mark as done'}
             </button>
           </article>
         </section>

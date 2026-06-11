@@ -325,9 +325,20 @@ button { -webkit-tap-highlight-color: transparent; }
   text-overflow: ellipsis;
 }
 
+.note-tile strong {
+  white-space: normal;
+  font-size: 0.78rem;
+  line-height: 1.15;
+}
+
 .hr-tile {
   background: var(--yellow-soft);
   border-color: var(--yellow-mid);
+}
+
+.note-tile {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 255, 255, 0.10);
 }
 
 .hr-tile strong {

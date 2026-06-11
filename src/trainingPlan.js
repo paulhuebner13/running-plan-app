@@ -1,6 +1,7 @@
 // Categorised half marathon training plan.
 // Every distance is calculated from the displayed minutes and pace.
 // Goal race: 18 April 2027.
+// Run overview heart rate uses the representative part of the workout, not warm-up or cool-down.
 
 export const trainingPlan = [
   {
@@ -8,7 +9,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-08",
     "endDate": "2026-06-14",
-    "targetKm": 42.03,
+    "targetKm": 42.78,
     "runs": [
       {
         "id": "kw24-2026-lauf1",
@@ -16,8 +17,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.07,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:49/km",
         "steps": [
           {
@@ -51,10 +52,10 @@ export const trainingPlan = [
         "order": 2,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.79,
+        "distanceKm": 7.54,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:22/km",
+        "pace": "7:38/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -67,10 +68,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -121,7 +132,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-15",
     "endDate": "2026-06-21",
-    "targetKm": 45.06,
+    "targetKm": 45.81,
     "runs": [
       {
         "id": "kw25-2026-lauf1",
@@ -129,8 +140,8 @@ export const trainingPlan = [
         "title": "Interval Run",
         "type": "interval",
         "distanceKm": 7.47,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 184,
+        "hrRange": "180-192 bpm",
         "pace": "6:42/km",
         "steps": [
           {
@@ -172,10 +183,10 @@ export const trainingPlan = [
         "order": 2,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.8,
+        "distanceKm": 7.55,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:21/km",
+        "pace": "7:37/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -188,10 +199,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -242,7 +263,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-22",
     "endDate": "2026-06-28",
-    "targetKm": 48.01,
+    "targetKm": 48.76,
     "runs": [
       {
         "id": "kw26-2026-lauf1",
@@ -250,8 +271,8 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "type": "threshold",
         "distanceKm": 6.76,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 178,
+        "hrRange": "174-183 bpm",
         "pace": "6:31/km",
         "steps": [
           {
@@ -285,10 +306,10 @@ export const trainingPlan = [
         "order": 2,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.82,
+        "distanceKm": 7.57,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:20/km",
+        "pace": "7:36/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -301,10 +322,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -355,7 +386,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-29",
     "endDate": "2026-07-05",
-    "targetKm": 38.98,
+    "targetKm": 39.73,
     "runs": [
       {
         "id": "kw27-2026-lauf1",
@@ -363,8 +394,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.12,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:46/km",
         "steps": [
           {
@@ -398,10 +429,10 @@ export const trainingPlan = [
         "order": 2,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.83,
+        "distanceKm": 7.58,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:19/km",
+        "pace": "7:35/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -414,10 +445,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -468,7 +509,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-06",
     "endDate": "2026-07-12",
-    "targetKm": 49.95,
+    "targetKm": 50.7,
     "runs": [
       {
         "id": "kw28-2026-lauf1",
@@ -496,8 +537,8 @@ export const trainingPlan = [
         "title": "Interval Run",
         "type": "interval",
         "distanceKm": 7.53,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 184,
+        "hrRange": "180-192 bpm",
         "pace": "6:38/km",
         "steps": [
           {
@@ -539,10 +580,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.85,
+        "distanceKm": 7.6,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:18/km",
+        "pace": "7:34/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -555,10 +596,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -609,7 +660,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-13",
     "endDate": "2026-07-19",
-    "targetKm": 53.05,
+    "targetKm": 53.8,
     "runs": [
       {
         "id": "kw29-2026-lauf1",
@@ -637,8 +688,8 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "type": "threshold",
         "distanceKm": 7.53,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 178,
+        "hrRange": "174-183 bpm",
         "pace": "6:22/km",
         "steps": [
           {
@@ -672,10 +723,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.86,
+        "distanceKm": 7.61,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:17/km",
+        "pace": "7:33/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -688,10 +739,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -721,8 +782,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 19.01,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "7:16/km",
         "steps": [
           {
@@ -750,7 +811,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-20",
     "endDate": "2026-07-26",
-    "targetKm": 56.03,
+    "targetKm": 56.78,
     "runs": [
       {
         "id": "kw30-2026-lauf1",
@@ -778,8 +839,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.18,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:43/km",
         "steps": [
           {
@@ -813,10 +874,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.86,
+        "distanceKm": 7.61,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:17/km",
+        "pace": "7:33/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -829,10 +890,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -883,7 +954,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-27",
     "endDate": "2026-08-02",
-    "targetKm": 45.01,
+    "targetKm": 45.76,
     "runs": [
       {
         "id": "kw31-2026-lauf1",
@@ -891,8 +962,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.2,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:42/km",
         "steps": [
           {
@@ -926,10 +997,10 @@ export const trainingPlan = [
         "order": 2,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.87,
+        "distanceKm": 7.62,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:17/km",
+        "pace": "7:33/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -942,10 +1013,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -996,7 +1077,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-03",
     "endDate": "2026-08-09",
-    "targetKm": 57.98,
+    "targetKm": 58.73,
     "runs": [
       {
         "id": "kw32-2026-lauf1",
@@ -1024,8 +1105,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 9.12,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:35/km",
         "steps": [
           {
@@ -1059,10 +1140,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.89,
+        "distanceKm": 7.64,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:15/km",
+        "pace": "7:32/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -1075,10 +1156,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -1129,7 +1220,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-10",
     "endDate": "2026-08-16",
-    "targetKm": 59.98,
+    "targetKm": 60.73,
     "runs": [
       {
         "id": "kw33-2026-lauf1",
@@ -1157,8 +1248,8 @@ export const trainingPlan = [
         "title": "Interval Run",
         "type": "interval",
         "distanceKm": 7.61,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 184,
+        "hrRange": "180-192 bpm",
         "pace": "6:34/km",
         "steps": [
           {
@@ -1200,10 +1291,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.25,
+        "distanceKm": 9.0,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:16/km",
+        "pace": "7:30/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -1216,10 +1307,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -1249,8 +1350,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 22.06,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "7:12/km",
         "steps": [
           {
@@ -1278,7 +1379,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-17",
     "endDate": "2026-08-23",
-    "targetKm": 62.98,
+    "targetKm": 63.73,
     "runs": [
       {
         "id": "kw34-2026-lauf1",
@@ -1306,8 +1407,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.27,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:39/km",
         "steps": [
           {
@@ -1341,10 +1442,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.26,
+        "distanceKm": 9.01,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:16/km",
+        "pace": "7:30/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -1357,10 +1458,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -1411,7 +1522,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-24",
     "endDate": "2026-08-30",
-    "targetKm": 49.98,
+    "targetKm": 50.73,
     "runs": [
       {
         "id": "kw35-2026-lauf1",
@@ -1439,8 +1550,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.29,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:38/km",
         "steps": [
           {
@@ -1474,10 +1585,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.93,
+        "distanceKm": 7.68,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:13/km",
+        "pace": "7:29/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -1490,10 +1601,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -1544,7 +1665,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-31",
     "endDate": "2026-09-06",
-    "targetKm": 62.95,
+    "targetKm": 63.7,
     "runs": [
       {
         "id": "kw36-2026-lauf1",
@@ -1572,8 +1693,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 9.21,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:31/km",
         "steps": [
           {
@@ -1607,10 +1728,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.3,
+        "distanceKm": 9.05,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:14/km",
+        "pace": "7:28/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -1623,10 +1744,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -1677,7 +1808,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-07",
     "endDate": "2026-09-13",
-    "targetKm": 68.68,
+    "targetKm": 69.43,
     "runs": [
       {
         "id": "kw37-2026-lauf1",
@@ -1705,8 +1836,8 @@ export const trainingPlan = [
         "title": "Interval Run",
         "type": "interval",
         "distanceKm": 7.66,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 184,
+        "hrRange": "180-192 bpm",
         "pace": "6:32/km",
         "steps": [
           {
@@ -1748,10 +1879,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.32,
+        "distanceKm": 9.07,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:13/km",
+        "pace": "7:27/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -1764,10 +1895,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -1777,8 +1918,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 22.64,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:30/km",
         "steps": [
           {
@@ -1813,8 +1954,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 23.94,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "7:09/km",
         "steps": [
           {
@@ -1842,7 +1983,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-14",
     "endDate": "2026-09-20",
-    "targetKm": 68.03,
+    "targetKm": 68.78,
     "runs": [
       {
         "id": "kw38-2026-lauf1",
@@ -1870,8 +2011,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 9.99,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:30/km",
         "steps": [
           {
@@ -1905,10 +2046,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.33,
+        "distanceKm": 9.08,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:12/km",
+        "pace": "7:26/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -1921,10 +2062,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -1975,7 +2126,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-21",
     "endDate": "2026-09-27",
-    "targetKm": 53.94,
+    "targetKm": 54.69,
     "runs": [
       {
         "id": "kw39-2026-lauf1",
@@ -2003,8 +2154,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.36,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:35/km",
         "steps": [
           {
@@ -2038,10 +2189,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 6.99,
+        "distanceKm": 7.74,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:09/km",
+        "pace": "7:26/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -2054,10 +2205,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -2108,7 +2269,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-28",
     "endDate": "2026-10-04",
-    "targetKm": 68.02,
+    "targetKm": 68.77,
     "runs": [
       {
         "id": "kw40-2026-lauf1",
@@ -2136,8 +2297,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 9.31,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:27/km",
         "steps": [
           {
@@ -2171,10 +2332,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.37,
+        "distanceKm": 9.12,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:10/km",
+        "pace": "7:24/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -2187,10 +2348,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -2241,7 +2412,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-05",
     "endDate": "2026-10-11",
-    "targetKm": 73.23,
+    "targetKm": 73.98,
     "runs": [
       {
         "id": "kw41-2026-lauf1",
@@ -2269,8 +2440,8 @@ export const trainingPlan = [
         "title": "Interval Run",
         "type": "interval",
         "distanceKm": 7.75,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 184,
+        "hrRange": "180-192 bpm",
         "pace": "6:27/km",
         "steps": [
           {
@@ -2312,10 +2483,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.37,
+        "distanceKm": 9.12,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:10/km",
+        "pace": "7:24/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -2328,10 +2499,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -2341,8 +2522,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 25.97,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:26/km",
         "steps": [
           {
@@ -2377,8 +2558,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 24.97,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "7:05/km",
         "steps": [
           {
@@ -2406,7 +2587,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-12",
     "endDate": "2026-10-18",
-    "targetKm": 71.94,
+    "targetKm": 72.69,
     "runs": [
       {
         "id": "kw42-2026-lauf1",
@@ -2434,8 +2615,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 10.09,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:27/km",
         "steps": [
           {
@@ -2469,10 +2650,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.39,
+        "distanceKm": 9.14,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:09/km",
+        "pace": "7:23/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -2485,10 +2666,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -2559,7 +2750,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-19",
     "endDate": "2026-10-25",
-    "targetKm": 58.05,
+    "targetKm": 58.8,
     "runs": [
       {
         "id": "kw43-2026-lauf1",
@@ -2587,8 +2778,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.45,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:31/km",
         "steps": [
           {
@@ -2622,10 +2813,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 7.04,
+        "distanceKm": 7.79,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:06/km",
+        "pace": "7:23/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -2638,10 +2829,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -2692,7 +2893,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 69.94,
+    "targetKm": 70.69,
     "runs": [
       {
         "id": "kw44-2026-lauf1",
@@ -2720,8 +2921,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 10.97,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:23/km",
         "steps": [
           {
@@ -2755,10 +2956,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.42,
+        "distanceKm": 9.17,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:08/km",
+        "pace": "7:22/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -2771,10 +2972,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -2825,7 +3036,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-02",
     "endDate": "2026-11-08",
-    "targetKm": 72.04,
+    "targetKm": 72.79,
     "runs": [
       {
         "id": "kw45-2026-lauf1",
@@ -2853,8 +3064,8 @@ export const trainingPlan = [
         "title": "Interval Run",
         "type": "interval",
         "distanceKm": 7.81,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 184,
+        "hrRange": "180-192 bpm",
         "pace": "6:24/km",
         "steps": [
           {
@@ -2896,10 +3107,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.44,
+        "distanceKm": 9.19,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:07/km",
+        "pace": "7:21/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -2912,10 +3123,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -2965,8 +3186,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 25.92,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "7:01/km",
         "steps": [
           {
@@ -2994,7 +3215,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 73.99,
+    "targetKm": 74.74,
     "runs": [
       {
         "id": "kw46-2026-lauf1",
@@ -3022,8 +3243,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 10.2,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:22/km",
         "steps": [
           {
@@ -3057,10 +3278,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.46,
+        "distanceKm": 9.21,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:06/km",
+        "pace": "7:20/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -3073,10 +3294,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -3147,7 +3378,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-16",
     "endDate": "2026-11-22",
-    "targetKm": 59.96,
+    "targetKm": 60.71,
     "runs": [
       {
         "id": "kw47-2026-lauf1",
@@ -3175,8 +3406,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.56,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:26/km",
         "steps": [
           {
@@ -3210,10 +3441,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.48,
+        "distanceKm": 9.23,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:05/km",
+        "pace": "7:19/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -3226,10 +3457,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -3280,7 +3521,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-23",
     "endDate": "2026-11-29",
-    "targetKm": 71.93,
+    "targetKm": 72.68,
     "runs": [
       {
         "id": "kw48-2026-lauf1",
@@ -3308,8 +3549,8 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "type": "hm-pace",
         "distanceKm": 10.22,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "5:58/km",
         "steps": [
           {
@@ -3351,10 +3592,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.5,
+        "distanceKm": 9.25,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:04/km",
+        "pace": "7:18/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -3367,10 +3608,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -3441,7 +3692,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-30",
     "endDate": "2026-12-06",
-    "targetKm": 73.99,
+    "targetKm": 74.74,
     "runs": [
       {
         "id": "kw49-2026-lauf1",
@@ -3512,10 +3763,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.52,
+        "distanceKm": 9.27,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:03/km",
+        "pace": "7:17/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -3528,10 +3779,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -3581,8 +3842,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 27.04,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "6:57/km",
         "steps": [
           {
@@ -3610,7 +3871,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 75.95,
+    "targetKm": 76.7,
     "runs": [
       {
         "id": "kw50-2026-lauf1",
@@ -3638,8 +3899,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 11.18,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:16/km",
         "steps": [
           {
@@ -3673,10 +3934,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.53,
+        "distanceKm": 9.28,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:02/km",
+        "pace": "7:16/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -3689,10 +3950,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -3763,7 +4034,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-14",
     "endDate": "2026-12-20",
-    "targetKm": 62.04,
+    "targetKm": 62.79,
     "runs": [
       {
         "id": "kw51-2026-lauf1",
@@ -3791,8 +4062,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.64,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:22/km",
         "steps": [
           {
@@ -3826,10 +4097,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.55,
+        "distanceKm": 9.3,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:01/km",
+        "pace": "7:15/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -3842,10 +4113,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -3896,7 +4177,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 64.02,
+    "targetKm": 64.77,
     "runs": [
       {
         "id": "kw52-2026-lauf1",
@@ -3924,8 +4205,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 8.65,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:22/km",
         "steps": [
           {
@@ -3959,10 +4240,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.55,
+        "distanceKm": 9.3,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:01/km",
+        "pace": "7:15/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -3975,10 +4256,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -4029,7 +4320,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-28",
     "endDate": "2027-01-03",
-    "targetKm": 68.87,
+    "targetKm": 69.62,
     "runs": [
       {
         "id": "kw53-2026-lauf1",
@@ -4100,10 +4391,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.57,
+        "distanceKm": 9.32,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "7:00/km",
+        "pace": "7:15/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -4116,10 +4407,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -4129,8 +4430,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 21.87,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:13/km",
         "steps": [
           {
@@ -4186,7 +4487,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-04",
     "endDate": "2027-01-10",
-    "targetKm": 69.95,
+    "targetKm": 70.7,
     "runs": [
       {
         "id": "kw1-2027-lauf1",
@@ -4214,8 +4515,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 11.29,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:12/km",
         "steps": [
           {
@@ -4249,10 +4550,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.59,
+        "distanceKm": 9.34,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:59/km",
+        "pace": "7:14/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -4265,10 +4566,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -4298,8 +4609,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 24.14,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "6:53/km",
         "steps": [
           {
@@ -4327,7 +4638,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 72.01,
+    "targetKm": 72.76,
     "runs": [
       {
         "id": "kw2-2027-lauf1",
@@ -4355,8 +4666,8 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "type": "threshold",
         "distanceKm": 10.43,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 179,
+        "hrRange": "175-184 bpm",
         "pace": "6:02/km",
         "steps": [
           {
@@ -4398,10 +4709,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.61,
+        "distanceKm": 9.36,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:58/km",
+        "pace": "7:13/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -4414,10 +4725,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -4488,7 +4809,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-18",
     "endDate": "2027-01-24",
-    "targetKm": 73.98,
+    "targetKm": 74.73,
     "runs": [
       {
         "id": "kw3-2027-lauf1",
@@ -4516,8 +4837,8 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "type": "hm-pace",
         "distanceKm": 10.36,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "5:53/km",
         "steps": [
           {
@@ -4559,10 +4880,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.63,
+        "distanceKm": 9.38,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:57/km",
+        "pace": "7:12/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -4575,10 +4896,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -4628,8 +4959,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 25.99,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "6:51/km",
         "steps": [
           {
@@ -4657,7 +4988,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-25",
     "endDate": "2027-01-31",
-    "targetKm": 75.93,
+    "targetKm": 76.68,
     "runs": [
       {
         "id": "kw4-2027-lauf1",
@@ -4728,10 +5059,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.65,
+        "distanceKm": 9.4,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:56/km",
+        "pace": "7:11/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -4744,10 +5075,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -4818,7 +5159,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-01",
     "endDate": "2027-02-07",
-    "targetKm": 78.01,
+    "targetKm": 78.76,
     "runs": [
       {
         "id": "kw5-2027-lauf1",
@@ -4846,8 +5187,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 11.4,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:08/km",
         "steps": [
           {
@@ -4881,10 +5222,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.67,
+        "distanceKm": 9.42,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:55/km",
+        "pace": "7:10/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -4897,10 +5238,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -4950,8 +5301,8 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "type": "hm-block-long",
         "distanceKm": 27.96,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "6:37/km",
         "steps": [
           {
@@ -4995,7 +5346,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-08",
     "endDate": "2027-02-14",
-    "targetKm": 64.04,
+    "targetKm": 64.79,
     "runs": [
       {
         "id": "kw6-2027-lauf1",
@@ -5023,8 +5374,8 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "type": "hm-pace",
         "distanceKm": 13.17,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "5:42/km",
         "steps": [
           {
@@ -5066,10 +5417,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.69,
+        "distanceKm": 9.44,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:54/km",
+        "pace": "7:09/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -5082,10 +5433,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -5136,7 +5497,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-15",
     "endDate": "2027-02-21",
-    "targetKm": 77.97,
+    "targetKm": 78.72,
     "runs": [
       {
         "id": "kw7-2027-lauf1",
@@ -5164,8 +5525,8 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "type": "threshold",
         "distanceKm": 10.6,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 179,
+        "hrRange": "175-184 bpm",
         "pace": "5:57/km",
         "steps": [
           {
@@ -5207,10 +5568,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.71,
+        "distanceKm": 9.46,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:53/km",
+        "pace": "7:08/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -5223,10 +5584,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -5276,8 +5647,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 26.99,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "6:47/km",
         "steps": [
           {
@@ -5305,7 +5676,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-22",
     "endDate": "2027-02-28",
-    "targetKm": 79.95,
+    "targetKm": 80.7,
     "runs": [
       {
         "id": "kw8-2027-lauf1",
@@ -5333,8 +5704,8 @@ export const trainingPlan = [
         "title": "Steady Run",
         "type": "steady",
         "distanceKm": 10.62,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 164,
+        "hrRange": "158-170 bpm",
         "pace": "6:07/km",
         "steps": [
           {
@@ -5368,10 +5739,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.73,
+        "distanceKm": 9.48,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:52/km",
+        "pace": "7:07/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -5384,10 +5755,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -5437,8 +5818,8 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "type": "hm-block-long",
         "distanceKm": 28.01,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "6:34/km",
         "steps": [
           {
@@ -5482,7 +5863,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-01",
     "endDate": "2027-03-07",
-    "targetKm": 81.95,
+    "targetKm": 82.7,
     "runs": [
       {
         "id": "kw9-2027-lauf1",
@@ -5510,8 +5891,8 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "type": "progressive",
         "distanceKm": 11.53,
-        "optimalHr": 146,
-        "hrRange": "140-152 bpm",
+        "optimalHr": 168,
+        "hrRange": "162-174 bpm",
         "pace": "6:04/km",
         "steps": [
           {
@@ -5545,10 +5926,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.75,
+        "distanceKm": 9.5,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:51/km",
+        "pace": "7:06/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -5561,10 +5942,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -5614,8 +6005,8 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "type": "fast-finish-long",
         "distanceKm": 28.01,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 166,
+        "hrRange": "160-175 bpm",
         "pace": "6:45/km",
         "steps": [
           {
@@ -5643,7 +6034,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-08",
     "endDate": "2027-03-14",
-    "targetKm": 70.05,
+    "targetKm": 70.8,
     "runs": [
       {
         "id": "kw10-2027-lauf1",
@@ -5671,8 +6062,8 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "type": "hm-pace",
         "distanceKm": 13.25,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "5:40/km",
         "steps": [
           {
@@ -5714,10 +6105,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.75,
+        "distanceKm": 9.5,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:51/km",
+        "pace": "7:06/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -5730,10 +6121,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -5784,7 +6185,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-15",
     "endDate": "2027-03-21",
-    "targetKm": 75.93,
+    "targetKm": 76.68,
     "runs": [
       {
         "id": "kw11-2027-lauf1",
@@ -5812,8 +6213,8 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "type": "threshold",
         "distanceKm": 11.57,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 179,
+        "hrRange": "175-184 bpm",
         "pace": "5:47/km",
         "steps": [
           {
@@ -5855,10 +6256,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.77,
+        "distanceKm": 9.52,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:50/km",
+        "pace": "7:05/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -5871,10 +6272,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -5924,8 +6335,8 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "type": "hm-block-long",
         "distanceKm": 25.98,
-        "optimalHr": 152,
-        "hrRange": "146-158 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "6:26/km",
         "steps": [
           {
@@ -5969,7 +6380,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-22",
     "endDate": "2027-03-28",
-    "targetKm": 67.93,
+    "targetKm": 68.68,
     "runs": [
       {
         "id": "kw12-2027-lauf1",
@@ -5997,8 +6408,8 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "type": "hm-pace",
         "distanceKm": 9.01,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "5:53/km",
         "steps": [
           {
@@ -6040,10 +6451,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.79,
+        "distanceKm": 9.54,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:50/km",
+        "pace": "7:05/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -6056,10 +6467,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -6110,7 +6531,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-29",
     "endDate": "2027-04-04",
-    "targetKm": 60.02,
+    "targetKm": 60.77,
     "runs": [
       {
         "id": "kw13-2027-lauf1",
@@ -6138,8 +6559,8 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "type": "hm-pace",
         "distanceKm": 9.02,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "5:53/km",
         "steps": [
           {
@@ -6181,10 +6602,10 @@ export const trainingPlan = [
         "order": 3,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 8.81,
+        "distanceKm": 9.56,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:49/km",
+        "pace": "7:04/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -6197,10 +6618,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -6251,7 +6682,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-05",
     "endDate": "2027-04-11",
-    "targetKm": 44.98,
+    "targetKm": 45.73,
     "runs": [
       {
         "id": "kw14-2027-lauf1",
@@ -6259,8 +6690,8 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "type": "hm-pace",
         "distanceKm": 9.04,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
+        "optimalHr": 176,
+        "hrRange": "170-184 bpm",
         "pace": "5:52/km",
         "steps": [
           {
@@ -6302,10 +6733,10 @@ export const trainingPlan = [
         "order": 2,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 7.38,
+        "distanceKm": 8.13,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:47/km",
+        "pace": "7:04/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -6318,10 +6749,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
@@ -6372,7 +6813,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-12",
     "endDate": "2027-04-18",
-    "targetKm": 34.91,
+    "targetKm": 35.66,
     "runs": [
       {
         "id": "kw15-2027-lauf1",
@@ -6399,10 +6840,10 @@ export const trainingPlan = [
         "order": 2,
         "title": "Easy Run + Strides",
         "type": "strides",
-        "distanceKm": 4.8,
+        "distanceKm": 5.55,
         "optimalHr": 146,
         "hrRange": "140-152 bpm",
-        "pace": "6:40/km",
+        "pace": "7:07/km",
         "steps": [
           {
             "label": "Easy Run",
@@ -6415,10 +6856,20 @@ export const trainingPlan = [
           {
             "label": "6 × 20 s Strides",
             "minutes": 2,
-            "hr": 170,
-            "hrRange": "kurz schnell, volle Pause",
+            "hr": null,
+            "hrRange": "",
             "pace": "4:20/km",
-            "km": 0.46
+            "km": 0.46,
+            "note": "Fast but relaxed. Not an all-out sprint."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "minutes": 7.5,
+            "hr": 138,
+            "hrRange": "130-145 bpm",
+            "pace": "10:00/km",
+            "km": 0.75,
+            "note": "Walk or very easy jog until breathing is fully controlled."
           }
         ]
       },
