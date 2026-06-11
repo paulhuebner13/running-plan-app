@@ -1,6 +1,6 @@
-// Auto-corrected training plan.
-// Distances are calculated from minutes and pace.
-// Formula: km = minutes / pace_in_minutes_per_km.
+// Categorised half marathon training plan.
+// Every distance is calculated from the displayed minutes and pace.
+// Goal race: 18 April 2027.
 
 export const trainingPlan = [
   {
@@ -8,124 +8,111 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-08",
     "endDate": "2026-06-14",
-    "targetKm": 39.75,
+    "targetKm": 42.03,
     "runs": [
       {
         "id": "kw24-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 9.01,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:33/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.07,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:49/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 68,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:33/km",
-            "km": 9.01
+            "label": "Warm-up",
+            "minutes": 12,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:35/km",
+            "km": 1.58
+          },
+          {
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:20/km",
+            "km": 5.53
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:20/km",
+            "km": 0.96
           }
         ]
       },
       {
         "id": "kw24-2026-lauf2",
         "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 6.44,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:47/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.79,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:22/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 10,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:33/km",
-            "km": 1.32
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:35/km",
+            "km": 6.33
           },
           {
-            "label": "Schwelle",
-            "minutes": 24,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:47/km",
-            "km": 4.15
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:15/km",
-            "km": 0.97
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw24-2026-lauf3",
         "order": 3,
-        "title": "Locker",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 8.97,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:15/km",
+        "distanceKm": 11.21,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:35/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 74,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:15/km",
-            "km": 8.97
+            "label": "Easy Run",
+            "minutes": 85,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:35/km",
+            "km": 11.21
           }
         ]
       },
       {
         "id": "kw24-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
+        "title": "Long Run",
         "type": "long",
-        "distanceKm": 15.33,
+        "distanceKm": 15.96,
         "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:30/km",
+        "hrRange": "146-158 bpm",
+        "pace": "7:35/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 115,
+            "label": "Long Run",
+            "minutes": 121,
             "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:30/km",
-            "km": 15.33
+            "hrRange": "146-158 bpm",
+            "pace": "7:35/km",
+            "km": 15.96
           }
         ]
-      },
-      {
-        "id": "kw24-2026-extra",
-        "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 4.85,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:15/km",
-        "steps": [
-          {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:15/km",
-            "km": 4.85
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -134,132 +121,119 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-15",
     "endDate": "2026-06-21",
-    "targetKm": 43.1,
+    "targetKm": 45.06,
     "runs": [
       {
         "id": "kw25-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 9.82,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:32/km",
+        "title": "Interval Run",
+        "type": "interval",
+        "distanceKm": 7.47,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:42/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 74,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:32/km",
-            "km": 9.82
+            "label": "Warm-up",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:34/km",
+            "km": 1.98
+          },
+          {
+            "label": "4 × 4 min",
+            "minutes": 16,
+            "hr": 184,
+            "hrRange": "180-192 bpm",
+            "pace": "4:59/km",
+            "km": 3.21
+          },
+          {
+            "label": "3 × 3 min Easy Jog",
+            "minutes": 9,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "8:19/km",
+            "km": 1.08
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:19/km",
+            "km": 1.2
           }
         ]
       },
       {
         "id": "kw25-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 6.66,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:54/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.8,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:21/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 10,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:32/km",
-            "km": 1.33
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:34/km",
+            "km": 6.34
           },
           {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:54/km",
-            "km": 3.27
-          },
-          {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "8:14/km",
-            "km": 1.09
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:14/km",
-            "km": 0.97
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw25-2026-lauf3",
         "order": 3,
-        "title": "Locker",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 10.32,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:14/km",
+        "distanceKm": 13.74,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:34/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 85,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:14/km",
-            "km": 10.32
+            "label": "Easy Run",
+            "minutes": 104,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:34/km",
+            "km": 13.74
           }
         ]
       },
       {
         "id": "kw25-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
+        "title": "Long Run",
         "type": "long",
-        "distanceKm": 16.3,
+        "distanceKm": 17.05,
         "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:29/km",
+        "hrRange": "146-158 bpm",
+        "pace": "7:34/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 122,
+            "label": "Long Run",
+            "minutes": 129,
             "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:29/km",
-            "km": 16.3
+            "hrRange": "146-158 bpm",
+            "pace": "7:34/km",
+            "km": 17.05
           }
         ]
-      },
-      {
-        "id": "kw25-2026-extra",
-        "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 4.86,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:14/km",
-        "steps": [
-          {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:14/km",
-            "km": 4.86
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -268,124 +242,111 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-22",
     "endDate": "2026-06-28",
-    "targetKm": 35.99,
+    "targetKm": 48.01,
     "runs": [
       {
         "id": "kw26-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 8.12,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:31/km",
+        "title": "Threshold Run",
+        "type": "threshold",
+        "distanceKm": 6.76,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:31/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 61,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:31/km",
-            "km": 8.12
+            "label": "Warm-up",
+            "minutes": 12,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:33/km",
+            "km": 1.59
+          },
+          {
+            "label": "Threshold",
+            "minutes": 24,
+            "hr": 178,
+            "hrRange": "174-183 bpm",
+            "pace": "5:42/km",
+            "km": 4.21
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:18/km",
+            "km": 0.96
           }
         ]
       },
       {
         "id": "kw26-2026-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 6.31,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "5:44/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.82,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:20/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 10,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:31/km",
-            "km": 1.33
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:33/km",
+            "km": 6.36
           },
           {
-            "label": "Schwelle",
-            "minutes": 23,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:44/km",
-            "km": 4.01
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:13/km",
-            "km": 0.97
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw26-2026-lauf3",
         "order": 3,
-        "title": "Locker",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 8.03,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:13/km",
+        "distanceKm": 16.42,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:33/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 66,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:13/km",
-            "km": 8.03
+            "label": "Easy Run",
+            "minutes": 124,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:33/km",
+            "km": 16.42
           }
         ]
       },
       {
         "id": "kw26-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
+        "title": "Long Run",
         "type": "long",
-        "distanceKm": 13.53,
+        "distanceKm": 18.01,
         "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:28/km",
+        "hrRange": "146-158 bpm",
+        "pace": "7:33/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 101,
+            "label": "Long Run",
+            "minutes": 136,
             "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:28/km",
-            "km": 13.53
+            "hrRange": "146-158 bpm",
+            "pace": "7:33/km",
+            "km": 18.01
           }
         ]
-      },
-      {
-        "id": "kw26-2026-extra",
-        "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 4.87,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:13/km",
-        "steps": [
-          {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:13/km",
-            "km": 4.87
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -394,124 +355,111 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-06-29",
     "endDate": "2026-07-05",
-    "targetKm": 47.52,
+    "targetKm": 38.98,
     "runs": [
       {
         "id": "kw27-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 10.67,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:30/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.12,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:46/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 80,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:30/km",
-            "km": 10.67
+            "label": "Warm-up",
+            "minutes": 12,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:32/km",
+            "km": 1.59
+          },
+          {
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:17/km",
+            "km": 5.57
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:18/km",
+            "km": 0.96
           }
         ]
       },
       {
         "id": "kw27-2026-lauf2",
         "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 7.73,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:43/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.83,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:19/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 10,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:30/km",
-            "km": 1.33
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:32/km",
+            "km": 6.37
           },
           {
-            "label": "Schwelle",
-            "minutes": 31,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:43/km",
-            "km": 5.42
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:12/km",
-            "km": 0.98
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw27-2026-lauf3",
         "order": 3,
-        "title": "Locker",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 11.71,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:12/km",
+        "distanceKm": 10.09,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:32/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 96,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:12/km",
-            "km": 11.71
+            "label": "Easy Run",
+            "minutes": 76,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:32/km",
+            "km": 10.09
           }
         ]
       },
       {
         "id": "kw27-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
+        "title": "Long Run",
         "type": "long",
-        "distanceKm": 17.41,
+        "distanceKm": 13.94,
         "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:28/km",
+        "hrRange": "146-158 bpm",
+        "pace": "7:32/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 130,
+            "label": "Long Run",
+            "minutes": 105,
             "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:28/km",
-            "km": 17.41
+            "hrRange": "146-158 bpm",
+            "pace": "7:32/km",
+            "km": 13.94
           }
         ]
-      },
-      {
-        "id": "kw27-2026-extra",
-        "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 4.88,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:12/km",
-        "steps": [
-          {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:12/km",
-            "km": 4.88
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -520,124 +468,139 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-06",
     "endDate": "2026-07-12",
-    "targetKm": 50.65,
+    "targetKm": 49.95,
     "runs": [
       {
         "id": "kw28-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.36,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:29/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.04,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:17/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 85,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:29/km",
-            "km": 11.36
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:17/km",
+            "km": 6.04
           }
         ]
       },
       {
         "id": "kw28-2026-lauf2",
         "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 8.44,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:41/km",
+        "title": "Interval Run",
+        "type": "interval",
+        "distanceKm": 7.53,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:38/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:29/km",
-            "km": 1.87
+            "pace": "7:31/km",
+            "km": 2.0
           },
           {
-            "label": "Schwelle",
-            "minutes": 29,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:41/km",
-            "km": 5.1
+            "label": "4 × 4 min",
+            "minutes": 16,
+            "hr": 184,
+            "hrRange": "180-192 bpm",
+            "pace": "4:57/km",
+            "km": 3.23
           },
           {
-            "label": "Auslaufen",
-            "minutes": 12,
+            "label": "3 × 3 min Easy Jog",
+            "minutes": 9,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "8:17/km",
+            "km": 1.09
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "8:11/km",
-            "km": 1.47
+            "pace": "8:17/km",
+            "km": 1.21
           }
         ]
       },
       {
         "id": "kw28-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 12.46,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:11/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.85,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:18/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 102,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:11/km",
-            "km": 12.46
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:31/km",
+            "km": 6.39
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw28-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 18.39,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:27/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.57,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:31/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 137,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:27/km",
-            "km": 18.39
+            "label": "Easy Run",
+            "minutes": 87,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:31/km",
+            "km": 11.57
           }
         ]
       },
       {
-        "id": "kw28-2026-extra",
+        "id": "kw28-2026-lauf5",
         "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 4.89,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:11/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 17.96,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:31/km",
         "steps": [
           {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:11/km",
-            "km": 4.89
+            "label": "Long Run",
+            "minutes": 135,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:31/km",
+            "km": 17.96
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -646,152 +609,139 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-13",
     "endDate": "2026-07-19",
-    "targetKm": 52.56,
+    "targetKm": 53.05,
     "runs": [
       {
         "id": "kw29-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 9.91,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:28/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.05,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:16/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 74,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:28/km",
-            "km": 9.91
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:16/km",
+            "km": 6.05
           }
         ]
       },
       {
         "id": "kw29-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 8,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:50/km",
+        "title": "Threshold Run",
+        "type": "threshold",
+        "distanceKm": 7.53,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:22/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:28/km",
-            "km": 1.88
+            "pace": "7:30/km",
+            "km": 1.6
           },
           {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:50/km",
-            "km": 3.31
+            "label": "Threshold",
+            "minutes": 28,
+            "hr": 178,
+            "hrRange": "174-183 bpm",
+            "pace": "5:39/km",
+            "km": 4.96
           },
           {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "8:10/km",
-            "km": 1.1
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 14,
+            "label": "Cool-down",
+            "minutes": 8,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "8:10/km",
-            "km": 1.71
+            "pace": "8:16/km",
+            "km": 0.97
           }
         ]
       },
       {
         "id": "kw29-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 8.2,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:10/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.86,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:17/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 67,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:10/km",
-            "km": 8.2
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:30/km",
+            "km": 6.4
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw29-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 19.1,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:26/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 13.6,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:30/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 142,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:26/km",
-            "km": 19.1
+            "label": "Easy Run",
+            "minutes": 102,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:30/km",
+            "km": 13.6
           }
         ]
       },
       {
         "id": "kw29-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 7.35,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:10/km",
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 19.01,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:16/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 60,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:10/km",
-            "km": 7.35
+            "label": "Easy Long Run",
+            "minutes": 111,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:30/km",
+            "km": 14.8
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 27,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "6:25/km",
+            "km": 4.21
           }
         ]
-      },
-      {
-        "id": "kw29-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 4.9,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:10/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:10/km",
-            "km": 4.9
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -800,152 +750,131 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-20",
     "endDate": "2026-07-26",
-    "targetKm": 54.65,
+    "targetKm": 56.03,
     "runs": [
       {
         "id": "kw30-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 10.34,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:27/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.06,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:15/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 77,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:27/km",
-            "km": 10.34
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:15/km",
+            "km": 6.06
           }
         ]
       },
       {
         "id": "kw30-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 8.39,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:49/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.18,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:43/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:27/km",
-            "km": 1.88
+            "pace": "7:30/km",
+            "km": 1.6
           },
           {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:49/km",
-            "km": 3.32
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:14/km",
+            "km": 5.61
           },
           {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "8:09/km",
-            "km": 1.1
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 17,
+            "label": "Cool-down",
+            "minutes": 8,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "8:09/km",
-            "km": 2.09
+            "pace": "8:15/km",
+            "km": 0.97
           }
         ]
       },
       {
         "id": "kw30-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 8.59,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:09/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.86,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:17/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 70,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:09/km",
-            "km": 8.59
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:30/km",
+            "km": 6.4
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw30-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 20.09,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:25/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 14.93,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:30/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 149,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:25/km",
-            "km": 20.09
+            "label": "Easy Run",
+            "minutes": 112,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:30/km",
+            "km": 14.93
           }
         ]
       },
       {
         "id": "kw30-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 7.24,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:09/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 20.0,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:30/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 59,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:09/km",
-            "km": 7.24
+            "label": "Long Run",
+            "minutes": 150,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:30/km",
+            "km": 20.0
           }
         ]
-      },
-      {
-        "id": "kw30-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 4.91,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:09/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:09/km",
-            "km": 4.91
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -954,56 +883,1148 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-07-27",
     "endDate": "2026-08-02",
-    "targetKm": 43.21,
+    "targetKm": 45.01,
     "runs": [
       {
         "id": "kw31-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 9.82,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:26/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.2,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:42/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 73,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:26/km",
-            "km": 9.82
+            "label": "Warm-up",
+            "minutes": 12,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:29/km",
+            "km": 1.6
+          },
+          {
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:13/km",
+            "km": 5.63
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:14/km",
+            "km": 0.97
           }
         ]
       },
       {
         "id": "kw31-2026-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 6.42,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "5:37/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.87,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:17/km",
         "steps": [
           {
-            "label": "Einlaufen",
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:29/km",
+            "km": 6.41
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
+          }
+        ]
+      },
+      {
+        "id": "kw31-2026-lauf3",
+        "order": 3,
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 13.9,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:29/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 104,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:29/km",
+            "km": 13.9
+          }
+        ]
+      },
+      {
+        "id": "kw31-2026-lauf4",
+        "order": 4,
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 16.04,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:29/km",
+        "steps": [
+          {
+            "label": "Long Run",
+            "minutes": 120,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:29/km",
+            "km": 16.04
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 32,
+    "year": 2026,
+    "startDate": "2026-08-03",
+    "endDate": "2026-08-09",
+    "targetKm": 57.98,
+    "runs": [
+      {
+        "id": "kw32-2026-lauf1",
+        "order": 1,
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.07,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:14/km",
+        "steps": [
+          {
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:14/km",
+            "km": 6.07
+          }
+        ]
+      },
+      {
+        "id": "kw32-2026-lauf2",
+        "order": 2,
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 9.12,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:35/km",
+        "steps": [
+          {
+            "label": "Easy Start",
+            "minutes": 24,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:28/km",
+            "km": 3.21
+          },
+          {
+            "label": "Steady Middle",
+            "minutes": 21,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "6:12/km",
+            "km": 3.39
+          },
+          {
+            "label": "Strong Finish",
+            "minutes": 15,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:57/km",
+            "km": 2.52
+          }
+        ]
+      },
+      {
+        "id": "kw32-2026-lauf3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.89,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:15/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:28/km",
+            "km": 6.43
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
+          }
+        ]
+      },
+      {
+        "id": "kw32-2026-lauf4",
+        "order": 4,
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 14.87,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:28/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 111,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:28/km",
+            "km": 14.87
+          }
+        ]
+      },
+      {
+        "id": "kw32-2026-lauf5",
+        "order": 5,
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 21.03,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:28/km",
+        "steps": [
+          {
+            "label": "Long Run",
+            "minutes": 157,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:28/km",
+            "km": 21.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 33,
+    "year": 2026,
+    "startDate": "2026-08-10",
+    "endDate": "2026-08-16",
+    "targetKm": 59.98,
+    "runs": [
+      {
+        "id": "kw33-2026-lauf1",
+        "order": 1,
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.09,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:13/km",
+        "steps": [
+          {
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:13/km",
+            "km": 6.09
+          }
+        ]
+      },
+      {
+        "id": "kw33-2026-lauf2",
+        "order": 2,
+        "title": "Interval Run",
+        "type": "interval",
+        "distanceKm": 7.61,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:34/km",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:27/km",
+            "km": 2.01
+          },
+          {
+            "label": "4 × 4 min",
+            "minutes": 16,
+            "hr": 184,
+            "hrRange": "180-192 bpm",
+            "pace": "4:53/km",
+            "km": 3.28
+          },
+          {
+            "label": "3 × 3 min Easy Jog",
+            "minutes": 9,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "8:13/km",
+            "km": 1.1
+          },
+          {
+            "label": "Cool-down",
             "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
+            "pace": "8:13/km",
+            "km": 1.22
+          }
+        ]
+      },
+      {
+        "id": "kw33-2026-lauf3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.25,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:16/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:27/km",
+            "km": 7.79
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
+          }
+        ]
+      },
+      {
+        "id": "kw33-2026-lauf4",
+        "order": 4,
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 15.97,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:27/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 119,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:27/km",
+            "km": 15.97
+          }
+        ]
+      },
+      {
+        "id": "kw33-2026-lauf5",
+        "order": 5,
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 22.06,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:12/km",
+        "steps": [
+          {
+            "label": "Easy Long Run",
+            "minutes": 128,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:27/km",
+            "km": 17.18
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 31,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "6:21/km",
+            "km": 4.88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 34,
+    "year": 2026,
+    "startDate": "2026-08-17",
+    "endDate": "2026-08-23",
+    "targetKm": 62.98,
+    "runs": [
+      {
+        "id": "kw34-2026-lauf1",
+        "order": 1,
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.1,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:12/km",
+        "steps": [
+          {
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:12/km",
+            "km": 6.1
+          }
+        ]
+      },
+      {
+        "id": "kw34-2026-lauf2",
+        "order": 2,
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.27,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:39/km",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "minutes": 12,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
             "pace": "7:26/km",
-            "km": 1.35
+            "km": 1.61
           },
           {
-            "label": "Schwelle",
-            "minutes": 23,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:37/km",
-            "km": 4.09
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:10/km",
+            "km": 5.68
           },
           {
-            "label": "Auslaufen",
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:12/km",
+            "km": 0.98
+          }
+        ]
+      },
+      {
+        "id": "kw34-2026-lauf3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.26,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:16/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:26/km",
+            "km": 7.8
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
+          }
+        ]
+      },
+      {
+        "id": "kw34-2026-lauf4",
+        "order": 4,
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 17.35,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:26/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 129,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:26/km",
+            "km": 17.35
+          }
+        ]
+      },
+      {
+        "id": "kw34-2026-lauf5",
+        "order": 5,
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 23.0,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:26/km",
+        "steps": [
+          {
+            "label": "Long Run",
+            "minutes": 171,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:26/km",
+            "km": 23.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 35,
+    "year": 2026,
+    "startDate": "2026-08-24",
+    "endDate": "2026-08-30",
+    "targetKm": 49.98,
+    "runs": [
+      {
+        "id": "kw35-2026-lauf1",
+        "order": 1,
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.5,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:11/km",
+        "steps": [
+          {
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:11/km",
+            "km": 5.5
+          }
+        ]
+      },
+      {
+        "id": "kw35-2026-lauf2",
+        "order": 2,
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.29,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:38/km",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "minutes": 12,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:25/km",
+            "km": 1.62
+          },
+          {
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:09/km",
+            "km": 5.69
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:11/km",
+            "km": 0.98
+          }
+        ]
+      },
+      {
+        "id": "kw35-2026-lauf3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.93,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:13/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:25/km",
+            "km": 6.47
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
+          }
+        ]
+      },
+      {
+        "id": "kw35-2026-lauf4",
+        "order": 4,
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.19,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:25/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 83,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:25/km",
+            "km": 11.19
+          }
+        ]
+      },
+      {
+        "id": "kw35-2026-lauf5",
+        "order": 5,
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 18.07,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:25/km",
+        "steps": [
+          {
+            "label": "Long Run",
+            "minutes": 134,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:25/km",
+            "km": 18.07
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 36,
+    "year": 2026,
+    "startDate": "2026-08-31",
+    "endDate": "2026-09-06",
+    "targetKm": 62.95,
+    "runs": [
+      {
+        "id": "kw36-2026-lauf1",
+        "order": 1,
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.12,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:10/km",
+        "steps": [
+          {
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:10/km",
+            "km": 6.12
+          }
+        ]
+      },
+      {
+        "id": "kw36-2026-lauf2",
+        "order": 2,
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 9.21,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:31/km",
+        "steps": [
+          {
+            "label": "Easy Start",
+            "minutes": 24,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:24/km",
+            "km": 3.24
+          },
+          {
+            "label": "Steady Middle",
+            "minutes": 21,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "6:08/km",
+            "km": 3.42
+          },
+          {
+            "label": "Strong Finish",
+            "minutes": 15,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:53/km",
+            "km": 2.55
+          }
+        ]
+      },
+      {
+        "id": "kw36-2026-lauf3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.3,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:14/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:24/km",
+            "km": 7.84
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
+          }
+        ]
+      },
+      {
+        "id": "kw36-2026-lauf4",
+        "order": 4,
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 16.35,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:24/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 121,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:24/km",
+            "km": 16.35
+          }
+        ]
+      },
+      {
+        "id": "kw36-2026-lauf5",
+        "order": 5,
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 22.97,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:24/km",
+        "steps": [
+          {
+            "label": "Long Run",
+            "minutes": 170,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:24/km",
+            "km": 22.97
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 37,
+    "year": 2026,
+    "startDate": "2026-09-07",
+    "endDate": "2026-09-13",
+    "targetKm": 68.68,
+    "runs": [
+      {
+        "id": "kw37-2026-lauf1",
+        "order": 1,
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.12,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:10/km",
+        "steps": [
+          {
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:10/km",
+            "km": 6.12
+          }
+        ]
+      },
+      {
+        "id": "kw37-2026-lauf2",
+        "order": 2,
+        "title": "Interval Run",
+        "type": "interval",
+        "distanceKm": 7.66,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:32/km",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:23/km",
+            "km": 2.03
+          },
+          {
+            "label": "4 × 4 min",
+            "minutes": 16,
+            "hr": 184,
+            "hrRange": "180-192 bpm",
+            "pace": "4:50/km",
+            "km": 3.31
+          },
+          {
+            "label": "3 × 3 min Easy Jog",
+            "minutes": 9,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "8:10/km",
+            "km": 1.1
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:10/km",
+            "km": 1.22
+          }
+        ]
+      },
+      {
+        "id": "kw37-2026-lauf3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.32,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:13/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:23/km",
+            "km": 7.86
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
+          }
+        ]
+      },
+      {
+        "id": "kw37-2026-lauf4",
+        "order": 4,
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 22.64,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:30/km",
+        "steps": [
+          {
+            "label": "Easy Start",
+            "minutes": 59,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:23/km",
+            "km": 7.99
+          },
+          {
+            "label": "Steady Middle",
+            "minutes": 51,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "6:07/km",
+            "km": 8.34
+          },
+          {
+            "label": "Strong Finish",
+            "minutes": 37,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:52/km",
+            "km": 6.31
+          }
+        ]
+      },
+      {
+        "id": "kw37-2026-lauf5",
+        "order": 5,
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 23.94,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:09/km",
+        "steps": [
+          {
+            "label": "Easy Long Run",
+            "minutes": 138,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:23/km",
+            "km": 18.69
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 33,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "6:17/km",
+            "km": 5.25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 38,
+    "year": 2026,
+    "startDate": "2026-09-14",
+    "endDate": "2026-09-20",
+    "targetKm": 68.03,
+    "runs": [
+      {
+        "id": "kw38-2026-lauf1",
+        "order": 1,
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.13,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:09/km",
+        "steps": [
+          {
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:09/km",
+            "km": 6.13
+          }
+        ]
+      },
+      {
+        "id": "kw38-2026-lauf2",
+        "order": 2,
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 9.99,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:30/km",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "minutes": 12,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:22/km",
+            "km": 1.63
+          },
+          {
+            "label": "Steady",
+            "minutes": 45,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:06/km",
+            "km": 7.38
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:09/km",
+            "km": 0.98
+          }
+        ]
+      },
+      {
+        "id": "kw38-2026-lauf3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.33,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:12/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:22/km",
+            "km": 7.87
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
+          }
+        ]
+      },
+      {
+        "id": "kw38-2026-lauf4",
+        "order": 4,
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 19.55,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:22/km",
+        "steps": [
+          {
+            "label": "Easy Run",
+            "minutes": 144,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:22/km",
+            "km": 19.55
+          }
+        ]
+      },
+      {
+        "id": "kw38-2026-lauf5",
+        "order": 5,
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 24.03,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:22/km",
+        "steps": [
+          {
+            "label": "Long Run",
+            "minutes": 177,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:22/km",
+            "km": 24.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 39,
+    "year": 2026,
+    "startDate": "2026-09-21",
+    "endDate": "2026-09-27",
+    "targetKm": 53.94,
+    "runs": [
+      {
+        "id": "kw39-2026-lauf1",
+        "order": 1,
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.53,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:08/km",
+        "steps": [
+          {
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:08/km",
+            "km": 5.53
+          }
+        ]
+      },
+      {
+        "id": "kw39-2026-lauf2",
+        "order": 2,
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.36,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:35/km",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "minutes": 12,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:21/km",
+            "km": 1.63
+          },
+          {
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:05/km",
+            "km": 5.75
+          },
+          {
+            "label": "Cool-down",
             "minutes": 8,
             "hr": 145,
             "hrRange": "138-150 bpm",
@@ -1013,1225 +2034,72 @@ export const trainingPlan = [
         ]
       },
       {
-        "id": "kw31-2026-lauf3",
-        "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.43,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:08/km",
-        "steps": [
-          {
-            "label": "Locker",
-            "minutes": 93,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:08/km",
-            "km": 11.43
-          }
-        ]
-      },
-      {
-        "id": "kw31-2026-lauf4",
-        "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 15.54,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:24/km",
-        "steps": [
-          {
-            "label": "Longrun",
-            "minutes": 115,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:24/km",
-            "km": 15.54
-          }
-        ]
-      },
-      {
-        "id": "kw31-2026-extra",
-        "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 4.92,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:08/km",
-        "steps": [
-          {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:08/km",
-            "km": 4.92
-          }
-        ],
-        "optional": true
-      }
-    ]
-  },
-  {
-    "kw": 32,
-    "year": 2026,
-    "startDate": "2026-08-03",
-    "endDate": "2026-08-09",
-    "targetKm": 57.63,
-    "runs": [
-      {
-        "id": "kw32-2026-lauf1",
-        "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 10.79,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:25/km",
-        "steps": [
-          {
-            "label": "Zone 2",
-            "minutes": 80,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:25/km",
-            "km": 10.79
-          }
-        ]
-      },
-      {
-        "id": "kw32-2026-lauf2",
-        "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 9.62,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:36/km",
-        "steps": [
-          {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:25/km",
-            "km": 1.89
-          },
-          {
-            "label": "Schwelle",
-            "minutes": 35,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:36/km",
-            "km": 6.25
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 12,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:07/km",
-            "km": 1.48
-          }
-        ]
-      },
-      {
-        "id": "kw32-2026-lauf3",
-        "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 8.87,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:07/km",
-        "steps": [
-          {
-            "label": "Locker",
-            "minutes": 72,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:07/km",
-            "km": 8.87
-          }
-        ]
-      },
-      {
-        "id": "kw32-2026-lauf4",
-        "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 21.08,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:24/km",
-        "steps": [
-          {
-            "label": "Longrun",
-            "minutes": 156,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:24/km",
-            "km": 21.08
-          }
-        ]
-      },
-      {
-        "id": "kw32-2026-lauf5",
-        "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 7.27,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:07/km",
-        "steps": [
-          {
-            "label": "Locker extra",
-            "minutes": 59,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:07/km",
-            "km": 7.27
-          }
-        ]
-      },
-      {
-        "id": "kw32-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 4.93,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:07/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:07/km",
-            "km": 4.93
-          }
-        ],
-        "optional": true
-      }
-    ]
-  },
-  {
-    "kw": 33,
-    "year": 2026,
-    "startDate": "2026-08-10",
-    "endDate": "2026-08-16",
-    "targetKm": 58.8,
-    "runs": [
-      {
-        "id": "kw33-2026-lauf1",
-        "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.22,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:24/km",
-        "steps": [
-          {
-            "label": "Zone 2",
-            "minutes": 83,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:24/km",
-            "km": 11.22
-          }
-        ]
-      },
-      {
-        "id": "kw33-2026-lauf2",
-        "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 9.08,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:46/km",
-        "steps": [
-          {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:24/km",
-            "km": 1.89
-          },
-          {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:46/km",
-            "km": 3.36
-          },
-          {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "8:06/km",
-            "km": 1.11
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 22,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:06/km",
-            "km": 2.72
-          }
-        ]
-      },
-      {
-        "id": "kw33-2026-lauf3",
-        "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 9.14,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:06/km",
-        "steps": [
-          {
-            "label": "Locker",
-            "minutes": 74,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:06/km",
-            "km": 9.14
-          }
-        ]
-      },
-      {
-        "id": "kw33-2026-lauf4",
-        "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 22.08,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:23/km",
-        "steps": [
-          {
-            "label": "Longrun",
-            "minutes": 163,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:23/km",
-            "km": 22.08
-          }
-        ]
-      },
-      {
-        "id": "kw33-2026-lauf5",
-        "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 7.28,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:06/km",
-        "steps": [
-          {
-            "label": "Locker extra",
-            "minutes": 59,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:06/km",
-            "km": 7.28
-          }
-        ]
-      },
-      {
-        "id": "kw33-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 4.94,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:06/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:06/km",
-            "km": 4.94
-          }
-        ],
-        "optional": true
-      }
-    ]
-  },
-  {
-    "kw": 34,
-    "year": 2026,
-    "startDate": "2026-08-17",
-    "endDate": "2026-08-23",
-    "targetKm": 60.77,
-    "runs": [
-      {
-        "id": "kw34-2026-lauf1",
-        "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.51,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:23/km",
-        "steps": [
-          {
-            "label": "Zone 2",
-            "minutes": 85,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:23/km",
-            "km": 11.51
-          }
-        ]
-      },
-      {
-        "id": "kw34-2026-lauf2",
-        "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 9.47,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:45/km",
-        "steps": [
-          {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:23/km",
-            "km": 1.9
-          },
-          {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:45/km",
-            "km": 3.37
-          },
-          {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "8:05/km",
-            "km": 1.11
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 25,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:05/km",
-            "km": 3.09
-          }
-        ]
-      },
-      {
-        "id": "kw34-2026-lauf3",
-        "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 9.53,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:05/km",
-        "steps": [
-          {
-            "label": "Locker",
-            "minutes": 77,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:05/km",
-            "km": 9.53
-          }
-        ]
-      },
-      {
-        "id": "kw34-2026-lauf4",
-        "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 23.08,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:22/km",
-        "steps": [
-          {
-            "label": "Longrun",
-            "minutes": 170,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:22/km",
-            "km": 23.08
-          }
-        ]
-      },
-      {
-        "id": "kw34-2026-lauf5",
-        "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 7.18,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:05/km",
-        "steps": [
-          {
-            "label": "Locker extra",
-            "minutes": 58,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:05/km",
-            "km": 7.18
-          }
-        ]
-      },
-      {
-        "id": "kw34-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 4.95,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:05/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:05/km",
-            "km": 4.95
-          }
-        ],
-        "optional": true
-      }
-    ]
-  },
-  {
-    "kw": 35,
-    "year": 2026,
-    "startDate": "2026-08-24",
-    "endDate": "2026-08-30",
-    "targetKm": 48.49,
-    "runs": [
-      {
-        "id": "kw35-2026-lauf1",
-        "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 10.86,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:22/km",
-        "steps": [
-          {
-            "label": "Zone 2",
-            "minutes": 80,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:22/km",
-            "km": 10.86
-          }
-        ]
-      },
-      {
-        "id": "kw35-2026-lauf2",
-        "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 7.05,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "5:32/km",
-        "steps": [
-          {
-            "label": "Einlaufen",
-            "minutes": 10,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:22/km",
-            "km": 1.36
-          },
-          {
-            "label": "Schwelle",
-            "minutes": 26,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:32/km",
-            "km": 4.7
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:04/km",
-            "km": 0.99
-          }
-        ]
-      },
-      {
-        "id": "kw35-2026-lauf3",
-        "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 12.89,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:04/km",
-        "steps": [
-          {
-            "label": "Locker",
-            "minutes": 104,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:04/km",
-            "km": 12.89
-          }
-        ]
-      },
-      {
-        "id": "kw35-2026-lauf4",
-        "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 17.69,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:21/km",
-        "steps": [
-          {
-            "label": "Longrun",
-            "minutes": 130,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:21/km",
-            "km": 17.69
-          }
-        ]
-      },
-      {
-        "id": "kw35-2026-extra",
-        "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 4.96,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:04/km",
-        "steps": [
-          {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:04/km",
-            "km": 4.96
-          }
-        ],
-        "optional": true
-      }
-    ]
-  },
-  {
-    "kw": 36,
-    "year": 2026,
-    "startDate": "2026-08-31",
-    "endDate": "2026-09-06",
-    "targetKm": 62.96,
-    "runs": [
-      {
-        "id": "kw36-2026-lauf1",
-        "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.81,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:22/km",
-        "steps": [
-          {
-            "label": "Zone 2",
-            "minutes": 87,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:22/km",
-            "km": 11.81
-          }
-        ]
-      },
-      {
-        "id": "kw36-2026-lauf2",
-        "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 10.66,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:30/km",
-        "steps": [
-          {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:22/km",
-            "km": 1.9
-          },
-          {
-            "label": "Schwelle",
-            "minutes": 40,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:30/km",
-            "km": 7.27
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 12,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:04/km",
-            "km": 1.49
-          }
-        ]
-      },
-      {
-        "id": "kw36-2026-lauf3",
-        "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 9.67,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:04/km",
-        "steps": [
-          {
-            "label": "Locker",
-            "minutes": 78,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:04/km",
-            "km": 9.67
-          }
-        ]
-      },
-      {
-        "id": "kw36-2026-lauf4",
-        "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 23.13,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:21/km",
-        "steps": [
-          {
-            "label": "Longrun",
-            "minutes": 170,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:21/km",
-            "km": 23.13
-          }
-        ]
-      },
-      {
-        "id": "kw36-2026-lauf5",
-        "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 7.69,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:04/km",
-        "steps": [
-          {
-            "label": "Locker extra",
-            "minutes": 62,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:04/km",
-            "km": 7.69
-          }
-        ]
-      },
-      {
-        "id": "kw36-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 4.96,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:04/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:04/km",
-            "km": 4.96
-          }
-        ],
-        "optional": true
-      }
-    ]
-  },
-  {
-    "kw": 37,
-    "year": 2026,
-    "startDate": "2026-09-07",
-    "endDate": "2026-09-13",
-    "targetKm": 64.16,
-    "runs": [
-      {
-        "id": "kw37-2026-lauf1",
-        "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 12.11,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:21/km",
-        "steps": [
-          {
-            "label": "Zone 2",
-            "minutes": 89,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:21/km",
-            "km": 12.11
-          }
-        ]
-      },
-      {
-        "id": "kw37-2026-lauf2",
-        "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 10.02,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:42/km",
-        "steps": [
-          {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:21/km",
-            "km": 1.9
-          },
-          {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:42/km",
-            "km": 3.4
-          },
-          {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "8:03/km",
-            "km": 1.12
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 29,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:03/km",
-            "km": 3.6
-          }
-        ]
-      },
-      {
-        "id": "kw37-2026-lauf3",
-        "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.06,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:03/km",
-        "steps": [
-          {
-            "label": "Locker",
-            "minutes": 81,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:03/km",
-            "km": 10.06
-          }
-        ]
-      },
-      {
-        "id": "kw37-2026-lauf4",
-        "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 24.27,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:20/km",
-        "steps": [
-          {
-            "label": "Longrun",
-            "minutes": 178,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:20/km",
-            "km": 24.27
-          }
-        ]
-      },
-      {
-        "id": "kw37-2026-lauf5",
-        "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 7.7,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:03/km",
-        "steps": [
-          {
-            "label": "Locker extra",
-            "minutes": 62,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:03/km",
-            "km": 7.7
-          }
-        ]
-      },
-      {
-        "id": "kw37-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 4.97,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:03/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:03/km",
-            "km": 4.97
-          }
-        ],
-        "optional": true
-      }
-    ]
-  },
-  {
-    "kw": 38,
-    "year": 2026,
-    "startDate": "2026-09-14",
-    "endDate": "2026-09-20",
-    "targetKm": 66.23,
-    "runs": [
-      {
-        "id": "kw38-2026-lauf1",
-        "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 12.55,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:20/km",
-        "steps": [
-          {
-            "label": "Zone 2",
-            "minutes": 92,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:20/km",
-            "km": 12.55
-          }
-        ]
-      },
-      {
-        "id": "kw38-2026-lauf2",
-        "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 10.31,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:41/km",
-        "steps": [
-          {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:20/km",
-            "km": 1.91
-          },
-          {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:41/km",
-            "km": 3.42
-          },
-          {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "8:02/km",
-            "km": 1.12
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 31,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:02/km",
-            "km": 3.86
-          }
-        ]
-      },
-      {
-        "id": "kw38-2026-lauf3",
-        "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.33,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:02/km",
-        "steps": [
-          {
-            "label": "Locker",
-            "minutes": 83,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:02/km",
-            "km": 10.33
-          }
-        ]
-      },
-      {
-        "id": "kw38-2026-lauf4",
-        "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 24.33,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:19/km",
-        "steps": [
-          {
-            "label": "Longrun",
-            "minutes": 178,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:19/km",
-            "km": 24.33
-          }
-        ]
-      },
-      {
-        "id": "kw38-2026-lauf5",
-        "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 8.71,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:02/km",
-        "steps": [
-          {
-            "label": "Locker extra",
-            "minutes": 70,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:02/km",
-            "km": 8.71
-          }
-        ]
-      },
-      {
-        "id": "kw38-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 4.98,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:02/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:02/km",
-            "km": 4.98
-          }
-        ],
-        "optional": true
-      }
-    ]
-  },
-  {
-    "kw": 39,
-    "year": 2026,
-    "startDate": "2026-09-21",
-    "endDate": "2026-09-27",
-    "targetKm": 52.8,
-    "runs": [
-      {
-        "id": "kw39-2026-lauf1",
-        "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.89,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:19/km",
-        "steps": [
-          {
-            "label": "Zone 2",
-            "minutes": 87,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:19/km",
-            "km": 11.89
-          }
-        ]
-      },
-      {
-        "id": "kw39-2026-lauf2",
-        "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 7.71,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "5:26/km",
-        "steps": [
-          {
-            "label": "Einlaufen",
-            "minutes": 10,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:19/km",
-            "km": 1.37
-          },
-          {
-            "label": "Schwelle",
-            "minutes": 29,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:26/km",
-            "km": 5.34
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:01/km",
-            "km": 1
-          }
-        ]
-      },
-      {
         "id": "kw39-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 13.47,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:01/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 6.99,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:09/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 108,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:01/km",
-            "km": 13.47
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:21/km",
+            "km": 6.53
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw39-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 19.73,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:18/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 14.01,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:21/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 144,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:18/km",
-            "km": 19.73
+            "label": "Easy Run",
+            "minutes": 103,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:21/km",
+            "km": 14.01
           }
         ]
       },
       {
-        "id": "kw39-2026-extra",
+        "id": "kw39-2026-lauf5",
         "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 4.99,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:01/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 19.05,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:21/km",
         "steps": [
           {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:01/km",
-            "km": 4.99
+            "label": "Long Run",
+            "minutes": 140,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:21/km",
+            "km": 19.05
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -2240,144 +2108,131 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-28",
     "endDate": "2026-10-04",
-    "targetKm": 66.44,
+    "targetKm": 68.02,
     "runs": [
       {
         "id": "kw40-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 12.33,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:18/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.16,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:07/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 90,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:18/km",
-            "km": 12.33
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:07/km",
+            "km": 6.16
           }
         ]
       },
       {
         "id": "kw40-2026-lauf2",
         "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 11.17,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:25/km",
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 9.31,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:27/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:18/km",
-            "km": 1.92
+            "label": "Easy Start",
+            "minutes": 24,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:20/km",
+            "km": 3.27
           },
           {
-            "label": "Schwelle",
-            "minutes": 42,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:25/km",
-            "km": 7.75
+            "label": "Steady Middle",
+            "minutes": 21,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "6:04/km",
+            "km": 3.46
           },
           {
-            "label": "Auslaufen",
-            "minutes": 12,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "8:00/km",
-            "km": 1.5
+            "label": "Strong Finish",
+            "minutes": 15,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:49/km",
+            "km": 2.58
           }
         ]
       },
       {
         "id": "kw40-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.25,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "8:00/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.37,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:10/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 82,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "8:00/km",
-            "km": 10.25
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:20/km",
+            "km": 7.91
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw40-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 24.44,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:17/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 20.18,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:20/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 178,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:17/km",
-            "km": 24.44
+            "label": "Easy Run",
+            "minutes": 148,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:20/km",
+            "km": 20.18
           }
         ]
       },
       {
         "id": "kw40-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 8.25,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "8:00/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 24.0,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:20/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 66,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "8:00/km",
-            "km": 8.25
+            "label": "Long Run",
+            "minutes": 176,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:20/km",
+            "km": 24.0
           }
         ]
-      },
-      {
-        "id": "kw40-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 5,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "8:00/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "8:00/km",
-            "km": 5
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -2386,152 +2241,163 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-05",
     "endDate": "2026-10-11",
-    "targetKm": 67.58,
+    "targetKm": 73.23,
     "runs": [
       {
         "id": "kw41-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 12.77,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:17/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.17,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:06/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 93,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:17/km",
-            "km": 12.77
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:06/km",
+            "km": 6.17
           }
         ]
       },
       {
         "id": "kw41-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
+        "title": "Interval Run",
         "type": "interval",
-        "distanceKm": 10.62,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:39/km",
+        "distanceKm": 7.75,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:27/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:17/km",
-            "km": 1.92
+            "pace": "7:20/km",
+            "km": 2.05
           },
           {
             "label": "4 × 4 min",
             "minutes": 16,
             "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:39/km",
-            "km": 3.44
+            "hrRange": "180-192 bpm",
+            "pace": "4:46/km",
+            "km": 3.36
           },
           {
-            "label": "3 × 3 min Trabpause",
+            "label": "3 × 3 min Easy Jog",
             "minutes": 9,
             "hr": 145,
             "hrRange": "138-152 bpm",
-            "pace": "7:59/km",
-            "km": 1.13
+            "pace": "8:06/km",
+            "km": 1.11
           },
           {
-            "label": "Auslaufen",
-            "minutes": 33,
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:59/km",
-            "km": 4.13
+            "pace": "8:06/km",
+            "km": 1.23
           }
         ]
       },
       {
         "id": "kw41-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.52,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:59/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.37,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:10/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 84,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:59/km",
-            "km": 10.52
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:20/km",
+            "km": 7.91
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw41-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 25.4,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:17/km",
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 25.97,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:26/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 185,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:17/km",
-            "km": 25.4
+            "label": "Easy Start",
+            "minutes": 67,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:20/km",
+            "km": 9.14
+          },
+          {
+            "label": "Steady Middle",
+            "minutes": 58,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "6:03/km",
+            "km": 9.59
+          },
+          {
+            "label": "Strong Finish",
+            "minutes": 42,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:48/km",
+            "km": 7.24
           }
         ]
       },
       {
         "id": "kw41-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 8.27,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:59/km",
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 24.97,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:05/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 66,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:59/km",
-            "km": 8.27
+            "label": "Easy Long Run",
+            "minutes": 143,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:20/km",
+            "km": 19.5
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 34,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "6:13/km",
+            "km": 5.47
           }
         ]
-      },
-      {
-        "id": "kw41-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.01,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:59/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:59/km",
-            "km": 6.01
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -2540,152 +2406,151 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-12",
     "endDate": "2026-10-18",
-    "targetKm": 69.65,
+    "targetKm": 71.94,
     "runs": [
       {
         "id": "kw42-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 13.21,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:16/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.17,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:06/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 96,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:16/km",
-            "km": 13.21
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:06/km",
+            "km": 6.17
           }
         ]
       },
       {
         "id": "kw42-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 10.9,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:38/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 10.09,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:27/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:16/km",
-            "km": 1.93
+            "pace": "7:19/km",
+            "km": 1.64
           },
           {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:38/km",
-            "km": 3.45
+            "label": "Steady",
+            "minutes": 45,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:02/km",
+            "km": 7.46
           },
           {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "7:58/km",
-            "km": 1.13
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 35,
+            "label": "Cool-down",
+            "minutes": 8,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:58/km",
-            "km": 4.39
+            "pace": "8:06/km",
+            "km": 0.99
           }
         ]
       },
       {
         "id": "kw42-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.79,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:58/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.39,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:09/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 86,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:58/km",
-            "km": 10.79
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:19/km",
+            "km": 7.93
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw42-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 25.46,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:16/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.21,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:19/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 185,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:16/km",
-            "km": 25.46
+            "label": "Easy Run",
+            "minutes": 82,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:19/km",
+            "km": 11.21
           }
         ]
       },
       {
         "id": "kw42-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 9.29,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:58/km",
+        "distanceKm": 11.07,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:19/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 74,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:58/km",
-            "km": 9.29
+            "label": "Easy Run",
+            "minutes": 81,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:19/km",
+            "km": 11.07
           }
         ]
       },
       {
-        "id": "kw42-2026-bonus",
+        "id": "kw42-2026-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.03,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:58/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 25.01,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:19/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:58/km",
-            "km": 6.03
+            "label": "Long Run",
+            "minutes": 183,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:19/km",
+            "km": 25.01
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -2694,144 +2559,131 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-19",
     "endDate": "2026-10-25",
-    "targetKm": 57.03,
+    "targetKm": 58.05,
     "runs": [
       {
         "id": "kw43-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 10.62,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:15/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.57,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:05/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 77,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:15/km",
-            "km": 10.62
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:05/km",
+            "km": 5.57
           }
         ]
       },
       {
         "id": "kw43-2026-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 8.37,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "5:21/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.45,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:31/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 10,
+            "label": "Warm-up",
+            "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:15/km",
-            "km": 1.38
+            "pace": "7:18/km",
+            "km": 1.64
           },
           {
-            "label": "Schwelle",
-            "minutes": 32,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:21/km",
-            "km": 5.98
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "6:01/km",
+            "km": 5.82
           },
           {
-            "label": "Auslaufen",
+            "label": "Cool-down",
             "minutes": 8,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:57/km",
-            "km": 1.01
+            "pace": "8:05/km",
+            "km": 0.99
           }
         ]
       },
       {
         "id": "kw43-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 8.81,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:57/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 7.04,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:06/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 70,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:57/km",
-            "km": 8.81
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:18/km",
+            "km": 6.58
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw43-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 20.55,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:15/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 16.99,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:18/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 149,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:15/km",
-            "km": 20.55
+            "label": "Easy Run",
+            "minutes": 124,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:18/km",
+            "km": 16.99
           }
         ]
       },
       {
         "id": "kw43-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 8.68,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:57/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 20.0,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:18/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 69,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:57/km",
-            "km": 8.68
+            "label": "Long Run",
+            "minutes": 146,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:18/km",
+            "km": 20.0
           }
         ]
-      },
-      {
-        "id": "kw43-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 5.03,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:57/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:57/km",
-            "km": 5.03
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -2840,144 +2692,131 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 69.05,
+    "targetKm": 69.94,
     "runs": [
       {
         "id": "kw44-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 12.86,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:14/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.2,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:04/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 93,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:14/km",
-            "km": 12.86
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:04/km",
+            "km": 6.2
           }
         ]
       },
       {
         "id": "kw44-2026-lauf2",
         "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 11.7,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:20/km",
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 10.97,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:23/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:14/km",
-            "km": 1.94
+            "label": "Easy Start",
+            "minutes": 28,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:17/km",
+            "km": 3.84
           },
           {
-            "label": "Schwelle",
-            "minutes": 44,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:20/km",
-            "km": 8.25
+            "label": "Steady Middle",
+            "minutes": 24,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "6:00/km",
+            "km": 4.0
           },
           {
-            "label": "Auslaufen",
-            "minutes": 12,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:56/km",
-            "km": 1.51
+            "label": "Strong Finish",
+            "minutes": 18,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:45/km",
+            "km": 3.13
           }
         ]
       },
       {
         "id": "kw44-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.59,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:56/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.42,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:08/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 84,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:56/km",
-            "km": 10.59
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:17/km",
+            "km": 7.96
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw44-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 25.58,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:14/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 19.36,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:17/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 185,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:14/km",
-            "km": 25.58
+            "label": "Easy Run",
+            "minutes": 141,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:17/km",
+            "km": 19.36
           }
         ]
       },
       {
         "id": "kw44-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 8.32,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:56/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 24.99,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:17/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 66,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:56/km",
-            "km": 8.32
+            "label": "Long Run",
+            "minutes": 182,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:17/km",
+            "km": 24.99
           }
         ]
-      },
-      {
-        "id": "kw44-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.05,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:56/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:56/km",
-            "km": 6.05
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -2986,152 +2825,167 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-02",
     "endDate": "2026-11-08",
-    "targetKm": 70.14,
+    "targetKm": 72.04,
     "runs": [
       {
         "id": "kw45-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 13.3,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:13/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.21,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:03/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 96,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:13/km",
-            "km": 13.3
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:03/km",
+            "km": 6.21
           }
         ]
       },
       {
         "id": "kw45-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
+        "title": "Interval Run",
         "type": "interval",
-        "distanceKm": 10.99,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:35/km",
+        "distanceKm": 7.81,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:24/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:13/km",
-            "km": 1.94
+            "pace": "7:16/km",
+            "km": 2.06
           },
           {
             "label": "4 × 4 min",
             "minutes": 16,
             "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:35/km",
-            "km": 3.49
+            "hrRange": "180-192 bpm",
+            "pace": "4:43/km",
+            "km": 3.39
           },
           {
-            "label": "3 × 3 min Trabpause",
+            "label": "3 × 3 min Easy Jog",
             "minutes": 9,
             "hr": 145,
             "hrRange": "138-152 bpm",
-            "pace": "7:55/km",
-            "km": 1.14
+            "pace": "8:03/km",
+            "km": 1.12
           },
           {
-            "label": "Auslaufen",
-            "minutes": 35,
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:55/km",
-            "km": 4.42
+            "pace": "8:03/km",
+            "km": 1.24
           }
         ]
       },
       {
         "id": "kw45-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.86,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:55/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.44,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:07/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 86,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:55/km",
-            "km": 10.86
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:16/km",
+            "km": 7.98
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw45-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 25.64,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:13/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.83,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:16/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 185,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:13/km",
-            "km": 25.64
+            "label": "Easy Run",
+            "minutes": 86,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:16/km",
+            "km": 11.83
           }
         ]
       },
       {
         "id": "kw45-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 9.35,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:55/km",
+        "distanceKm": 11.83,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:16/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 74,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:55/km",
-            "km": 9.35
+            "label": "Easy Run",
+            "minutes": 86,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:16/km",
+            "km": 11.83
           }
         ]
       },
       {
-        "id": "kw45-2026-bonus",
+        "id": "kw45-2026-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.06,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:55/km",
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 25.92,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:01/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:55/km",
-            "km": 6.06
+            "label": "Easy Long Run",
+            "minutes": 147,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:16/km",
+            "km": 20.23
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 35,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "6:09/km",
+            "km": 5.69
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -3140,152 +2994,151 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 72.39,
+    "targetKm": 73.99,
     "runs": [
       {
         "id": "kw46-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 13.75,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:12/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.22,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:02/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 99,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:12/km",
-            "km": 13.75
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:02/km",
+            "km": 6.22
           }
         ]
       },
       {
         "id": "kw46-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 11.39,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:34/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 10.2,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:22/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:12/km",
-            "km": 1.94
+            "pace": "7:15/km",
+            "km": 1.66
           },
           {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:34/km",
-            "km": 3.5
+            "label": "Steady",
+            "minutes": 45,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "5:58/km",
+            "km": 7.54
           },
           {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "7:54/km",
-            "km": 1.14
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 38,
+            "label": "Cool-down",
+            "minutes": 8,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:54/km",
-            "km": 4.81
+            "pace": "8:02/km",
+            "km": 1.0
           }
         ]
       },
       {
         "id": "kw46-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.27,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:54/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.46,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:06/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 89,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:54/km",
-            "km": 11.27
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:15/km",
+            "km": 8.0
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw46-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 26.61,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:13/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.59,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:15/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 192,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:13/km",
-            "km": 26.61
+            "label": "Easy Run",
+            "minutes": 84,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:15/km",
+            "km": 11.59
           }
         ]
       },
       {
         "id": "kw46-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 9.37,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:54/km",
+        "distanceKm": 11.59,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:15/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 74,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:54/km",
-            "km": 9.37
+            "label": "Easy Run",
+            "minutes": 84,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:15/km",
+            "km": 11.59
           }
         ]
       },
       {
-        "id": "kw46-2026-bonus",
+        "id": "kw46-2026-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.08,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:54/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 25.93,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:15/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:54/km",
-            "km": 6.08
+            "label": "Long Run",
+            "minutes": 188,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:15/km",
+            "km": 25.93
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -3294,144 +3147,131 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-16",
     "endDate": "2026-11-22",
-    "targetKm": 59.68,
+    "targetKm": 59.96,
     "runs": [
       {
         "id": "kw47-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.14,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:11/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.6,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:02/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 80,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:11/km",
-            "km": 11.14
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:02/km",
+            "km": 5.6
           }
         ]
       },
       {
         "id": "kw47-2026-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 8.99,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "5:15/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.56,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:26/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:11/km",
-            "km": 1.95
-          },
-          {
-            "label": "Schwelle",
-            "minutes": 29,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:15/km",
-            "km": 5.52
-          },
-          {
-            "label": "Auslaufen",
+            "label": "Warm-up",
             "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:53/km",
-            "km": 1.52
+            "pace": "7:14/km",
+            "km": 1.66
+          },
+          {
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "5:56/km",
+            "km": 5.9
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "8:02/km",
+            "km": 1.0
           }
         ]
       },
       {
         "id": "kw47-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 9.13,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:53/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.48,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:05/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 72,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:53/km",
-            "km": 9.13
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:14/km",
+            "km": 8.02
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw47-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 21.67,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:12/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 16.31,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:14/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 156,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:12/km",
-            "km": 21.67
+            "label": "Easy Run",
+            "minutes": 118,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:14/km",
+            "km": 16.31
           }
         ]
       },
       {
         "id": "kw47-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 8.75,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:53/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 21.01,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:14/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 69,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:53/km",
-            "km": 8.75
+            "label": "Long Run",
+            "minutes": 152,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:14/km",
+            "km": 21.01
           }
         ]
-      },
-      {
-        "id": "kw47-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 5.07,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:53/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:53/km",
-            "km": 5.07
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -3440,144 +3280,159 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-23",
     "endDate": "2026-11-29",
-    "targetKm": 71.57,
+    "targetKm": 71.93,
     "runs": [
       {
         "id": "kw48-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 13.4,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:10/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.24,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:01/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 96,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:10/km",
-            "km": 13.4
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:01/km",
+            "km": 6.24
           }
         ]
       },
       {
         "id": "kw48-2026-lauf2",
         "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 12.08,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:14/km",
+        "title": "HM Pace Run",
+        "type": "hm-pace",
+        "distanceKm": 10.22,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:58/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:10/km",
-            "km": 1.95
+            "pace": "7:13/km",
+            "km": 2.08
           },
           {
-            "label": "Schwelle",
-            "minutes": 45,
+            "label": "3 × 10 min HM Pace",
+            "minutes": 30,
             "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:14/km",
-            "km": 8.6
+            "hrRange": "170-184 bpm",
+            "pace": "4:53/km",
+            "km": 6.14
           },
           {
-            "label": "Auslaufen",
-            "minutes": 12,
+            "label": "Easy Jog Between Blocks",
+            "minutes": 6,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "8:01/km",
+            "km": 0.75
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:52/km",
-            "km": 1.53
+            "pace": "8:01/km",
+            "km": 1.25
           }
         ]
       },
       {
         "id": "kw48-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.93,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:52/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.5,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:04/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 86,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:52/km",
-            "km": 10.93
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:13/km",
+            "km": 8.04
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw48-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 25.75,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:11/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 10.53,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:13/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 185,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:11/km",
-            "km": 25.75
+            "label": "Easy Run",
+            "minutes": 76,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:13/km",
+            "km": 10.53
           }
         ]
       },
       {
         "id": "kw48-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 9.41,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:52/km",
+        "distanceKm": 10.39,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:13/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 74,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:52/km",
-            "km": 9.41
+            "label": "Easy Run",
+            "minutes": 75,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:13/km",
+            "km": 10.39
           }
         ]
       },
       {
-        "id": "kw48-2026-bonus",
+        "id": "kw48-2026-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.1,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:52/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 26.05,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:13/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:52/km",
-            "km": 6.1
+            "label": "Long Run",
+            "minutes": 188,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:13/km",
+            "km": 26.05
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -3586,152 +3441,167 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-30",
     "endDate": "2026-12-06",
-    "targetKm": 72.9,
+    "targetKm": 73.99,
     "runs": [
       {
         "id": "kw49-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 13.85,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:09/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.25,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "8:00/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 99,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:09/km",
-            "km": 13.85
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "8:00/km",
+            "km": 6.25
           }
         ]
       },
       {
         "id": "kw49-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
+        "title": "Interval Run",
         "type": "interval",
-        "distanceKm": 11.49,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:31/km",
+        "distanceKm": 9.12,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:15/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:09/km",
-            "km": 1.96
+            "pace": "7:12/km",
+            "km": 2.08
           },
           {
-            "label": "4 × 4 min",
-            "minutes": 16,
+            "label": "5 × 4 min",
+            "minutes": 20,
             "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:31/km",
-            "km": 3.54
+            "hrRange": "180-192 bpm",
+            "pace": "4:40/km",
+            "km": 4.29
           },
           {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
+            "label": "4 × 3 min Easy Jog",
+            "minutes": 12,
             "hr": 145,
             "hrRange": "138-152 bpm",
-            "pace": "7:51/km",
-            "km": 1.15
+            "pace": "8:00/km",
+            "km": 1.5
           },
           {
-            "label": "Auslaufen",
-            "minutes": 38,
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:51/km",
-            "km": 4.84
+            "pace": "8:00/km",
+            "km": 1.25
           }
         ]
       },
       {
         "id": "kw49-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.34,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:51/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.52,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:03/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 89,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:51/km",
-            "km": 11.34
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:12/km",
+            "km": 8.06
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw49-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 26.79,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:10/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.53,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:12/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 192,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:10/km",
-            "km": 26.79
+            "label": "Easy Run",
+            "minutes": 83,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:12/km",
+            "km": 11.53
           }
         ]
       },
       {
         "id": "kw49-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 9.43,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:51/km",
+        "distanceKm": 11.53,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:12/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 74,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:51/km",
-            "km": 9.43
+            "label": "Easy Run",
+            "minutes": 83,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:12/km",
+            "km": 11.53
           }
         ]
       },
       {
-        "id": "kw49-2026-bonus",
+        "id": "kw49-2026-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.11,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:51/km",
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 27.04,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:57/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:51/km",
-            "km": 6.11
+            "label": "Easy Long Run",
+            "minutes": 152,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:12/km",
+            "km": 21.11
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 36,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "6:04/km",
+            "km": 5.93
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -3740,152 +3610,151 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 75,
+    "targetKm": 75.95,
     "runs": [
       {
         "id": "kw50-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 14.16,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:08/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.26,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:59/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 101,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:08/km",
-            "km": 14.16
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:59/km",
+            "km": 6.26
           }
         ]
       },
       {
         "id": "kw50-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 11.9,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:30/km",
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 11.18,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:16/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:08/km",
-            "km": 1.96
+            "label": "Easy Start",
+            "minutes": 28,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:11/km",
+            "km": 3.9
           },
           {
-            "label": "4 × 4 min",
-            "minutes": 16,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:30/km",
-            "km": 3.56
+            "label": "Steady Middle",
+            "minutes": 24,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "5:53/km",
+            "km": 4.08
           },
           {
-            "label": "3 × 3 min Trabpause",
-            "minutes": 9,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "7:50/km",
-            "km": 1.15
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 41,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:50/km",
-            "km": 5.23
+            "label": "Strong Finish",
+            "minutes": 18,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:38/km",
+            "km": 3.2
           }
         ]
       },
       {
         "id": "kw50-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.62,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:50/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.53,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:02/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 91,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:50/km",
-            "km": 11.62
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:11/km",
+            "km": 8.07
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw50-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 26.85,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:09/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.55,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:11/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 192,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:09/km",
-            "km": 26.85
+            "label": "Easy Run",
+            "minutes": 83,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:11/km",
+            "km": 11.55
           }
         ]
       },
       {
         "id": "kw50-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 10.47,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:50/km",
+        "distanceKm": 11.42,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:11/km",
         "steps": [
           {
-            "label": "Locker extra",
+            "label": "Easy Run",
             "minutes": 82,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:50/km",
-            "km": 10.47
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:11/km",
+            "km": 11.42
           }
         ]
       },
       {
-        "id": "kw50-2026-bonus",
+        "id": "kw50-2026-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.13,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:50/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 27.01,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:11/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:50/km",
-            "km": 6.13
+            "label": "Long Run",
+            "minutes": 194,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:11/km",
+            "km": 27.01
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -3894,144 +3763,131 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-14",
     "endDate": "2026-12-20",
-    "targetKm": 60.22,
+    "targetKm": 62.04,
     "runs": [
       {
         "id": "kw51-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.24,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:07/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.64,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:59/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 80,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:07/km",
-            "km": 11.24
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:59/km",
+            "km": 5.64
           }
         ]
       },
       {
         "id": "kw51-2026-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 9.12,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "5:10/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.64,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:22/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:07/km",
-            "km": 1.97
-          },
-          {
-            "label": "Schwelle",
-            "minutes": 29,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:10/km",
-            "km": 5.61
-          },
-          {
-            "label": "Auslaufen",
+            "label": "Warm-up",
             "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:49/km",
-            "km": 1.54
+            "pace": "7:10/km",
+            "km": 1.67
+          },
+          {
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "5:52/km",
+            "km": 5.97
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:59/km",
+            "km": 1.0
           }
         ]
       },
       {
         "id": "kw51-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 9.21,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:49/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.55,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:01/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 72,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:49/km",
-            "km": 9.21
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:10/km",
+            "km": 8.09
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw51-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 21.82,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:09/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 17.16,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:10/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 156,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:09/km",
-            "km": 21.82
+            "label": "Easy Run",
+            "minutes": 123,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:10/km",
+            "km": 17.16
           }
         ]
       },
       {
         "id": "kw51-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 8.83,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:49/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 22.05,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:10/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 69,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:49/km",
-            "km": 8.83
+            "label": "Long Run",
+            "minutes": 158,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:10/km",
+            "km": 22.05
           }
         ]
-      },
-      {
-        "id": "kw51-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 5.12,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:49/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:49/km",
-            "km": 5.12
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -4040,144 +3896,131 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 66.22,
+    "targetKm": 64.02,
     "runs": [
       {
         "id": "kw52-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 12.39,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:06/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.65,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:58/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 88,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:06/km",
-            "km": 12.39
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:58/km",
+            "km": 5.65
           }
         ]
       },
       {
         "id": "kw52-2026-lauf2",
         "order": 2,
-        "title": "Schwelle",
-        "type": "threshold",
-        "distanceKm": 11.28,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:09/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 8.65,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:22/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:06/km",
-            "km": 1.97
-          },
-          {
-            "label": "Schwelle",
-            "minutes": 40,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:09/km",
-            "km": 7.77
-          },
-          {
-            "label": "Auslaufen",
+            "label": "Warm-up",
             "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:48/km",
-            "km": 1.54
+            "pace": "7:10/km",
+            "km": 1.67
+          },
+          {
+            "label": "Steady",
+            "minutes": 35,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "5:51/km",
+            "km": 5.98
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 8,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:58/km",
+            "km": 1.0
           }
         ]
       },
       {
         "id": "kw52-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.13,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:48/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.55,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:01/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 79,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:48/km",
-            "km": 10.13
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:10/km",
+            "km": 8.09
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw52-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 23.83,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:08/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 19.12,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:10/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 170,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:08/km",
-            "km": 23.83
+            "label": "Easy Run",
+            "minutes": 137,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:10/km",
+            "km": 19.12
           }
         ]
       },
       {
         "id": "kw52-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 8.59,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:48/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 22.05,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:10/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 67,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:48/km",
-            "km": 8.59
+            "label": "Long Run",
+            "minutes": 158,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:10/km",
+            "km": 22.05
           }
         ]
-      },
-      {
-        "id": "kw52-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 5.13,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:48/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:48/km",
-            "km": 5.13
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -4186,152 +4029,155 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-28",
     "endDate": "2027-01-03",
-    "targetKm": 69.79,
+    "targetKm": 68.87,
     "runs": [
       {
         "id": "kw53-2026-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 13.13,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:05/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.29,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:57/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 93,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:05/km",
-            "km": 13.13
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:57/km",
+            "km": 6.29
           }
         ]
       },
       {
         "id": "kw53-2026-lauf2",
         "order": 2,
-        "title": "Intervalle",
+        "title": "Interval Run",
         "type": "interval",
-        "distanceKm": 11.35,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:27/km",
+        "distanceKm": 9.2,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:12/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:05/km",
-            "km": 1.98
+            "pace": "7:09/km",
+            "km": 2.1
           },
           {
             "label": "5 × 4 min",
             "minutes": 20,
             "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:27/km",
-            "km": 4.49
+            "hrRange": "180-192 bpm",
+            "pace": "4:37/km",
+            "km": 4.33
           },
           {
-            "label": "4 × 3 min Trabpause",
+            "label": "4 × 3 min Easy Jog",
             "minutes": 12,
             "hr": 145,
             "hrRange": "138-152 bpm",
-            "pace": "7:47/km",
-            "km": 1.54
+            "pace": "7:57/km",
+            "km": 1.51
           },
           {
-            "label": "Auslaufen",
-            "minutes": 26,
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:47/km",
-            "km": 3.34
+            "pace": "7:57/km",
+            "km": 1.26
           }
         ]
       },
       {
         "id": "kw53-2026-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.79,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:47/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.57,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:00/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 84,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:47/km",
-            "km": 10.79
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:09/km",
+            "km": 8.11
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw53-2026-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 25.01,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:07/km",
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 21.87,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:13/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 178,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:07/km",
-            "km": 25.01
+            "label": "Easy Start",
+            "minutes": 54,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:09/km",
+            "km": 7.55
+          },
+          {
+            "label": "Steady Middle",
+            "minutes": 48,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "5:50/km",
+            "km": 8.23
+          },
+          {
+            "label": "Strong Finish",
+            "minutes": 34,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:35/km",
+            "km": 6.09
           }
         ]
       },
       {
         "id": "kw53-2026-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 9.51,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:47/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 22.94,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:09/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 74,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:47/km",
-            "km": 9.51
+            "label": "Long Run",
+            "minutes": 164,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:09/km",
+            "km": 22.94
           }
         ]
-      },
-      {
-        "id": "kw53-2026-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.17,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:47/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:47/km",
-            "km": 6.17
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -4340,152 +4186,139 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-04",
     "endDate": "2027-01-10",
-    "targetKm": 71.89,
+    "targetKm": 69.95,
     "runs": [
       {
         "id": "kw1-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 13.58,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:04/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.3,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:56/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 96,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:04/km",
-            "km": 13.58
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:56/km",
+            "km": 6.3
           }
         ]
       },
       {
         "id": "kw1-2027-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 11.65,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:26/km",
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 11.29,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:12/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:04/km",
-            "km": 1.98
-          },
-          {
-            "label": "5 × 4 min",
-            "minutes": 20,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:26/km",
-            "km": 4.51
-          },
-          {
-            "label": "4 × 3 min Trabpause",
-            "minutes": 12,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "7:46/km",
-            "km": 1.55
-          },
-          {
-            "label": "Auslaufen",
+            "label": "Easy Start",
             "minutes": 28,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:46/km",
-            "km": 3.61
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:08/km",
+            "km": 3.93
+          },
+          {
+            "label": "Steady Middle",
+            "minutes": 24,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "5:49/km",
+            "km": 4.13
+          },
+          {
+            "label": "Strong Finish",
+            "minutes": 18,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:34/km",
+            "km": 3.23
           }
         ]
       },
       {
         "id": "kw1-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.07,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:46/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.59,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:59/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 86,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:46/km",
-            "km": 11.07
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:08/km",
+            "km": 8.13
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw1-2027-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 26.06,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:06/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 19.63,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:08/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 185,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:06/km",
-            "km": 26.06
+            "label": "Easy Run",
+            "minutes": 140,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:08/km",
+            "km": 19.63
           }
         ]
       },
       {
         "id": "kw1-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 9.53,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:46/km",
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 24.14,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:53/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 74,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:46/km",
-            "km": 9.53
+            "label": "Easy Long Run",
+            "minutes": 134,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:08/km",
+            "km": 18.79
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 32,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "5:59/km",
+            "km": 5.35
           }
         ]
-      },
-      {
-        "id": "kw1-2027-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.18,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:46/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:46/km",
-            "km": 6.18
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -4494,144 +4327,159 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 75.01,
+    "targetKm": 72.01,
     "runs": [
       {
         "id": "kw2-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 14.04,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:03/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.32,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:55/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 99,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:03/km",
-            "km": 14.04
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:55/km",
+            "km": 6.32
           }
         ]
       },
       {
         "id": "kw2-2027-lauf2",
         "order": 2,
-        "title": "Schwelle",
+        "title": "Threshold Run",
         "type": "threshold",
-        "distanceKm": 12.79,
-        "optimalHr": 176,
-        "hrRange": "172-180 bpm",
-        "pace": "5:05/km",
+        "distanceKm": 10.43,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:02/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:03/km",
-            "km": 1.99
+            "pace": "7:07/km",
+            "km": 2.11
           },
           {
-            "label": "Schwelle",
-            "minutes": 47,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
+            "label": "4 × 8 min Threshold",
+            "minutes": 32,
+            "hr": 179,
+            "hrRange": "175-184 bpm",
             "pace": "5:05/km",
-            "km": 9.25
+            "km": 6.3
           },
           {
-            "label": "Auslaufen",
-            "minutes": 12,
+            "label": "3 × 2 min Easy Jog",
+            "minutes": 6,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:45/km",
-            "km": 1.55
+            "pace": "7:55/km",
+            "km": 0.76
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:55/km",
+            "km": 1.26
           }
         ]
       },
       {
         "id": "kw2-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.48,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:45/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.61,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:58/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 89,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:45/km",
-            "km": 11.48
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:07/km",
+            "km": 8.15
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw2-2027-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 26.12,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:05/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 10.82,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:07/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 185,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:05/km",
-            "km": 26.12
+            "label": "Easy Run",
+            "minutes": 77,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:07/km",
+            "km": 10.82
           }
         ]
       },
       {
         "id": "kw2-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 10.58,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:45/km",
+        "distanceKm": 10.82,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:07/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 82,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:45/km",
-            "km": 10.58
+            "label": "Easy Run",
+            "minutes": 77,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:07/km",
+            "km": 10.82
           }
         ]
       },
       {
-        "id": "kw2-2027-bonus",
+        "id": "kw2-2027-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.19,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:45/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 25.01,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:07/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:45/km",
-            "km": 6.19
+            "label": "Long Run",
+            "minutes": 178,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:07/km",
+            "km": 25.01
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -4640,144 +4488,167 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-18",
     "endDate": "2027-01-24",
-    "targetKm": 60.9,
+    "targetKm": 73.98,
     "runs": [
       {
         "id": "kw3-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.37,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:02/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.32,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:55/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 80,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:02/km",
-            "km": 11.37
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:55/km",
+            "km": 6.32
           }
         ]
       },
       {
         "id": "kw3-2027-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 9.28,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "5:03/km",
+        "title": "HM Pace Run",
+        "type": "hm-pace",
+        "distanceKm": 10.36,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:53/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:02/km",
-            "km": 1.99
+            "pace": "7:06/km",
+            "km": 2.11
           },
           {
-            "label": "Schwelle",
-            "minutes": 29,
+            "label": "3 × 10 min HM Pace",
+            "minutes": 30,
             "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "5:03/km",
-            "km": 5.74
+            "hrRange": "170-184 bpm",
+            "pace": "4:49/km",
+            "km": 6.23
           },
           {
-            "label": "Auslaufen",
-            "minutes": 12,
+            "label": "Easy Jog Between Blocks",
+            "minutes": 6,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "7:55/km",
+            "km": 0.76
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:44/km",
-            "km": 1.55
+            "pace": "7:55/km",
+            "km": 1.26
           }
         ]
       },
       {
         "id": "kw3-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 9.31,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:44/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.63,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:57/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 72,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:44/km",
-            "km": 9.31
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:06/km",
+            "km": 8.17
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw3-2027-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 22.02,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:05/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.41,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:06/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 156,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "7:05/km",
-            "km": 22.02
+            "label": "Easy Run",
+            "minutes": 81,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:06/km",
+            "km": 11.41
           }
         ]
       },
       {
         "id": "kw3-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 8.92,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:44/km",
+        "distanceKm": 11.27,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:06/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 69,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:44/km",
-            "km": 8.92
+            "label": "Easy Run",
+            "minutes": 80,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:06/km",
+            "km": 11.27
           }
         ]
       },
       {
-        "id": "kw3-2027-bonus",
+        "id": "kw3-2027-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 5.17,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:44/km",
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 25.99,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:51/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:44/km",
-            "km": 5.17
+            "label": "Easy Long Run",
+            "minutes": 144,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:06/km",
+            "km": 20.28
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 34,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "5:57/km",
+            "km": 5.71
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -4786,168 +4657,159 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-25",
     "endDate": "2027-01-31",
-    "targetKm": 74.86,
+    "targetKm": 75.93,
     "runs": [
       {
         "id": "kw4-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 14.11,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:01/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.33,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:54/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 99,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:01/km",
-            "km": 14.11
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:54/km",
+            "km": 6.33
           }
         ]
       },
       {
         "id": "kw4-2027-lauf2",
         "order": 2,
-        "title": "HM-Pace",
-        "type": "hm_pace",
-        "distanceKm": 12.69,
-        "optimalHr": 176,
-        "hrRange": "170-184 bpm",
-        "pace": "4:49/km",
+        "title": "Interval Run",
+        "type": "interval",
+        "distanceKm": 9.29,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:08/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:01/km",
-            "km": 2
+            "pace": "7:05/km",
+            "km": 2.12
           },
           {
-            "label": "HM-Pace Block",
-            "minutes": 39,
-            "hr": 176,
-            "hrRange": "170-184 bpm",
-            "pace": "4:49/km",
-            "km": 8.1
+            "label": "5 × 4 min",
+            "minutes": 20,
+            "hr": 184,
+            "hrRange": "180-192 bpm",
+            "pace": "4:34/km",
+            "km": 4.38
           },
           {
-            "label": "Trabpause",
-            "minutes": 4,
+            "label": "4 × 3 min Easy Jog",
+            "minutes": 12,
             "hr": 145,
             "hrRange": "138-152 bpm",
-            "pace": "7:43/km",
-            "km": 0.52
+            "pace": "7:54/km",
+            "km": 1.52
           },
           {
-            "label": "Auslaufen",
-            "minutes": 16,
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:43/km",
-            "km": 2.07
+            "pace": "7:54/km",
+            "km": 1.27
           }
         ]
       },
       {
         "id": "kw4-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.53,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:43/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.65,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:56/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 89,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:43/km",
-            "km": 11.53
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:05/km",
+            "km": 8.19
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw4-2027-lauf4",
         "order": 4,
-        "title": "Longrun mit Finish",
-        "type": "long",
-        "distanceKm": 25.9,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:04/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 12.42,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:05/km",
         "steps": [
           {
-            "label": "Longrun locker",
-            "minutes": 140,
-            "hr": 150,
-            "hrRange": "145-154 bpm",
-            "pace": "7:04/km",
-            "km": 19.81
-          },
-          {
-            "label": "Endbeschleunigung",
-            "minutes": 26,
-            "hr": 165,
-            "hrRange": "158-174 bpm",
-            "pace": "5:09/km",
-            "km": 5.05
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:43/km",
-            "km": 1.04
+            "label": "Easy Run",
+            "minutes": 88,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:05/km",
+            "km": 12.42
           }
         ]
       },
       {
         "id": "kw4-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 10.63,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:43/km",
+        "distanceKm": 12.28,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:05/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 82,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:43/km",
-            "km": 10.63
+            "label": "Easy Run",
+            "minutes": 87,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:05/km",
+            "km": 12.28
           }
         ]
       },
       {
-        "id": "kw4-2027-bonus",
+        "id": "kw4-2027-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.22,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:43/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 26.96,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:05/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:43/km",
-            "km": 6.22
+            "label": "Long Run",
+            "minutes": 191,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:05/km",
+            "km": 26.96
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -4956,168 +4818,175 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-01",
     "endDate": "2027-02-07",
-    "targetKm": 76.7,
+    "targetKm": 78.01,
     "runs": [
       {
         "id": "kw5-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 14.39,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:01/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.34,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:53/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 101,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:01/km",
-            "km": 14.39
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:53/km",
+            "km": 6.34
           }
         ]
       },
       {
         "id": "kw5-2027-lauf2",
         "order": 2,
-        "title": "HM-Pace",
-        "type": "hm_pace",
-        "distanceKm": 16.06,
-        "optimalHr": 176,
-        "hrRange": "170-184 bpm",
-        "pace": "4:48/km",
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 11.4,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:08/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:01/km",
-            "km": 2
+            "label": "Easy Start",
+            "minutes": 28,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:04/km",
+            "km": 3.96
           },
           {
-            "label": "Langer HM-Pace Block",
-            "minutes": 55,
-            "hr": 176,
-            "hrRange": "170-184 bpm",
-            "pace": "4:48/km",
-            "km": 11.46
+            "label": "Steady Middle",
+            "minutes": 24,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "5:45/km",
+            "km": 4.17
           },
           {
-            "label": "Trabpause",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "7:43/km",
-            "km": 1.04
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 12,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:43/km",
-            "km": 1.56
+            "label": "Strong Finish",
+            "minutes": 18,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:30/km",
+            "km": 3.27
           }
         ]
       },
       {
         "id": "kw5-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.79,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:43/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.67,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:55/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 91,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:43/km",
-            "km": 11.79
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:04/km",
+            "km": 8.21
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw5-2027-lauf4",
         "order": 4,
-        "title": "Longrun mit Finish",
-        "type": "long",
-        "distanceKm": 26.94,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:03/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.75,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:04/km",
         "steps": [
           {
-            "label": "Longrun locker",
-            "minutes": 147,
-            "hr": 150,
-            "hrRange": "145-154 bpm",
-            "pace": "7:03/km",
-            "km": 20.85
-          },
-          {
-            "label": "Endbeschleunigung",
-            "minutes": 26,
-            "hr": 165,
-            "hrRange": "158-174 bpm",
-            "pace": "5:09/km",
-            "km": 5.05
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:43/km",
-            "km": 1.04
+            "label": "Easy Run",
+            "minutes": 83,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:04/km",
+            "km": 11.75
           }
         ]
       },
       {
         "id": "kw5-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 7.52,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:43/km",
+        "distanceKm": 11.89,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:04/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 58,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:43/km",
-            "km": 7.52
+            "label": "Easy Run",
+            "minutes": 84,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:04/km",
+            "km": 11.89
           }
         ]
       },
       {
-        "id": "kw5-2027-bonus",
+        "id": "kw5-2027-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.22,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:43/km",
+        "title": "Long Run with HM Pace Blocks",
+        "type": "hm-block-long",
+        "distanceKm": 27.96,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:37/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:43/km",
-            "km": 6.22
+            "label": "Easy Long Run",
+            "minutes": 79,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:04/km",
+            "km": 11.18
+          },
+          {
+            "label": "2 × 14 min HM Pace",
+            "minutes": 28,
+            "hr": 176,
+            "hrRange": "170-184 bpm",
+            "pace": "4:48/km",
+            "km": 5.83
+          },
+          {
+            "label": "Easy Jog Between Blocks",
+            "minutes": 6,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "7:53/km",
+            "km": 0.76
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 72,
+            "hr": 150,
+            "hrRange": "144-156 bpm",
+            "pace": "7:04/km",
+            "km": 10.19
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -5126,168 +4995,139 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-08",
     "endDate": "2027-02-14",
-    "targetKm": 76.43,
+    "targetKm": 64.04,
     "runs": [
       {
         "id": "kw6-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 14.43,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "7:00/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.72,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:52/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 101,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "7:00/km",
-            "km": 14.43
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:52/km",
+            "km": 5.72
           }
         ]
       },
       {
         "id": "kw6-2027-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 12.58,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:21/km",
+        "title": "HM Pace Run",
+        "type": "hm-pace",
+        "distanceKm": 13.17,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:42/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:00/km",
-            "km": 2
+            "pace": "7:03/km",
+            "km": 2.13
           },
           {
-            "label": "5 × 4 min",
-            "minutes": 20,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:21/km",
-            "km": 4.6
+            "label": "3 × 14 min HM Pace",
+            "minutes": 42,
+            "hr": 176,
+            "hrRange": "170-184 bpm",
+            "pace": "4:48/km",
+            "km": 8.75
           },
           {
-            "label": "4 × 3 min Trabpause",
-            "minutes": 12,
+            "label": "Easy Jog Between Blocks",
+            "minutes": 8,
             "hr": 145,
             "hrRange": "138-152 bpm",
-            "pace": "7:42/km",
-            "km": 1.56
+            "pace": "7:52/km",
+            "km": 1.02
           },
           {
-            "label": "Auslaufen",
-            "minutes": 34,
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:42/km",
-            "km": 4.42
+            "pace": "7:52/km",
+            "km": 1.27
           }
         ]
       },
       {
         "id": "kw6-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.82,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:42/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.69,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:54/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 91,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:42/km",
-            "km": 11.82
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:03/km",
+            "km": 8.23
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw6-2027-lauf4",
         "order": 4,
-        "title": "Longrun mit Finish",
-        "type": "long",
-        "distanceKm": 27.99,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "7:02/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 14.47,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:03/km",
         "steps": [
           {
-            "label": "Longrun locker",
-            "minutes": 154,
-            "hr": 150,
-            "hrRange": "145-154 bpm",
-            "pace": "7:02/km",
-            "km": 21.9
-          },
-          {
-            "label": "Endbeschleunigung",
-            "minutes": 26,
-            "hr": 165,
-            "hrRange": "158-174 bpm",
-            "pace": "5:09/km",
-            "km": 5.05
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:42/km",
-            "km": 1.04
+            "label": "Easy Run",
+            "minutes": 102,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:03/km",
+            "km": 14.47
           }
         ]
       },
       {
         "id": "kw6-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 9.61,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:42/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 21.99,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:03/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 74,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:42/km",
-            "km": 9.61
+            "label": "Long Run",
+            "minutes": 155,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:03/km",
+            "km": 21.99
           }
         ]
-      },
-      {
-        "id": "kw6-2027-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.23,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:42/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:42/km",
-            "km": 6.23
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -5296,144 +5136,167 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-15",
     "endDate": "2027-02-21",
-    "targetKm": 63.28,
+    "targetKm": 77.97,
     "runs": [
       {
         "id": "kw7-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 11.89,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "6:59/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.37,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:51/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 83,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "6:59/km",
-            "km": 11.89
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:51/km",
+            "km": 6.37
           }
         ]
       },
       {
         "id": "kw7-2027-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 9.6,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "4:58/km",
+        "title": "Threshold Run",
+        "type": "threshold",
+        "distanceKm": 10.6,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:57/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "6:59/km",
-            "km": 2
+            "pace": "7:02/km",
+            "km": 2.13
           },
           {
-            "label": "Schwelle",
-            "minutes": 30,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
+            "label": "4 × 8 min Threshold",
+            "minutes": 32,
+            "hr": 179,
+            "hrRange": "175-184 bpm",
             "pace": "4:58/km",
-            "km": 6.04
+            "km": 6.44
           },
           {
-            "label": "Auslaufen",
-            "minutes": 12,
+            "label": "3 × 2 min Easy Jog",
+            "minutes": 6,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:41/km",
-            "km": 1.56
+            "pace": "7:51/km",
+            "km": 0.76
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:51/km",
+            "km": 1.27
           }
         ]
       },
       {
         "id": "kw7-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 9.63,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:41/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.71,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:53/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 74,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:41/km",
-            "km": 9.63
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:02/km",
+            "km": 8.25
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw7-2027-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 23.18,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 12.65,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
         "pace": "7:02/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 163,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
+            "label": "Easy Run",
+            "minutes": 89,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
             "pace": "7:02/km",
-            "km": 23.18
+            "km": 12.65
           }
         ]
       },
       {
         "id": "kw7-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 8.98,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:41/km",
+        "distanceKm": 12.65,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:02/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 69,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:41/km",
-            "km": 8.98
+            "label": "Easy Run",
+            "minutes": 89,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:02/km",
+            "km": 12.65
           }
         ]
       },
       {
-        "id": "kw7-2027-bonus",
+        "id": "kw7-2027-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 5.21,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:41/km",
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 26.99,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:47/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:41/km",
-            "km": 5.21
+            "label": "Easy Long Run",
+            "minutes": 148,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:02/km",
+            "km": 21.04
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 35,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "5:53/km",
+            "km": 5.95
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -5442,168 +5305,175 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-22",
     "endDate": "2027-02-28",
-    "targetKm": 75.36,
+    "targetKm": 79.95,
     "runs": [
       {
         "id": "kw8-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 14.21,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "6:58/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.37,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:51/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 99,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "6:58/km",
-            "km": 14.21
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:51/km",
+            "km": 6.37
           }
         ]
       },
       {
         "id": "kw8-2027-lauf2",
         "order": 2,
-        "title": "HM-Pace",
-        "type": "hm_pace",
-        "distanceKm": 12.8,
-        "optimalHr": 176,
-        "hrRange": "170-184 bpm",
-        "pace": "4:46/km",
+        "title": "Steady Run",
+        "type": "steady",
+        "distanceKm": 10.62,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "6:07/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 12,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "6:58/km",
-            "km": 2.01
+            "pace": "7:01/km",
+            "km": 1.71
           },
           {
-            "label": "HM-Pace Block",
-            "minutes": 39,
-            "hr": 176,
-            "hrRange": "170-184 bpm",
-            "pace": "4:46/km",
-            "km": 8.18
+            "label": "Steady",
+            "minutes": 45,
+            "hr": 164,
+            "hrRange": "158-170 bpm",
+            "pace": "5:42/km",
+            "km": 7.89
           },
           {
-            "label": "Trabpause",
-            "minutes": 4,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "7:40/km",
-            "km": 0.52
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 16,
+            "label": "Cool-down",
+            "minutes": 8,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:40/km",
-            "km": 2.09
+            "pace": "7:51/km",
+            "km": 1.02
           }
         ]
       },
       {
         "id": "kw8-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.61,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:40/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.73,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:52/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 89,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:40/km",
-            "km": 11.61
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:01/km",
+            "km": 8.27
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw8-2027-lauf4",
         "order": 4,
-        "title": "Longrun mit Finish",
-        "type": "long",
-        "distanceKm": 26.04,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 13.11,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
         "pace": "7:01/km",
         "steps": [
           {
-            "label": "Longrun locker",
-            "minutes": 140,
-            "hr": 150,
-            "hrRange": "145-154 bpm",
+            "label": "Easy Run",
+            "minutes": 92,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
             "pace": "7:01/km",
-            "km": 19.95
-          },
-          {
-            "label": "Endbeschleunigung",
-            "minutes": 26,
-            "hr": 165,
-            "hrRange": "158-174 bpm",
-            "pace": "5:09/km",
-            "km": 5.05
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:40/km",
-            "km": 1.04
+            "km": 13.11
           }
         ]
       },
       {
         "id": "kw8-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 10.7,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:40/km",
+        "distanceKm": 13.11,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:01/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 82,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:40/km",
-            "km": 10.7
+            "label": "Easy Run",
+            "minutes": 92,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:01/km",
+            "km": 13.11
           }
         ]
       },
       {
-        "id": "kw8-2027-bonus",
+        "id": "kw8-2027-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.26,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:40/km",
+        "title": "Long Run with HM Pace Blocks",
+        "type": "hm-block-long",
+        "distanceKm": 28.01,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:34/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:40/km",
-            "km": 6.26
+            "label": "Easy Long Run",
+            "minutes": 79,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:01/km",
+            "km": 11.26
+          },
+          {
+            "label": "2 × 14 min HM Pace",
+            "minutes": 28,
+            "hr": 176,
+            "hrRange": "170-184 bpm",
+            "pace": "4:46/km",
+            "km": 5.87
+          },
+          {
+            "label": "Easy Jog Between Blocks",
+            "minutes": 6,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "7:51/km",
+            "km": 0.76
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 71,
+            "hr": 150,
+            "hrRange": "144-156 bpm",
+            "pace": "7:01/km",
+            "km": 10.12
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -5612,168 +5482,159 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-01",
     "endDate": "2027-03-07",
-    "targetKm": 77.32,
+    "targetKm": 81.95,
     "runs": [
       {
         "id": "kw9-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 14.53,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "6:57/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.38,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:50/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 101,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "6:57/km",
-            "km": 14.53
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:50/km",
+            "km": 6.38
           }
         ]
       },
       {
         "id": "kw9-2027-lauf2",
         "order": 2,
-        "title": "HM-Pace",
-        "type": "hm_pace",
-        "distanceKm": 16.21,
-        "optimalHr": 176,
-        "hrRange": "170-184 bpm",
-        "pace": "4:45/km",
+        "title": "Progressive Run",
+        "type": "progressive",
+        "distanceKm": 11.53,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:04/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "6:57/km",
-            "km": 2.01
+            "label": "Easy Start",
+            "minutes": 28,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:00/km",
+            "km": 4.0
           },
           {
-            "label": "Langer HM-Pace Block",
-            "minutes": 55,
-            "hr": 176,
-            "hrRange": "170-184 bpm",
-            "pace": "4:45/km",
-            "km": 11.58
+            "label": "Steady Middle",
+            "minutes": 24,
+            "hr": 162,
+            "hrRange": "156-168 bpm",
+            "pace": "5:41/km",
+            "km": 4.22
           },
           {
-            "label": "Trabpause",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "7:39/km",
-            "km": 1.05
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 12,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:39/km",
-            "km": 1.57
+            "label": "Strong Finish",
+            "minutes": 18,
+            "hr": 168,
+            "hrRange": "162-174 bpm",
+            "pace": "5:26/km",
+            "km": 3.31
           }
         ]
       },
       {
         "id": "kw9-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 11.9,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:39/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.75,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:51/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 91,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:39/km",
-            "km": 11.9
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:00/km",
+            "km": 8.29
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw9-2027-lauf4",
         "order": 4,
-        "title": "Longrun mit Finish",
-        "type": "long",
-        "distanceKm": 27.1,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 13.71,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
         "pace": "7:00/km",
         "steps": [
           {
-            "label": "Longrun locker",
-            "minutes": 147,
-            "hr": 150,
-            "hrRange": "145-154 bpm",
+            "label": "Easy Run",
+            "minutes": 96,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
             "pace": "7:00/km",
-            "km": 21
-          },
-          {
-            "label": "Endbeschleunigung",
-            "minutes": 26,
-            "hr": 165,
-            "hrRange": "158-174 bpm",
-            "pace": "5:09/km",
-            "km": 5.05
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:39/km",
-            "km": 1.05
+            "km": 13.71
           }
         ]
       },
       {
         "id": "kw9-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 7.58,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:39/km",
+        "distanceKm": 13.57,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:00/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 58,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:39/km",
-            "km": 7.58
+            "label": "Easy Run",
+            "minutes": 95,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:00/km",
+            "km": 13.57
           }
         ]
       },
       {
-        "id": "kw9-2027-bonus",
+        "id": "kw9-2027-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.27,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:39/km",
+        "title": "Fast Finish Long Run",
+        "type": "fast-finish-long",
+        "distanceKm": 28.01,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:45/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:39/km",
-            "km": 6.27
+            "label": "Easy Long Run",
+            "minutes": 153,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:00/km",
+            "km": 21.86
+          },
+          {
+            "label": "Fast Finish",
+            "minutes": 36,
+            "hr": 166,
+            "hrRange": "160-175 bpm",
+            "pace": "5:51/km",
+            "km": 6.15
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -5782,168 +5643,139 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-08",
     "endDate": "2027-03-14",
-    "targetKm": 78.11,
+    "targetKm": 70.05,
     "runs": [
       {
         "id": "kw10-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 14.71,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "6:56/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.76,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:49/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 102,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "6:56/km",
-            "km": 14.71
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:49/km",
+            "km": 5.76
           }
         ]
       },
       {
         "id": "kw10-2027-lauf2",
         "order": 2,
-        "title": "Intervalle",
-        "type": "interval",
-        "distanceKm": 12.85,
-        "optimalHr": 184,
-        "hrRange": "178-190 bpm",
-        "pace": "4:17/km",
+        "title": "HM Pace Run",
+        "type": "hm-pace",
+        "distanceKm": 13.25,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:40/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "6:56/km",
-            "km": 2.02
+            "pace": "7:00/km",
+            "km": 2.14
           },
           {
-            "label": "5 × 4 min",
-            "minutes": 20,
-            "hr": 184,
-            "hrRange": "178-190 bpm",
-            "pace": "4:17/km",
-            "km": 4.67
+            "label": "3 × 14 min HM Pace",
+            "minutes": 42,
+            "hr": 176,
+            "hrRange": "170-184 bpm",
+            "pace": "4:46/km",
+            "km": 8.81
           },
           {
-            "label": "4 × 3 min Trabpause",
-            "minutes": 12,
+            "label": "Easy Jog Between Blocks",
+            "minutes": 8,
             "hr": 145,
             "hrRange": "138-152 bpm",
-            "pace": "7:38/km",
-            "km": 1.57
+            "pace": "7:49/km",
+            "km": 1.02
           },
           {
-            "label": "Auslaufen",
-            "minutes": 35,
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:38/km",
-            "km": 4.59
+            "pace": "7:49/km",
+            "km": 1.28
           }
         ]
       },
       {
         "id": "kw10-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 12.18,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:38/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.75,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:51/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 93,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:38/km",
-            "km": 12.18
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:00/km",
+            "km": 8.29
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw10-2027-lauf4",
         "order": 4,
-        "title": "Longrun mit Finish",
-        "type": "long",
-        "distanceKm": 28.15,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "6:59/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 18.29,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "7:00/km",
         "steps": [
           {
-            "label": "Longrun locker",
-            "minutes": 154,
-            "hr": 150,
-            "hrRange": "145-154 bpm",
-            "pace": "6:59/km",
-            "km": 22.05
-          },
-          {
-            "label": "Endbeschleunigung",
-            "minutes": 26,
-            "hr": 165,
-            "hrRange": "158-174 bpm",
-            "pace": "5:09/km",
-            "km": 5.05
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:38/km",
-            "km": 1.05
+            "label": "Easy Run",
+            "minutes": 128,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "7:00/km",
+            "km": 18.29
           }
         ]
       },
       {
         "id": "kw10-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
-        "type": "easy",
-        "distanceKm": 10.22,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:38/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 24.0,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "7:00/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 78,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:38/km",
-            "km": 10.22
+            "label": "Long Run",
+            "minutes": 168,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "7:00/km",
+            "km": 24.0
           }
         ]
-      },
-      {
-        "id": "kw10-2027-bonus",
-        "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 6.29,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:38/km",
-        "steps": [
-          {
-            "label": "Bonus sehr locker",
-            "minutes": 48,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:38/km",
-            "km": 6.29
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -5952,152 +5784,183 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-15",
     "endDate": "2027-03-21",
-    "targetKm": 67.81,
+    "targetKm": 75.93,
     "runs": [
       {
         "id": "kw11-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 12.72,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "6:55/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 6.41,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:48/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 88,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "6:55/km",
-            "km": 12.72
+            "label": "Recovery Run",
+            "minutes": 50,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:48/km",
+            "km": 6.41
           }
         ]
       },
       {
         "id": "kw11-2027-lauf2",
         "order": 2,
-        "title": "HM-Pace",
-        "type": "hm_pace",
-        "distanceKm": 14.19,
-        "optimalHr": 176,
-        "hrRange": "170-184 bpm",
-        "pace": "4:43/km",
+        "title": "Threshold Run",
+        "type": "threshold",
+        "distanceKm": 11.57,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:47/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "6:55/km",
-            "km": 2.02
+            "pace": "6:59/km",
+            "km": 2.15
           },
           {
-            "label": "Langer HM-Pace Block",
-            "minutes": 45,
-            "hr": 176,
-            "hrRange": "170-184 bpm",
-            "pace": "4:43/km",
-            "km": 9.54
+            "label": "4 × 9 min Threshold",
+            "minutes": 36,
+            "hr": 179,
+            "hrRange": "175-184 bpm",
+            "pace": "4:53/km",
+            "km": 7.37
           },
           {
-            "label": "Trabpause",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-152 bpm",
-            "pace": "7:37/km",
-            "km": 1.05
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 12,
+            "label": "3 × 2 min Easy Jog",
+            "minutes": 6,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:37/km",
-            "km": 1.58
+            "pace": "7:48/km",
+            "km": 0.77
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:48/km",
+            "km": 1.28
           }
         ]
       },
       {
         "id": "kw11-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 10.37,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:37/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.77,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:50/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 79,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:37/km",
-            "km": 10.37
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:59/km",
+            "km": 8.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw11-2027-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 22.39,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
-        "pace": "6:58/km",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 11.6,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:59/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 156,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
-            "pace": "6:58/km",
-            "km": 22.39
+            "label": "Easy Run",
+            "minutes": 81,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:59/km",
+            "km": 11.6
           }
         ]
       },
       {
         "id": "kw11-2027-lauf5",
         "order": 5,
-        "title": "Locker extra",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 8.14,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:37/km",
+        "distanceKm": 11.6,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:59/km",
         "steps": [
           {
-            "label": "Locker extra",
-            "minutes": 62,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:37/km",
-            "km": 8.14
+            "label": "Easy Run",
+            "minutes": 81,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:59/km",
+            "km": 11.6
           }
         ]
       },
       {
-        "id": "kw11-2027-bonus",
+        "id": "kw11-2027-lauf6",
         "order": 6,
-        "title": "Bonus sehr locker",
-        "type": "optional",
-        "distanceKm": 5.25,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:37/km",
+        "title": "Long Run with HM Pace Blocks",
+        "type": "hm-block-long",
+        "distanceKm": 25.98,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:26/km",
         "steps": [
           {
-            "label": "Bonus sehr locker",
-            "minutes": 40,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:37/km",
-            "km": 5.25
+            "label": "Easy Long Run",
+            "minutes": 73,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "6:59/km",
+            "km": 10.45
+          },
+          {
+            "label": "2 × 16 min HM Pace",
+            "minutes": 32,
+            "hr": 176,
+            "hrRange": "170-184 bpm",
+            "pace": "4:45/km",
+            "km": 6.74
+          },
+          {
+            "label": "Easy Jog Between Blocks",
+            "minutes": 6,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "7:48/km",
+            "km": 0.77
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 56,
+            "hr": 150,
+            "hrRange": "144-156 bpm",
+            "pace": "6:59/km",
+            "km": 8.02
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -6106,124 +5969,139 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-22",
     "endDate": "2027-03-28",
-    "targetKm": 62.28,
+    "targetKm": 67.93,
     "runs": [
       {
         "id": "kw12-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 13.19,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "6:54/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.78,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:47/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 91,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "6:54/km",
-            "km": 13.19
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:47/km",
+            "km": 5.78
           }
         ]
       },
       {
         "id": "kw12-2027-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 10,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "4:51/km",
+        "title": "HM Pace Run",
+        "type": "hm-pace",
+        "distanceKm": 9.01,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:53/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 14,
+            "label": "Warm-up",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "6:54/km",
-            "km": 2.03
+            "pace": "6:58/km",
+            "km": 2.15
           },
           {
-            "label": "Schwelle",
-            "minutes": 31,
+            "label": "2 × 12 min HM Pace",
+            "minutes": 24,
             "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "4:51/km",
-            "km": 6.39
+            "hrRange": "170-184 bpm",
+            "pace": "4:44/km",
+            "km": 5.07
           },
           {
-            "label": "Auslaufen",
-            "minutes": 12,
+            "label": "Easy Jog Between Blocks",
+            "minutes": 4,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "7:47/km",
+            "km": 0.51
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "7:36/km",
-            "km": 1.58
+            "pace": "7:47/km",
+            "km": 1.28
           }
         ]
       },
       {
         "id": "kw12-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 18.42,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:36/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.79,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:50/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 140,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:36/km",
-            "km": 18.42
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:58/km",
+            "km": 8.33
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw12-2027-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 20.67,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 22.39,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
         "pace": "6:58/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 144,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
+            "label": "Easy Run",
+            "minutes": 156,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
             "pace": "6:58/km",
-            "km": 20.67
+            "km": 22.39
           }
         ]
       },
       {
-        "id": "kw12-2027-extra",
+        "id": "kw12-2027-lauf5",
         "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 6.32,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:36/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 21.96,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:58/km",
         "steps": [
           {
-            "label": "Extra locker",
-            "minutes": 48,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:36/km",
-            "km": 6.32
+            "label": "Long Run",
+            "minutes": 153,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "6:58/km",
+            "km": 21.96
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -6232,124 +6110,139 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-29",
     "endDate": "2027-04-04",
-    "targetKm": 56.29,
+    "targetKm": 60.02,
     "runs": [
       {
         "id": "kw13-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 12.64,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "6:53/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 5.78,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:47/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 87,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "6:53/km",
-            "km": 12.64
+            "label": "Recovery Run",
+            "minutes": 45,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:47/km",
+            "km": 5.78
           }
         ]
       },
       {
         "id": "kw13-2027-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 9.12,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "4:50/km",
+        "title": "HM Pace Run",
+        "type": "hm-pace",
+        "distanceKm": 9.02,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:53/km",
         "steps": [
           {
-            "label": "Einlaufen",
+            "label": "Warm-up",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "6:57/km",
+            "km": 2.16
+          },
+          {
+            "label": "2 × 12 min HM Pace",
+            "minutes": 24,
+            "hr": 176,
+            "hrRange": "170-184 bpm",
+            "pace": "4:44/km",
+            "km": 5.07
+          },
+          {
+            "label": "Easy Jog Between Blocks",
+            "minutes": 4,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "7:47/km",
+            "km": 0.51
+          },
+          {
+            "label": "Cool-down",
             "minutes": 10,
             "hr": 145,
             "hrRange": "138-150 bpm",
-            "pace": "6:53/km",
-            "km": 1.45
-          },
-          {
-            "label": "Schwelle",
-            "minutes": 32,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "4:50/km",
-            "km": 6.62
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:35/km",
-            "km": 1.05
+            "pace": "7:47/km",
+            "km": 1.28
           }
         ]
       },
       {
         "id": "kw13-2027-lauf3",
         "order": 3,
-        "title": "Locker",
-        "type": "easy",
-        "distanceKm": 15.82,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:35/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 8.81,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:49/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 120,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:35/km",
-            "km": 15.82
+            "label": "Easy Run",
+            "minutes": 58,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:57/km",
+            "km": 8.35
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw13-2027-lauf4",
         "order": 4,
-        "title": "Longrun",
-        "type": "long",
-        "distanceKm": 18.71,
-        "optimalHr": 152,
-        "hrRange": "148-155 bpm",
+        "title": "Easy Run",
+        "type": "easy",
+        "distanceKm": 18.42,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
         "pace": "6:57/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 130,
-            "hr": 152,
-            "hrRange": "148-155 bpm",
+            "label": "Easy Run",
+            "minutes": 128,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
             "pace": "6:57/km",
-            "km": 18.71
+            "km": 18.42
           }
         ]
       },
       {
-        "id": "kw13-2027-extra",
+        "id": "kw13-2027-lauf5",
         "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 5.27,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:35/km",
+        "title": "Long Run",
+        "type": "long",
+        "distanceKm": 17.99,
+        "optimalHr": 152,
+        "hrRange": "146-158 bpm",
+        "pace": "6:57/km",
         "steps": [
           {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:35/km",
-            "km": 5.27
+            "label": "Long Run",
+            "minutes": 125,
+            "hr": 152,
+            "hrRange": "146-158 bpm",
+            "pace": "6:57/km",
+            "km": 17.99
           }
-        ],
-        "optional": true
+        ]
       }
     ]
   },
@@ -6358,124 +6251,119 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-05",
     "endDate": "2027-04-11",
-    "targetKm": 46.81,
+    "targetKm": 44.98,
     "runs": [
       {
         "id": "kw14-2027-lauf1",
         "order": 1,
-        "title": "Zone 2",
-        "type": "easy",
-        "distanceKm": 10.63,
-        "optimalHr": 146,
-        "hrRange": "140-150 bpm",
-        "pace": "6:52/km",
+        "title": "HM Pace Run",
+        "type": "hm-pace",
+        "distanceKm": 9.04,
+        "optimalHr": 145,
+        "hrRange": "138-150 bpm",
+        "pace": "5:52/km",
         "steps": [
           {
-            "label": "Zone 2",
-            "minutes": 73,
-            "hr": 146,
-            "hrRange": "140-150 bpm",
-            "pace": "6:52/km",
-            "km": 10.63
+            "label": "Warm-up",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "6:56/km",
+            "km": 2.16
+          },
+          {
+            "label": "2 × 12 min HM Pace",
+            "minutes": 24,
+            "hr": 176,
+            "hrRange": "170-184 bpm",
+            "pace": "4:44/km",
+            "km": 5.07
+          },
+          {
+            "label": "Easy Jog Between Blocks",
+            "minutes": 4,
+            "hr": 145,
+            "hrRange": "138-152 bpm",
+            "pace": "7:46/km",
+            "km": 0.52
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
+            "hr": 145,
+            "hrRange": "138-150 bpm",
+            "pace": "7:46/km",
+            "km": 1.29
           }
         ]
       },
       {
         "id": "kw14-2027-lauf2",
         "order": 2,
-        "title": "Schwelle kontrolliert",
-        "type": "deload",
-        "distanceKm": 7.52,
-        "optimalHr": 174,
-        "hrRange": "168-176 bpm",
-        "pace": "4:48/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 7.38,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:47/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 10,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "6:52/km",
-            "km": 1.46
+            "label": "Easy Run",
+            "minutes": 48,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:56/km",
+            "km": 6.92
           },
           {
-            "label": "Schwelle",
-            "minutes": 24,
-            "hr": 176,
-            "hrRange": "172-180 bpm",
-            "pace": "4:48/km",
-            "km": 5
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 8,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:34/km",
-            "km": 1.06
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw14-2027-lauf3",
         "order": 3,
-        "title": "Locker",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 16.26,
-        "optimalHr": 142,
-        "hrRange": "136-146 bpm",
-        "pace": "7:34/km",
+        "distanceKm": 16.59,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:56/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 123,
-            "hr": 142,
-            "hrRange": "136-146 bpm",
-            "pace": "7:34/km",
-            "km": 16.26
+            "label": "Easy Run",
+            "minutes": 115,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:56/km",
+            "km": 16.59
           }
         ]
       },
       {
         "id": "kw14-2027-lauf4",
         "order": 4,
-        "title": "Longrun",
+        "title": "Long Run",
         "type": "long",
-        "distanceKm": 12.4,
+        "distanceKm": 11.97,
         "optimalHr": 152,
-        "hrRange": "148-155 bpm",
+        "hrRange": "146-158 bpm",
         "pace": "6:56/km",
         "steps": [
           {
-            "label": "Longrun",
-            "minutes": 86,
+            "label": "Long Run",
+            "minutes": 83,
             "hr": 152,
-            "hrRange": "148-155 bpm",
+            "hrRange": "146-158 bpm",
             "pace": "6:56/km",
-            "km": 12.4
+            "km": 11.97
           }
         ]
-      },
-      {
-        "id": "kw14-2027-extra",
-        "order": 5,
-        "title": "Extra locker",
-        "type": "optional",
-        "distanceKm": 5.29,
-        "optimalHr": 143,
-        "hrRange": "138-148 bpm",
-        "pace": "7:34/km",
-        "steps": [
-          {
-            "label": "Extra locker",
-            "minutes": 40,
-            "hr": 143,
-            "hrRange": "138-148 bpm",
-            "pace": "7:34/km",
-            "km": 5.29
-          }
-        ],
-        "optional": true
       }
     ]
   },
@@ -6484,99 +6372,91 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-12",
     "endDate": "2027-04-18",
-    "targetKm": 39.52,
+    "targetKm": 34.91,
     "runs": [
       {
         "id": "kw15-2027-lauf1",
         "order": 1,
-        "title": "Locker",
+        "title": "Easy Run",
         "type": "easy",
-        "distanceKm": 8.18,
-        "optimalHr": 145,
-        "hrRange": "138-150 bpm",
-        "pace": "6:51/km",
+        "distanceKm": 5.78,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:55/km",
         "steps": [
           {
-            "label": "Locker",
-            "minutes": 56,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "6:51/km",
-            "km": 8.18
+            "label": "Easy Run",
+            "minutes": 40,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:55/km",
+            "km": 5.78
           }
         ]
       },
       {
         "id": "kw15-2027-lauf2",
         "order": 2,
-        "title": "Aktivierung",
-        "type": "taper",
-        "distanceKm": 6.13,
-        "optimalHr": 160,
-        "hrRange": "150-176 bpm",
-        "pace": "6:15/km",
+        "title": "Easy Run + Strides",
+        "type": "strides",
+        "distanceKm": 4.8,
+        "optimalHr": 146,
+        "hrRange": "140-152 bpm",
+        "pace": "6:40/km",
         "steps": [
           {
-            "label": "Einlaufen",
-            "minutes": 18,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "6:51/km",
-            "km": 2.63
+            "label": "Easy Run",
+            "minutes": 30,
+            "hr": 146,
+            "hrRange": "140-152 bpm",
+            "pace": "6:55/km",
+            "km": 4.34
           },
           {
-            "label": "3 × 3 min HM-Pace",
-            "minutes": 9,
-            "hr": 176,
-            "hrRange": "170-184 bpm",
-            "pace": "4:43/km",
-            "km": 1.91
-          },
-          {
-            "label": "Auslaufen",
-            "minutes": 12,
-            "hr": 145,
-            "hrRange": "138-150 bpm",
-            "pace": "7:33/km",
-            "km": 1.59
+            "label": "6 × 20 s Strides",
+            "minutes": 2,
+            "hr": 170,
+            "hrRange": "kurz schnell, volle Pause",
+            "pace": "4:20/km",
+            "km": 0.46
           }
         ]
       },
       {
         "id": "kw15-2027-lauf3",
         "order": 3,
-        "title": "Shakeout",
-        "type": "taper",
-        "distanceKm": 4.11,
-        "optimalHr": 140,
-        "hrRange": "132-145 bpm",
-        "pace": "7:33/km",
+        "title": "Recovery Run",
+        "type": "recovery",
+        "distanceKm": 3.23,
+        "optimalHr": 142,
+        "hrRange": "136-146 bpm",
+        "pace": "7:44/km",
         "steps": [
           {
-            "label": "Sehr locker",
-            "minutes": 31,
-            "hr": 140,
-            "hrRange": "132-145 bpm",
-            "pace": "7:33/km",
-            "km": 4.11
+            "label": "Recovery Run",
+            "minutes": 25,
+            "hr": 142,
+            "hrRange": "136-146 bpm",
+            "pace": "7:45/km",
+            "km": 3.23
           }
         ]
       },
       {
-        "id": "kw15-2027-race",
+        "id": "kw15-2027-lauf4",
         "order": 4,
-        "title": "Halbmarathon 18.04.2027",
+        "title": "Race",
         "type": "race",
         "distanceKm": 21.1,
-        "optimalHr": 181,
-        "hrRange": "174-188 bpm",
+        "optimalHr": 178,
+        "hrRange": "172-186 bpm",
         "pace": "4:43/km",
         "steps": [
           {
-            "label": "Halbmarathon",
+            "label": "Half Marathon Race",
             "minutes": 99.5,
-            "hr": 181,
-            "hrRange": "174-188 bpm",
+            "hr": 178,
+            "hrRange": "172-186 bpm",
             "pace": "4:43/km",
             "km": 21.1
           }
