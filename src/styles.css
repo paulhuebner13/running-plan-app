@@ -45,15 +45,16 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
 .km-progress-label span { color: var(--muted); font-size: 0.86rem; font-weight: 750; }
 .km-progress-label strong { font-size: 1rem; color: var(--ink); }
 .km-progress-track { height: 16px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.11); box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.35); }
-.km-progress-track.segmented { display: flex; gap: 2px; padding: 2px; }
-.km-segment { --cat: var(--yellow); display: block; min-width: 6px; height: 100%; border-radius: 999px; background: var(--cat); opacity: 0.46; }
+.km-progress-track.segmented { display: flex; gap: 0; padding: 0; align-items: stretch; }
+.km-segment { --cat: var(--yellow); display: block; min-width: 0; height: 100%; border-radius: 0; background: var(--cat); opacity: 1; }
 .km-segment.done { opacity: 1; }
-.km-segment.missed { opacity: 0.22; outline: 1px solid var(--red); }
 
 .run-list { display: grid; gap: 11px; margin-top: 16px; }
 .run-card { --cat: var(--yellow); width: 100%; border: 2px solid color-mix(in srgb, var(--cat) 78%, transparent); border-radius: 20px; background: linear-gradient(90deg, color-mix(in srgb, var(--cat) 18%, transparent), var(--card-strong) 44%); color: var(--ink); padding: 13px; display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 12px; text-align: left; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.20); transition: transform 120ms ease, opacity 120ms ease, filter 120ms ease; }
 .run-card:active { transform: scale(0.99); }
-.run-card.done { opacity: 0.70; filter: grayscale(0.18); background: linear-gradient(90deg, color-mix(in srgb, var(--cat) 10%, transparent), rgba(35,38,45,0.92) 44%); }
+.run-card.done { opacity: 0.46; filter: grayscale(0.78) saturate(0.34); background: linear-gradient(90deg, rgba(255,255,255,0.035), rgba(36,38,44,0.76) 44%); border-color: rgba(255,255,255,0.16); }
+.run-card.done .run-number, .run-card.done .category-badge { opacity: 0.55; }
+.run-card.done .run-summary strong, .run-card.done .run-summary > span { color: rgba(247,244,234,0.52); }
 .run-card.missed { border-color: var(--red); background: linear-gradient(90deg, rgba(240, 83, 83, 0.14), var(--card-strong) 44%); }
 .run-number { width: 42px; height: 38px; border-radius: 14px; display: grid; place-items: center; background: color-mix(in srgb, var(--cat) 20%, transparent); color: var(--cat); font-weight: 950; font-size: 0.92rem; }
 .run-summary { min-width: 0; }

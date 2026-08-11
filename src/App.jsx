@@ -297,16 +297,15 @@ export default function App() {
               <span>Target volume</span>
               <strong>{formatNumber(completedMandatoryKm)} / {formatNumber(totalMandatoryKm)} km</strong>
             </div>
-            <div className="km-progress-track segmented" aria-label="Weekly run colour overview">
-              {mandatoryRuns.map((run) => {
+            <div className="km-progress-track segmented" aria-label="Completed weekly volume by run category">
+              {mandatoryRuns.filter((run) => progress[run.id]).map((run) => {
                 const width = totalMandatoryKm > 0 ? (Number(run.distanceKm || 0) / totalMandatoryKm) * 100 : 0;
-                const status = statusFor(run);
                 return (
                   <span
                     key={run.id}
-                    className={`km-segment ${categoryClass(run)} ${status}`}
+                    className={`km-segment ${categoryClass(run)} done`}
                     style={{ width: `${width}%` }}
-                    title={`${run.title}: ${formatNumber(run.distanceKm)} km`}
+                    title={`${run.title}: ${formatNumber(run.distanceKm)} km completed`}
                   />
                 );
               })}
