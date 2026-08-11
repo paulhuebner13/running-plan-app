@@ -408,3 +408,50 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     min-height: 76px;
   }
 }
+
+
+/* v21 fixed modal height and full overview category colors */
+.run-modal {
+  height: auto !important;
+  max-height: min(92dvh, 760px) !important;
+}
+.workout-blocks {
+  flex: 0 1 auto !important;
+  max-height: calc(92dvh - 170px) !important;
+  overflow-y: auto !important;
+}
+.grouped-block,
+.workout-block {
+  min-height: 0 !important;
+  height: auto !important;
+}
+.grouped-items {
+  display: grid !important;
+  grid-auto-rows: auto !important;
+}
+.grouped-item {
+  min-height: 0 !important;
+  height: auto !important;
+}
+.metric-tile {
+  min-height: 76px !important;
+  height: auto !important;
+}
+.overview-run-segment .overview-run-fill,
+.overview-run-segment.done .overview-run-fill,
+.overview-run-segment.missed .overview-run-fill,
+.overview-run-segment.upcoming .overview-run-fill {
+  background: var(--cat) !important;
+  opacity: 0.94 !important;
+  filter: none !important;
+}
+
+@media (max-width: 480px) {
+  .run-modal {
+    height: auto !important;
+    max-height: calc(100dvh - 10px) !important;
+  }
+  .workout-blocks {
+    max-height: calc(100dvh - 165px) !important;
+  }
+}
