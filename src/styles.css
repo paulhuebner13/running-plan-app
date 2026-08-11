@@ -312,3 +312,99 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
   .overview-run-segment { min-width: 14px; border-width: 3px; padding: 2px; border-radius: 7px; }
   .overview-run-fill { border-radius: 3px; }
 }
+
+/* v20 category color source of truth for modals and overview fills */
+.run-modal.cat-recovery,
+.overview-run-segment.cat-recovery { --cat: var(--blue-light); }
+.run-modal.cat-easy,
+.run-modal.cat-easy-strides,
+.overview-run-segment.cat-easy,
+.overview-run-segment.cat-easy-strides { --cat: var(--green); }
+.run-modal.cat-steady,
+.run-modal.cat-progressive,
+.overview-run-segment.cat-steady,
+.overview-run-segment.cat-progressive { --cat: var(--orange); }
+.run-modal.cat-threshold,
+.run-modal.cat-hm-pace,
+.overview-run-segment.cat-threshold,
+.overview-run-segment.cat-hm-pace { --cat: var(--red); }
+.run-modal.cat-interval,
+.overview-run-segment.cat-interval { --cat: var(--purple); }
+.run-modal.cat-long,
+.run-modal.cat-fast-finish,
+.run-modal.cat-long-hm,
+.overview-run-segment.cat-long,
+.overview-run-segment.cat-fast-finish,
+.overview-run-segment.cat-long-hm { --cat: var(--blue-dark); }
+.run-modal.cat-race,
+.overview-run-segment.cat-race { --cat: var(--race); }
+
+.overview-run-segment .overview-run-fill {
+  background: var(--cat) !important;
+  opacity: 0.92;
+  filter: none;
+}
+.overview-run-segment.done .overview-run-fill {
+  opacity: 0.58;
+  filter: grayscale(0.35) saturate(0.75);
+}
+.overview-run-segment.missed .overview-run-fill {
+  opacity: 0.42;
+  filter: grayscale(0.5) saturate(0.65);
+}
+
+.run-modal {
+  height: min(92dvh, 760px);
+  max-height: calc(100dvh - 16px);
+}
+.workout-blocks {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 22px;
+}
+.grouped-block {
+  overflow: visible;
+}
+.grouped-items {
+  display: grid;
+  gap: 0;
+}
+.grouped-item {
+  min-width: 0;
+}
+.grouped-item .block-grid {
+  align-items: stretch;
+}
+.block-divider {
+  flex: none;
+}
+.metric-tile {
+  min-height: 76px;
+  height: auto;
+}
+.metric-tile strong {
+  min-height: 38px;
+  align-items: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.minutes-tile strong,
+.hr-tile strong {
+  color: color-mix(in srgb, var(--cat) 82%, white);
+}
+
+@media (max-width: 480px) {
+  .run-modal {
+    height: min(94dvh, 760px);
+    max-height: calc(100dvh - 10px);
+  }
+  .workout-blocks {
+    padding-bottom: 24px;
+  }
+  .grouped-item .block-grid {
+    grid-template-columns: 1.2fr 1.3fr 1fr 0.85fr;
+  }
+  .metric-tile {
+    min-height: 76px;
+  }
+}

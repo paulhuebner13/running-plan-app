@@ -1,11 +1,6 @@
-Clean fixed running plan app.
+Running Plan App v20
 
-Copy the contents of this folder into your project root, then run:
-
-npm.cmd install
-npm.cmd run build
-git add -A
-git commit -m "Upgrade running plan app"
-git push
-
-Do not commit node_modules or dist.
+Fixes:
+- Modal and weekly overview now use the same category colors as run cards.
+- Combined workout blocks are used for work + recovery pairs, including VO2max intervals and threshold runs.
+- Combined blocks and the modal middle section are fully scrollable and should not be cut off.
