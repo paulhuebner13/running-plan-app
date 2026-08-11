@@ -2,8 +2,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { trainingPlan } from './trainingPlan.js';
 
-// You can either keep these values in Vercel environment variables
-// or replace them directly with your Supabase values.
 const supabaseUrl = 'https://frfduxfbeugdagcaljur.supabase.co';
 const supabaseAnonKey = 'sb_publishable_bL6iOCMHMPeBSG4tcUVcVw_vZMxFOUY';
 
@@ -11,30 +9,58 @@ const supabase = supabaseUrl && supabaseAnonKey
   ? createClient(supabaseUrl, supabaseAnonKey)
   : null;
 
-const STORAGE_KEY = 'running-plan-progress-v1';
-const SYNC_KEY = 'paul-running';
+const STORAGE_KEY = 'running-plan-progress-v3';
+const SYNC_KEY = 'paul-running-v3';
+
+const DAY_OFFSETS = {
+  Monday: 0,
+  Tuesday: 1,
+  Wednesday: 2,
+  Thursday: 3,
+  Friday: 4,
+  Saturday: 5,
+  Sunday: 6
+};
+
+const DAY_SHORT = {
+  Monday: 'Mon',
+  Tuesday: 'Tue',
+  Wednesday: 'Wed',
+  Thursday: 'Thu',
+  Friday: 'Fri',
+  Saturday: 'Sat',
+  Sunday: 'Sun'
+};
+
+const CATEGORY_META = {
+  'Recovery Run': { className: 'cat-recovery', label: 'Recovery' },
+  'Easy Run': { className: 'cat-easy', label: 'Easy' },
+  'Easy Run + Strides': { className: 'cat-easy-strides', label: 'Easy + Strides' },
+  'Steady Run': { className: 'cat-steady', label: 'Steady' },
+  'Progressive Run': { className: 'cat-progressive', label: 'Progressive' },
+  'Threshold Run': { className: 'cat-threshold', label: 'Threshold' },
+  'Interval Run': { className: 'cat-interval', label: 'Interval' },
+  'HM Pace Run': { className: 'cat-hm-pace', label: 'HM Pace' },
+  'Long Run': { className: 'cat-long', label: 'Long' },
+  'Fast Finish Long Run': { className: 'cat-fast-finish', label: 'Fast Finish' },
+  'Long Run with HM Pace Blocks': { className: 'cat-long-hm', label: 'Long + HM' },
+  Race: { className: 'cat-race', label: 'Race' }
+};
+
+function categoryClass(run) {
+  return CATEGORY_META[run.category || run.title]?.className || 'cat-default';
+}
+
+function categoryLabel(run) {
+  return CATEGORY_META[run.category || run.title]?.label || run.category || run.title;
+}
 
 function formatDate(value) {
-  return new Intl.DateTimeFormat('de-AT', {
+  return new Intl.DateTimeFormat('en-GB', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
   }).format(new Date(`${value}T12:00:00`));
-}
-
-
-function getRunMinutes(run) {
-  return (run.steps || []).reduce((sum, step) => sum + Number(step.minutes || 0), 0);
-}
-
-function formatMinutes(value) {
-  if (!Number.isFinite(Number(value))) return value;
-  const number = Number(value);
-  return Number.isInteger(number) ? number : number.toFixed(1);
-}
-
-function hasHeartRate(value) {
-  return value !== null && value !== undefined && value !== '';
 }
 
 function getInitialWeekIndex() {
@@ -53,11 +79,29 @@ function formatNumber(value) {
 }
 
 function formatHr(value) {
-  return String(value ?? '').replace(/\s*bpm/gi, '').trim();
+  if (value === null || value === undefined || value === '') return '—';
+  return String(value).replace(/\s*bpm/gi, '').trim();
 }
 
 function formatPace(value) {
-  return String(value ?? '').replace(/\s*\/?km/gi, '').trim();
+  if (!value) return '—';
+  return String(value).replace(/\s*\/?km/gi, '').trim();
+}
+
+function getStepMinutes(step) {
+  return Number(step.minutes || 0) + Number(step.seconds || 0) / 60;
+}
+
+function getRunMinutes(run) {
+  return Math.round((run.steps || []).reduce((sum, step) => sum + getStepMinutes(step), 0));
+}
+
+function formatStepDuration(step) {
+  if (step.displayDuration) return step.displayDuration;
+  if (step.seconds && !step.minutes) return `${step.seconds} s`;
+  const total = getStepMinutes(step);
+  if (total < 1 && total > 0) return `${Math.round(total * 60)} s`;
+  return `${Math.round(total)} min`;
 }
 
 function parseRepeatedStep(step) {
@@ -71,7 +115,7 @@ function parseRepeatedStep(step) {
 
   return {
     reps,
-    minutesPerRep,
+    displayDuration: `${minutesPerRep} min each`,
     kmPerRep: Number.isFinite(kmPerRep) ? kmPerRep : step.km
   };
 }
@@ -82,14 +126,27 @@ function makeWorkoutBlocks(run) {
 
     return {
       label: step.label,
-      minutes: repeated ? repeated.minutesPerRep : step.minutes,
+      duration: repeated ? repeated.displayDuration : formatStepDuration(step),
       hr: step.hr ?? null,
-      hrRange: step.hrRange ?? '',
-      pace: step.pace ?? run.pace,
-      km: repeated ? repeated.kmPerRep : (step.km ?? run.distanceKm),
-      note: step.note ?? ''
+      hrRange: step.hrRange ?? null,
+      pace: step.pace ?? null,
+      km: repeated ? repeated.kmPerRep : (step.km ?? null),
+      notes: step.notes ?? null
     };
   });
+}
+
+function plannedDateForRun(weekItem, run) {
+  const start = new Date(`${weekItem.startDate}T00:00:00`);
+  const offset = DAY_OFFSETS[run.plannedDay] ?? Math.max(0, Number(run.order || 1) - 1);
+  start.setDate(start.getDate() + offset);
+  return start;
+}
+
+function isRunDatePast(weekItem, run) {
+  const planned = plannedDateForRun(weekItem, run);
+  planned.setHours(23, 59, 59, 999);
+  return new Date() > planned;
 }
 
 export default function App() {
@@ -98,6 +155,7 @@ export default function App() {
   const [progress, setProgress] = useState({});
 
   const week = trainingPlan[weekIndex];
+  const currentWeekIndex = getInitialWeekIndex();
   const selectedRun = useMemo(() => {
     if (!selectedRunId) return null;
     return week.runs.find((run) => run.id === selectedRunId) || null;
@@ -172,15 +230,10 @@ export default function App() {
       });
   }
 
-  function isWeekPast(weekItem) {
-    const end = new Date(`${weekItem.endDate}T23:59:59`);
-    return new Date() > end;
-  }
-
-  function statusFor(run) {
+  function statusFor(run, weekItem = week) {
     if (progress[run.id]) return 'done';
-    if (isWeekPast(week) && !run.optional) return 'missed';
-    return 'open';
+    if (isRunDatePast(weekItem, run)) return 'missed';
+    return 'upcoming';
   }
 
   function previousWeek() {
@@ -193,16 +246,22 @@ export default function App() {
     setSelectedRunId(null);
   }
 
+  function goToCurrentWeek() {
+    setWeekIndex(currentWeekIndex);
+    setSelectedRunId(null);
+  }
+
   return (
     <main className="app-shell">
       <header className="hero-card">
         <div className="week-nav compact">
-          <button aria-label="Previous calendar week" onClick={previousWeek} disabled={weekIndex === 0}>‹</button>
+          <button aria-label="Previous week" onClick={previousWeek} disabled={weekIndex === 0}>‹</button>
           <div>
-            <h1>KW {week.kw}</h1>
+            <h1>Week {week.kw}</h1>
             <p>{formatDate(week.startDate)} to {formatDate(week.endDate)}</p>
           </div>
-          <button aria-label="Next calendar week" onClick={nextWeek} disabled={weekIndex === trainingPlan.length - 1}>›</button>
+          <button className="today-button" aria-label="Go to current week" onClick={goToCurrentWeek} title="Current week">▦</button>
+          <button aria-label="Next week" onClick={nextWeek} disabled={weekIndex === trainingPlan.length - 1}>›</button>
         </div>
 
         <section className="km-progress-card">
@@ -219,16 +278,20 @@ export default function App() {
       <section className="run-list" aria-label="Runs this week">
         {week.runs.map((run) => {
           const status = statusFor(run);
+          const cat = categoryClass(run);
           return (
             <button
               key={run.id}
-              className={`run-card ${status}`}
+              className={`run-card ${status} ${cat}`}
               onClick={() => setSelectedRunId(run.id)}
             >
-              <div className="run-number">{run.optional ? '+' : run.order}</div>
+              <div className="run-number">{DAY_SHORT[run.plannedDay] || run.order}</div>
               <div className="run-summary">
-                <strong>{run.title}</strong>
-                <span>{formatMinutes(getRunMinutes(run))} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HR {formatHr(run.optimalHr)}</span>
+                <div className="title-row">
+                  <strong>{run.title}</strong>
+                  <span className="category-badge">{categoryLabel(run)}</span>
+                </div>
+                <span>{getRunMinutes(run)} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HR {formatHr(run.optimalHr)}</span>
               </div>
               <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
             </button>
@@ -236,13 +299,50 @@ export default function App() {
         })}
       </section>
 
+      <section className="overview-section" aria-label="Training plan overview">
+        <div className="section-heading">
+          <h2>Weekly overview</h2>
+          <span>done / missed / upcoming</span>
+        </div>
+        <div className="week-overview-list">
+          {trainingPlan.map((weekItem, index) => (
+            <button
+              key={`${weekItem.year}-${weekItem.kw}`}
+              className={`overview-week ${index === weekIndex ? 'selected' : ''}`}
+              onClick={() => {
+                setWeekIndex(index);
+                setSelectedRunId(null);
+              }}
+            >
+              <div className="overview-week-head">
+                <strong>W{weekItem.kw}</strong>
+                <span>{formatNumber(weekItem.targetKm)} km</span>
+              </div>
+              <div className="overview-pills">
+                {weekItem.runs.map((run) => {
+                  const status = statusFor(run, weekItem);
+                  return (
+                    <span key={run.id} className={`overview-pill ${categoryClass(run)} ${status}`}>
+                      <b>{DAY_SHORT[run.plannedDay] || run.order}</b>
+                      <em>{categoryLabel(run)}</em>
+                      <i>{status === 'done' ? '✓' : status === 'missed' ? '!' : '•'}</i>
+                    </span>
+                  );
+                })}
+              </div>
+            </button>
+          ))}
+        </div>
+      </section>
+
       {selectedRun && (
         <section className="modal-backdrop" onClick={() => setSelectedRunId(null)}>
-          <article className="run-modal" onClick={(event) => event.stopPropagation()}>
+          <article className={`run-modal ${categoryClass(selectedRun)}`} onClick={(event) => event.stopPropagation()}>
             <div className="modal-header">
               <div>
-                <span>{selectedRun.optional ? 'Extra' : `Run ${selectedRun.order}`}</span>
+                <span>{selectedRun.plannedDay} · Run {selectedRun.order}</span>
                 <h2>{selectedRun.title}</h2>
+                <p>{categoryLabel(selectedRun)} · {getRunMinutes(selectedRun)} min · {formatNumber(selectedRun.distanceKm)} km</p>
               </div>
               <button className="close-button" onClick={() => setSelectedRunId(null)} aria-label="Close">×</button>
             </div>
@@ -253,30 +353,24 @@ export default function App() {
                   <div className="block-title">{block.label}</div>
                   <div className="block-grid">
                     <div className="metric-tile minutes-tile">
-                      <span>Minutes</span>
-                      <strong>{formatMinutes(block.minutes)}</strong>
+                      <span>Duration</span>
+                      <strong>{block.duration}</strong>
                     </div>
-                    {hasHeartRate(block.hr) ? (
-                      <div className="metric-tile hr-tile">
-                        <span>HR</span>
-                        <strong>{formatHr(block.hr)}</strong>
-                        <em>{formatHr(block.hrRange)}</em>
-                      </div>
-                    ) : (
-                      <div className="metric-tile note-tile">
-                        <span>Notes</span>
-                        <strong>{block.note || 'No HR target'}</strong>
-                      </div>
-                    )}
+                    <div className="metric-tile hr-tile">
+                      <span>HR</span>
+                      <strong>{formatHr(block.hr)}</strong>
+                      <em>{formatHr(block.hrRange)}</em>
+                    </div>
                     <div className="metric-tile pace-tile">
                       <span>Pace</span>
                       <strong>{formatPace(block.pace)}</strong>
                     </div>
                     <div className="metric-tile km-tile">
                       <span>km</span>
-                      <strong>{formatNumber(block.km)}</strong>
+                      <strong>{block.km === null || block.km === undefined ? '—' : formatNumber(block.km)}</strong>
                     </div>
                   </div>
+                  {block.notes && <p className="block-note">{block.notes}</p>}
                 </article>
               ))}
             </div>

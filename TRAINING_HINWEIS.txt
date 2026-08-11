@@ -1,16 +1,3 @@
-Laufplan bis Halbmarathon am 18.04.2027
+Training plan notes
 
-Grundidee:
-- Echter Zieltermin: Sonntag, 18. April 2027.
-- Kein zufaelliger Taper am Dateiende, sondern Aufbau bis zur spezifischen Halbmarathonphase und Taper nur direkt vor dem Rennen.
-- Ab etwa 55 bis 60 km werden 5 Pflichtlaeufe pro Woche verwendet. Das ist kontrollierter als 70+ km auf nur 4 Laeufe zu pressen.
-- Peak: ca. 77 km Pflichtumfang, optionaler Bonus nur wenn du dich frisch fuehlst.
-- Longruns steigen bis maximal 28 km. Mehr waere fuer Halbmarathon aktuell nicht noetig.
-- Letzte Wochen: echter Taper mit abnehmendem Umfang, aber etwas Intensitaet bleibt erhalten.
-
-Eingeschaetztes Rennen im Plan:
-- Halbmarathon am 18.04.2027
-- Zielzeit im Plan: ca. 1:39:30
-- Pace: ca. 4:43/km
-
-Das ist ambitioniert, aber nicht voellig unrealistisch, wenn du konstant bleibst, gesund bleibst und die lockeren Einheiten wirklich locker laeufst.
+The plan uses fixed workout categories. Overview HR values represent the main training stimulus, not warm-up or cool-down. Distances are calculated from the displayed minutes and pace. Strides are shown with a separate notes field and full recovery guidance, not as an HR target.
