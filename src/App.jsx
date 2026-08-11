@@ -114,34 +114,43 @@ function formatStepDuration(step) {
 
 function parseRepeatedStep(step) {
   const label = String(step.label || '');
-  const match = label.match(/(\d+)\s*[×x]\s*(\d+)\s*min/i);
+  const minuteMatch = label.match(/(\d+)\s*[×x]\s*(\d+)\s*min/i);
+  const secondMatch = label.match(/(\d+)\s*[×x]\s*(\d+)\s*s/i);
+  const match = minuteMatch || secondMatch;
   if (!match) return null;
 
   const reps = Number(match[1]);
-  const minutesPerRep = Number(match[2]);
+  const amountPerRep = Number(match[2]);
   const kmPerRep = Number(step.km || 0) / reps;
 
   return {
     reps,
-    displayDuration: `${minutesPerRep} min each`,
+    displayDuration: minuteMatch ? `${amountPerRep} min each` : `${amountPerRep} s each`,
     kmPerRep: Number.isFinite(kmPerRep) ? kmPerRep : step.km
   };
 }
 
 function makeWorkoutBlocks(run) {
-  return (run.steps || []).map((step) => {
-    const repeated = parseRepeatedStep(step);
+  const steps = run.steps || [];
+  const blocks = [];
 
-    return {
-      label: step.label,
-      duration: repeated ? repeated.displayDuration : formatStepDuration(step),
-      hr: step.hr ?? null,
-      hrRange: step.hrRange ?? null,
-      pace: step.pace ?? null,
-      km: repeated ? repeated.kmPerRep : (step.km ?? null),
-      notes: step.notes ?? null
-    };
-  });
+  for (let index = 0; index < steps.length; index += 1) {
+    const step = steps[index];
+    const nextStep = steps[index + 1];
+
+    if (shouldGroupWithNext(step, nextStep)) {
+      blocks.push({
+        label: step.label,
+        grouped: true,
+        items: [makeSingleWorkoutBlock(step), makeSingleWorkoutBlock(nextStep)]
+      });
+      index += 1;
+    } else {
+      blocks.push(makeSingleWorkoutBlock(step));
+    }
+  }
+
+  return blocks;
 }
 
 function plannedDateForRun(weekItem, run) {
@@ -163,6 +172,31 @@ function getStatusLabel(status) {
   return 'open';
 }
 
+function shouldGroupWithNext(step, nextStep) {
+  if (!nextStep) return false;
+  const label = String(step.label || '');
+  const nextLabel = String(nextStep.label || '');
+
+  const isWorkBlock = /(Strides|Threshold|Interval|HM Pace|Fast|Hard)/i.test(label);
+  const isRecoveryBlock = /(Recovery|Easy Recovery|Full Recovery|Rest)/i.test(nextLabel);
+
+  return isWorkBlock && isRecoveryBlock;
+}
+
+function makeSingleWorkoutBlock(step) {
+  const repeated = parseRepeatedStep(step);
+
+  return {
+    label: step.label,
+    duration: repeated ? repeated.displayDuration : formatStepDuration(step),
+    hr: step.hr ?? null,
+    hrRange: step.hrRange ?? null,
+    pace: step.pace ?? null,
+    km: repeated ? repeated.kmPerRep : (step.km ?? null),
+    notes: step.notes ?? null
+  };
+}
+
 export default function App() {
   const [weekIndex, setWeekIndex] = useState(getInitialWeekIndex);
   const [selectedRunId, setSelectedRunId] = useState(null);
@@ -177,6 +211,9 @@ export default function App() {
 
   const mandatoryRuns = week.runs.filter((run) => !run.optional);
   const totalMandatoryKm = mandatoryRuns.reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
+  const maxOverviewKm = useMemo(() => Math.max(...trainingPlan.map((weekItem) =>
+    weekItem.runs.filter((run) => !run.optional).reduce((sum, run) => sum + Number(run.distanceKm || 0), 0)
+  )), []);
   const completedMandatoryKm = mandatoryRuns
     .filter((run) => progress[run.id])
     .reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
@@ -347,30 +384,39 @@ export default function App() {
           </div>
           <div className="week-overview-list compact-squares">
             {trainingPlan.map((weekItem, index) => {
-              const doneCount = weekItem.runs.filter((run) => statusFor(run, weekItem) === 'done').length;
-              const missedCount = weekItem.runs.filter((run) => statusFor(run, weekItem) === 'missed').length;
+              const mandatoryWeekRuns = weekItem.runs.filter((run) => !run.optional);
+              const doneCount = mandatoryWeekRuns.filter((run) => statusFor(run, weekItem) === 'done').length;
+              const missedCount = mandatoryWeekRuns.filter((run) => statusFor(run, weekItem) === 'missed').length;
+              const weekKm = mandatoryWeekRuns.reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
+              const weekWidth = maxOverviewKm > 0 ? Math.max(6, (weekKm / maxOverviewKm) * 100) : 100;
+              const allDone = mandatoryWeekRuns.length > 0 && doneCount === mandatoryWeekRuns.length;
               return (
                 <button
                   key={`${weekItem.year}-${weekItem.kw}`}
-                  className={`overview-week ${index === weekIndex ? 'selected' : ''}`}
+                  className={`overview-week ${index === weekIndex ? 'selected' : ''} ${allDone ? 'all-done' : ''}`}
                   onClick={() => openWeek(index)}
                 >
                   <div className="overview-week-head">
                     <strong>W{weekItem.kw}</strong>
                     <span>{formatDate(weekItem.startDate)}</span>
-                    <em>{formatNumber(weekItem.targetKm)} km</em>
+                    <em>{formatNumber(weekKm)} km</em>
                   </div>
-                  <div className="overview-squares" aria-label={`Week ${weekItem.kw}: ${doneCount} done, ${missedCount} missed`}>
-                    {weekItem.runs.map((run) => {
-                      const status = statusFor(run, weekItem);
-                      return (
-                        <span
-                          key={run.id}
-                          className={`overview-square ${status}`}
-                          title={`${DAY_SHORT[run.plannedDay] || run.order} · ${run.title} · ${getStatusLabel(status)}`}
-                        />
-                      );
-                    })}
+                  <div className="overview-bars" aria-label={`Week ${weekItem.kw}: ${doneCount} done, ${missedCount} missed`}>
+                    <div className="overview-volume-row" style={{ width: `${weekWidth}%` }}>
+                      {mandatoryWeekRuns.map((run) => {
+                        const status = statusFor(run, weekItem);
+                        return (
+                          <span
+                            key={run.id}
+                            className={`overview-run-segment ${status} ${categoryClass(run)}`}
+                            style={{ flexGrow: Number(run.distanceKm || 0) }}
+                            title={`${DAY_SHORT[run.plannedDay] || run.order} · ${run.title} · ${formatNumber(run.distanceKm)} km · ${getStatusLabel(status)}`}
+                          >
+                            <span className="overview-run-fill" />
+                          </span>
+                        );
+                      })}
+                    </div>
                   </div>
                 </button>
               );
@@ -393,38 +439,75 @@ export default function App() {
 
             <div className="workout-blocks">
               {makeWorkoutBlocks(selectedRun).map((block, index) => (
-                <article className="workout-block" key={`${selectedRun.id}-${index}`}>
-                  <div className="block-title">{block.label}</div>
-                  <div className="block-grid">
-                    <div className="metric-tile minutes-tile highlight-tile">
-                      <span>Duration</span>
-                      <strong>{block.duration}</strong>
+                <article className={`workout-block ${block.grouped ? 'grouped-block' : ''}`} key={`${selectedRun.id}-${index}`}>
+                  {block.grouped ? (
+                    <div className="grouped-items">
+                      {block.items.map((item, itemIndex) => (
+                        <React.Fragment key={`${selectedRun.id}-${index}-${itemIndex}`}>
+                          {itemIndex > 0 && <div className="block-divider" aria-hidden="true" />}
+                          <div className="grouped-item">
+                            <div className="block-title">{item.label}</div>
+                            <div className="block-grid">
+                              <div className="metric-tile minutes-tile highlight-tile">
+                                <span>Duration</span>
+                                <strong>{item.duration}</strong>
+                              </div>
+                              <div className="metric-tile hr-tile highlight-tile">
+                                <span>HR</span>
+                                <strong>{formatHr(item.hr)}</strong>
+                                <em>{formatHr(item.hrRange)}</em>
+                              </div>
+                              <div className="metric-tile pace-tile">
+                                <span>Pace</span>
+                                <strong>{formatPace(item.pace)}</strong>
+                              </div>
+                              <div className="metric-tile km-tile">
+                                <span>km</span>
+                                <strong>{item.km === null || item.km === undefined ? '—' : formatNumber(item.km)}</strong>
+                              </div>
+                            </div>
+                            {item.notes && <p className="block-note">{item.notes}</p>}
+                          </div>
+                        </React.Fragment>
+                      ))}
                     </div>
-                    <div className="metric-tile hr-tile highlight-tile">
-                      <span>HR</span>
-                      <strong>{formatHr(block.hr)}</strong>
-                      <em>{formatHr(block.hrRange)}</em>
-                    </div>
-                    <div className="metric-tile pace-tile">
-                      <span>Pace</span>
-                      <strong>{formatPace(block.pace)}</strong>
-                    </div>
-                    <div className="metric-tile km-tile">
-                      <span>km</span>
-                      <strong>{block.km === null || block.km === undefined ? '—' : formatNumber(block.km)}</strong>
-                    </div>
-                  </div>
-                  {block.notes && <p className="block-note">{block.notes}</p>}
+                  ) : (
+                    <>
+                      <div className="block-title">{block.label}</div>
+                      <div className="block-grid">
+                        <div className="metric-tile minutes-tile highlight-tile">
+                          <span>Duration</span>
+                          <strong>{block.duration}</strong>
+                        </div>
+                        <div className="metric-tile hr-tile highlight-tile">
+                          <span>HR</span>
+                          <strong>{formatHr(block.hr)}</strong>
+                          <em>{formatHr(block.hrRange)}</em>
+                        </div>
+                        <div className="metric-tile pace-tile">
+                          <span>Pace</span>
+                          <strong>{formatPace(block.pace)}</strong>
+                        </div>
+                        <div className="metric-tile km-tile">
+                          <span>km</span>
+                          <strong>{block.km === null || block.km === undefined ? '—' : formatNumber(block.km)}</strong>
+                        </div>
+                      </div>
+                      {block.notes && <p className="block-note">{block.notes}</p>}
+                    </>
+                  )}
                 </article>
               ))}
             </div>
 
-            <button
-              className={`modal-check-button ${progress[selectedRun.id] ? 'checked' : ''}`}
-              onClick={() => updateRun(selectedRun.id, !progress[selectedRun.id])}
-            >
-              {progress[selectedRun.id] ? 'Done' : 'Mark as done'}
-            </button>
+            <div className="modal-footer">
+              <button
+                className={`modal-check-button ${progress[selectedRun.id] ? 'checked' : ''}`}
+                onClick={() => updateRun(selectedRun.id, !progress[selectedRun.id])}
+              >
+                {progress[selectedRun.id] ? 'Undo' : 'Mark as done'}
+              </button>
+            </div>
           </article>
         </section>
       )}
