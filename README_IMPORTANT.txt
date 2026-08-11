@@ -1,1 +1,1 @@
-v21: Modal height no longer fills the screen for short workouts. Grouped workout cards keep normal content height and scroll only when needed. Weekly overview fills always use full category colors; status is shown by the border.
+Version v22: More VO2max interval runs, fewer progressive/steady runs. Interval Run appears about every second week in the build-up while keeping HM-specific threshold, HM pace and long-run blocks.

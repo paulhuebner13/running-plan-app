@@ -174,7 +174,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-17",
     "endDate": "2026-08-23",
-    "targetKm": 47.93,
+    "targetKm": 47.82,
     "runs": [
       {
         "id": "kw34-run1",
@@ -221,42 +221,50 @@ export const trainingPlan = [
       {
         "id": "kw34-run2",
         "order": 2,
-        "title": "Steady Run",
-        "category": "Steady Run",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "54 min · 8.38 km",
-        "type": "steady-run",
-        "distanceKm": 8.38,
-        "minutes": 54,
-        "optimalHr": 167,
-        "hrRange": "160-173",
-        "pace": "5:56",
+        "subtitle": "52 min · 8.27 km",
+        "type": "interval-run",
+        "distanceKm": 8.27,
+        "minutes": 52,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:41",
         "optional": false,
-        "notes": null,
+        "notes": "VO2max session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 12,
+            "minutes": 15,
             "pace": "7:08",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 1.68
+            "km": 2.1
           },
           {
-            "label": "Steady",
-            "minutes": 32,
-            "pace": "5:56",
-            "hr": 167,
-            "hrRange": "160-173",
-            "km": 5.39
+            "label": "4 × 4 min VO2max",
+            "minutes": 16,
+            "pace": "4:41",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 3.42
+          },
+          {
+            "label": "3 × 3 min Easy Recovery",
+            "minutes": 9,
+            "pace": "7:38",
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.18
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:39",
+            "minutes": 12,
+            "pace": "7:38",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.31
+            "km": 1.57
           }
         ]
       },
@@ -817,42 +825,50 @@ export const trainingPlan = [
       {
         "id": "kw38-run2",
         "order": 2,
-        "title": "Progressive Run",
-        "category": "Progressive Run",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
         "subtitle": "52 min · 8.31 km",
-        "type": "progressive-run",
+        "type": "interval-run",
         "distanceKm": 8.31,
         "minutes": 52,
-        "optimalHr": 172,
-        "hrRange": "166-178",
-        "pace": "5:44",
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:39",
         "optional": false,
-        "notes": null,
+        "notes": "VO2max session. Hard but controlled, not all-out.",
         "steps": [
           {
-            "label": "Easy Start",
-            "minutes": 20,
+            "label": "Warm-up",
+            "minutes": 15,
             "pace": "7:05",
-            "hr": 146,
-            "hrRange": "140-152",
-            "km": 2.82
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.12
           },
           {
-            "label": "Steady Middle",
-            "minutes": 20,
-            "pace": "5:53",
-            "hr": 166,
-            "hrRange": "160-172",
-            "km": 3.4
+            "label": "4 × 4 min VO2max",
+            "minutes": 16,
+            "pace": "4:39",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 3.44
           },
           {
-            "label": "Strong Finish",
+            "label": "3 × 3 min Easy Recovery",
+            "minutes": 9,
+            "pace": "7:38",
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.18
+          },
+          {
+            "label": "Cool-down",
             "minutes": 12,
-            "pace": "5:44",
-            "hr": 172,
-            "hrRange": "166-178",
-            "km": 2.09
+            "pace": "7:38",
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.57
           }
         ]
       },
@@ -1698,7 +1714,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 41.15,
+    "targetKm": 39.47,
     "runs": [
       {
         "id": "kw44-run1",
@@ -1745,42 +1761,50 @@ export const trainingPlan = [
       {
         "id": "kw44-run2",
         "order": 2,
-        "title": "Progressive Run",
-        "category": "Progressive Run",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "52 min · 8.41 km",
-        "type": "progressive-run",
-        "distanceKm": 8.41,
-        "minutes": 52,
-        "optimalHr": 172,
-        "hrRange": "166-178",
-        "pace": "5:40",
+        "subtitle": "42 min · 6.73 km",
+        "type": "interval-run",
+        "distanceKm": 6.73,
+        "minutes": 42,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:37",
         "optional": false,
-        "notes": null,
+        "notes": "VO2max session. Hard but controlled, not all-out.",
         "steps": [
           {
-            "label": "Easy Start",
-            "minutes": 20,
+            "label": "Warm-up",
+            "minutes": 14,
             "pace": "7:01",
-            "hr": 146,
-            "hrRange": "140-152",
-            "km": 2.85
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.0
           },
           {
-            "label": "Steady Middle",
-            "minutes": 20,
-            "pace": "5:49",
-            "hr": 166,
-            "hrRange": "160-172",
-            "km": 3.44
-          },
-          {
-            "label": "Strong Finish",
+            "label": "4 × 3 min VO2max",
             "minutes": 12,
-            "pace": "5:40",
-            "hr": 172,
-            "hrRange": "166-178",
-            "km": 2.12
+            "pace": "4:37",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 2.6
+          },
+          {
+            "label": "3 × 2 min Easy Recovery",
+            "minutes": 6,
+            "pace": "7:30",
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.8
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
+            "pace": "7:30",
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.33
           }
         ]
       },
@@ -2005,7 +2029,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 52.67,
+    "targetKm": 52.41,
     "runs": [
       {
         "id": "kw46-run1",
@@ -2052,42 +2076,50 @@ export const trainingPlan = [
       {
         "id": "kw46-run2",
         "order": 2,
-        "title": "Steady Run",
-        "category": "Steady Run",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "62 min · 9.96 km",
-        "type": "steady-run",
-        "distanceKm": 9.96,
-        "minutes": 62,
-        "optimalHr": 167,
-        "hrRange": "160-173",
-        "pace": "5:47",
+        "subtitle": "59 min · 9.70 km",
+        "type": "interval-run",
+        "distanceKm": 9.7,
+        "minutes": 59,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:36",
         "optional": false,
-        "notes": null,
+        "notes": "VO2max session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 12,
+            "minutes": 15,
             "pace": "6:59",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 1.72
+            "km": 2.15
           },
           {
-            "label": "Steady",
-            "minutes": 40,
-            "pace": "5:47",
-            "hr": 167,
-            "hrRange": "160-173",
-            "km": 6.92
+            "label": "5 × 4 min VO2max",
+            "minutes": 20,
+            "pace": "4:36",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 4.35
+          },
+          {
+            "label": "4 × 3 min Easy Recovery",
+            "minutes": 12,
+            "pace": "7:30",
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.6
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:33",
+            "minutes": 12,
+            "pace": "7:30",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.32
+            "km": 1.6
           }
         ]
       },
@@ -2609,7 +2641,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 51.81,
+    "targetKm": 53.03,
     "runs": [
       {
         "id": "kw50-run1",
@@ -2656,42 +2688,50 @@ export const trainingPlan = [
       {
         "id": "kw50-run2",
         "order": 2,
-        "title": "Progressive Run",
-        "category": "Progressive Run",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "52 min · 8.52 km",
-        "type": "progressive-run",
-        "distanceKm": 8.52,
-        "minutes": 52,
-        "optimalHr": 172,
-        "hrRange": "166-178",
-        "pace": "5:35",
+        "subtitle": "59 min · 9.74 km",
+        "type": "interval-run",
+        "distanceKm": 9.74,
+        "minutes": 59,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:34",
         "optional": false,
-        "notes": null,
+        "notes": "VO2max session. Hard but controlled, not all-out.",
         "steps": [
           {
-            "label": "Easy Start",
-            "minutes": 20,
+            "label": "Warm-up",
+            "minutes": 15,
             "pace": "6:56",
-            "hr": 146,
-            "hrRange": "140-152",
-            "km": 2.88
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.16
           },
           {
-            "label": "Steady Middle",
+            "label": "5 × 4 min VO2max",
             "minutes": 20,
-            "pace": "5:44",
-            "hr": 166,
-            "hrRange": "160-172",
-            "km": 3.49
+            "pace": "4:34",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 4.38
           },
           {
-            "label": "Strong Finish",
+            "label": "4 × 3 min Easy Recovery",
             "minutes": 12,
-            "pace": "5:35",
-            "hr": 172,
-            "hrRange": "166-178",
-            "km": 2.15
+            "pace": "7:30",
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.6
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 12,
+            "pace": "7:30",
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.6
           }
         ]
       },
@@ -2916,7 +2956,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 42.0,
+    "targetKm": 40.12,
     "runs": [
       {
         "id": "kw52-run1",
@@ -2963,39 +3003,47 @@ export const trainingPlan = [
       {
         "id": "kw52-run2",
         "order": 2,
-        "title": "Steady Run",
-        "category": "Steady Run",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "54 min · 8.68 km",
-        "type": "steady-run",
-        "distanceKm": 8.68,
-        "minutes": 54,
-        "optimalHr": 167,
-        "hrRange": "160-173",
-        "pace": "5:42",
+        "subtitle": "42 min · 6.80 km",
+        "type": "interval-run",
+        "distanceKm": 6.8,
+        "minutes": 42,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:33",
         "optional": false,
-        "notes": null,
+        "notes": "VO2max session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 12,
+            "minutes": 14,
             "pace": "6:54",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 1.74
+            "km": 2.03
           },
           {
-            "label": "Steady",
-            "minutes": 32,
-            "pace": "5:42",
-            "hr": 167,
-            "hrRange": "160-173",
-            "km": 5.61
+            "label": "4 × 3 min VO2max",
+            "minutes": 12,
+            "pace": "4:33",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 2.64
+          },
+          {
+            "label": "3 × 2 min Easy Recovery",
+            "minutes": 6,
+            "pace": "7:30",
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.8
           },
           {
             "label": "Cool-down",
             "minutes": 10,
-            "pace": "7:31",
+            "pace": "7:30",
             "hr": 142,
             "hrRange": "136-148",
             "km": 1.33
@@ -3384,7 +3432,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 58.54,
+    "targetKm": 59.9,
     "runs": [
       {
         "id": "kw2-run1",
@@ -3431,42 +3479,50 @@ export const trainingPlan = [
       {
         "id": "kw2-run2",
         "order": 2,
-        "title": "Progressive Run",
-        "category": "Progressive Run",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "52 min · 8.62 km",
-        "type": "progressive-run",
-        "distanceKm": 8.62,
-        "minutes": 52,
-        "optimalHr": 172,
-        "hrRange": "166-178",
-        "pace": "5:31",
+        "subtitle": "60 min · 9.98 km",
+        "type": "interval-run",
+        "distanceKm": 9.98,
+        "minutes": 60,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:32",
         "optional": false,
-        "notes": null,
+        "notes": "VO2max session. Hard but controlled, not all-out.",
         "steps": [
           {
-            "label": "Easy Start",
-            "minutes": 20,
+            "label": "Warm-up",
+            "minutes": 16,
             "pace": "6:52",
-            "hr": 146,
-            "hrRange": "140-152",
-            "km": 2.91
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.33
           },
           {
-            "label": "Steady Middle",
+            "label": "5 × 4 min VO2max",
             "minutes": 20,
-            "pace": "5:40",
-            "hr": 166,
-            "hrRange": "160-172",
-            "km": 3.53
+            "pace": "4:32",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 4.41
           },
           {
-            "label": "Strong Finish",
+            "label": "4 × 3 min Easy Recovery",
             "minutes": 12,
-            "pace": "5:31",
-            "hr": 172,
-            "hrRange": "166-178",
-            "km": 2.18
+            "pace": "7:24",
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.62
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 12,
+            "pace": "7:24",
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.62
           }
         ]
       },
@@ -3555,7 +3611,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-18",
     "endDate": "2027-01-24",
-    "targetKm": 42.47,
+    "targetKm": 40.69,
     "runs": [
       {
         "id": "kw3-run1",
@@ -3602,42 +3658,50 @@ export const trainingPlan = [
       {
         "id": "kw3-run2",
         "order": 2,
-        "title": "Progressive Run",
-        "category": "Progressive Run",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "52 min · 8.64 km",
-        "type": "progressive-run",
-        "distanceKm": 8.64,
-        "minutes": 52,
-        "optimalHr": 172,
-        "hrRange": "166-178",
-        "pace": "5:30",
+        "subtitle": "42 min · 6.86 km",
+        "type": "interval-run",
+        "distanceKm": 6.86,
+        "minutes": 42,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:31",
         "optional": false,
-        "notes": null,
+        "notes": "VO2max session. Hard but controlled, not all-out.",
         "steps": [
           {
-            "label": "Easy Start",
-            "minutes": 20,
+            "label": "Warm-up",
+            "minutes": 14,
             "pace": "6:51",
-            "hr": 146,
-            "hrRange": "140-152",
-            "km": 2.92
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.04
           },
           {
-            "label": "Steady Middle",
-            "minutes": 20,
-            "pace": "5:39",
-            "hr": 166,
-            "hrRange": "160-172",
-            "km": 3.54
-          },
-          {
-            "label": "Strong Finish",
+            "label": "4 × 3 min VO2max",
             "minutes": 12,
-            "pace": "5:30",
-            "hr": 172,
-            "hrRange": "166-178",
-            "km": 2.18
+            "pace": "4:31",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 2.66
+          },
+          {
+            "label": "3 × 2 min Easy Recovery",
+            "minutes": 6,
+            "pace": "7:24",
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.81
+          },
+          {
+            "label": "Cool-down",
+            "minutes": 10,
+            "pace": "7:24",
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.35
           }
         ]
       },
