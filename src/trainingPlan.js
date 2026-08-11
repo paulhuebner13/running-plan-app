@@ -4,7 +4,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-10",
     "endDate": "2026-08-16",
-    "targetKm": 44.88,
+    "targetKm": 50.1,
     "runs": [
       {
         "id": "kw33-run1",
@@ -12,10 +12,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "62 min · 8.98 km",
+        "subtitle": "78 min · 11.02 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 8.98,
-        "minutes": 62,
+        "distanceKm": 11.02,
+        "minutes": 78,
         "optimalHr": 146,
         "hrRange": "140-152",
         "pace": "7:09",
@@ -24,11 +24,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 53,
+            "minutes": 68,
             "pace": "7:09",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 7.47
+            "km": 9.51
           },
           {
             "label": "6 × 20 s Strides",
@@ -138,10 +138,10 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "127 min · 18.48 km",
+        "subtitle": "150 min · 21.66 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 18.48,
-        "minutes": 127,
+        "distanceKm": 21.66,
+        "minutes": 150,
         "optimalHr": 169,
         "hrRange": "162-176",
         "pace": "5:57",
@@ -150,11 +150,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 95,
+            "minutes": 118,
             "pace": "7:15",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 13.1
+            "km": 16.28
           },
           {
             "label": "Fast Finish",
@@ -174,7 +174,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-17",
     "endDate": "2026-08-23",
-    "targetKm": 42.62,
+    "targetKm": 47.93,
     "runs": [
       {
         "id": "kw34-run1",
@@ -182,10 +182,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "64 min · 9.19 km",
+        "subtitle": "80 min · 11.32 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.19,
-        "minutes": 64,
+        "distanceKm": 11.32,
+        "minutes": 80,
         "optimalHr": 146,
         "hrRange": "140-152",
         "pace": "7:08",
@@ -194,11 +194,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 55,
+            "minutes": 70,
             "pace": "7:08",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 7.68
+            "km": 9.81
           },
           {
             "label": "6 × 20 s Strides",
@@ -292,10 +292,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "130 min · 17.97 km",
+        "subtitle": "153 min · 21.15 km",
         "type": "long-run",
-        "distanceKm": 17.97,
-        "minutes": 130,
+        "distanceKm": 21.15,
+        "minutes": 153,
         "optimalHr": 151,
         "hrRange": "145-158",
         "pace": "7:14",
@@ -304,11 +304,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Long Run",
-            "minutes": 130,
+            "minutes": 153,
             "pace": "7:14",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 17.97
+            "km": 21.15
           }
         ]
       }
@@ -319,7 +319,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-24",
     "endDate": "2026-08-30",
-    "targetKm": 44.19,
+    "targetKm": 50.01,
     "runs": [
       {
         "id": "kw35-run1",
@@ -327,10 +327,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "66 min · 9.41 km",
+        "subtitle": "82 min · 11.77 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.41,
-        "minutes": 66,
+        "distanceKm": 11.77,
+        "minutes": 82,
         "optimalHr": 146,
         "hrRange": "140-152",
         "pace": "7:07",
@@ -339,11 +339,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 56,
+            "minutes": 73,
             "pace": "7:07",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 7.9
+            "km": 10.26
           },
           {
             "label": "6 × 20 s Strides",
@@ -445,10 +445,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "135 min · 18.71 km",
+        "subtitle": "160 min · 22.17 km",
         "type": "long-run",
-        "distanceKm": 18.71,
-        "minutes": 135,
+        "distanceKm": 22.17,
+        "minutes": 160,
         "optimalHr": 151,
         "hrRange": "145-158",
         "pace": "7:13",
@@ -457,11 +457,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Long Run",
-            "minutes": 135,
+            "minutes": 160,
             "pace": "7:13",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 18.71
+            "km": 22.17
           }
         ]
       }
@@ -472,7 +472,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-31",
     "endDate": "2026-09-06",
-    "targetKm": 39.37,
+    "targetKm": 42.98,
     "runs": [
       {
         "id": "kw36-run1",
@@ -480,10 +480,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "62 min · 8.82 km",
+        "subtitle": "72 min · 10.22 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 8.82,
-        "minutes": 62,
+        "distanceKm": 10.22,
+        "minutes": 72,
         "optimalHr": 146,
         "hrRange": "140-152",
         "pace": "7:07",
@@ -492,11 +492,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 52,
+            "minutes": 62,
             "pace": "7:07",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 7.31
+            "km": 8.71
           },
           {
             "label": "6 × 20 s Strides",
@@ -598,10 +598,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "115 min · 15.94 km",
+        "subtitle": "131 min · 18.15 km",
         "type": "long-run",
-        "distanceKm": 15.94,
-        "minutes": 115,
+        "distanceKm": 18.15,
+        "minutes": 131,
         "optimalHr": 151,
         "hrRange": "145-158",
         "pace": "7:13",
@@ -610,11 +610,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Long Run",
-            "minutes": 115,
+            "minutes": 131,
             "pace": "7:13",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 15.94
+            "km": 18.15
           }
         ]
       }
@@ -625,7 +625,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-07",
     "endDate": "2026-09-13",
-    "targetKm": 43.19,
+    "targetKm": 48.93,
     "runs": [
       {
         "id": "kw37-run1",
@@ -633,10 +633,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "66 min · 9.52 km",
+        "subtitle": "82 min · 11.79 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.52,
-        "minutes": 66,
+        "distanceKm": 11.79,
+        "minutes": 82,
         "optimalHr": 146,
         "hrRange": "140-152",
         "pace": "7:06",
@@ -645,11 +645,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 57,
+            "minutes": 73,
             "pace": "7:06",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.01
+            "km": 10.28
           },
           {
             "label": "6 × 20 s Strides",
@@ -743,10 +743,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "137 min · 19.03 km",
+        "subtitle": "162 min · 22.50 km",
         "type": "long-run",
-        "distanceKm": 19.03,
-        "minutes": 137,
+        "distanceKm": 22.5,
+        "minutes": 162,
         "optimalHr": 151,
         "hrRange": "145-158",
         "pace": "7:12",
@@ -755,11 +755,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Long Run",
-            "minutes": 137,
+            "minutes": 162,
             "pace": "7:12",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 19.03
+            "km": 22.5
           }
         ]
       }
@@ -770,7 +770,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-14",
     "endDate": "2026-09-20",
-    "targetKm": 46.12,
+    "targetKm": 52.0,
     "runs": [
       {
         "id": "kw38-run1",
@@ -778,10 +778,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "68 min · 9.84 km",
+        "subtitle": "86 min · 12.24 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.84,
-        "minutes": 68,
+        "distanceKm": 12.24,
+        "minutes": 86,
         "optimalHr": 146,
         "hrRange": "140-152",
         "pace": "7:05",
@@ -790,11 +790,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 59,
+            "minutes": 76,
             "pace": "7:05",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.33
+            "km": 10.73
           },
           {
             "label": "6 × 20 s Strides",
@@ -896,10 +896,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "145 min · 20.19 km",
+        "subtitle": "170 min · 23.67 km",
         "type": "long-run",
-        "distanceKm": 20.19,
-        "minutes": 145,
+        "distanceKm": 23.67,
+        "minutes": 170,
         "optimalHr": 151,
         "hrRange": "145-158",
         "pace": "7:11",
@@ -908,11 +908,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Long Run",
-            "minutes": 145,
+            "minutes": 170,
             "pace": "7:11",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 20.19
+            "km": 23.67
           }
         ]
       }
@@ -923,7 +923,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-21",
     "endDate": "2026-09-27",
-    "targetKm": 50.89,
+    "targetKm": 50.87,
     "runs": [
       {
         "id": "kw39-run1",
@@ -931,9 +931,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "70 min · 10.17 km",
+        "subtitle": "70 min · 10.15 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.17,
+        "distanceKm": 10.15,
         "minutes": 70,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -947,7 +947,7 @@ export const trainingPlan = [
             "pace": "7:04",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.65
+            "km": 8.63
           },
           {
             "label": "6 × 20 s Strides",
@@ -1085,7 +1085,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-28",
     "endDate": "2026-10-04",
-    "targetKm": 39.97,
+    "targetKm": 39.91,
     "runs": [
       {
         "id": "kw40-run1",
@@ -1093,9 +1093,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "62 min · 9.08 km",
+        "subtitle": "62 min · 9.02 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.08,
+        "distanceKm": 9.02,
         "minutes": 62,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -1109,7 +1109,7 @@ export const trainingPlan = [
             "pace": "7:04",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 7.56
+            "km": 7.5
           },
           {
             "label": "6 × 20 s Strides",
@@ -1230,7 +1230,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-05",
     "endDate": "2026-10-11",
-    "targetKm": 48.19,
+    "targetKm": 48.23,
     "runs": [
       {
         "id": "kw41-run1",
@@ -1238,9 +1238,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "70 min · 9.99 km",
+        "subtitle": "70 min · 10.03 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.99,
+        "distanceKm": 10.03,
         "minutes": 70,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -1254,7 +1254,7 @@ export const trainingPlan = [
             "pace": "7:03",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.47
+            "km": 8.51
           },
           {
             "label": "6 × 20 s Strides",
@@ -1383,7 +1383,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-12",
     "endDate": "2026-10-18",
-    "targetKm": 49.25,
+    "targetKm": 49.28,
     "runs": [
       {
         "id": "kw42-run1",
@@ -1391,9 +1391,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "72 min · 10.31 km",
+        "subtitle": "72 min · 10.34 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.31,
+        "distanceKm": 10.34,
         "minutes": 72,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -1407,7 +1407,7 @@ export const trainingPlan = [
             "pace": "7:02",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.79
+            "km": 8.82
           },
           {
             "label": "6 × 20 s Strides",
@@ -1545,7 +1545,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-19",
     "endDate": "2026-10-25",
-    "targetKm": 50.65,
+    "targetKm": 50.66,
     "runs": [
       {
         "id": "kw43-run1",
@@ -1553,9 +1553,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.63 km",
+        "subtitle": "74 min · 10.64 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.63,
+        "distanceKm": 10.64,
         "minutes": 74,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -1569,7 +1569,7 @@ export const trainingPlan = [
             "pace": "7:01",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.11
+            "km": 9.12
           },
           {
             "label": "6 × 20 s Strides",
@@ -1698,7 +1698,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 41.08,
+    "targetKm": 41.15,
     "runs": [
       {
         "id": "kw44-run1",
@@ -1706,9 +1706,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "66 min · 9.43 km",
+        "subtitle": "66 min · 9.50 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.43,
+        "distanceKm": 9.5,
         "minutes": 66,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -1722,7 +1722,7 @@ export const trainingPlan = [
             "pace": "7:01",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 7.91
+            "km": 7.98
           },
           {
             "label": "6 × 20 s Strides",
@@ -1843,7 +1843,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-02",
     "endDate": "2026-11-08",
-    "targetKm": 52.43,
+    "targetKm": 52.36,
     "runs": [
       {
         "id": "kw45-run1",
@@ -1851,9 +1851,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "72 min · 10.45 km",
+        "subtitle": "72 min · 10.38 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.45,
+        "distanceKm": 10.38,
         "minutes": 72,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -1867,7 +1867,7 @@ export const trainingPlan = [
             "pace": "7:00",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.93
+            "km": 8.86
           },
           {
             "label": "6 × 20 s Strides",
@@ -2005,7 +2005,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 52.61,
+    "targetKm": 52.67,
     "runs": [
       {
         "id": "kw46-run1",
@@ -2013,9 +2013,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.77 km",
+        "subtitle": "74 min · 10.83 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.77,
+        "distanceKm": 10.83,
         "minutes": 74,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -2029,7 +2029,7 @@ export const trainingPlan = [
             "pace": "6:59",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.25
+            "km": 9.31
           },
           {
             "label": "6 × 20 s Strides",
@@ -2303,7 +2303,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-23",
     "endDate": "2026-11-29",
-    "targetKm": 42.11,
+    "targetKm": 42.12,
     "runs": [
       {
         "id": "kw48-run1",
@@ -2311,9 +2311,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "66 min · 9.71 km",
+        "subtitle": "66 min · 9.72 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.71,
+        "distanceKm": 9.72,
         "minutes": 66,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -2327,7 +2327,7 @@ export const trainingPlan = [
             "pace": "6:57",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.19
+            "km": 8.2
           },
           {
             "label": "6 × 20 s Strides",
@@ -2464,7 +2464,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-30",
     "endDate": "2026-12-06",
-    "targetKm": 51.08,
+    "targetKm": 51.05,
     "runs": [
       {
         "id": "kw49-run1",
@@ -2472,9 +2472,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "72 min · 10.62 km",
+        "subtitle": "72 min · 10.59 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.62,
+        "distanceKm": 10.59,
         "minutes": 72,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -2488,7 +2488,7 @@ export const trainingPlan = [
             "pace": "6:57",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.09
+            "km": 9.06
           },
           {
             "label": "6 × 20 s Strides",
@@ -2609,7 +2609,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 51.85,
+    "targetKm": 51.81,
     "runs": [
       {
         "id": "kw50-run1",
@@ -2617,9 +2617,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.95 km",
+        "subtitle": "74 min · 10.91 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.95,
+        "distanceKm": 10.91,
         "minutes": 74,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -2633,7 +2633,7 @@ export const trainingPlan = [
             "pace": "6:56",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.42
+            "km": 9.38
           },
           {
             "label": "6 × 20 s Strides",
@@ -2754,7 +2754,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-14",
     "endDate": "2026-12-20",
-    "targetKm": 55.6,
+    "targetKm": 55.65,
     "runs": [
       {
         "id": "kw51-run1",
@@ -2762,9 +2762,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.17 km",
+        "subtitle": "76 min · 11.22 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.17,
+        "distanceKm": 11.22,
         "minutes": 76,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -2778,7 +2778,7 @@ export const trainingPlan = [
             "pace": "6:55",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.64
+            "km": 9.69
           },
           {
             "label": "6 × 20 s Strides",
@@ -2916,7 +2916,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 42.04,
+    "targetKm": 42.0,
     "runs": [
       {
         "id": "kw52-run1",
@@ -2924,9 +2924,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "68 min · 9.98 km",
+        "subtitle": "68 min · 9.94 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 9.98,
+        "distanceKm": 9.94,
         "minutes": 68,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -2940,7 +2940,7 @@ export const trainingPlan = [
             "pace": "6:54",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.45
+            "km": 8.41
           },
           {
             "label": "6 × 20 s Strides",
@@ -3061,7 +3061,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-28",
     "endDate": "2027-01-03",
-    "targetKm": 52.5,
+    "targetKm": 52.52,
     "runs": [
       {
         "id": "kw53-run1",
@@ -3069,9 +3069,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.79 km",
+        "subtitle": "74 min · 10.81 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.79,
+        "distanceKm": 10.81,
         "minutes": 74,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -3085,7 +3085,7 @@ export const trainingPlan = [
             "pace": "6:54",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.26
+            "km": 9.28
           },
           {
             "label": "6 × 20 s Strides",
@@ -3384,7 +3384,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 58.6,
+    "targetKm": 58.54,
     "runs": [
       {
         "id": "kw2-run1",
@@ -3392,9 +3392,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.35 km",
+        "subtitle": "76 min · 11.29 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.35,
+        "distanceKm": 11.29,
         "minutes": 76,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -3408,7 +3408,7 @@ export const trainingPlan = [
             "pace": "6:52",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.82
+            "km": 9.76
           },
           {
             "label": "6 × 20 s Strides",
@@ -3700,7 +3700,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-25",
     "endDate": "2027-01-31",
-    "targetKm": 59.62,
+    "targetKm": 59.64,
     "runs": [
       {
         "id": "kw4-run1",
@@ -3708,9 +3708,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.98 km",
+        "subtitle": "74 min · 11.04 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.98,
+        "distanceKm": 11.04,
         "minutes": 74,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -3724,7 +3724,7 @@ export const trainingPlan = [
             "pace": "6:50",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.45
+            "km": 9.51
           },
           {
             "label": "6 × 20 s Strides",
@@ -3750,9 +3750,9 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "83 min · 14.54 km",
+        "subtitle": "83 min · 14.50 km",
         "type": "hm-pace-run",
-        "distanceKm": 14.54,
+        "distanceKm": 14.5,
         "minutes": 83,
         "optimalHr": 179,
         "hrRange": "174-184",
@@ -3774,7 +3774,7 @@ export const trainingPlan = [
             "pace": "4:48",
             "hr": 179,
             "hrRange": "174-184",
-            "km": 9
+            "km": 8.96
           },
           {
             "label": "2 km Easy Recovery",
@@ -3782,7 +3782,7 @@ export const trainingPlan = [
             "pace": "7:29",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 2
+            "km": 2.0
           },
           {
             "label": "Cool-down",
@@ -3862,7 +3862,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-01",
     "endDate": "2027-02-07",
-    "targetKm": 54.35,
+    "targetKm": 54.31,
     "runs": [
       {
         "id": "kw5-run1",
@@ -3870,9 +3870,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.29 km",
+        "subtitle": "76 min · 11.33 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.29,
+        "distanceKm": 11.33,
         "minutes": 76,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -3886,7 +3886,7 @@ export const trainingPlan = [
             "pace": "6:50",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.76
+            "km": 9.8
           },
           {
             "label": "6 × 20 s Strides",
@@ -3988,9 +3988,9 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "158 min · 25.00 km",
+        "subtitle": "158 min · 24.92 km",
         "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 25.0,
+        "distanceKm": 24.92,
         "minutes": 158,
         "optimalHr": 180,
         "hrRange": "175-185",
@@ -4004,7 +4004,7 @@ export const trainingPlan = [
             "pace": "6:56",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 13
+            "km": 12.98
           },
           {
             "label": "2 × 4 km HM Pace",
@@ -4012,7 +4012,7 @@ export const trainingPlan = [
             "pace": "4:48",
             "hr": 180,
             "hrRange": "175-185",
-            "km": 8
+            "km": 7.92
           },
           {
             "label": "2 km Easy Recovery",
@@ -4020,7 +4020,7 @@ export const trainingPlan = [
             "pace": "7:28",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 2
+            "km": 2.01
           },
           {
             "label": "Cool-down",
@@ -4028,7 +4028,7 @@ export const trainingPlan = [
             "pace": "7:28",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 2
+            "km": 2.01
           }
         ]
       }
@@ -4039,7 +4039,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-08",
     "endDate": "2027-02-14",
-    "targetKm": 59.93,
+    "targetKm": 59.92,
     "runs": [
       {
         "id": "kw6-run1",
@@ -4047,9 +4047,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "78 min · 11.52 km",
+        "subtitle": "78 min · 11.51 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.52,
+        "distanceKm": 11.51,
         "minutes": 78,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -4063,7 +4063,7 @@ export const trainingPlan = [
             "pace": "6:49",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.99
+            "km": 9.98
           },
           {
             "label": "6 × 20 s Strides",
@@ -4218,7 +4218,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-15",
     "endDate": "2027-02-21",
-    "targetKm": 50.89,
+    "targetKm": 50.83,
     "runs": [
       {
         "id": "kw7-run1",
@@ -4226,9 +4226,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "70 min · 10.42 km",
+        "subtitle": "70 min · 10.36 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.42,
+        "distanceKm": 10.36,
         "minutes": 70,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -4242,7 +4242,7 @@ export const trainingPlan = [
             "pace": "6:48",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.88
+            "km": 8.82
           },
           {
             "label": "6 × 20 s Strides",
@@ -4292,7 +4292,7 @@ export const trainingPlan = [
             "pace": "4:47",
             "hr": 179,
             "hrRange": "174-184",
-            "km": 9
+            "km": 8.99
           },
           {
             "label": "2 km Easy Recovery",
@@ -4300,7 +4300,7 @@ export const trainingPlan = [
             "pace": "7:27",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 2
+            "km": 2.01
           },
           {
             "label": "Cool-down",
@@ -4371,7 +4371,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-22",
     "endDate": "2027-02-28",
-    "targetKm": 54.42,
+    "targetKm": 54.31,
     "runs": [
       {
         "id": "kw8-run1",
@@ -4497,9 +4497,9 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "157 min · 25.00 km",
+        "subtitle": "157 min · 24.89 km",
         "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 25.0,
+        "distanceKm": 24.89,
         "minutes": 157,
         "optimalHr": 180,
         "hrRange": "175-185",
@@ -4513,7 +4513,7 @@ export const trainingPlan = [
             "pace": "6:53",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 13
+            "km": 12.93
           },
           {
             "label": "2 × 4 km HM Pace",
@@ -4521,7 +4521,7 @@ export const trainingPlan = [
             "pace": "4:47",
             "hr": 180,
             "hrRange": "175-185",
-            "km": 8
+            "km": 7.94
           },
           {
             "label": "2 km Easy Recovery",
@@ -4529,7 +4529,7 @@ export const trainingPlan = [
             "pace": "7:27",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 2
+            "km": 2.01
           },
           {
             "label": "Cool-down",
@@ -4537,7 +4537,7 @@ export const trainingPlan = [
             "pace": "7:27",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 2
+            "km": 2.01
           }
         ]
       }
@@ -4548,7 +4548,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-01",
     "endDate": "2027-03-07",
-    "targetKm": 57.93,
+    "targetKm": 57.87,
     "runs": [
       {
         "id": "kw9-run1",
@@ -4556,9 +4556,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.48 km",
+        "subtitle": "76 min · 11.42 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.48,
+        "distanceKm": 11.42,
         "minutes": 76,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -4572,7 +4572,7 @@ export const trainingPlan = [
             "pace": "6:47",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.94
+            "km": 9.88
           },
           {
             "label": "6 × 20 s Strides",
@@ -4727,7 +4727,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-08",
     "endDate": "2027-03-14",
-    "targetKm": 67.52,
+    "targetKm": 66.54,
     "runs": [
       {
         "id": "kw10-run1",
@@ -4735,9 +4735,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "78 min · 11.71 km",
+        "subtitle": "78 min · 11.74 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.71,
+        "distanceKm": 11.74,
         "minutes": 78,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -4751,7 +4751,7 @@ export const trainingPlan = [
             "pace": "6:46",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 10.17
+            "km": 10.2
           },
           {
             "label": "6 × 20 s Strides",
@@ -4777,9 +4777,9 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "80 min · 14.57 km",
+        "subtitle": "80 min · 14.58 km",
         "type": "hm-pace-run",
-        "distanceKm": 14.57,
+        "distanceKm": 14.58,
         "minutes": 80,
         "optimalHr": 180,
         "hrRange": "175-185",
@@ -4801,7 +4801,7 @@ export const trainingPlan = [
             "pace": "4:46",
             "hr": 180,
             "hrRange": "175-185",
-            "km": 10
+            "km": 10.07
           },
           {
             "label": "1 km Easy Recovery",
@@ -4809,7 +4809,7 @@ export const trainingPlan = [
             "pace": "7:26",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1
+            "km": 0.94
           },
           {
             "label": "Cool-down",
@@ -4887,10 +4887,10 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "173 min · 27.95 km",
+        "subtitle": "166 min · 26.93 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.95,
-        "minutes": 173,
+        "distanceKm": 26.93,
+        "minutes": 166,
         "optimalHr": 178,
         "hrRange": "174-184",
         "pace": "4:46",
@@ -4899,11 +4899,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 130,
+            "minutes": 123,
             "pace": "6:52",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 18.93
+            "km": 17.91
           },
           {
             "label": "Fast Finish",
@@ -4923,7 +4923,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-15",
     "endDate": "2027-03-21",
-    "targetKm": 52.42,
+    "targetKm": 52.55,
     "runs": [
       {
         "id": "kw11-run1",
@@ -4931,9 +4931,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "70 min · 10.59 km",
+        "subtitle": "70 min · 10.58 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.59,
+        "distanceKm": 10.58,
         "minutes": 70,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -4947,7 +4947,7 @@ export const trainingPlan = [
             "pace": "6:45",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 9.05
+            "km": 9.04
           },
           {
             "label": "6 × 20 s Strides",
@@ -5049,9 +5049,9 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "133 min · 22.00 km",
+        "subtitle": "133 min · 22.14 km",
         "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 22.0,
+        "distanceKm": 22.14,
         "minutes": 133,
         "optimalHr": 180,
         "hrRange": "175-185",
@@ -5065,7 +5065,7 @@ export const trainingPlan = [
             "pace": "6:51",
             "hr": 151,
             "hrRange": "145-158",
-            "km": 8
+            "km": 8.03
           },
           {
             "label": "2 × 5 km HM Pace",
@@ -5073,7 +5073,7 @@ export const trainingPlan = [
             "pace": "4:46",
             "hr": 180,
             "hrRange": "175-185",
-            "km": 10
+            "km": 10.07
           },
           {
             "label": "2 km Easy Recovery",
@@ -5081,7 +5081,7 @@ export const trainingPlan = [
             "pace": "7:26",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 2
+            "km": 2.02
           },
           {
             "label": "Cool-down",
@@ -5089,7 +5089,7 @@ export const trainingPlan = [
             "pace": "7:26",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 2
+            "km": 2.02
           }
         ]
       }
@@ -5253,7 +5253,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-29",
     "endDate": "2027-04-04",
-    "targetKm": 56.57,
+    "targetKm": 56.53,
     "runs": [
       {
         "id": "kw13-run1",
@@ -5261,9 +5261,9 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "68 min · 10.20 km",
+        "subtitle": "68 min · 10.15 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.2,
+        "distanceKm": 10.15,
         "minutes": 68,
         "optimalHr": 146,
         "hrRange": "140-152",
@@ -5277,7 +5277,7 @@ export const trainingPlan = [
             "pace": "6:44",
             "hr": 146,
             "hrRange": "140-152",
-            "km": 8.66
+            "km": 8.61
           },
           {
             "label": "6 × 20 s Strides",
@@ -5303,9 +5303,9 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "80 min · 14.58 km",
+        "subtitle": "80 min · 14.59 km",
         "type": "hm-pace-run",
-        "distanceKm": 14.58,
+        "distanceKm": 14.59,
         "minutes": 80,
         "optimalHr": 180,
         "hrRange": "175-185",
@@ -5327,7 +5327,7 @@ export const trainingPlan = [
             "pace": "4:46",
             "hr": 180,
             "hrRange": "175-185",
-            "km": 10
+            "km": 10.07
           },
           {
             "label": "1 km Easy Recovery",
@@ -5335,7 +5335,7 @@ export const trainingPlan = [
             "pace": "7:25",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1
+            "km": 0.94
           },
           {
             "label": "Cool-down",
@@ -5568,7 +5568,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-12",
     "endDate": "2027-04-18",
-    "targetKm": 38.13,
+    "targetKm": 38.03,
     "runs": [
       {
         "id": "kw15-run1",
@@ -5618,9 +5618,9 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "36 min · 6.14 km",
+        "subtitle": "36 min · 6.09 km",
         "type": "hm-pace-run",
-        "distanceKm": 6.14,
+        "distanceKm": 6.09,
         "minutes": 36,
         "optimalHr": 179,
         "hrRange": "174-184",
@@ -5642,7 +5642,7 @@ export const trainingPlan = [
             "pace": "4:45",
             "hr": 179,
             "hrRange": "174-184",
-            "km": 3.0
+            "km": 2.95
           },
           {
             "label": "Cool-down",
@@ -5687,9 +5687,9 @@ export const trainingPlan = [
         "title": "Race",
         "category": "Race",
         "plannedDay": "Sunday",
-        "subtitle": "100 min · 21.10 km",
+        "subtitle": "100 min · 21.05 km",
         "type": "race",
-        "distanceKm": 21.1,
+        "distanceKm": 21.05,
         "minutes": 100,
         "optimalHr": 182,
         "hrRange": "176-188",
@@ -5703,7 +5703,7 @@ export const trainingPlan = [
             "pace": "4:45",
             "hr": 182,
             "hrRange": "176-188",
-            "km": 21.1,
+            "km": 21.05,
             "notes": "Target: about 1:40. Controlled first 5 km, strong rhythm from 5-16 km, race from 16 km."
           }
         ]

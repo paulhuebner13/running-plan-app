@@ -9,8 +9,8 @@ const supabase = supabaseUrl && supabaseAnonKey
   ? createClient(supabaseUrl, supabaseAnonKey)
   : null;
 
-const STORAGE_KEY = 'running-plan-progress-v3';
-const SYNC_KEY = 'paul-running-v3';
+const STORAGE_KEY = 'running-plan-progress-v4';
+const SYNC_KEY = 'paul-running-v4';
 
 const DAY_OFFSETS = {
   Monday: 0,
@@ -56,11 +56,19 @@ function categoryLabel(run) {
 }
 
 function formatDate(value) {
-  return new Intl.DateTimeFormat('en-GB', {
+  return new Intl.DateTimeFormat('de-DE', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
   }).format(new Date(`${value}T12:00:00`));
+}
+
+function formatDateObject(date) {
+  return new Intl.DateTimeFormat('de-DE', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  }).format(date);
 }
 
 function getInitialWeekIndex() {
@@ -149,13 +157,19 @@ function isRunDatePast(weekItem, run) {
   return new Date() > planned;
 }
 
+function getStatusLabel(status) {
+  if (status === 'done') return 'done';
+  if (status === 'missed') return 'missed';
+  return 'open';
+}
+
 export default function App() {
   const [weekIndex, setWeekIndex] = useState(getInitialWeekIndex);
   const [selectedRunId, setSelectedRunId] = useState(null);
   const [progress, setProgress] = useState({});
+  const [view, setView] = useState('week');
 
   const week = trainingPlan[weekIndex];
-  const currentWeekIndex = getInitialWeekIndex();
   const selectedRun = useMemo(() => {
     if (!selectedRunId) return null;
     return week.runs.find((run) => run.id === selectedRunId) || null;
@@ -166,9 +180,6 @@ export default function App() {
   const completedMandatoryKm = mandatoryRuns
     .filter((run) => progress[run.id])
     .reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
-  const progressPercent = totalMandatoryKm > 0
-    ? Math.min(100, Math.round((completedMandatoryKm / totalMandatoryKm) * 100))
-    : 0;
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -246,101 +257,135 @@ export default function App() {
     setSelectedRunId(null);
   }
 
-  function goToCurrentWeek() {
-    setWeekIndex(currentWeekIndex);
+  function openOverview() {
+    setView('overview');
     setSelectedRunId(null);
+  }
+
+  function openWeek(index) {
+    setWeekIndex(index);
+    setSelectedRunId(null);
+    setView('week');
   }
 
   return (
     <main className="app-shell">
       <header className="hero-card">
-        <div className="week-nav compact">
-          <button aria-label="Previous week" onClick={previousWeek} disabled={weekIndex === 0}>‹</button>
-          <div>
-            <h1>Week {week.kw}</h1>
-            <p>{formatDate(week.startDate)} to {formatDate(week.endDate)}</p>
+        {view === 'week' ? (
+          <div className="week-nav compact">
+            <button aria-label="Previous week" onClick={previousWeek} disabled={weekIndex === 0}>‹</button>
+            <div>
+              <h1>Week {week.kw}</h1>
+              <p>{formatDate(week.startDate)} to {formatDate(week.endDate)}</p>
+            </div>
+            <button className="calendar-button" aria-label="Open weekly overview" onClick={openOverview} title="Weekly overview">▦</button>
+            <button aria-label="Next week" onClick={nextWeek} disabled={weekIndex === trainingPlan.length - 1}>›</button>
           </div>
-          <button className="today-button" aria-label="Go to current week" onClick={goToCurrentWeek} title="Current week">▦</button>
-          <button aria-label="Next week" onClick={nextWeek} disabled={weekIndex === trainingPlan.length - 1}>›</button>
-        </div>
+        ) : (
+          <div className="overview-nav">
+            <button aria-label="Back to selected week" onClick={() => setView('week')}>‹</button>
+            <div>
+              <h1>Weekly Overview</h1>
+              <p>Tap a week to open details</p>
+            </div>
+          </div>
+        )}
 
-        <section className="km-progress-card">
-          <div className="km-progress-label">
-            <span>Target volume</span>
-            <strong>{formatNumber(completedMandatoryKm)} / {formatNumber(totalMandatoryKm)} km</strong>
-          </div>
-          <div className="km-progress-track" aria-label="Kilometre progress">
-            <div className="km-progress-fill" style={{ width: `${progressPercent}%` }} />
-          </div>
-        </section>
+        {view === 'week' && (
+          <section className="km-progress-card">
+            <div className="km-progress-label">
+              <span>Target volume</span>
+              <strong>{formatNumber(completedMandatoryKm)} / {formatNumber(totalMandatoryKm)} km</strong>
+            </div>
+            <div className="km-progress-track segmented" aria-label="Weekly run colour overview">
+              {mandatoryRuns.map((run) => {
+                const width = totalMandatoryKm > 0 ? (Number(run.distanceKm || 0) / totalMandatoryKm) * 100 : 0;
+                const status = statusFor(run);
+                return (
+                  <span
+                    key={run.id}
+                    className={`km-segment ${categoryClass(run)} ${status}`}
+                    style={{ width: `${width}%` }}
+                    title={`${run.title}: ${formatNumber(run.distanceKm)} km`}
+                  />
+                );
+              })}
+            </div>
+          </section>
+        )}
       </header>
 
-      <section className="run-list" aria-label="Runs this week">
-        {week.runs.map((run) => {
-          const status = statusFor(run);
-          const cat = categoryClass(run);
-          return (
-            <button
-              key={run.id}
-              className={`run-card ${status} ${cat}`}
-              onClick={() => setSelectedRunId(run.id)}
-            >
-              <div className="run-number">{DAY_SHORT[run.plannedDay] || run.order}</div>
-              <div className="run-summary">
-                <div className="title-row">
-                  <strong>{run.title}</strong>
-                  <span className="category-badge">{categoryLabel(run)}</span>
+      {view === 'week' ? (
+        <section className="run-list" aria-label="Runs this week">
+          {week.runs.map((run) => {
+            const status = statusFor(run);
+            const cat = categoryClass(run);
+            return (
+              <button
+                key={run.id}
+                className={`run-card ${status} ${cat}`}
+                onClick={() => setSelectedRunId(run.id)}
+              >
+                <div className="run-number">{DAY_SHORT[run.plannedDay] || run.order}</div>
+                <div className="run-summary">
+                  <div className="title-row">
+                    <strong>{run.title}</strong>
+                    <span className="category-badge">{categoryLabel(run)}</span>
+                  </div>
+                  <span>{getRunMinutes(run)} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HR {formatHr(run.optimalHr)}</span>
                 </div>
-                <span>{getRunMinutes(run)} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HR {formatHr(run.optimalHr)}</span>
-              </div>
-              <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
-            </button>
-          );
-        })}
-      </section>
-
-      <section className="overview-section" aria-label="Training plan overview">
-        <div className="section-heading">
-          <h2>Weekly overview</h2>
-          <span>done / missed / upcoming</span>
-        </div>
-        <div className="week-overview-list">
-          {trainingPlan.map((weekItem, index) => (
-            <button
-              key={`${weekItem.year}-${weekItem.kw}`}
-              className={`overview-week ${index === weekIndex ? 'selected' : ''}`}
-              onClick={() => {
-                setWeekIndex(index);
-                setSelectedRunId(null);
-              }}
-            >
-              <div className="overview-week-head">
-                <strong>W{weekItem.kw}</strong>
-                <span>{formatNumber(weekItem.targetKm)} km</span>
-              </div>
-              <div className="overview-pills">
-                {weekItem.runs.map((run) => {
-                  const status = statusFor(run, weekItem);
-                  return (
-                    <span key={run.id} className={`overview-pill ${categoryClass(run)} ${status}`}>
-                      <b>{DAY_SHORT[run.plannedDay] || run.order}</b>
-                      <em>{categoryLabel(run)}</em>
-                      <i>{status === 'done' ? '✓' : status === 'missed' ? '!' : '•'}</i>
-                    </span>
-                  );
-                })}
-              </div>
-            </button>
-          ))}
-        </div>
-      </section>
+                <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
+              </button>
+            );
+          })}
+        </section>
+      ) : (
+        <section className="overview-page" aria-label="Training plan weekly overview">
+          <div className="overview-legend" aria-label="Status legend">
+            <span><i className="legend-done" /> Done</span>
+            <span><i className="legend-missed" /> Missed</span>
+            <span><i className="legend-open" /> Open</span>
+          </div>
+          <div className="week-overview-list compact-squares">
+            {trainingPlan.map((weekItem, index) => {
+              const doneCount = weekItem.runs.filter((run) => statusFor(run, weekItem) === 'done').length;
+              const missedCount = weekItem.runs.filter((run) => statusFor(run, weekItem) === 'missed').length;
+              return (
+                <button
+                  key={`${weekItem.year}-${weekItem.kw}`}
+                  className={`overview-week ${index === weekIndex ? 'selected' : ''}`}
+                  onClick={() => openWeek(index)}
+                >
+                  <div className="overview-week-head">
+                    <strong>W{weekItem.kw}</strong>
+                    <span>{formatDate(weekItem.startDate)}</span>
+                    <em>{formatNumber(weekItem.targetKm)} km</em>
+                  </div>
+                  <div className="overview-squares" aria-label={`Week ${weekItem.kw}: ${doneCount} done, ${missedCount} missed`}>
+                    {weekItem.runs.map((run) => {
+                      const status = statusFor(run, weekItem);
+                      return (
+                        <span
+                          key={run.id}
+                          className={`overview-square ${status}`}
+                          title={`${DAY_SHORT[run.plannedDay] || run.order} · ${run.title} · ${getStatusLabel(status)}`}
+                        />
+                      );
+                    })}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {selectedRun && (
         <section className="modal-backdrop" onClick={() => setSelectedRunId(null)}>
           <article className={`run-modal ${categoryClass(selectedRun)}`} onClick={(event) => event.stopPropagation()}>
             <div className="modal-header">
               <div>
-                <span>{selectedRun.plannedDay} · Run {selectedRun.order}</span>
+                <span>{selectedRun.plannedDay} · Run {selectedRun.order} · {formatDateObject(plannedDateForRun(week, selectedRun))}</span>
                 <h2>{selectedRun.title}</h2>
                 <p>{categoryLabel(selectedRun)} · {getRunMinutes(selectedRun)} min · {formatNumber(selectedRun.distanceKm)} km</p>
               </div>
@@ -352,11 +397,11 @@ export default function App() {
                 <article className="workout-block" key={`${selectedRun.id}-${index}`}>
                   <div className="block-title">{block.label}</div>
                   <div className="block-grid">
-                    <div className="metric-tile minutes-tile">
+                    <div className="metric-tile minutes-tile highlight-tile">
                       <span>Duration</span>
                       <strong>{block.duration}</strong>
                     </div>
-                    <div className="metric-tile hr-tile">
+                    <div className="metric-tile hr-tile highlight-tile">
                       <span>HR</span>
                       <strong>{formatHr(block.hr)}</strong>
                       <em>{formatHr(block.hrRange)}</em>
