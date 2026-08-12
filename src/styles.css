@@ -531,3 +531,165 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     border-radius: 14px !important;
   }
 }
+
+/* v26: keep all four detail metrics in one row and let grouped cards size naturally */
+.run-modal {
+  width: min(720px, calc(100vw - 16px)) !important;
+  height: auto !important;
+  max-height: calc(100dvh - 16px) !important;
+}
+
+.workout-blocks {
+  flex: 0 1 auto !important;
+  max-height: calc(100dvh - 170px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 13px 16px max(18px, env(safe-area-inset-bottom)) !important;
+}
+
+.grouped-block,
+.workout-block {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+.grouped-items {
+  display: block !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.grouped-item {
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 12px !important;
+  overflow: visible !important;
+}
+
+.block-grid,
+.grouped-item .block-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1.22fr) minmax(0, 0.95fr) minmax(0, 0.72fr) !important;
+  gap: 8px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.metric-tile {
+  min-width: 0 !important;
+  min-height: 78px !important;
+  height: auto !important;
+  padding: 9px 6px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 4px !important;
+  overflow: visible !important;
+  text-align: center !important;
+}
+
+.metric-tile span {
+  width: 100% !important;
+  line-height: 1.05 !important;
+  white-space: normal !important;
+}
+
+.metric-tile strong {
+  width: 100% !important;
+  min-height: 0 !important;
+  display: block !important;
+  line-height: 1.12 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  overflow: visible !important;
+}
+
+.hr-tile em {
+  width: 100% !important;
+  margin-top: 0 !important;
+  line-height: 1.08 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 640px) {
+  .workout-blocks {
+    padding: 11px 12px max(16px, env(safe-area-inset-bottom)) !important;
+    max-height: calc(100dvh - 158px) !important;
+  }
+
+  .workout-block {
+    padding: 10px !important;
+  }
+
+  .grouped-block {
+    padding: 0 !important;
+  }
+
+  .grouped-item {
+    padding: 10px !important;
+  }
+
+  .block-grid,
+  .grouped-item .block-grid {
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 1.18fr) minmax(0, 0.92fr) minmax(0, 0.70fr) !important;
+    gap: 5px !important;
+  }
+
+  .metric-tile {
+    min-height: 74px !important;
+    padding: 8px 4px !important;
+    border-radius: 12px !important;
+  }
+
+  .metric-tile span {
+    font-size: 0.54rem !important;
+    letter-spacing: 0.015em !important;
+  }
+
+  .metric-tile strong {
+    font-size: 0.82rem !important;
+    line-height: 1.08 !important;
+  }
+
+  .highlight-tile strong {
+    font-size: 0.88rem !important;
+  }
+
+  .hr-tile em {
+    font-size: 0.58rem !important;
+  }
+}
+
+@media (max-width: 370px) {
+  .block-grid,
+  .grouped-item .block-grid {
+    gap: 4px !important;
+  }
+
+  .metric-tile {
+    padding-inline: 3px !important;
+    min-height: 72px !important;
+  }
+
+  .metric-tile span {
+    font-size: 0.50rem !important;
+  }
+
+  .metric-tile strong {
+    font-size: 0.75rem !important;
+  }
+
+  .highlight-tile strong {
+    font-size: 0.80rem !important;
+  }
+
+  .hr-tile em {
+    font-size: 0.52rem !important;
+  }
+}
