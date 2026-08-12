@@ -455,3 +455,79 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     max-height: calc(100dvh - 165px) !important;
   }
 }
+
+
+/* v25: prevent grouped workout content from clipping and make mobile detail grids readable */
+.workout-block,
+.grouped-block,
+.grouped-items,
+.grouped-item {
+  overflow: visible !important;
+}
+
+.workout-blocks {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-bottom: max(22px, env(safe-area-inset-bottom)) !important;
+}
+
+.grouped-item {
+  display: block !important;
+  padding-block: 13px !important;
+}
+
+.block-title {
+  line-height: 1.18 !important;
+  overflow-wrap: anywhere !important;
+  margin-bottom: 9px !important;
+}
+
+.block-grid {
+  align-items: stretch !important;
+}
+
+.metric-tile {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 5px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.metric-tile span,
+.metric-tile strong,
+.metric-tile em {
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.metric-tile strong {
+  display: block !important;
+  line-height: 1.14 !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: anywhere !important;
+  text-overflow: clip !important;
+}
+
+.hr-tile em {
+  display: block !important;
+  line-height: 1.12 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 640px) {
+  .block-grid,
+  .grouped-item .block-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .metric-tile {
+    padding: 10px 8px !important;
+    border-radius: 14px !important;
+  }
+}

@@ -6351,7 +6351,7 @@ export const trainingPlan = [
       {
         "id": "kw15-run4",
         "order": 4,
-        "title": "Half Marathon Race",
+        "title": "Wiener Städtische Halbmarathon",
         "category": "Race",
         "plannedDay": "Sunday",
         "subtitle": "115 min · 23.26 km",
@@ -6373,7 +6373,7 @@ export const trainingPlan = [
             "km": 1.49
           },
           {
-            "label": "Half Marathon Race",
+            "label": "Wiener Städtische Halbmarathon",
             "minutes": 100,
             "pace": "4:44",
             "hr": 180,

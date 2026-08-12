@@ -503,7 +503,10 @@ export default function App() {
             <div className="modal-footer">
               <button
                 className={`modal-check-button ${progress[selectedRun.id] ? 'checked' : ''}`}
-                onClick={() => updateRun(selectedRun.id, !progress[selectedRun.id])}
+                onClick={() => {
+                  updateRun(selectedRun.id, !progress[selectedRun.id]);
+                  setSelectedRunId(null);
+                }}
               >
                 {progress[selectedRun.id] ? 'Undo' : 'Mark as done'}
               </button>
