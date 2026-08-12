@@ -1223,3 +1223,26 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     font-size: 0.48rem !important;
   }
 }
+
+/* v30: align single workout card spacing with grouped cards.
+   Only adds breathing room between the block title and the metric row.
+   Does not change metric tile height, grouped-card sizing, or modal scroll behavior. */
+.run-modal .workout-block:not(.grouped-block) {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 9px !important;
+}
+
+.run-modal .workout-block:not(.grouped-block) .block-title {
+  margin: 0 !important;
+}
+
+.run-modal .workout-block:not(.grouped-block) .block-grid {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 390px) {
+  .run-modal .workout-block:not(.grouped-block) {
+    gap: 8px !important;
+  }
+}
