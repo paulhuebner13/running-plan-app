@@ -1,1 +1,1 @@
-v28: Final grouped workout card layout fix. Metric tiles stay compact; only paired outer cards grow naturally so Interval/Recovery and HM/Threshold pairs do not overlap.
+v29: rigorous fix for opened-run workout cards. The four metric tiles remain one row and centered. Grouped interval/recovery cards grow from content and no longer clip/overlap.

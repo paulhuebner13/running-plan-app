@@ -1008,3 +1008,218 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     font-size: 0.50rem !important;
   }
 }
+
+/* v29 rigorous modal card layout reset
+   Goal: keep the four metric tiles in one row, centered; let grouped parent cards
+   grow from their content; never clip or overlap paired interval/recovery blocks. */
+.run-modal .workout-blocks {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  min-height: 0 !important;
+}
+
+.run-modal .workout-block,
+.run-modal .grouped-block,
+.run-modal .grouped-items,
+.run-modal .grouped-item,
+.run-modal .block-grid,
+.run-modal .metric-tile {
+  position: static !important;
+  float: none !important;
+  inset: auto !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+.run-modal .workout-block,
+.run-modal .grouped-block {
+  width: 100% !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+  overflow: visible !important;
+  flex: 0 0 auto !important;
+}
+
+.run-modal .workout-block:not(.grouped-block) {
+  padding: 12px !important;
+}
+
+.run-modal .grouped-block {
+  padding: 0 !important;
+}
+
+.run-modal .grouped-items {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.run-modal .grouped-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 9px !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+  overflow: visible !important;
+  flex: 0 0 auto !important;
+  padding: 12px !important;
+}
+
+.run-modal .block-divider {
+  display: block !important;
+  width: calc(100% - 24px) !important;
+  height: 2px !important;
+  min-height: 2px !important;
+  margin: 0 12px !important;
+  flex: 0 0 2px !important;
+  border: 0 !important;
+  background: color-mix(in srgb, var(--cat) 36%, rgba(255,255,255,0.12)) !important;
+}
+
+.run-modal .block-title {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+  overflow: visible !important;
+  overflow-wrap: anywhere !important;
+}
+
+.run-modal .block-grid,
+.run-modal .grouped-item .block-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.run-modal .metric-tile {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 72px !important;
+  max-height: none !important;
+  padding: 7px 4px !important;
+  overflow: visible !important;
+  text-align: center !important;
+}
+
+.run-modal .metric-tile span,
+.run-modal .metric-tile strong,
+.run-modal .metric-tile em {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+}
+
+.run-modal .metric-tile span {
+  font-size: 0.56rem !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0.015em !important;
+}
+
+.run-modal .metric-tile strong {
+  font-size: 0.80rem !important;
+  line-height: 1.12 !important;
+  font-weight: 950 !important;
+}
+
+.run-modal .highlight-tile strong {
+  font-size: 0.86rem !important;
+}
+
+.run-modal .hr-tile em {
+  margin-top: 0 !important;
+  font-size: 0.54rem !important;
+  line-height: 1.08 !important;
+  font-style: normal !important;
+}
+
+.run-modal .block-note {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.32 !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+@media (max-width: 390px) {
+  .run-modal .workout-blocks {
+    gap: 10px !important;
+  }
+
+  .run-modal .workout-block:not(.grouped-block),
+  .run-modal .grouped-item {
+    padding: 10px !important;
+  }
+
+  .run-modal .block-divider {
+    width: calc(100% - 20px) !important;
+    margin: 0 10px !important;
+  }
+
+  .run-modal .block-grid,
+  .run-modal .grouped-item .block-grid {
+    gap: 5px !important;
+  }
+
+  .run-modal .metric-tile {
+    min-height: 70px !important;
+    padding: 6px 3px !important;
+    gap: 3px !important;
+  }
+
+  .run-modal .metric-tile span {
+    font-size: 0.50rem !important;
+  }
+
+  .run-modal .metric-tile strong {
+    font-size: 0.72rem !important;
+    line-height: 1.10 !important;
+  }
+
+  .run-modal .highlight-tile strong {
+    font-size: 0.78rem !important;
+  }
+
+  .run-modal .hr-tile em {
+    font-size: 0.48rem !important;
+  }
+}
