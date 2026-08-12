@@ -177,7 +177,7 @@ function shouldGroupWithNext(step, nextStep) {
   const label = String(step.label || '');
   const nextLabel = String(nextStep.label || '');
 
-  const isWorkBlock = /(Strides|Threshold|Interval|VO2max|HM Pace|Fast|Hard|Cruise|Repeat)/i.test(label);
+  const isWorkBlock = /(Strides|Threshold|Interval|VO2max|5K Pace|HM Pace|Fast|Hard|Cruise|Repeat)/i.test(label);
   const isRecoveryBlock = /(Recovery|Easy Recovery|Full Recovery|Rest)/i.test(nextLabel);
 
   return isWorkBlock && isRecoveryBlock;

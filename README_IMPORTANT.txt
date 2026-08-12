@@ -1,1 +1,1 @@
-Version v23: 5K race on 17.09.2026 added, 30% 5K focus until then, then 100% half marathon focus. Volume starts around 50 km and builds toward 80 km with cutback weeks.
+Version v24: max week now around 70 km with faster build to a plateau. Interval/threshold/HM blocks use explicit alternating repetition labels, e.g. 5 × 4 min hard + 4 × 3 min easy recovery, so total minutes and km add up correctly.

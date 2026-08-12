@@ -36,7 +36,7 @@ export const trainingPlan = [
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -45,7 +45,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.97,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -63,7 +63,7 @@ export const trainingPlan = [
         "hrRange": "184-194",
         "pace": "4:30",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -79,15 +79,17 @@ export const trainingPlan = [
             "pace": "4:30",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 4.0
+            "km": 4.0,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 6 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "5 × 2 min Easy Recovery",
             "minutes": 10,
             "pace": "7:45",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.29
+            "km": 1.29,
+            "notes": "Recovery between reps only: 5 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -158,7 +160,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-17",
     "endDate": "2026-08-23",
-    "targetKm": 53.94,
+    "targetKm": 55.03,
     "focus": "30% 5K / 70% Half Marathon",
     "runs": [
       {
@@ -167,10 +169,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "80 min · 11.34 km",
+        "subtitle": "82 min · 11.62 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.34,
-        "minutes": 80,
+        "distanceKm": 11.62,
+        "minutes": 82,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:07",
@@ -179,18 +181,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 70,
+            "minutes": 72,
             "pace": "7:07",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.84
+            "km": 10.12
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -199,7 +201,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.97,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -209,10 +211,10 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "59 min · 9.71 km",
+        "subtitle": "61 min · 9.97 km",
         "type": "threshold-run",
-        "distanceKm": 9.71,
-        "minutes": 59,
+        "distanceKm": 9.97,
+        "minutes": 61,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "5:11",
@@ -233,15 +235,17 @@ export const trainingPlan = [
             "pace": "5:11",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 5.79
+            "km": 5.79,
+            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 4,
+            "label": "2 × 3 min Easy Recovery",
+            "minutes": 6,
             "pace": "7:44",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.52
+            "km": 0.78,
+            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -259,10 +263,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "54 min · 7.59 km",
+        "subtitle": "55 min · 7.73 km",
         "type": "easy-run",
-        "distanceKm": 7.59,
-        "minutes": 54,
+        "distanceKm": 7.73,
+        "minutes": 55,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:07",
@@ -271,11 +275,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 54,
+            "minutes": 55,
             "pace": "7:07",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 7.59
+            "km": 7.73
           }
         ]
       },
@@ -285,10 +289,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "183 min · 25.30 km",
+        "subtitle": "186 min · 25.71 km",
         "type": "long-run",
-        "distanceKm": 25.3,
-        "minutes": 183,
+        "distanceKm": 25.71,
+        "minutes": 186,
         "optimalHr": 152,
         "hrRange": "145-158",
         "pace": "7:14",
@@ -297,11 +301,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 183,
+            "minutes": 186,
             "pace": "7:14",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 25.3
+            "km": 25.71
           }
         ]
       }
@@ -312,7 +316,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-24",
     "endDate": "2026-08-30",
-    "targetKm": 56.72,
+    "targetKm": 59.76,
     "focus": "30% 5K / 70% Half Marathon",
     "runs": [
       {
@@ -321,10 +325,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "84 min · 11.92 km",
+        "subtitle": "88 min · 12.63 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.92,
-        "minutes": 84,
+        "distanceKm": 12.63,
+        "minutes": 88,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:06",
@@ -333,18 +337,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 74,
+            "minutes": 79,
             "pace": "7:06",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.42
+            "km": 11.13
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -353,7 +357,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.97,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -371,7 +375,7 @@ export const trainingPlan = [
         "hrRange": "184-194",
         "pace": "4:30",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -387,15 +391,17 @@ export const trainingPlan = [
             "pace": "4:30",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 4.0
+            "km": 4.0,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 6 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "5 × 2 min Easy Recovery",
             "minutes": 10,
             "pace": "7:44",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.29
+            "km": 1.29,
+            "notes": "Recovery between reps only: 5 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -413,10 +419,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "57 min · 8.03 km",
+        "subtitle": "74 min · 10.42 km",
         "type": "easy-run",
-        "distanceKm": 8.03,
-        "minutes": 57,
+        "distanceKm": 10.42,
+        "minutes": 74,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:06",
@@ -425,11 +431,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 57,
+            "minutes": 74,
             "pace": "7:06",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.03
+            "km": 10.42
           }
         ]
       },
@@ -439,9 +445,9 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "193 min · 27.82 km",
+        "subtitle": "193 min · 27.76 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.82,
+        "distanceKm": 27.76,
         "minutes": 193,
         "optimalHr": 169,
         "hrRange": "162-176",
@@ -451,19 +457,19 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 155,
+            "minutes": 157,
             "pace": "7:14",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.43
+            "km": 21.71
           },
           {
             "label": "Fast Finish",
-            "minutes": 38,
+            "minutes": 36,
             "pace": "5:57",
             "hr": 169,
             "hrRange": "162-176",
-            "km": 6.39,
+            "km": 6.05,
             "notes": "Controlled acceleration on tired legs. Strong, not all-out."
           }
         ]
@@ -475,7 +481,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-31",
     "endDate": "2026-09-06",
-    "targetKm": 48.02,
+    "targetKm": 51.95,
     "focus": "30% 5K / 70% Half Marathon",
     "runs": [
       {
@@ -484,10 +490,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "70 min · 10.09 km",
+        "subtitle": "76 min · 10.94 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.09,
-        "minutes": 70,
+        "distanceKm": 10.94,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:06",
@@ -496,18 +502,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 61,
+            "minutes": 67,
             "pace": "7:06",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.59
+            "km": 9.44
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -516,7 +522,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.97,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -526,15 +532,15 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "45 min · 6.78 km",
+        "subtitle": "42 min · 6.39 km",
         "type": "interval-run",
-        "distanceKm": 6.78,
-        "minutes": 45,
+        "distanceKm": 6.39,
+        "minutes": 42,
         "optimalHr": 188,
         "hrRange": "184-194",
         "pace": "4:25",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -550,15 +556,17 @@ export const trainingPlan = [
             "pace": "4:25",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 1.81
+            "km": 1.81,
+            "notes": "Alternate with the recovery below: 1 min hard, then 1 min easy. Repeat until all 8 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 10,
+            "label": "7 × 1 min Easy Recovery",
+            "minutes": 7,
             "pace": "7:43",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.3
+            "km": 0.91,
+            "notes": "Recovery between reps only: 7 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -576,10 +584,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "48 min · 6.76 km",
+        "subtitle": "52 min · 7.32 km",
         "type": "easy-run",
-        "distanceKm": 6.76,
-        "minutes": 48,
+        "distanceKm": 7.32,
+        "minutes": 52,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:06",
@@ -588,11 +596,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 48,
+            "minutes": 52,
             "pace": "7:06",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 6.76
+            "km": 7.32
           }
         ]
       },
@@ -602,10 +610,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "176 min · 24.39 km",
+        "subtitle": "197 min · 27.30 km",
         "type": "long-run",
-        "distanceKm": 24.39,
-        "minutes": 176,
+        "distanceKm": 27.3,
+        "minutes": 197,
         "optimalHr": 152,
         "hrRange": "145-158",
         "pace": "7:13",
@@ -614,11 +622,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 176,
+            "minutes": 197,
             "pace": "7:13",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 24.39
+            "km": 27.3
           }
         ]
       }
@@ -629,19 +637,46 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-07",
     "endDate": "2026-09-13",
-    "targetKm": 57.88,
+    "targetKm": 63.95,
     "focus": "30% 5K / 70% Half Marathon",
     "runs": [
       {
         "id": "kw37-run1",
         "order": 1,
+        "title": "Recovery Run",
+        "category": "Recovery Run",
+        "plannedDay": "Monday",
+        "subtitle": "61 min · 7.91 km",
+        "type": "recovery-run",
+        "distanceKm": 7.91,
+        "minutes": 61,
+        "optimalHr": 140,
+        "hrRange": "132-146",
+        "pace": "7:43",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Recovery",
+            "minutes": 61,
+            "pace": "7:43",
+            "hr": 140,
+            "hrRange": "132-146",
+            "km": 7.91,
+            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
+          }
+        ]
+      },
+      {
+        "id": "kw37-run2",
+        "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "86 min · 12.23 km",
+        "subtitle": "72 min · 10.25 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.23,
-        "minutes": 86,
+        "distanceKm": 10.25,
+        "minutes": 72,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:05",
@@ -650,18 +685,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 76,
+            "minutes": 62,
             "pace": "7:05",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.73
+            "km": 8.75
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -670,13 +705,13 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.97,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
       {
-        "id": "kw37-run2",
-        "order": 2,
+        "id": "kw37-run3",
+        "order": 3,
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
@@ -688,7 +723,7 @@ export const trainingPlan = [
         "hrRange": "184-194",
         "pace": "4:30",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -704,15 +739,17 @@ export const trainingPlan = [
             "pace": "4:30",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 4.44
+            "km": 4.44,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 5 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "4 × 3 min Easy Recovery",
             "minutes": 12,
             "pace": "7:43",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.56
+            "km": 1.56,
+            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -725,15 +762,15 @@ export const trainingPlan = [
         ]
       },
       {
-        "id": "kw37-run3",
-        "order": 3,
+        "id": "kw37-run4",
+        "order": 4,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "58 min · 8.19 km",
+        "subtitle": "59 min · 8.33 km",
         "type": "easy-run",
-        "distanceKm": 8.19,
-        "minutes": 58,
+        "distanceKm": 8.33,
+        "minutes": 59,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:05",
@@ -742,17 +779,17 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 58,
+            "minutes": 59,
             "pace": "7:05",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.19
+            "km": 8.33
           }
         ]
       },
       {
-        "id": "kw37-run4",
-        "order": 4,
+        "id": "kw37-run5",
+        "order": 5,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
@@ -783,7 +820,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-14",
     "endDate": "2026-09-20",
-    "targetKm": 49.97,
+    "targetKm": 53.31,
     "focus": "30% 5K / 70% Half Marathon",
     "runs": [
       {
@@ -815,7 +852,7 @@ export const trainingPlan = [
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -824,7 +861,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.97,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -904,10 +941,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "176 min · 24.50 km",
+        "subtitle": "200 min · 27.84 km",
         "type": "long-run",
-        "distanceKm": 24.5,
-        "minutes": 176,
+        "distanceKm": 27.84,
+        "minutes": 200,
         "optimalHr": 152,
         "hrRange": "145-158",
         "pace": "7:11",
@@ -916,11 +953,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 176,
+            "minutes": 200,
             "pace": "7:11",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 24.5
+            "km": 27.84
           }
         ]
       }
@@ -931,19 +968,46 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-21",
     "endDate": "2026-09-27",
-    "targetKm": 57.86,
+    "targetKm": 63.97,
     "focus": "Half Marathon",
     "runs": [
       {
         "id": "kw39-run1",
         "order": 1,
+        "title": "Recovery Run",
+        "category": "Recovery Run",
+        "plannedDay": "Monday",
+        "subtitle": "57 min · 7.42 km",
+        "type": "recovery-run",
+        "distanceKm": 7.42,
+        "minutes": 57,
+        "optimalHr": 140,
+        "hrRange": "132-146",
+        "pace": "7:41",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Recovery",
+            "minutes": 57,
+            "pace": "7:41",
+            "hr": 140,
+            "hrRange": "132-146",
+            "km": 7.42,
+            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
+          }
+        ]
+      },
+      {
+        "id": "kw39-run2",
+        "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "84 min · 12.15 km",
+        "subtitle": "72 min · 10.30 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.15,
-        "minutes": 84,
+        "distanceKm": 10.3,
+        "minutes": 72,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:03",
@@ -952,18 +1016,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 75,
+            "minutes": 62,
             "pace": "7:03",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.64
+            "km": 8.79
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -972,20 +1036,20 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
       {
-        "id": "kw39-run2",
-        "order": 2,
+        "id": "kw39-run3",
+        "order": 3,
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "59 min · 9.78 km",
+        "subtitle": "61 min · 10.04 km",
         "type": "threshold-run",
-        "distanceKm": 9.78,
-        "minutes": 59,
+        "distanceKm": 10.04,
+        "minutes": 61,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "5:09",
@@ -1006,15 +1070,17 @@ export const trainingPlan = [
             "pace": "5:09",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 5.83
+            "km": 5.83,
+            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 4,
+            "label": "2 × 3 min Easy Recovery",
+            "minutes": 6,
             "pace": "7:41",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.52
+            "km": 0.78,
+            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -1027,15 +1093,15 @@ export const trainingPlan = [
         ]
       },
       {
-        "id": "kw39-run3",
-        "order": 3,
+        "id": "kw39-run4",
+        "order": 4,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "57 min · 8.09 km",
+        "subtitle": "59 min · 8.37 km",
         "type": "easy-run",
-        "distanceKm": 8.09,
-        "minutes": 57,
+        "distanceKm": 8.37,
+        "minutes": 59,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:03",
@@ -1044,17 +1110,17 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 57,
+            "minutes": 59,
             "pace": "7:03",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.09
+            "km": 8.37
           }
         ]
       },
       {
-        "id": "kw39-run4",
-        "order": 4,
+        "id": "kw39-run5",
+        "order": 5,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
@@ -1085,19 +1151,46 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-28",
     "endDate": "2026-10-04",
-    "targetKm": 61.79,
+    "targetKm": 68.0,
     "focus": "Half Marathon",
     "runs": [
       {
         "id": "kw40-run1",
         "order": 1,
+        "title": "Recovery Run",
+        "category": "Recovery Run",
+        "plannedDay": "Monday",
+        "subtitle": "67 min · 8.72 km",
+        "type": "recovery-run",
+        "distanceKm": 8.72,
+        "minutes": 67,
+        "optimalHr": 140,
+        "hrRange": "132-146",
+        "pace": "7:41",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Recovery",
+            "minutes": 67,
+            "pace": "7:41",
+            "hr": 140,
+            "hrRange": "132-146",
+            "km": 8.72,
+            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
+          }
+        ]
+      },
+      {
+        "id": "kw40-run2",
+        "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "90 min · 13.00 km",
+        "subtitle": "76 min · 10.87 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 13.0,
-        "minutes": 90,
+        "distanceKm": 10.87,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:03",
@@ -1106,18 +1199,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 81,
+            "minutes": 66,
             "pace": "7:03",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.49
+            "km": 9.36
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -1126,13 +1219,13 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
       {
-        "id": "kw40-run2",
-        "order": 2,
+        "id": "kw40-run3",
+        "order": 3,
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
@@ -1144,7 +1237,7 @@ export const trainingPlan = [
         "hrRange": "184-194",
         "pace": "4:35",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -1160,15 +1253,17 @@ export const trainingPlan = [
             "pace": "4:35",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.49
+            "km": 3.49,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 3 min Easy Recovery",
             "minutes": 9,
             "pace": "7:41",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.17
+            "km": 1.17,
+            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -1181,15 +1276,15 @@ export const trainingPlan = [
         ]
       },
       {
-        "id": "kw40-run3",
-        "order": 3,
+        "id": "kw40-run4",
+        "order": 4,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "75 min · 10.64 km",
+        "subtitle": "72 min · 10.21 km",
         "type": "easy-run",
-        "distanceKm": 10.64,
-        "minutes": 75,
+        "distanceKm": 10.21,
+        "minutes": 72,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:03",
@@ -1198,24 +1293,24 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 75,
+            "minutes": 72,
             "pace": "7:03",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.64
+            "km": 10.21
           }
         ]
       },
       {
-        "id": "kw40-run4",
-        "order": 4,
+        "id": "kw40-run5",
+        "order": 5,
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "191 min · 27.81 km",
+        "subtitle": "192 min · 27.86 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.81,
-        "minutes": 191,
+        "distanceKm": 27.86,
+        "minutes": 192,
         "optimalHr": 169,
         "hrRange": "162-176",
         "pace": "5:53",
@@ -1224,19 +1319,19 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 153,
+            "minutes": 157,
             "pace": "7:10",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.35
+            "km": 21.91
           },
           {
             "label": "Fast Finish",
-            "minutes": 38,
+            "minutes": 35,
             "pace": "5:53",
             "hr": 169,
             "hrRange": "162-176",
-            "km": 6.46,
+            "km": 5.95,
             "notes": "Controlled acceleration on tired legs. Strong, not all-out."
           }
         ]
@@ -1248,19 +1343,46 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-05",
     "endDate": "2026-10-11",
-    "targetKm": 65.02,
+    "targetKm": 69.78,
     "focus": "Half Marathon",
     "runs": [
       {
         "id": "kw41-run1",
         "order": 1,
+        "title": "Recovery Run",
+        "category": "Recovery Run",
+        "plannedDay": "Monday",
+        "subtitle": "67 min · 8.74 km",
+        "type": "recovery-run",
+        "distanceKm": 8.74,
+        "minutes": 67,
+        "optimalHr": 140,
+        "hrRange": "132-146",
+        "pace": "7:40",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Recovery",
+            "minutes": 67,
+            "pace": "7:40",
+            "hr": 140,
+            "hrRange": "132-146",
+            "km": 8.74,
+            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
+          }
+        ]
+      },
+      {
+        "id": "kw41-run2",
+        "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "94 min · 13.60 km",
+        "subtitle": "76 min · 10.90 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 13.6,
-        "minutes": 94,
+        "distanceKm": 10.9,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:02",
@@ -1269,18 +1391,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 85,
+            "minutes": 66,
             "pace": "7:02",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.09
+            "km": 9.39
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -1289,13 +1411,13 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
       {
-        "id": "kw41-run2",
-        "order": 2,
+        "id": "kw41-run3",
+        "order": 3,
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
@@ -1323,15 +1445,17 @@ export const trainingPlan = [
             "pace": "4:50",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 9
+            "km": 9,
+            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "2 × 3 min Easy Recovery",
             "minutes": 6,
             "pace": "7:40",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.78
+            "km": 0.78,
+            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -1344,15 +1468,15 @@ export const trainingPlan = [
         ]
       },
       {
-        "id": "kw41-run3",
-        "order": 3,
+        "id": "kw41-run4",
+        "order": 4,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "73 min · 10.38 km",
+        "subtitle": "64 min · 9.10 km",
         "type": "easy-run",
-        "distanceKm": 10.38,
-        "minutes": 73,
+        "distanceKm": 9.1,
+        "minutes": 64,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:02",
@@ -1361,17 +1485,17 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 73,
+            "minutes": 64,
             "pace": "7:02",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.38
+            "km": 9.1
           }
         ]
       },
       {
-        "id": "kw41-run4",
-        "order": 4,
+        "id": "kw41-run5",
+        "order": 5,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
@@ -1402,7 +1526,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-12",
     "endDate": "2026-10-18",
-    "targetKm": 53.95,
+    "targetKm": 57.95,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -1411,10 +1535,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "78 min · 11.34 km",
+        "subtitle": "84 min · 12.20 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.34,
-        "minutes": 78,
+        "distanceKm": 12.2,
+        "minutes": 84,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:01",
@@ -1423,18 +1547,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 69,
+            "minutes": 75,
             "pace": "7:01",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.83
+            "km": 10.69
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -1443,7 +1567,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -1453,23 +1577,23 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "52 min · 8.28 km",
+        "subtitle": "63 min · 9.87 km",
         "type": "interval-run",
-        "distanceKm": 8.28,
-        "minutes": 52,
+        "distanceKm": 9.87,
+        "minutes": 63,
         "optimalHr": 188,
         "hrRange": "184-194",
         "pace": "4:35",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 15,
+            "minutes": 28,
             "pace": "7:01",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.14
+            "km": 3.99
           },
           {
             "label": "5 × 3 min VO2max",
@@ -1477,15 +1601,17 @@ export const trainingPlan = [
             "pace": "4:35",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.27
+            "km": 3.27,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 5 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 10,
+            "label": "4 × 2 min Easy Recovery",
+            "minutes": 8,
             "pace": "7:40",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.3
+            "km": 1.04,
+            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -1503,10 +1629,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "53 min · 7.55 km",
+        "subtitle": "57 min · 8.12 km",
         "type": "easy-run",
-        "distanceKm": 7.55,
-        "minutes": 53,
+        "distanceKm": 8.12,
+        "minutes": 57,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:01",
@@ -1515,11 +1641,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 53,
+            "minutes": 57,
             "pace": "7:01",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 7.55
+            "km": 8.12
           }
         ]
       },
@@ -1529,10 +1655,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "191 min · 26.78 km",
+        "subtitle": "198 min · 27.76 km",
         "type": "long-run",
-        "distanceKm": 26.78,
-        "minutes": 191,
+        "distanceKm": 27.76,
+        "minutes": 198,
         "optimalHr": 152,
         "hrRange": "145-158",
         "pace": "7:08",
@@ -1541,11 +1667,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 191,
+            "minutes": 198,
             "pace": "7:08",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 26.78
+            "km": 27.76
           }
         ]
       }
@@ -1556,7 +1682,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-19",
     "endDate": "2026-10-25",
-    "targetKm": 65.97,
+    "targetKm": 67.93,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -1565,10 +1691,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "71 min · 9.28 km",
+        "subtitle": "67 min · 8.76 km",
         "type": "recovery-run",
-        "distanceKm": 9.28,
-        "minutes": 71,
+        "distanceKm": 8.76,
+        "minutes": 67,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:39",
@@ -1577,11 +1703,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 71,
+            "minutes": 67,
             "pace": "7:39",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 9.28,
+            "km": 8.76,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -1592,10 +1718,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "72 min · 10.51 km",
+        "subtitle": "76 min · 10.94 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.51,
-        "minutes": 72,
+        "distanceKm": 10.94,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:00",
@@ -1604,18 +1730,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 63,
+            "minutes": 66,
             "pace": "7:00",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.0
+            "km": 9.43
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -1624,7 +1750,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -1634,10 +1760,10 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "59 min · 9.83 km",
+        "subtitle": "61 min · 10.09 km",
         "type": "threshold-run",
-        "distanceKm": 9.83,
-        "minutes": 59,
+        "distanceKm": 10.09,
+        "minutes": 61,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "5:07",
@@ -1658,15 +1784,17 @@ export const trainingPlan = [
             "pace": "5:07",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 5.86
+            "km": 5.86,
+            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 4,
+            "label": "2 × 3 min Easy Recovery",
+            "minutes": 6,
             "pace": "7:39",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.52
+            "km": 0.78,
+            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -1681,35 +1809,26 @@ export const trainingPlan = [
       {
         "id": "kw43-run4",
         "order": 4,
-        "title": "Progressive Run",
-        "category": "Progressive Run",
+        "title": "Easy Run",
+        "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "55 min · 8.58 km",
-        "type": "progressive-run",
-        "distanceKm": 8.58,
-        "minutes": 55,
-        "optimalHr": 166,
-        "hrRange": "160-174",
-        "pace": "5:51",
+        "subtitle": "72 min · 10.29 km",
+        "type": "easy-run",
+        "distanceKm": 10.29,
+        "minutes": 72,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:00",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy Start",
-            "minutes": 29,
+            "label": "Easy",
+            "minutes": 72,
             "pace": "7:00",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 4.14
-          },
-          {
-            "label": "Progressive Finish",
-            "minutes": 26,
-            "pace": "5:51",
-            "hr": 166,
-            "hrRange": "160-174",
-            "km": 4.44,
-            "notes": "Finish controlled, not as a race."
+            "km": 10.29
           }
         ]
       },
@@ -1719,10 +1838,10 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "190 min · 27.77 km",
+        "subtitle": "191 min · 27.85 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.77,
-        "minutes": 190,
+        "distanceKm": 27.85,
+        "minutes": 191,
         "optimalHr": 169,
         "hrRange": "162-176",
         "pace": "5:51",
@@ -1731,19 +1850,19 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 153,
+            "minutes": 156,
             "pace": "7:08",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.45
+            "km": 21.87
           },
           {
             "label": "Fast Finish",
-            "minutes": 37,
+            "minutes": 35,
             "pace": "5:51",
             "hr": 169,
             "hrRange": "162-176",
-            "km": 6.32,
+            "km": 5.98,
             "notes": "Controlled acceleration on tired legs. Strong, not all-out."
           }
         ]
@@ -1755,7 +1874,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 68.97,
+    "targetKm": 69.59,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -1764,10 +1883,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "73 min · 9.54 km",
+        "subtitle": "69 min · 9.02 km",
         "type": "recovery-run",
-        "distanceKm": 9.54,
-        "minutes": 73,
+        "distanceKm": 9.02,
+        "minutes": 69,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:39",
@@ -1776,11 +1895,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 73,
+            "minutes": 69,
             "pace": "7:39",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 9.54,
+            "km": 9.02,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -1791,10 +1910,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.08 km",
+        "subtitle": "78 min · 11.22 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.08,
-        "minutes": 76,
+        "distanceKm": 11.22,
+        "minutes": 78,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:00",
@@ -1803,18 +1922,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 67,
+            "minutes": 68,
             "pace": "7:00",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.57
+            "km": 9.71
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -1823,7 +1942,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -1841,7 +1960,7 @@ export const trainingPlan = [
         "hrRange": "184-194",
         "pace": "4:34",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -1857,15 +1976,17 @@ export const trainingPlan = [
             "pace": "4:34",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.5
+            "km": 3.5,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 3 min Easy Recovery",
             "minutes": 9,
             "pace": "7:39",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.18
+            "km": 1.18,
+            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -1883,10 +2004,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "71 min · 10.14 km",
+        "subtitle": "78 min · 11.14 km",
         "type": "easy-run",
-        "distanceKm": 10.14,
-        "minutes": 71,
+        "distanceKm": 11.14,
+        "minutes": 78,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "7:00",
@@ -1895,11 +2016,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 71,
+            "minutes": 78,
             "pace": "7:00",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.14
+            "km": 11.14
           }
         ]
       },
@@ -1936,7 +2057,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-02",
     "endDate": "2026-11-08",
-    "targetKm": 71.77,
+    "targetKm": 69.75,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -1945,10 +2066,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "75 min · 9.83 km",
+        "subtitle": "66 min · 8.64 km",
         "type": "recovery-run",
-        "distanceKm": 9.83,
-        "minutes": 75,
+        "distanceKm": 8.64,
+        "minutes": 66,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:38",
@@ -1957,11 +2078,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 75,
+            "minutes": 66,
             "pace": "7:38",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 9.83,
+            "km": 8.64,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -1972,10 +2093,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "80 min · 11.53 km",
+        "subtitle": "76 min · 10.96 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.53,
-        "minutes": 80,
+        "distanceKm": 10.96,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:59",
@@ -1984,18 +2105,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 70,
+            "minutes": 66,
             "pace": "6:59",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.02
+            "km": 9.45
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -2004,7 +2125,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -2038,15 +2159,17 @@ export const trainingPlan = [
             "pace": "4:49",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 9
+            "km": 9,
+            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "2 × 3 min Easy Recovery",
             "minutes": 6,
             "pace": "7:38",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79
+            "km": 0.79,
+            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -2064,10 +2187,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "65 min · 9.31 km",
+        "subtitle": "64 min · 9.16 km",
         "type": "easy-run",
-        "distanceKm": 9.31,
-        "minutes": 65,
+        "distanceKm": 9.16,
+        "minutes": 64,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:59",
@@ -2076,11 +2199,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 65,
+            "minutes": 64,
             "pace": "6:59",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.31
+            "km": 9.16
           }
         ]
       },
@@ -2090,10 +2213,10 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "181 min · 27.85 km",
+        "subtitle": "180 min · 27.74 km",
         "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.85,
-        "minutes": 181,
+        "distanceKm": 27.74,
+        "minutes": 180,
         "optimalHr": 178,
         "hrRange": "174-183",
         "pace": "4:49",
@@ -2102,11 +2225,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 126,
+            "minutes": 128,
             "pace": "7:06",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 17.75
+            "km": 18.03
           },
           {
             "label": "2 × 4 km HM Pace",
@@ -2114,15 +2237,17 @@ export const trainingPlan = [
             "pace": "4:49",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 8
+            "km": 8,
+            "notes": "In the long run: 4 km HM pace, then 5 min easy, then the second HM pace block."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 8,
+            "label": "1 × 5 min Easy Recovery",
+            "minutes": 5,
             "pace": "7:38",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.05
+            "km": 0.66,
+            "notes": "Recovery between the two HM pace blocks only."
           },
           {
             "label": "Cool-down",
@@ -2141,7 +2266,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 57.94,
+    "targetKm": 59.81,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -2150,10 +2275,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "84 min · 12.13 km",
+        "subtitle": "86 min · 12.56 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.13,
-        "minutes": 84,
+        "distanceKm": 12.56,
+        "minutes": 86,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:58",
@@ -2162,18 +2287,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 74,
+            "minutes": 77,
             "pace": "6:58",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.62
+            "km": 11.05
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -2182,7 +2307,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -2216,15 +2341,17 @@ export const trainingPlan = [
             "pace": "5:06",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 4.71
+            "km": 4.71,
+            "notes": "Alternate with the recovery below: 6 min threshold, then 2 min easy. Repeat until all 4 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 2 min Easy Recovery",
             "minutes": 6,
             "pace": "7:37",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79
+            "km": 0.79,
+            "notes": "Recovery between threshold reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -2242,10 +2369,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "63 min · 9.04 km",
+        "subtitle": "73 min · 10.48 km",
         "type": "easy-run",
-        "distanceKm": 9.04,
-        "minutes": 63,
+        "distanceKm": 10.48,
+        "minutes": 73,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:58",
@@ -2254,11 +2381,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 63,
+            "minutes": 73,
             "pace": "6:58",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.04
+            "km": 10.48
           }
         ]
       },
@@ -2295,7 +2422,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-16",
     "endDate": "2026-11-22",
-    "targetKm": 71.94,
+    "targetKm": 68.95,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -2304,10 +2431,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "75 min · 9.85 km",
+        "subtitle": "68 min · 8.93 km",
         "type": "recovery-run",
-        "distanceKm": 9.85,
-        "minutes": 75,
+        "distanceKm": 8.93,
+        "minutes": 68,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:37",
@@ -2316,11 +2443,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 75,
+            "minutes": 68,
             "pace": "7:37",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 9.85,
+            "km": 8.93,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -2331,10 +2458,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "86 min · 12.44 km",
+        "subtitle": "76 min · 11.01 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.44,
-        "minutes": 86,
+        "distanceKm": 11.01,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:57",
@@ -2343,18 +2470,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 76,
+            "minutes": 66,
             "pace": "6:57",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.93
+            "km": 9.5
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -2363,7 +2490,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.98,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -2381,7 +2508,7 @@ export const trainingPlan = [
         "hrRange": "184-194",
         "pace": "4:33",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -2397,15 +2524,17 @@ export const trainingPlan = [
             "pace": "4:33",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.52
+            "km": 3.52,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 3 min Easy Recovery",
             "minutes": 9,
             "pace": "7:37",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.18
+            "km": 1.18,
+            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -2423,10 +2552,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "79 min · 11.36 km",
+        "subtitle": "75 min · 10.79 km",
         "type": "easy-run",
-        "distanceKm": 11.36,
-        "minutes": 79,
+        "distanceKm": 10.79,
+        "minutes": 75,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:57",
@@ -2435,11 +2564,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 79,
+            "minutes": 75,
             "pace": "6:57",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.36
+            "km": 10.79
           }
         ]
       },
@@ -2449,9 +2578,9 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "189 min · 27.84 km",
+        "subtitle": "189 min · 27.77 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.84,
+        "distanceKm": 27.77,
         "minutes": 189,
         "optimalHr": 169,
         "hrRange": "162-176",
@@ -2461,19 +2590,19 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 152,
+            "minutes": 154,
             "pace": "7:05",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.46
+            "km": 21.74
           },
           {
             "label": "Fast Finish",
-            "minutes": 37,
+            "minutes": 35,
             "pace": "5:48",
             "hr": 169,
             "hrRange": "162-176",
-            "km": 6.38,
+            "km": 6.03,
             "notes": "Controlled acceleration on tired legs. Strong, not all-out."
           }
         ]
@@ -2485,7 +2614,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-23",
     "endDate": "2026-11-29",
-    "targetKm": 74.04,
+    "targetKm": 69.94,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -2494,10 +2623,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "77 min · 10.13 km",
+        "subtitle": "68 min · 8.94 km",
         "type": "recovery-run",
-        "distanceKm": 10.13,
-        "minutes": 77,
+        "distanceKm": 8.94,
+        "minutes": 68,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:36",
@@ -2506,11 +2635,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 77,
+            "minutes": 68,
             "pace": "7:36",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 10.13,
+            "km": 8.94,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -2521,10 +2650,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "86 min · 12.60 km",
+        "subtitle": "76 min · 11.16 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.6,
-        "minutes": 86,
+        "distanceKm": 11.16,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:57",
@@ -2533,18 +2662,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 77,
+            "minutes": 67,
             "pace": "6:57",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.08
+            "km": 9.64
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -2553,7 +2682,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.99,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -2563,10 +2692,10 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "73 min · 11.92 km",
+        "subtitle": "67 min · 11.03 km",
         "type": "threshold-run",
-        "distanceKm": 11.92,
-        "minutes": 73,
+        "distanceKm": 11.03,
+        "minutes": 67,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "5:05",
@@ -2575,11 +2704,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
+            "minutes": 21,
             "pace": "6:57",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.17
+            "km": 3.02
           },
           {
             "label": "3 × 10 min Threshold",
@@ -2587,15 +2716,17 @@ export const trainingPlan = [
             "pace": "5:05",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 5.9
+            "km": 5.9,
+            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 4,
+            "label": "2 × 3 min Easy Recovery",
+            "minutes": 6,
             "pace": "7:36",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.53
+            "km": 0.79,
+            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -2613,10 +2744,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "81 min · 11.65 km",
+        "subtitle": "77 min · 11.07 km",
         "type": "easy-run",
-        "distanceKm": 11.65,
-        "minutes": 81,
+        "distanceKm": 11.07,
+        "minutes": 77,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:57",
@@ -2625,11 +2756,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 81,
+            "minutes": 77,
             "pace": "6:57",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.65
+            "km": 11.07
           }
         ]
       },
@@ -2666,7 +2797,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-30",
     "endDate": "2026-12-06",
-    "targetKm": 75.65,
+    "targetKm": 69.67,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -2675,10 +2806,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "79 min · 10.39 km",
+        "subtitle": "65 min · 8.55 km",
         "type": "recovery-run",
-        "distanceKm": 10.39,
-        "minutes": 79,
+        "distanceKm": 8.55,
+        "minutes": 65,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:36",
@@ -2687,11 +2818,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 79,
+            "minutes": 65,
             "pace": "7:36",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 10.39,
+            "km": 8.55,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -2702,10 +2833,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "84 min · 12.19 km",
+        "subtitle": "74 min · 10.89 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.19,
-        "minutes": 84,
+        "distanceKm": 10.89,
+        "minutes": 74,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:56",
@@ -2714,18 +2845,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 74,
+            "minutes": 65,
             "pace": "6:56",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.67
+            "km": 9.37
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -2734,7 +2865,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.99,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -2768,15 +2899,17 @@ export const trainingPlan = [
             "pace": "4:48",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 9
+            "km": 9,
+            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "2 × 3 min Easy Recovery",
             "minutes": 6,
             "pace": "7:36",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79
+            "km": 0.79,
+            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -2794,10 +2927,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "83 min · 11.97 km",
+        "subtitle": "63 min · 9.09 km",
         "type": "easy-run",
-        "distanceKm": 11.97,
-        "minutes": 83,
+        "distanceKm": 9.09,
+        "minutes": 63,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:56",
@@ -2806,11 +2939,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 83,
+            "minutes": 63,
             "pace": "6:56",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.97
+            "km": 9.09
           }
         ]
       },
@@ -2820,9 +2953,9 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "179 min · 27.83 km",
+        "subtitle": "179 min · 27.87 km",
         "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.83,
+        "distanceKm": 27.87,
         "minutes": 179,
         "optimalHr": 178,
         "hrRange": "174-183",
@@ -2832,11 +2965,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 125,
+            "minutes": 128,
             "pace": "7:03",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 17.73
+            "km": 18.16
           },
           {
             "label": "2 × 4 km HM Pace",
@@ -2844,15 +2977,17 @@ export const trainingPlan = [
             "pace": "4:48",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 8
+            "km": 8,
+            "notes": "In the long run: 4 km HM pace, then 5 min easy, then the second HM pace block."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 8,
+            "label": "1 × 5 min Easy Recovery",
+            "minutes": 5,
             "pace": "7:36",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.05
+            "km": 0.66,
+            "notes": "Recovery between the two HM pace blocks only."
           },
           {
             "label": "Cool-down",
@@ -2871,7 +3006,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 62.05,
+    "targetKm": 60.05,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -2880,10 +3015,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "90 min · 13.09 km",
+        "subtitle": "86 min · 12.65 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 13.09,
-        "minutes": 90,
+        "distanceKm": 12.65,
+        "minutes": 86,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:55",
@@ -2892,18 +3027,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 80,
+            "minutes": 77,
             "pace": "6:55",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.57
+            "km": 11.13
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -2912,7 +3047,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.99,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -2922,15 +3057,15 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "66 min · 10.40 km",
+        "subtitle": "64 min · 10.13 km",
         "type": "interval-run",
-        "distanceKm": 10.4,
-        "minutes": 66,
+        "distanceKm": 10.13,
+        "minutes": 64,
         "optimalHr": 188,
         "hrRange": "184-194",
         "pace": "4:32",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -2946,15 +3081,17 @@ export const trainingPlan = [
             "pace": "4:32",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.31
+            "km": 3.31,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 5 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 10,
+            "label": "4 × 2 min Easy Recovery",
+            "minutes": 8,
             "pace": "7:35",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.32
+            "km": 1.05,
+            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -2972,10 +3109,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "74 min · 10.69 km",
+        "subtitle": "65 min · 9.40 km",
         "type": "easy-run",
-        "distanceKm": 10.69,
-        "minutes": 74,
+        "distanceKm": 9.4,
+        "minutes": 65,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:55",
@@ -2984,11 +3121,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 74,
+            "minutes": 65,
             "pace": "6:55",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.69
+            "km": 9.4
           }
         ]
       },
@@ -3025,7 +3162,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-14",
     "endDate": "2026-12-20",
-    "targetKm": 75.93,
+    "targetKm": 67.98,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -3034,10 +3171,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "78 min · 10.31 km",
+        "subtitle": "66 min · 8.72 km",
         "type": "recovery-run",
-        "distanceKm": 10.31,
-        "minutes": 78,
+        "distanceKm": 8.72,
+        "minutes": 66,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:34",
@@ -3046,11 +3183,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 78,
+            "minutes": 66,
             "pace": "7:34",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 10.31,
+            "km": 8.72,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -3061,10 +3198,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "96 min · 13.98 km",
+        "subtitle": "74 min · 10.94 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 13.98,
-        "minutes": 96,
+        "distanceKm": 10.94,
+        "minutes": 74,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:54",
@@ -3073,18 +3210,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 86,
+            "minutes": 65,
             "pace": "6:54",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.46
+            "km": 9.42
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -3093,7 +3230,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.99,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -3103,10 +3240,10 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "73 min · 11.99 km",
+        "subtitle": "61 min · 10.22 km",
         "type": "threshold-run",
-        "distanceKm": 11.99,
-        "minutes": 73,
+        "distanceKm": 10.22,
+        "minutes": 61,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "5:03",
@@ -3115,11 +3252,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
+            "minutes": 15,
             "pace": "6:54",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.2
+            "km": 2.17
           },
           {
             "label": "3 × 10 min Threshold",
@@ -3127,15 +3264,17 @@ export const trainingPlan = [
             "pace": "5:03",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 5.94
+            "km": 5.94,
+            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 4,
+            "label": "2 × 3 min Easy Recovery",
+            "minutes": 6,
             "pace": "7:34",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.53
+            "km": 0.79,
+            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -3153,10 +3292,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "82 min · 11.89 km",
+        "subtitle": "71 min · 10.29 km",
         "type": "easy-run",
-        "distanceKm": 11.89,
-        "minutes": 82,
+        "distanceKm": 10.29,
+        "minutes": 71,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:54",
@@ -3165,11 +3304,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 82,
+            "minutes": 71,
             "pace": "6:54",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.89
+            "km": 10.29
           }
         ]
       },
@@ -3179,10 +3318,10 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "187 min · 27.76 km",
+        "subtitle": "188 min · 27.81 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.76,
-        "minutes": 187,
+        "distanceKm": 27.81,
+        "minutes": 188,
         "optimalHr": 169,
         "hrRange": "162-176",
         "pace": "5:45",
@@ -3191,19 +3330,19 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 150,
+            "minutes": 154,
             "pace": "7:02",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.33
+            "km": 21.9
           },
           {
             "label": "Fast Finish",
-            "minutes": 37,
+            "minutes": 34,
             "pace": "5:45",
             "hr": 169,
             "hrRange": "162-176",
-            "km": 6.43,
+            "km": 5.91,
             "notes": "Controlled acceleration on tired legs. Strong, not all-out."
           }
         ]
@@ -3215,7 +3354,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 70.03,
+    "targetKm": 65.96,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -3224,10 +3363,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "71 min · 9.39 km",
+        "subtitle": "55 min · 7.27 km",
         "type": "recovery-run",
-        "distanceKm": 9.39,
-        "minutes": 71,
+        "distanceKm": 7.27,
+        "minutes": 55,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:34",
@@ -3236,11 +3375,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 71,
+            "minutes": 55,
             "pace": "7:34",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 9.39,
+            "km": 7.27,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -3251,10 +3390,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.25 km",
+        "subtitle": "72 min · 10.53 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.25,
-        "minutes": 76,
+        "distanceKm": 10.53,
+        "minutes": 72,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:53",
@@ -3263,18 +3402,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 67,
+            "minutes": 62,
             "pace": "6:53",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.73
+            "km": 9.01
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -3283,7 +3422,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.99,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -3293,10 +3432,10 @@ export const trainingPlan = [
         "title": "Steady Run",
         "category": "Steady Run",
         "plannedDay": "Thursday",
-        "subtitle": "76 min · 12.54 km",
+        "subtitle": "72 min · 11.84 km",
         "type": "steady-run",
-        "distanceKm": 12.54,
-        "minutes": 76,
+        "distanceKm": 11.84,
+        "minutes": 72,
         "optimalHr": 166,
         "hrRange": "160-172",
         "pace": "5:45",
@@ -3313,11 +3452,11 @@ export const trainingPlan = [
           },
           {
             "label": "Steady",
-            "minutes": 56,
+            "minutes": 52,
             "pace": "5:45",
             "hr": 166,
             "hrRange": "160-172",
-            "km": 9.74
+            "km": 9.04
           },
           {
             "label": "Cool-down",
@@ -3335,10 +3474,10 @@ export const trainingPlan = [
         "title": "Progressive Run",
         "category": "Progressive Run",
         "plannedDay": "Saturday",
-        "subtitle": "57 min · 9.06 km",
+        "subtitle": "54 min · 8.53 km",
         "type": "progressive-run",
-        "distanceKm": 9.06,
-        "minutes": 57,
+        "distanceKm": 8.53,
+        "minutes": 54,
         "optimalHr": 166,
         "hrRange": "160-174",
         "pace": "5:45",
@@ -3355,11 +3494,11 @@ export const trainingPlan = [
           },
           {
             "label": "Progressive Finish",
-            "minutes": 27,
+            "minutes": 24,
             "pace": "5:45",
             "hr": 166,
             "hrRange": "160-174",
-            "km": 4.7,
+            "km": 4.17,
             "notes": "Finish controlled, not as a race."
           }
         ]
@@ -3397,7 +3536,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-28",
     "endDate": "2027-01-03",
-    "targetKm": 73.96,
+    "targetKm": 69.85,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -3406,10 +3545,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "76 min · 10.07 km",
+        "subtitle": "68 min · 9.01 km",
         "type": "recovery-run",
-        "distanceKm": 10.07,
-        "minutes": 76,
+        "distanceKm": 9.01,
+        "minutes": 68,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:33",
@@ -3418,11 +3557,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 76,
+            "minutes": 68,
             "pace": "7:33",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 10.07,
+            "km": 9.01,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -3433,10 +3572,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "94 min · 13.86 km",
+        "subtitle": "76 min · 11.25 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 13.86,
-        "minutes": 94,
+        "distanceKm": 11.25,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:53",
@@ -3445,18 +3584,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 85,
+            "minutes": 67,
             "pace": "6:53",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.34
+            "km": 9.73
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -3465,7 +3604,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.99,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -3483,7 +3622,7 @@ export const trainingPlan = [
         "hrRange": "184-194",
         "pace": "4:30",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -3499,15 +3638,17 @@ export const trainingPlan = [
             "pace": "4:30",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.56
+            "km": 3.56,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 3 min Easy Recovery",
             "minutes": 9,
             "pace": "7:33",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.19
+            "km": 1.19,
+            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -3525,10 +3666,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "80 min · 11.62 km",
+        "subtitle": "77 min · 11.18 km",
         "type": "easy-run",
-        "distanceKm": 11.62,
-        "minutes": 80,
+        "distanceKm": 11.18,
+        "minutes": 77,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:53",
@@ -3537,11 +3678,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 80,
+            "minutes": 77,
             "pace": "6:53",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.62
+            "km": 11.18
           }
         ]
       },
@@ -3578,7 +3719,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-04",
     "endDate": "2027-01-10",
-    "targetKm": 77.99,
+    "targetKm": 69.76,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -3587,10 +3728,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "80 min · 10.60 km",
+        "subtitle": "66 min · 8.74 km",
         "type": "recovery-run",
-        "distanceKm": 10.6,
-        "minutes": 80,
+        "distanceKm": 8.74,
+        "minutes": 66,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:33",
@@ -3599,11 +3740,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 80,
+            "minutes": 66,
             "pace": "7:33",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 10.6,
+            "km": 8.74,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -3614,10 +3755,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "96 min · 14.04 km",
+        "subtitle": "74 min · 10.84 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 14.04,
-        "minutes": 96,
+        "distanceKm": 10.84,
+        "minutes": 74,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:52",
@@ -3626,18 +3767,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 86,
+            "minutes": 64,
             "pace": "6:52",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.52
+            "km": 9.32
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -3646,7 +3787,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.99,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -3680,15 +3821,17 @@ export const trainingPlan = [
             "pace": "4:47",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 9
+            "km": 9,
+            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "2 × 3 min Easy Recovery",
             "minutes": 6,
             "pace": "7:33",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79
+            "km": 0.79,
+            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -3706,10 +3849,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "84 min · 12.23 km",
+        "subtitle": "62 min · 9.03 km",
         "type": "easy-run",
-        "distanceKm": 12.23,
-        "minutes": 84,
+        "distanceKm": 9.03,
+        "minutes": 62,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:52",
@@ -3718,11 +3861,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 84,
+            "minutes": 62,
             "pace": "6:52",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.23
+            "km": 9.03
           }
         ]
       },
@@ -3732,9 +3875,9 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "178 min · 27.83 km",
+        "subtitle": "178 min · 27.86 km",
         "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.83,
+        "distanceKm": 27.86,
         "minutes": 178,
         "optimalHr": 178,
         "hrRange": "174-183",
@@ -3744,11 +3887,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 124,
+            "minutes": 127,
             "pace": "7:00",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 17.71
+            "km": 18.14
           },
           {
             "label": "2 × 4 km HM Pace",
@@ -3756,15 +3899,17 @@ export const trainingPlan = [
             "pace": "4:47",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 8
+            "km": 8,
+            "notes": "In the long run: 4 km HM pace, then 5 min easy, then the second HM pace block."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 8,
+            "label": "1 × 5 min Easy Recovery",
+            "minutes": 5,
             "pace": "7:33",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.06
+            "km": 0.66,
+            "notes": "Recovery between the two HM pace blocks only."
           },
           {
             "label": "Cool-down",
@@ -3783,7 +3928,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 79.82,
+    "targetKm": 69.03,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -3792,10 +3937,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "96 min · 12.74 km",
+        "subtitle": "67 min · 8.89 km",
         "type": "recovery-run",
-        "distanceKm": 12.74,
-        "minutes": 96,
+        "distanceKm": 8.89,
+        "minutes": 67,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:32",
@@ -3804,11 +3949,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 96,
+            "minutes": 67,
             "pace": "7:32",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 12.74,
+            "km": 8.89,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -3819,10 +3964,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "100 min · 14.81 km",
+        "subtitle": "74 min · 11.02 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 14.81,
-        "minutes": 100,
+        "distanceKm": 11.02,
+        "minutes": 74,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:51",
@@ -3831,18 +3976,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 91,
+            "minutes": 65,
             "pace": "6:51",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 13.28
+            "km": 9.49
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -3851,7 +3996,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.0,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -3861,10 +4006,10 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "73 min · 12.07 km",
+        "subtitle": "61 min · 10.30 km",
         "type": "threshold-run",
-        "distanceKm": 12.07,
-        "minutes": 73,
+        "distanceKm": 10.3,
+        "minutes": 61,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "5:01",
@@ -3873,11 +4018,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
+            "minutes": 15,
             "pace": "6:51",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.23
+            "km": 2.19
           },
           {
             "label": "3 × 10 min Threshold",
@@ -3885,15 +4030,17 @@ export const trainingPlan = [
             "pace": "5:01",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 5.98
+            "km": 5.98,
+            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 4,
+            "label": "2 × 3 min Easy Recovery",
+            "minutes": 6,
             "pace": "7:32",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.53
+            "km": 0.8,
+            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -3911,10 +4058,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "85 min · 12.40 km",
+        "subtitle": "75 min · 10.95 km",
         "type": "easy-run",
-        "distanceKm": 12.4,
-        "minutes": 85,
+        "distanceKm": 10.95,
+        "minutes": 75,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:51",
@@ -3923,11 +4070,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 85,
+            "minutes": 75,
             "pace": "6:51",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.4
+            "km": 10.95
           }
         ]
       },
@@ -3937,10 +4084,10 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "186 min · 27.80 km",
+        "subtitle": "187 min · 27.87 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.8,
-        "minutes": 186,
+        "distanceKm": 27.87,
+        "minutes": 187,
         "optimalHr": 169,
         "hrRange": "162-176",
         "pace": "5:42",
@@ -3949,19 +4096,19 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 150,
+            "minutes": 153,
             "pace": "6:59",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.48
+            "km": 21.91
           },
           {
             "label": "Fast Finish",
-            "minutes": 36,
+            "minutes": 34,
             "pace": "5:42",
             "hr": 169,
             "hrRange": "162-176",
-            "km": 6.32,
+            "km": 5.96,
             "notes": "Controlled acceleration on tired legs. Strong, not all-out."
           }
         ]
@@ -3973,7 +4120,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-18",
     "endDate": "2027-01-24",
-    "targetKm": 64.94,
+    "targetKm": 59.98,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -3982,10 +4129,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "104 min · 15.44 km",
+        "subtitle": "86 min · 12.65 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 15.44,
-        "minutes": 104,
+        "distanceKm": 12.65,
+        "minutes": 86,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:50",
@@ -3994,18 +4141,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 95,
+            "minutes": 76,
             "pace": "6:50",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 13.91
+            "km": 11.12
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -4014,7 +4161,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.0,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -4024,15 +4171,15 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "66 min · 10.53 km",
+        "subtitle": "64 min · 10.26 km",
         "type": "interval-run",
-        "distanceKm": 10.53,
-        "minutes": 66,
+        "distanceKm": 10.26,
+        "minutes": 64,
         "optimalHr": 188,
         "hrRange": "184-194",
         "pace": "4:29",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
@@ -4048,15 +4195,17 @@ export const trainingPlan = [
             "pace": "4:29",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.35
+            "km": 3.35,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 5 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 10,
+            "label": "4 × 2 min Easy Recovery",
+            "minutes": 8,
             "pace": "7:31",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.33
+            "km": 1.06,
+            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -4074,10 +4223,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "76 min · 11.12 km",
+        "subtitle": "63 min · 9.22 km",
         "type": "easy-run",
-        "distanceKm": 11.12,
-        "minutes": 76,
+        "distanceKm": 9.22,
+        "minutes": 63,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:50",
@@ -4086,11 +4235,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 76,
+            "minutes": 63,
             "pace": "6:50",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.12
+            "km": 9.22
           }
         ]
       },
@@ -4127,7 +4276,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-25",
     "endDate": "2027-01-31",
-    "targetKm": 78.03,
+    "targetKm": 68.02,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -4136,10 +4285,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "86 min · 11.44 km",
+        "subtitle": "66 min · 8.78 km",
         "type": "recovery-run",
-        "distanceKm": 11.44,
-        "minutes": 86,
+        "distanceKm": 8.78,
+        "minutes": 66,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:31",
@@ -4148,11 +4297,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 86,
+            "minutes": 66,
             "pace": "7:31",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 11.44,
+            "km": 8.78,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -4163,10 +4312,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "98 min · 14.56 km",
+        "subtitle": "74 min · 10.90 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 14.56,
-        "minutes": 98,
+        "distanceKm": 10.9,
+        "minutes": 74,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:50",
@@ -4175,18 +4324,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 89,
+            "minutes": 64,
             "pace": "6:50",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 13.03
+            "km": 9.37
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -4195,7 +4344,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.0,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -4205,10 +4354,10 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "73 min · 12.11 km",
+        "subtitle": "61 min · 10.33 km",
         "type": "threshold-run",
-        "distanceKm": 12.11,
-        "minutes": 73,
+        "distanceKm": 10.33,
+        "minutes": 61,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "5:00",
@@ -4217,11 +4366,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
+            "minutes": 15,
             "pace": "6:50",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.25
+            "km": 2.2
           },
           {
             "label": "3 × 10 min Threshold",
@@ -4229,15 +4378,17 @@ export const trainingPlan = [
             "pace": "5:00",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 6.0
+            "km": 6.0,
+            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 4,
+            "label": "2 × 3 min Easy Recovery",
+            "minutes": 6,
             "pace": "7:31",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.53
+            "km": 0.8,
+            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -4255,10 +4406,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "83 min · 12.15 km",
+        "subtitle": "70 min · 10.24 km",
         "type": "easy-run",
-        "distanceKm": 12.15,
-        "minutes": 83,
+        "distanceKm": 10.24,
+        "minutes": 70,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:50",
@@ -4267,11 +4418,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 83,
+            "minutes": 70,
             "pace": "6:50",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.15
+            "km": 10.24
           }
         ]
       },
@@ -4308,7 +4459,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-01",
     "endDate": "2027-02-07",
-    "targetKm": 79.95,
+    "targetKm": 69.79,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -4317,10 +4468,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "91 min · 12.13 km",
+        "subtitle": "67 min · 8.93 km",
         "type": "recovery-run",
-        "distanceKm": 12.13,
-        "minutes": 91,
+        "distanceKm": 8.93,
+        "minutes": 67,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:30",
@@ -4329,11 +4480,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 91,
+            "minutes": 67,
             "pace": "7:30",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 12.13,
+            "km": 8.93,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -4344,10 +4495,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "100 min · 14.88 km",
+        "subtitle": "76 min · 11.21 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 14.88,
-        "minutes": 100,
+        "distanceKm": 11.21,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:49",
@@ -4356,18 +4507,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 91,
+            "minutes": 66,
             "pace": "6:49",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 13.35
+            "km": 9.68
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -4376,7 +4527,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.0,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -4386,23 +4537,23 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "80 min · 12.68 km",
+        "subtitle": "66 min · 10.63 km",
         "type": "interval-run",
-        "distanceKm": 12.68,
-        "minutes": 80,
+        "distanceKm": 10.63,
+        "minutes": 66,
         "optimalHr": 188,
         "hrRange": "184-194",
         "pace": "4:28",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 43,
+            "minutes": 29,
             "pace": "6:49",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 6.3
+            "km": 4.25
           },
           {
             "label": "4 × 4 min VO2max",
@@ -4410,15 +4561,17 @@ export const trainingPlan = [
             "pace": "4:28",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.58
+            "km": 3.58,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 3 min Easy Recovery",
             "minutes": 9,
             "pace": "7:30",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.2
+            "km": 1.2,
+            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -4436,10 +4589,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "85 min · 12.47 km",
+        "subtitle": "76 min · 11.15 km",
         "type": "easy-run",
-        "distanceKm": 12.47,
-        "minutes": 85,
+        "distanceKm": 11.15,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:49",
@@ -4448,11 +4601,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 85,
+            "minutes": 76,
             "pace": "6:49",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.47
+            "km": 11.15
           }
         ]
       },
@@ -4462,10 +4615,10 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "185 min · 27.79 km",
+        "subtitle": "186 min · 27.87 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.79,
-        "minutes": 185,
+        "distanceKm": 27.87,
+        "minutes": 186,
         "optimalHr": 169,
         "hrRange": "162-176",
         "pace": "5:40",
@@ -4474,19 +4627,19 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 149,
+            "minutes": 152,
             "pace": "6:57",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.44
+            "km": 21.87
           },
           {
             "label": "Fast Finish",
-            "minutes": 36,
+            "minutes": 34,
             "pace": "5:40",
             "hr": 169,
             "hrRange": "162-176",
-            "km": 6.35,
+            "km": 6.0,
             "notes": "Controlled acceleration on tired legs. Strong, not all-out."
           }
         ]
@@ -4498,7 +4651,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-08",
     "endDate": "2027-02-14",
-    "targetKm": 76.94,
+    "targetKm": 69.69,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -4507,10 +4660,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "79 min · 10.53 km",
+        "subtitle": "64 min · 8.53 km",
         "type": "recovery-run",
-        "distanceKm": 10.53,
-        "minutes": 79,
+        "distanceKm": 8.53,
+        "minutes": 64,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:30",
@@ -4519,11 +4672,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 79,
+            "minutes": 64,
             "pace": "7:30",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 10.53,
+            "km": 8.53,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -4534,10 +4687,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "88 min · 13.15 km",
+        "subtitle": "74 min · 10.95 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 13.15,
-        "minutes": 88,
+        "distanceKm": 10.95,
+        "minutes": 74,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:48",
@@ -4546,18 +4699,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 79,
+            "minutes": 64,
             "pace": "6:48",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.62
+            "km": 9.42
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -4566,7 +4719,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.0,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -4600,15 +4753,17 @@ export const trainingPlan = [
             "pace": "4:46",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 9
+            "km": 9,
+            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "2 × 3 min Easy Recovery",
             "minutes": 6,
             "pace": "7:30",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.8
+            "km": 0.8,
+            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -4626,10 +4781,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "82 min · 12.06 km",
+        "subtitle": "62 min · 9.12 km",
         "type": "easy-run",
-        "distanceKm": 12.06,
-        "minutes": 82,
+        "distanceKm": 9.12,
+        "minutes": 62,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:48",
@@ -4638,11 +4793,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 82,
+            "minutes": 62,
             "pace": "6:48",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.06
+            "km": 9.12
           }
         ]
       },
@@ -4652,10 +4807,10 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "173 min · 27.86 km",
+        "subtitle": "172 min · 27.75 km",
         "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.86,
-        "minutes": 173,
+        "distanceKm": 27.75,
+        "minutes": 172,
         "optimalHr": 178,
         "hrRange": "174-183",
         "pace": "4:46",
@@ -4664,11 +4819,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 109,
+            "minutes": 111,
             "pace": "6:56",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 15.72
+            "km": 16.01
           },
           {
             "label": "2 × 5 km HM Pace",
@@ -4676,15 +4831,17 @@ export const trainingPlan = [
             "pace": "4:46",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 10
+            "km": 10,
+            "notes": "In the long run: 5 km HM pace, then 5 min easy, then the second HM pace block."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 8,
+            "label": "1 × 5 min Easy Recovery",
+            "minutes": 5,
             "pace": "7:30",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.07
+            "km": 0.67,
+            "notes": "Recovery between the two HM pace blocks only."
           },
           {
             "label": "Cool-down",
@@ -4703,7 +4860,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-15",
     "endDate": "2027-02-21",
-    "targetKm": 64.99,
+    "targetKm": 59.98,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -4712,10 +4869,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "100 min · 14.80 km",
+        "subtitle": "84 min · 12.59 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 14.8,
-        "minutes": 100,
+        "distanceKm": 12.59,
+        "minutes": 84,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:47",
@@ -4724,18 +4881,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 90,
+            "minutes": 75,
             "pace": "6:47",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 13.27
+            "km": 11.06
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -4744,7 +4901,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.0,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -4754,10 +4911,10 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "69 min · 11.23 km",
+        "subtitle": "55 min · 9.17 km",
         "type": "threshold-run",
-        "distanceKm": 11.23,
-        "minutes": 69,
+        "distanceKm": 9.17,
+        "minutes": 55,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "4:59",
@@ -4766,11 +4923,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
+            "minutes": 15,
             "pace": "6:47",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.27
+            "km": 2.21
           },
           {
             "label": "4 × 6 min Threshold",
@@ -4778,15 +4935,17 @@ export const trainingPlan = [
             "pace": "4:59",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 4.82
+            "km": 4.82,
+            "notes": "Alternate with the recovery below: 6 min threshold, then 2 min easy. Repeat until all 4 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 2 min Easy Recovery",
             "minutes": 6,
             "pace": "7:29",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.8
+            "km": 0.8,
+            "notes": "Recovery between threshold reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -4804,10 +4963,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "76 min · 11.20 km",
+        "subtitle": "71 min · 10.46 km",
         "type": "easy-run",
-        "distanceKm": 11.2,
-        "minutes": 76,
+        "distanceKm": 10.46,
+        "minutes": 71,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:47",
@@ -4816,11 +4975,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 76,
+            "minutes": 71,
             "pace": "6:47",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.2
+            "km": 10.46
           }
         ]
       },
@@ -4857,7 +5016,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-22",
     "endDate": "2027-02-28",
-    "targetKm": 80.04,
+    "targetKm": 69.91,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -4866,10 +5025,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "91 min · 12.16 km",
+        "subtitle": "67 min · 8.95 km",
         "type": "recovery-run",
-        "distanceKm": 12.16,
-        "minutes": 91,
+        "distanceKm": 8.95,
+        "minutes": 67,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:29",
@@ -4878,11 +5037,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 91,
+            "minutes": 67,
             "pace": "7:29",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 12.16,
+            "km": 8.95,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -4893,10 +5052,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "100 min · 14.79 km",
+        "subtitle": "76 min · 11.26 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 14.79,
-        "minutes": 100,
+        "distanceKm": 11.26,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:47",
@@ -4905,18 +5064,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 90,
+            "minutes": 66,
             "pace": "6:47",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 13.26
+            "km": 9.73
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -4925,7 +5084,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.0,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -4935,23 +5094,23 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "80 min · 12.73 km",
+        "subtitle": "66 min · 10.67 km",
         "type": "interval-run",
-        "distanceKm": 12.73,
-        "minutes": 80,
+        "distanceKm": 10.67,
+        "minutes": 66,
         "optimalHr": 188,
         "hrRange": "184-194",
         "pace": "4:27",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 43,
+            "minutes": 29,
             "pace": "6:47",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 6.33
+            "km": 4.27
           },
           {
             "label": "4 × 4 min VO2max",
@@ -4959,15 +5118,17 @@ export const trainingPlan = [
             "pace": "4:27",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.6
+            "km": 3.6,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 3 min Easy Recovery",
             "minutes": 9,
             "pace": "7:29",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.2
+            "km": 1.2,
+            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -4985,10 +5146,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "85 min · 12.53 km",
+        "subtitle": "76 min · 11.20 km",
         "type": "easy-run",
-        "distanceKm": 12.53,
-        "minutes": 85,
+        "distanceKm": 11.2,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:47",
@@ -4997,11 +5158,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 85,
+            "minutes": 76,
             "pace": "6:47",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.53
+            "km": 11.2
           }
         ]
       },
@@ -5038,7 +5199,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-01",
     "endDate": "2027-03-07",
-    "targetKm": 77.98,
+    "targetKm": 68.06,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -5047,10 +5208,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "83 min · 11.12 km",
+        "subtitle": "66 min · 8.84 km",
         "type": "recovery-run",
-        "distanceKm": 11.12,
-        "minutes": 83,
+        "distanceKm": 8.84,
+        "minutes": 66,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:28",
@@ -5059,11 +5220,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 83,
+            "minutes": 66,
             "pace": "7:28",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 11.12,
+            "km": 8.84,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -5074,10 +5235,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "98 min · 14.54 km",
+        "subtitle": "72 min · 10.84 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 14.54,
-        "minutes": 98,
+        "distanceKm": 10.84,
+        "minutes": 72,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:46",
@@ -5086,18 +5247,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 88,
+            "minutes": 63,
             "pace": "6:46",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 13.01
+            "km": 9.31
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -5106,7 +5267,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.0,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -5116,10 +5277,10 @@ export const trainingPlan = [
         "title": "Threshold Run",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "73 min · 12.21 km",
+        "subtitle": "61 min · 10.40 km",
         "type": "threshold-run",
-        "distanceKm": 12.21,
-        "minutes": 73,
+        "distanceKm": 10.4,
+        "minutes": 61,
         "optimalHr": 180,
         "hrRange": "175-184",
         "pace": "4:58",
@@ -5128,11 +5289,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
+            "minutes": 15,
             "pace": "6:46",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.29
+            "km": 2.22
           },
           {
             "label": "3 × 10 min Threshold",
@@ -5140,15 +5301,17 @@ export const trainingPlan = [
             "pace": "4:58",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 6.04
+            "km": 6.04,
+            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 4,
+            "label": "2 × 3 min Easy Recovery",
+            "minutes": 6,
             "pace": "7:28",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.54
+            "km": 0.8,
+            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -5166,10 +5329,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "83 min · 12.27 km",
+        "subtitle": "69 min · 10.20 km",
         "type": "easy-run",
-        "distanceKm": 12.27,
-        "minutes": 83,
+        "distanceKm": 10.2,
+        "minutes": 69,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:46",
@@ -5178,11 +5341,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 83,
+            "minutes": 69,
             "pace": "6:46",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 12.27
+            "km": 10.2
           }
         ]
       },
@@ -5192,9 +5355,9 @@ export const trainingPlan = [
         "title": "Fast Finish Long Run",
         "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "184 min · 27.84 km",
+        "subtitle": "184 min · 27.78 km",
         "type": "fast-finish-long-run",
-        "distanceKm": 27.84,
+        "distanceKm": 27.78,
         "minutes": 184,
         "optimalHr": 169,
         "hrRange": "162-176",
@@ -5204,19 +5367,19 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 148,
+            "minutes": 150,
             "pace": "6:54",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.45
+            "km": 21.74
           },
           {
             "label": "Fast Finish",
-            "minutes": 36,
+            "minutes": 34,
             "pace": "5:38",
             "hr": 169,
             "hrRange": "162-176",
-            "km": 6.39,
+            "km": 6.04,
             "notes": "Controlled acceleration on tired legs. Strong, not all-out."
           }
         ]
@@ -5228,7 +5391,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-08",
     "endDate": "2027-03-14",
-    "targetKm": 71.93,
+    "targetKm": 65.97,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -5237,10 +5400,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Monday",
-        "subtitle": "74 min · 9.93 km",
+        "subtitle": "49 min · 6.58 km",
         "type": "recovery-run",
-        "distanceKm": 9.93,
-        "minutes": 74,
+        "distanceKm": 6.58,
+        "minutes": 49,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:27",
@@ -5249,11 +5412,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 74,
+            "minutes": 49,
             "pace": "7:27",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 9.93,
+            "km": 6.58,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
@@ -5264,10 +5427,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.47 km",
+        "subtitle": "70 min · 10.58 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 11.47,
-        "minutes": 76,
+        "distanceKm": 10.58,
+        "minutes": 70,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:45",
@@ -5276,18 +5439,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 67,
+            "minutes": 61,
             "pace": "6:45",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.93
+            "km": 9.04
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -5296,7 +5459,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.01,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -5330,15 +5493,17 @@ export const trainingPlan = [
             "pace": "4:45",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 9
+            "km": 9,
+            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "2 × 3 min Easy Recovery",
             "minutes": 6,
             "pace": "7:27",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.81
+            "km": 0.81,
+            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -5356,10 +5521,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "63 min · 9.33 km",
+        "subtitle": "58 min · 8.59 km",
         "type": "easy-run",
-        "distanceKm": 9.33,
-        "minutes": 63,
+        "distanceKm": 8.59,
+        "minutes": 58,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:45",
@@ -5368,11 +5533,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 63,
+            "minutes": 58,
             "pace": "6:45",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.33
+            "km": 8.59
           }
         ]
       },
@@ -5382,10 +5547,10 @@ export const trainingPlan = [
         "title": "Long Run with HM Pace Blocks",
         "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "172 min · 27.83 km",
+        "subtitle": "165 min · 26.85 km",
         "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.83,
-        "minutes": 172,
+        "distanceKm": 26.85,
+        "minutes": 165,
         "optimalHr": 178,
         "hrRange": "174-183",
         "pace": "4:45",
@@ -5394,11 +5559,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 108,
+            "minutes": 104,
             "pace": "6:53",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 15.69
+            "km": 15.11
           },
           {
             "label": "2 × 5 km HM Pace",
@@ -5406,15 +5571,17 @@ export const trainingPlan = [
             "pace": "4:45",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 10
+            "km": 10,
+            "notes": "In the long run: 5 km HM pace, then 5 min easy, then the second HM pace block."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 8,
+            "label": "1 × 5 min Easy Recovery",
+            "minutes": 5,
             "pace": "7:27",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.07
+            "km": 0.67,
+            "notes": "Recovery between the two HM pace blocks only."
           },
           {
             "label": "Cool-down",
@@ -5433,46 +5600,19 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-15",
     "endDate": "2027-03-21",
-    "targetKm": 66.04,
+    "targetKm": 58.0,
     "focus": "Half Marathon",
     "runs": [
       {
         "id": "kw11-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "69 min · 9.26 km",
-        "type": "recovery-run",
-        "distanceKm": 9.26,
-        "minutes": 69,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:27",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 69,
-            "pace": "7:27",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 9.26,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw11-run2",
-        "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "70 min · 10.60 km",
+        "subtitle": "82 min · 12.23 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.6,
-        "minutes": 70,
+        "distanceKm": 12.23,
+        "minutes": 82,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:44",
@@ -5481,18 +5621,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 61,
+            "minutes": 72,
             "pace": "6:44",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.06
+            "km": 10.69
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -5501,33 +5641,33 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.01,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
       {
-        "id": "kw11-run3",
-        "order": 3,
+        "id": "kw11-run2",
+        "order": 2,
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
-        "subtitle": "60 min · 9.75 km",
+        "subtitle": "50 min · 8.29 km",
         "type": "interval-run",
-        "distanceKm": 9.75,
-        "minutes": 60,
+        "distanceKm": 8.29,
+        "minutes": 50,
         "optimalHr": 188,
         "hrRange": "184-194",
         "pace": "4:26",
         "optional": false,
-        "notes": "VO2max session. Hard but controlled, not all-out.",
+        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 23,
+            "minutes": 15,
             "pace": "6:44",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 3.42
+            "km": 2.23
           },
           {
             "label": "5 × 3 min VO2max",
@@ -5535,15 +5675,17 @@ export const trainingPlan = [
             "pace": "4:26",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 3.38
+            "km": 3.38,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 5 hard reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 10,
+            "label": "4 × 2 min Easy Recovery",
+            "minutes": 8,
             "pace": "7:27",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.34
+            "km": 1.07,
+            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -5556,15 +5698,15 @@ export const trainingPlan = [
         ]
       },
       {
-        "id": "kw11-run4",
-        "order": 4,
+        "id": "kw11-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "58 min · 8.61 km",
+        "subtitle": "65 min · 9.66 km",
         "type": "easy-run",
-        "distanceKm": 8.61,
-        "minutes": 58,
+        "distanceKm": 9.66,
+        "minutes": 65,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:44",
@@ -5573,17 +5715,17 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 58,
+            "minutes": 65,
             "pace": "6:44",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.61
+            "km": 9.66
           }
         ]
       },
       {
-        "id": "kw11-run5",
-        "order": 5,
+        "id": "kw11-run4",
+        "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
@@ -5614,7 +5756,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-22",
     "endDate": "2027-03-28",
-    "targetKm": 58.05,
+    "targetKm": 54.04,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -5623,10 +5765,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "82 min · 12.23 km",
+        "subtitle": "76 min · 11.34 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.23,
-        "minutes": 82,
+        "distanceKm": 11.34,
+        "minutes": 76,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:44",
@@ -5635,18 +5777,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 72,
+            "minutes": 66,
             "pace": "6:44",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.69
+            "km": 9.8
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -5655,7 +5797,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.01,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -5665,10 +5807,10 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "69 min · 12.39 km",
+        "subtitle": "72 min · 12.79 km",
         "type": "hm-pace-run",
-        "distanceKm": 12.39,
-        "minutes": 69,
+        "distanceKm": 12.79,
+        "minutes": 72,
         "optimalHr": 178,
         "hrRange": "174-183",
         "pace": "4:44",
@@ -5689,15 +5831,17 @@ export const trainingPlan = [
             "pace": "4:44",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 8
+            "km": 8,
+            "notes": "Alternate with the recovery below: 2 km at HM pace, then 3 min easy. Repeat until all 4 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 6,
+            "label": "3 × 3 min Easy Recovery",
+            "minutes": 9,
             "pace": "7:26",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.81
+            "km": 1.21,
+            "notes": "Recovery between HM pace reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -5715,10 +5859,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "55 min · 8.17 km",
+        "subtitle": "51 min · 7.57 km",
         "type": "easy-run",
-        "distanceKm": 8.17,
-        "minutes": 55,
+        "distanceKm": 7.57,
+        "minutes": 51,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:44",
@@ -5727,11 +5871,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 55,
+            "minutes": 51,
             "pace": "6:44",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.17
+            "km": 7.57
           }
         ]
       },
@@ -5741,10 +5885,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "173 min · 25.26 km",
+        "subtitle": "153 min · 22.34 km",
         "type": "long-run",
-        "distanceKm": 25.26,
-        "minutes": 173,
+        "distanceKm": 22.34,
+        "minutes": 153,
         "optimalHr": 152,
         "hrRange": "145-158",
         "pace": "6:51",
@@ -5753,11 +5897,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 173,
+            "minutes": 153,
             "pace": "6:51",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 25.26
+            "km": 22.34
           }
         ]
       }
@@ -5768,7 +5912,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-29",
     "endDate": "2027-04-04",
-    "targetKm": 48.02,
+    "targetKm": 45.96,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -5777,10 +5921,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "66 min · 10.03 km",
+        "subtitle": "64 min · 9.73 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.03,
-        "minutes": 66,
+        "distanceKm": 9.73,
+        "minutes": 64,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:43",
@@ -5789,18 +5933,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 57,
+            "minutes": 55,
             "pace": "6:43",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.49
+            "km": 8.19
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -5809,7 +5953,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.01,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -5843,15 +5987,17 @@ export const trainingPlan = [
             "pace": "4:56",
             "hr": 180,
             "hrRange": "175-184",
-            "km": 4.86
+            "km": 4.86,
+            "notes": "Alternate with the recovery below: 6 min threshold, then 2 min easy. Repeat until all 4 threshold reps are done."
           },
           {
-            "label": "Easy Recovery",
+            "label": "3 × 2 min Easy Recovery",
             "minutes": 6,
             "pace": "7:26",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.81
+            "km": 0.81,
+            "notes": "Recovery between threshold reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -5869,10 +6015,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "45 min · 6.70 km",
+        "subtitle": "43 min · 6.40 km",
         "type": "easy-run",
-        "distanceKm": 6.7,
-        "minutes": 45,
+        "distanceKm": 6.4,
+        "minutes": 43,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:43",
@@ -5881,11 +6027,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 45,
+            "minutes": 43,
             "pace": "6:43",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 6.7
+            "km": 6.4
           }
         ]
       },
@@ -5895,10 +6041,10 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "151 min · 22.04 km",
+        "subtitle": "141 min · 20.58 km",
         "type": "long-run",
-        "distanceKm": 22.04,
-        "minutes": 151,
+        "distanceKm": 20.58,
+        "minutes": 141,
         "optimalHr": 152,
         "hrRange": "145-158",
         "pace": "6:51",
@@ -5907,11 +6053,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 151,
+            "minutes": 141,
             "pace": "6:51",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 22.04
+            "km": 20.58
           }
         ]
       }
@@ -5922,7 +6068,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-05",
     "endDate": "2027-04-11",
-    "targetKm": 43.02,
+    "targetKm": 42.08,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -5931,10 +6077,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "58 min · 8.85 km",
+        "subtitle": "52 min · 7.96 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 8.85,
-        "minutes": 58,
+        "distanceKm": 7.96,
+        "minutes": 52,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:42",
@@ -5943,18 +6089,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 49,
+            "minutes": 43,
             "pace": "6:42",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 7.31
+            "km": 6.42
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -5963,7 +6109,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.01,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -5973,10 +6119,10 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "69 min · 12.40 km",
+        "subtitle": "72 min · 12.80 km",
         "type": "hm-pace-run",
-        "distanceKm": 12.4,
-        "minutes": 69,
+        "distanceKm": 12.8,
+        "minutes": 72,
         "optimalHr": 178,
         "hrRange": "174-183",
         "pace": "4:44",
@@ -5997,15 +6143,17 @@ export const trainingPlan = [
             "pace": "4:44",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 8
+            "km": 8,
+            "notes": "Alternate with the recovery below: 2 km at HM pace, then 3 min easy. Repeat until all 4 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 6,
+            "label": "3 × 3 min Easy Recovery",
+            "minutes": 9,
             "pace": "7:25",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.81
+            "km": 1.21,
+            "notes": "Recovery between HM pace reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -6023,10 +6171,10 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "39 min · 5.82 km",
+        "subtitle": "36 min · 5.37 km",
         "type": "easy-run",
-        "distanceKm": 5.82,
-        "minutes": 39,
+        "distanceKm": 5.37,
+        "minutes": 36,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:42",
@@ -6035,11 +6183,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 39,
+            "minutes": 36,
             "pace": "6:42",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 5.82
+            "km": 5.37
           }
         ]
       },
@@ -6076,7 +6224,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-12",
     "endDate": "2027-04-18",
-    "targetKm": 49.2,
+    "targetKm": 48.02,
     "focus": "Half Marathon",
     "runs": [
       {
@@ -6085,10 +6233,10 @@ export const trainingPlan = [
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "56 min · 8.55 km",
+        "subtitle": "50 min · 7.51 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 8.55,
-        "minutes": 56,
+        "distanceKm": 7.51,
+        "minutes": 50,
         "optimalHr": 146,
         "hrRange": "138-152",
         "pace": "6:42",
@@ -6097,18 +6245,18 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 47,
+            "minutes": 40,
             "pace": "6:42",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 7.01
+            "km": 5.97
           },
           {
             "label": "6 × 20 s Strides",
             "seconds": 120,
             "pace": "3:45",
             "km": 0.53,
-            "notes": "Fast but relaxed. Not an all-out sprint."
+            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
@@ -6117,7 +6265,7 @@ export const trainingPlan = [
             "hr": 140,
             "hrRange": "132-148",
             "km": 1.01,
-            "notes": "Walk or very easy jog. Full recovery before the next stride."
+            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
           }
         ]
       },
@@ -6127,10 +6275,10 @@ export const trainingPlan = [
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "69 min · 12.40 km",
+        "subtitle": "72 min · 12.80 km",
         "type": "hm-pace-run",
-        "distanceKm": 12.4,
-        "minutes": 69,
+        "distanceKm": 12.8,
+        "minutes": 72,
         "optimalHr": 178,
         "hrRange": "174-183",
         "pace": "4:44",
@@ -6151,15 +6299,17 @@ export const trainingPlan = [
             "pace": "4:44",
             "hr": 178,
             "hrRange": "174-183",
-            "km": 8
+            "km": 8,
+            "notes": "Alternate with the recovery below: 2 km at HM pace, then 3 min easy. Repeat until all 4 HM reps are done."
           },
           {
-            "label": "Easy Recovery",
-            "minutes": 6,
+            "label": "3 × 3 min Easy Recovery",
+            "minutes": 9,
             "pace": "7:25",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.81
+            "km": 1.21,
+            "notes": "Recovery between HM pace reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
@@ -6177,10 +6327,10 @@ export const trainingPlan = [
         "title": "Recovery Run",
         "category": "Recovery Run",
         "plannedDay": "Saturday",
-        "subtitle": "37 min · 4.99 km",
+        "subtitle": "33 min · 4.45 km",
         "type": "recovery-run",
-        "distanceKm": 4.99,
-        "minutes": 37,
+        "distanceKm": 4.45,
+        "minutes": 33,
         "optimalHr": 140,
         "hrRange": "132-146",
         "pace": "7:25",
@@ -6189,11 +6339,11 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Recovery",
-            "minutes": 37,
+            "minutes": 33,
             "pace": "7:25",
             "hr": 140,
             "hrRange": "132-146",
-            "km": 4.99,
+            "km": 4.45,
             "notes": "Very relaxed. Keep it easy even if the pace feels slow."
           }
         ]
