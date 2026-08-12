@@ -1,1 +1,1 @@
-Version v24: max week now around 70 km with faster build to a plateau. Interval/threshold/HM blocks use explicit alternating repetition labels, e.g. 5 × 4 min hard + 4 × 3 min easy recovery, so total minutes and km add up correctly.
+v28: Final grouped workout card layout fix. Metric tiles stay compact; only paired outer cards grow naturally so Interval/Recovery and HM/Threshold pairs do not overlap.
