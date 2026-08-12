@@ -693,3 +693,83 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     font-size: 0.52rem !important;
   }
 }
+
+/* v27: grouped workout cards must grow to fit both paired rows */
+.run-modal {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.workout-blocks {
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  flex: 0 1 auto !important;
+}
+
+.workout-block,
+.grouped-block,
+.grouped-items,
+.grouped-item {
+  height: auto !important;
+  min-height: max-content !important;
+  max-height: none !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+.grouped-block {
+  padding: 0 !important;
+}
+
+.grouped-item {
+  padding: 14px !important;
+}
+
+.block-divider {
+  margin: 0 !important;
+}
+
+.block-grid,
+.grouped-item .block-grid {
+  height: auto !important;
+  min-height: 0 !important;
+  align-items: stretch !important;
+}
+
+.metric-tile {
+  box-sizing: border-box !important;
+  min-height: 92px !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.metric-tile strong,
+.metric-tile span,
+.metric-tile em {
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+@media (max-width: 640px) {
+  .grouped-item {
+    padding: 12px !important;
+  }
+
+  .metric-tile {
+    min-height: 96px !important;
+    padding: 9px 4px 10px !important;
+  }
+
+  .metric-tile strong {
+    line-height: 1.14 !important;
+  }
+}
+
+@media (max-width: 370px) {
+  .metric-tile {
+    min-height: 98px !important;
+    padding: 8px 3px 9px !important;
+  }
+}

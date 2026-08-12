@@ -1,6 +1,6 @@
 {
   "name": "running-plan-app",
-  "version": "1.0.0",
+  "version": "1.0.27",
   "private": true,
   "type": "module",
   "scripts": {
