@@ -5,7 +5,7 @@ export const trainingPlan = [
     "startDate": "2026-08-10",
     "endDate": "2026-08-16",
     "targetKm": 50.01,
-    "focus": "30% 5K / 70% Half Marathon",
+    "focus": "70% 5K / 30% Half Marathon",
     "runs": [
       {
         "id": "kw33-run1",
@@ -161,7 +161,7 @@ export const trainingPlan = [
     "startDate": "2026-08-17",
     "endDate": "2026-08-23",
     "targetKm": 55.03,
-    "focus": "30% 5K / 70% Half Marathon",
+    "focus": "70% 5K / 30% Half Marathon",
     "runs": [
       {
         "id": "kw34-run1",
@@ -208,52 +208,52 @@ export const trainingPlan = [
       {
         "id": "kw34-run2",
         "order": 2,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
+        "title": "5K Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Thursday",
         "subtitle": "61 min · 9.97 km",
-        "type": "threshold-run",
+        "type": "interval-run",
         "distanceKm": 9.97,
         "minutes": 61,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "5:11",
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:28",
         "optional": false,
-        "notes": null,
+        "notes": "5K-specific session. Keep the reps controlled and even; this is the main quality stimulus of the week.",
         "steps": [
           {
             "label": "Warm-up",
             "minutes": 15,
-            "pace": "7:07",
+            "pace": "7:06",
             "hr": 145,
             "hrRange": "138-152",
             "km": 2.11
           },
           {
-            "label": "3 × 10 min Threshold",
-            "minutes": 30,
-            "pace": "5:11",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 5.79,
-            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
+            "label": "5 × 4 min 5K Pace",
+            "minutes": 20,
+            "pace": "4:28",
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 4.48,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 5 hard reps are done."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
+            "label": "4 × 3 min Easy Recovery",
+            "minutes": 12,
             "pace": "7:44",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.78,
-            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
+            "km": 1.55,
+            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:44",
+            "minutes": 14,
+            "pace": "7:39",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.29
+            "km": 1.83
           }
         ]
       },
@@ -317,7 +317,7 @@ export const trainingPlan = [
     "startDate": "2026-08-24",
     "endDate": "2026-08-30",
     "targetKm": 59.76,
-    "focus": "30% 5K / 70% Half Marathon",
+    "focus": "70% 5K / 30% Half Marathon",
     "runs": [
       {
         "id": "kw35-run1",
@@ -364,7 +364,7 @@ export const trainingPlan = [
       {
         "id": "kw35-run2",
         "order": 2,
-        "title": "Interval Run",
+        "title": "5K Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
         "subtitle": "55 min · 8.95 km",
@@ -373,9 +373,9 @@ export const trainingPlan = [
         "minutes": 55,
         "optimalHr": 188,
         "hrRange": "184-194",
-        "pace": "4:30",
+        "pace": "4:28",
         "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "5K-specific 4-minute reps. Strong but repeatable; do not sprint the first rep.",
         "steps": [
           {
             "label": "Warm-up",
@@ -386,30 +386,30 @@ export const trainingPlan = [
             "km": 2.11
           },
           {
-            "label": "6 × 3 min 5K Pace",
-            "minutes": 18,
-            "pace": "4:30",
+            "label": "4 × 4 min 5K Pace",
+            "minutes": 16,
+            "pace": "4:28",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 4.0,
-            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 6 hard reps are done."
+            "km": 3.58,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
           },
           {
-            "label": "5 × 2 min Easy Recovery",
-            "minutes": 10,
+            "label": "3 × 3 min Easy Recovery",
+            "minutes": 9,
             "pace": "7:44",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.29,
-            "notes": "Recovery between reps only: 5 recoveries total, not after the final rep."
+            "km": 1.16,
+            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 12,
-            "pace": "7:44",
+            "minutes": 15,
+            "pace": "7:09",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.55
+            "km": 2.1
           }
         ]
       },
@@ -442,35 +442,26 @@ export const trainingPlan = [
       {
         "id": "kw35-run4",
         "order": 4,
-        "title": "Fast Finish Long Run",
-        "category": "Fast Finish Long Run",
+        "title": "Long Run",
+        "category": "Long Run",
         "plannedDay": "Sunday",
         "subtitle": "193 min · 27.76 km",
-        "type": "fast-finish-long-run",
+        "type": "long-run",
         "distanceKm": 27.76,
         "minutes": 193,
-        "optimalHr": 169,
-        "hrRange": "162-176",
-        "pace": "5:57",
+        "optimalHr": 152,
+        "hrRange": "145-158",
+        "pace": "6:57",
         "optional": false,
-        "notes": null,
+        "notes": "Keep this fully easy. During the 5K block the long run supports endurance but should not become another hard workout.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 157,
-            "pace": "7:14",
+            "minutes": 193,
+            "pace": "6:57",
             "hr": 152,
             "hrRange": "145-158",
-            "km": 21.71
-          },
-          {
-            "label": "Fast Finish",
-            "minutes": 36,
-            "pace": "5:57",
-            "hr": 169,
-            "hrRange": "162-176",
-            "km": 6.05,
-            "notes": "Controlled acceleration on tired legs. Strong, not all-out."
+            "km": 27.76
           }
         ]
       }
@@ -482,7 +473,7 @@ export const trainingPlan = [
     "startDate": "2026-08-31",
     "endDate": "2026-09-06",
     "targetKm": 51.95,
-    "focus": "30% 5K / 70% Half Marathon",
+    "focus": "70% 5K / 30% Half Marathon",
     "runs": [
       {
         "id": "kw36-run1",
@@ -638,7 +629,7 @@ export const trainingPlan = [
     "startDate": "2026-09-07",
     "endDate": "2026-09-13",
     "targetKm": 63.95,
-    "focus": "30% 5K / 70% Half Marathon",
+    "focus": "70% 5K / 30% Half Marathon",
     "runs": [
       {
         "id": "kw37-run1",
@@ -712,7 +703,7 @@ export const trainingPlan = [
       {
         "id": "kw37-run3",
         "order": 3,
-        "title": "Interval Run",
+        "title": "5K Interval Run",
         "category": "Interval Run",
         "plannedDay": "Thursday",
         "subtitle": "59 min · 9.68 km",
@@ -721,43 +712,43 @@ export const trainingPlan = [
         "minutes": 59,
         "optimalHr": 188,
         "hrRange": "184-194",
-        "pace": "4:30",
+        "pace": "4:28",
         "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "Last bigger 5K-specific workout before race week. Controlled race rhythm, not all-out.",
         "steps": [
           {
             "label": "Warm-up",
             "minutes": 15,
-            "pace": "7:05",
+            "pace": "7:06",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.12
+            "km": 2.11
           },
           {
             "label": "5 × 4 min 5K Pace",
             "minutes": 20,
-            "pace": "4:30",
+            "pace": "4:28",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 4.44,
+            "km": 4.48,
             "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 5 hard reps are done."
           },
           {
             "label": "4 × 3 min Easy Recovery",
             "minutes": 12,
-            "pace": "7:43",
+            "pace": "7:44",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.56,
+            "km": 1.55,
             "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
           },
           {
             "label": "Cool-down",
             "minutes": 12,
-            "pace": "7:43",
+            "pace": "7:48",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.56
+            "km": 1.54
           }
         ]
       },
@@ -821,7 +812,7 @@ export const trainingPlan = [
     "startDate": "2026-09-14",
     "endDate": "2026-09-20",
     "targetKm": 53.31,
-    "focus": "30% 5K / 70% Half Marathon",
+    "focus": "70% 5K / 30% Half Marathon",
     "runs": [
       {
         "id": "kw38-run1",
@@ -879,7 +870,7 @@ export const trainingPlan = [
         "hrRange": "180-196",
         "pace": "4:30",
         "optional": false,
-        "notes": null,
+        "notes": "5K race. Treat this as the main focus of the week. Controlled hard effort, then return to full half-marathon focus next week.",
         "steps": [
           {
             "label": "Warm-up",
@@ -896,7 +887,7 @@ export const trainingPlan = [
             "hr": 188,
             "hrRange": "180-196",
             "km": 5.0,
-            "notes": "Controlled race effort. Target around 22:30-23:00 depending on conditions."
+            "notes": "Race effort. Start controlled for the first kilometer, then build. Target around 22:30-23:00 depending on conditions."
           },
           {
             "label": "Cool-down",
