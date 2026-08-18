@@ -1765,3 +1765,241 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     font-size: 0.86rem;
   }
 }
+
+/* v33 Gym polish: opaque cards, exact durations, centered timer, ring segments */
+.gym-workout-card {
+  background: linear-gradient(90deg, rgba(243, 193, 58, 0.20), rgba(34, 37, 45, 0.98) 42%, rgba(28, 31, 39, 0.98));
+  border-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: none;
+}
+
+.gym-workout-card.done {
+  background: linear-gradient(90deg, rgba(69, 201, 121, 0.24), rgba(34, 37, 45, 0.98) 44%, rgba(28, 31, 39, 0.98));
+}
+
+.gym-workout-card.missed {
+  background: linear-gradient(90deg, rgba(255,255,255,0.11), rgba(34,37,45,0.98) 44%, rgba(28,31,39,0.98));
+}
+
+.gym-modal,
+.exercise-modal {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--exercise, var(--yellow)) 13%, #20232c), #171a21 42%);
+}
+
+.gym-modal {
+  --exercise: var(--yellow);
+}
+
+.exercise-card-main span {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.25;
+}
+
+.exercise-timer {
+  padding: 14px;
+}
+
+.timer-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.timer-circle-wrap {
+  width: 210px;
+  height: 210px;
+  margin: 0 auto;
+}
+
+.timer-circle {
+  display: block;
+  overflow: visible;
+}
+
+.timer-track,
+.timer-inner-track,
+.timer-phase-segment,
+.timer-progress {
+  fill: none;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.timer-track {
+  stroke: rgba(255,255,255,0.08);
+}
+
+.timer-inner-track {
+  stroke: rgba(255,255,255,0.10);
+}
+
+.timer-phase-segment {
+  stroke: var(--phase-color, var(--yellow));
+  stroke-linecap: butt;
+  opacity: 0.34;
+}
+
+.timer-progress {
+  stroke: var(--phase-color, var(--yellow));
+  stroke-linecap: round;
+  opacity: 1;
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--phase-color, var(--yellow)) 55%, transparent));
+}
+
+.timer-dot {
+  fill: var(--phase-color, var(--yellow));
+  stroke: #111318;
+  stroke-width: 3px;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.45));
+}
+
+.timer-center {
+  position: absolute;
+  inset: 39px;
+  width: auto;
+  height: auto;
+  border: 2px solid color-mix(in srgb, var(--phase-color, var(--yellow)) 28%, transparent);
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 0;
+  background: color-mix(in srgb, var(--phase-color, var(--yellow)) 9%, rgba(17,19,24,0.92));
+  color: var(--ink);
+  text-align: center;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.timer-center span,
+.timer-center strong,
+.timer-center em,
+.timer-center small {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.timer-center span {
+  color: var(--phase-color, var(--yellow));
+  font-size: 0.72rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.timer-center strong {
+  color: var(--ink);
+  font-size: 2.05rem;
+  line-height: 1;
+  font-weight: 1000;
+}
+
+.timer-center em {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.78rem;
+  line-height: 1.05;
+  font-weight: 850;
+}
+
+.timer-center small {
+  color: color-mix(in srgb, var(--phase-color, var(--yellow)) 70%, white);
+  font-size: 0.68rem;
+  line-height: 1;
+  font-weight: 1000;
+}
+
+.timer-side-controls {
+  display: grid;
+  gap: 8px;
+  width: 84px;
+}
+
+.timer-side-controls button {
+  min-height: 42px;
+  border: 2px solid color-mix(in srgb, var(--exercise) 34%, transparent);
+  border-radius: 14px;
+  padding: 8px 7px;
+  color: var(--ink);
+  background: rgba(255,255,255,0.08);
+  font-weight: 950;
+}
+
+.timer-side-controls button.checked,
+.timer-side-controls button:last-child {
+  color: #fff;
+  background: var(--green);
+  border-color: transparent;
+}
+
+.timer-controls,
+.phase-strip {
+  display: none !important;
+}
+
+@media (max-width: 520px) {
+  .timer-layout {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+  }
+
+  .timer-circle-wrap {
+    width: 190px;
+    height: 190px;
+  }
+
+  .timer-circle {
+    width: 190px;
+    height: 190px;
+  }
+
+  .timer-center {
+    inset: 35px;
+  }
+
+  .timer-center strong {
+    font-size: 1.85rem;
+  }
+
+  .timer-side-controls {
+    width: 72px;
+  }
+
+  .timer-side-controls button {
+    min-height: 39px;
+    padding: 7px 5px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .timer-circle-wrap {
+    width: 176px;
+    height: 176px;
+  }
+
+  .timer-circle {
+    width: 176px;
+    height: 176px;
+  }
+
+  .timer-center {
+    inset: 33px;
+  }
+
+  .timer-center strong {
+    font-size: 1.68rem;
+  }
+
+  .timer-side-controls {
+    width: 66px;
+  }
+}

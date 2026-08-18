@@ -258,6 +258,22 @@ function buildExercisePhases(exercise) {
   return phases;
 }
 
+
+function getExerciseTotalSeconds(exercise) {
+  return buildExercisePhases(exercise).reduce((sum, phase) => sum + Number(phase.seconds || 0), 0);
+}
+
+function formatDurationFromSeconds(seconds) {
+  const minutes = Math.ceil(Number(seconds || 0) / 60);
+  return `${minutes} min`;
+}
+
+function getWorkoutDurationMinutes(workout) {
+  const exerciseSeconds = (workout.exercises || []).reduce((sum, exercise) => sum + getExerciseTotalSeconds(exercise), 0);
+  const transitionSeconds = Math.max(0, (workout.exercises || []).length - 1) * 120;
+  return Math.ceil((exerciseSeconds + transitionSeconds) / 60);
+}
+
 function secondsToClock(seconds) {
   const rounded = Math.max(0, Math.round(seconds));
   const mins = Math.floor(rounded / 60);
@@ -283,7 +299,7 @@ function phaseAtElapsed(phases, elapsed) {
   return { phase: phases[phases.length - 1], index: phases.length - 1, elapsedInPhase: 0, remainingInPhase: 0 };
 }
 
-function ExerciseTimer({ exercise, isDone, onDone }) {
+function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   const phases = useMemo(() => buildExercisePhases(exercise), [exercise]);
   const totalSeconds = useMemo(() => phases.reduce((sum, phase) => sum + phase.seconds, 0), [phases]);
   const [elapsed, setElapsed] = useState(0);
@@ -314,15 +330,18 @@ function ExerciseTimer({ exercise, isDone, onDone }) {
 
   const progress = totalSeconds > 0 ? Math.min(1, elapsed / totalSeconds) : 0;
   const current = phaseAtElapsed(phases, elapsed);
-  const radius = 82;
-  const stroke = 12;
-  const size = 196;
+  const size = 210;
   const center = size / 2;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference * (1 - progress);
+  const outerRadius = 88;
+  const innerRadius = 67;
+  const outerStroke = 12;
+  const innerStroke = 13;
+  const outerCircumference = 2 * Math.PI * outerRadius;
+  const innerCircumference = 2 * Math.PI * innerRadius;
+  const progressOffset = innerCircumference * (1 - progress);
   const angle = progress * 2 * Math.PI - Math.PI / 2;
-  const dotX = center + radius * Math.cos(angle);
-  const dotY = center + radius * Math.sin(angle);
+  const dotX = center + innerRadius * Math.cos(angle);
+  const dotY = center + innerRadius * Math.sin(angle);
 
   function setFromPointer(event) {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -334,63 +353,80 @@ function ExerciseTimer({ exercise, isDone, onDone }) {
     setElapsed(Math.round(nextProgress * totalSeconds));
   }
 
+  let phaseCursor = 0;
+
   return (
     <section className={`exercise-timer ${current.phase.colorClass}`}>
-      <div className="timer-circle-wrap">
-        <svg
-          className="timer-circle"
-          width={size}
-          height={size}
-          viewBox={`0 0 ${size} ${size}`}
-          onPointerDown={(event) => {
-            setDragging(true);
-            event.currentTarget.setPointerCapture?.(event.pointerId);
-            setFromPointer(event);
-          }}
-          onPointerMove={(event) => {
-            if (dragging) setFromPointer(event);
-          }}
-          onPointerUp={() => setDragging(false)}
-          onPointerCancel={() => setDragging(false)}
-        >
-          <circle className="timer-track" cx={center} cy={center} r={radius} strokeWidth={stroke} />
-          <circle
-            className="timer-progress"
-            cx={center}
-            cy={center}
-            r={radius}
-            strokeWidth={stroke}
-            strokeDasharray={circumference}
-            strokeDashoffset={offset}
-          />
-          <circle className="timer-dot" cx={dotX} cy={dotY} r="8" />
-        </svg>
-        <div className="timer-center">
-          <span>{current.phase.label}</span>
-          <strong>{secondsToClock(current.remainingInPhase)}</strong>
-          <em>{current.phase.kind === 'work' ? `${exercise.reps} reps` : `Set ${current.phase.setIndex}/${exercise.sets}`}</em>
+      <div className="timer-layout">
+        <div className="timer-circle-wrap">
+          <svg
+            className="timer-circle"
+            width={size}
+            height={size}
+            viewBox={`0 0 ${size} ${size}`}
+            onPointerDown={(event) => {
+              setDragging(true);
+              event.currentTarget.setPointerCapture?.(event.pointerId);
+              setFromPointer(event);
+            }}
+            onPointerMove={(event) => {
+              if (dragging) setFromPointer(event);
+            }}
+            onPointerUp={() => setDragging(false)}
+            onPointerCancel={() => setDragging(false)}
+          >
+            <circle className="timer-track" cx={center} cy={center} r={outerRadius} strokeWidth={outerStroke} />
+            {phases.map((phase, index) => {
+              const segmentLength = totalSeconds > 0 ? (phase.seconds / totalSeconds) * outerCircumference : 0;
+              const dashOffset = -phaseCursor;
+              phaseCursor += segmentLength;
+              return (
+                <circle
+                  key={`${phase.kind}-${phase.setIndex}-${index}`}
+                  className={`timer-phase-segment ${phase.colorClass}`}
+                  cx={center}
+                  cy={center}
+                  r={outerRadius}
+                  strokeWidth={outerStroke}
+                  strokeDasharray={`${Math.max(0, segmentLength - 2)} ${outerCircumference}`}
+                  strokeDashoffset={dashOffset}
+                />
+              );
+            })}
+            <circle className="timer-inner-track" cx={center} cy={center} r={innerRadius} strokeWidth={innerStroke} />
+            <circle
+              className="timer-progress"
+              cx={center}
+              cy={center}
+              r={innerRadius}
+              strokeWidth={innerStroke}
+              strokeDasharray={innerCircumference}
+              strokeDashoffset={progressOffset}
+            />
+            <circle className="timer-dot" cx={dotX} cy={dotY} r="8" />
+          </svg>
+          <button
+            className="timer-center"
+            type="button"
+            onClick={() => setRunning((value) => !value)}
+            aria-label={running ? 'Pause timer' : 'Play timer'}
+          >
+            <span>{current.phase.label}</span>
+            <strong>{secondsToClock(current.remainingInPhase)}</strong>
+            <em>{current.phase.kind === 'work' ? `${exercise.reps} reps` : `Set ${current.phase.setIndex}/${exercise.sets}`}</em>
+            <small>{running ? 'Pause' : 'Play'}</small>
+          </button>
         </div>
-      </div>
-      <div className="timer-controls">
-        <button onClick={() => setRunning((value) => !value)}>{running ? 'Pause' : 'Play'}</button>
-        <button onClick={() => { setRunning(false); setElapsed(0); }}>Reset</button>
-        <button className={isDone ? 'checked' : ''} onClick={onDone}>{isDone ? 'Done' : 'Mark done'}</button>
-      </div>
-      <div className="phase-strip" aria-label="Timer phases">
-        {phases.map((phase, index) => (
-          <span
-            key={`${phase.kind}-${phase.setIndex}-${index}`}
-            className={`${phase.colorClass} ${index === current.index ? 'active' : ''}`}
-            style={{ flexGrow: phase.seconds }}
-            title={`${phase.label}: ${phase.seconds}s`}
-          />
-        ))}
+        <div className="timer-side-controls">
+          <button type="button" onClick={() => { setRunning(false); setElapsed(0); }}>Reset</button>
+          <button type="button" className={isDone ? 'checked' : ''} onClick={onToggleDone}>{isDone ? 'Undo' : 'Done'}</button>
+        </div>
       </div>
     </section>
   );
 }
 
-function ExerciseDetailModal({ exercise, isDone, onClose, onDone }) {
+function ExerciseDetailModal({ exercise, isDone, onClose, onDone, onToggleDone }) {
   return (
     <section className="modal-backdrop exercise-backdrop" onClick={onClose}>
       <article className={`exercise-modal ${exerciseTypeClass(exercise)}`} onClick={(event) => event.stopPropagation()}>
@@ -398,7 +434,7 @@ function ExerciseDetailModal({ exercise, isDone, onClose, onDone }) {
           <div>
             <span>{exerciseTypeLabel(exercise)} · {exercise.sets} × {exercise.reps}</span>
             <h2>{exercise.name}</h2>
-            <p>{exercise.sets} sets · {exercise.setSeconds}s work · {exercise.restSeconds}s rest · 10s prep before every set</p>
+            <p>{exercise.sets} sets · {exercise.setSeconds}s work · {exercise.restSeconds}s rest · 10s prep before every set · ca. {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))}</p>
           </div>
           <button className="close-button" onClick={onClose} aria-label="Close">×</button>
         </div>
@@ -411,7 +447,7 @@ function ExerciseDetailModal({ exercise, isDone, onClose, onDone }) {
               {exercise.alternatives.map((alternative) => <span key={alternative}>{alternative}</span>)}
             </div>
           </section>
-          <ExerciseTimer exercise={exercise} isDone={isDone} onDone={onDone} />
+          <ExerciseTimer exercise={exercise} isDone={isDone} onDone={onDone} onToggleDone={onToggleDone} />
         </div>
       </article>
     </section>
@@ -683,9 +719,9 @@ export default function App() {
               <div className="run-summary">
                 <div className="title-row">
                   <strong>{workout.title}</strong>
-                  <span className="category-badge gym-badge">{workout.durationMin} min</span>
+                  <span className="category-badge gym-badge">ca. {getWorkoutDurationMinutes(workout)} min</span>
                 </div>
-                <span>{workout.subtitle} · {doneExercises}/{workout.exercises.length} exercises</span>
+                <span>{workout.subtitle} · {doneExercises}/{workout.exercises.length} exercises · incl. 2 min transitions</span>
               </div>
               <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
             </button>
@@ -903,7 +939,7 @@ export default function App() {
               <div>
                 <span>{selectedGymWorkout.plannedDay} · {formatDateObject(plannedDateForGym(week, selectedGymWorkout))}</span>
                 <h2>{selectedGymWorkout.title}</h2>
-                <p>{selectedGymWorkout.subtitle} · ca. {selectedGymWorkout.durationMin} min</p>
+                <p>{selectedGymWorkout.subtitle} · ca. {getWorkoutDurationMinutes(selectedGymWorkout)} min · incl. 2 min between exercises</p>
               </div>
               <button className="close-button" onClick={() => setSelectedGymWorkoutId(null)} aria-label="Close">×</button>
             </div>
@@ -918,7 +954,7 @@ export default function App() {
                   <div className="exercise-order">{exercise.order}</div>
                   <div className="exercise-card-main">
                     <strong>{exercise.name}</strong>
-                    <span>{exercise.sets} × {exercise.reps} · {exercise.setSeconds}s work · {exercise.restSeconds}s rest</span>
+                    <span>{exercise.sets} × {exercise.reps} · ca. {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {exercise.setSeconds}s work · {exercise.restSeconds}s rest</span>
                   </div>
                   <div className="exercise-type-pill">{exerciseTypeLabel(exercise)}</div>
                   <div className="exercise-done">{progress[exercise.id] ? '✓' : 'open'}</div>
@@ -950,7 +986,9 @@ export default function App() {
           onClose={() => setSelectedExerciseId(null)}
           onDone={() => {
             updateExercise(selectedGymWorkout, selectedExercise.id, true);
-            setSelectedExerciseId(null);
+          }}
+          onToggleDone={() => {
+            updateExercise(selectedGymWorkout, selectedExercise.id, !progress[selectedExercise.id]);
           }}
         />
       )}
