@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { trainingPlan } from './trainingPlan.js';
+import { getGymWorkoutsForWeek } from './gymPlan.js';
 
 const supabaseUrl = 'https://frfduxfbeugdagcaljur.supabase.co';
 const supabaseAnonKey = 'sb_publishable_bL6iOCMHMPeBSG4tcUVcVw_vZMxFOUY';
@@ -9,8 +10,8 @@ const supabase = supabaseUrl && supabaseAnonKey
   ? createClient(supabaseUrl, supabaseAnonKey)
   : null;
 
-const STORAGE_KEY = 'running-plan-progress-v4';
-const SYNC_KEY = 'paul-running-v4';
+const STORAGE_KEY = 'sport-app-progress-v1';
+const SYNC_KEY = 'paul-sport-v1';
 
 const DAY_OFFSETS = {
   Monday: 0,
@@ -47,12 +48,26 @@ const CATEGORY_META = {
   Race: { className: 'cat-race', label: 'Race' }
 };
 
+const EXERCISE_TYPE_META = {
+  push: { className: 'gym-push', label: 'Push' },
+  pull: { className: 'gym-pull', label: 'Pull' },
+  legs: { className: 'gym-legs', label: 'Legs' }
+};
+
 function categoryClass(run) {
   return CATEGORY_META[run.category || run.title]?.className || 'cat-default';
 }
 
 function categoryLabel(run) {
   return CATEGORY_META[run.category || run.title]?.label || run.category || run.title;
+}
+
+function exerciseTypeClass(exercise) {
+  return EXERCISE_TYPE_META[exercise.type]?.className || 'gym-default';
+}
+
+function exerciseTypeLabel(exercise) {
+  return EXERCISE_TYPE_META[exercise.type]?.label || 'Exercise';
 }
 
 function formatDate(value) {
@@ -130,48 +145,6 @@ function parseRepeatedStep(step) {
   };
 }
 
-function makeWorkoutBlocks(run) {
-  const steps = run.steps || [];
-  const blocks = [];
-
-  for (let index = 0; index < steps.length; index += 1) {
-    const step = steps[index];
-    const nextStep = steps[index + 1];
-
-    if (shouldGroupWithNext(step, nextStep)) {
-      blocks.push({
-        label: step.label,
-        grouped: true,
-        items: [makeSingleWorkoutBlock(step), makeSingleWorkoutBlock(nextStep)]
-      });
-      index += 1;
-    } else {
-      blocks.push(makeSingleWorkoutBlock(step));
-    }
-  }
-
-  return blocks;
-}
-
-function plannedDateForRun(weekItem, run) {
-  const start = new Date(`${weekItem.startDate}T00:00:00`);
-  const offset = DAY_OFFSETS[run.plannedDay] ?? Math.max(0, Number(run.order || 1) - 1);
-  start.setDate(start.getDate() + offset);
-  return start;
-}
-
-function isRunDatePast(weekItem, run) {
-  const planned = plannedDateForRun(weekItem, run);
-  planned.setHours(23, 59, 59, 999);
-  return new Date() > planned;
-}
-
-function getStatusLabel(status) {
-  if (status === 'done') return 'done';
-  if (status === 'missed') return 'missed';
-  return 'open';
-}
-
 function shouldGroupWithNext(step, nextStep) {
   if (!nextStep) return false;
   const label = String(step.label || '');
@@ -197,17 +170,277 @@ function makeSingleWorkoutBlock(step) {
   };
 }
 
+function makeWorkoutBlocks(run) {
+  const steps = run.steps || [];
+  const blocks = [];
+
+  for (let index = 0; index < steps.length; index += 1) {
+    const step = steps[index];
+    const nextStep = steps[index + 1];
+
+    if (shouldGroupWithNext(step, nextStep)) {
+      blocks.push({
+        label: step.label,
+        grouped: true,
+        items: [makeSingleWorkoutBlock(step), makeSingleWorkoutBlock(nextStep)]
+      });
+      index += 1;
+    } else {
+      blocks.push(makeSingleWorkoutBlock(step));
+    }
+  }
+
+  return blocks;
+}
+
+function plannedDateForDay(weekItem, plannedDay, fallbackOrder = 1) {
+  const start = new Date(`${weekItem.startDate}T00:00:00`);
+  const offset = DAY_OFFSETS[plannedDay] ?? Math.max(0, Number(fallbackOrder || 1) - 1);
+  start.setDate(start.getDate() + offset);
+  return start;
+}
+
+function plannedDateForRun(weekItem, run) {
+  return plannedDateForDay(weekItem, run.plannedDay, run.order);
+}
+
+function plannedDateForGym(weekItem, workout) {
+  return plannedDateForDay(weekItem, workout.plannedDay, 1);
+}
+
+function isDatePast(date) {
+  const planned = new Date(date);
+  planned.setHours(23, 59, 59, 999);
+  return new Date() > planned;
+}
+
+function isRunDatePast(weekItem, run) {
+  return isDatePast(plannedDateForRun(weekItem, run));
+}
+
+function isGymDatePast(weekItem, workout) {
+  return isDatePast(plannedDateForGym(weekItem, workout));
+}
+
+function getStatusLabel(status) {
+  if (status === 'done') return 'done';
+  if (status === 'missed') return 'missed';
+  return 'open';
+}
+
+function buildExercisePhases(exercise) {
+  const phases = [];
+  for (let setIndex = 1; setIndex <= exercise.sets; setIndex += 1) {
+    phases.push({
+      kind: 'prep',
+      label: 'Preparation',
+      colorClass: 'phase-prep',
+      seconds: exercise.prepSeconds,
+      setIndex
+    });
+    phases.push({
+      kind: 'work',
+      label: `Set ${setIndex}`,
+      colorClass: 'phase-work',
+      seconds: exercise.setSeconds,
+      setIndex
+    });
+    if (setIndex < exercise.sets) {
+      phases.push({
+        kind: 'rest',
+        label: 'Rest',
+        colorClass: 'phase-rest',
+        seconds: exercise.restSeconds,
+        setIndex
+      });
+    }
+  }
+  return phases;
+}
+
+function secondsToClock(seconds) {
+  const rounded = Math.max(0, Math.round(seconds));
+  const mins = Math.floor(rounded / 60);
+  const secs = rounded % 60;
+  return `${mins}:${String(secs).padStart(2, '0')}`;
+}
+
+function phaseAtElapsed(phases, elapsed) {
+  let cursor = 0;
+  for (let index = 0; index < phases.length; index += 1) {
+    const phase = phases[index];
+    const next = cursor + phase.seconds;
+    if (elapsed < next || index === phases.length - 1) {
+      return {
+        phase,
+        index,
+        elapsedInPhase: Math.max(0, elapsed - cursor),
+        remainingInPhase: Math.max(0, next - elapsed)
+      };
+    }
+    cursor = next;
+  }
+  return { phase: phases[phases.length - 1], index: phases.length - 1, elapsedInPhase: 0, remainingInPhase: 0 };
+}
+
+function ExerciseTimer({ exercise, isDone, onDone }) {
+  const phases = useMemo(() => buildExercisePhases(exercise), [exercise]);
+  const totalSeconds = useMemo(() => phases.reduce((sum, phase) => sum + phase.seconds, 0), [phases]);
+  const [elapsed, setElapsed] = useState(0);
+  const [running, setRunning] = useState(false);
+  const [dragging, setDragging] = useState(false);
+
+  useEffect(() => {
+    setElapsed(0);
+    setRunning(false);
+    setDragging(false);
+  }, [exercise.id]);
+
+  useEffect(() => {
+    if (!running || dragging) return undefined;
+    const interval = window.setInterval(() => {
+      setElapsed((current) => {
+        const next = Math.min(totalSeconds, current + 1);
+        if (next >= totalSeconds) {
+          window.clearInterval(interval);
+          setRunning(false);
+          onDone();
+        }
+        return next;
+      });
+    }, 1000);
+    return () => window.clearInterval(interval);
+  }, [running, dragging, totalSeconds, onDone]);
+
+  const progress = totalSeconds > 0 ? Math.min(1, elapsed / totalSeconds) : 0;
+  const current = phaseAtElapsed(phases, elapsed);
+  const radius = 82;
+  const stroke = 12;
+  const size = 196;
+  const center = size / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference * (1 - progress);
+  const angle = progress * 2 * Math.PI - Math.PI / 2;
+  const dotX = center + radius * Math.cos(angle);
+  const dotY = center + radius * Math.sin(angle);
+
+  function setFromPointer(event) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - rect.left - rect.width / 2;
+    const y = event.clientY - rect.top - rect.height / 2;
+    let nextAngle = Math.atan2(y, x) + Math.PI / 2;
+    if (nextAngle < 0) nextAngle += 2 * Math.PI;
+    const nextProgress = nextAngle / (2 * Math.PI);
+    setElapsed(Math.round(nextProgress * totalSeconds));
+  }
+
+  return (
+    <section className={`exercise-timer ${current.phase.colorClass}`}>
+      <div className="timer-circle-wrap">
+        <svg
+          className="timer-circle"
+          width={size}
+          height={size}
+          viewBox={`0 0 ${size} ${size}`}
+          onPointerDown={(event) => {
+            setDragging(true);
+            event.currentTarget.setPointerCapture?.(event.pointerId);
+            setFromPointer(event);
+          }}
+          onPointerMove={(event) => {
+            if (dragging) setFromPointer(event);
+          }}
+          onPointerUp={() => setDragging(false)}
+          onPointerCancel={() => setDragging(false)}
+        >
+          <circle className="timer-track" cx={center} cy={center} r={radius} strokeWidth={stroke} />
+          <circle
+            className="timer-progress"
+            cx={center}
+            cy={center}
+            r={radius}
+            strokeWidth={stroke}
+            strokeDasharray={circumference}
+            strokeDashoffset={offset}
+          />
+          <circle className="timer-dot" cx={dotX} cy={dotY} r="8" />
+        </svg>
+        <div className="timer-center">
+          <span>{current.phase.label}</span>
+          <strong>{secondsToClock(current.remainingInPhase)}</strong>
+          <em>{current.phase.kind === 'work' ? `${exercise.reps} reps` : `Set ${current.phase.setIndex}/${exercise.sets}`}</em>
+        </div>
+      </div>
+      <div className="timer-controls">
+        <button onClick={() => setRunning((value) => !value)}>{running ? 'Pause' : 'Play'}</button>
+        <button onClick={() => { setRunning(false); setElapsed(0); }}>Reset</button>
+        <button className={isDone ? 'checked' : ''} onClick={onDone}>{isDone ? 'Done' : 'Mark done'}</button>
+      </div>
+      <div className="phase-strip" aria-label="Timer phases">
+        {phases.map((phase, index) => (
+          <span
+            key={`${phase.kind}-${phase.setIndex}-${index}`}
+            className={`${phase.colorClass} ${index === current.index ? 'active' : ''}`}
+            style={{ flexGrow: phase.seconds }}
+            title={`${phase.label}: ${phase.seconds}s`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ExerciseDetailModal({ exercise, isDone, onClose, onDone }) {
+  return (
+    <section className="modal-backdrop exercise-backdrop" onClick={onClose}>
+      <article className={`exercise-modal ${exerciseTypeClass(exercise)}`} onClick={(event) => event.stopPropagation()}>
+        <div className="modal-header exercise-header">
+          <div>
+            <span>{exerciseTypeLabel(exercise)} · {exercise.sets} × {exercise.reps}</span>
+            <h2>{exercise.name}</h2>
+            <p>{exercise.sets} sets · {exercise.setSeconds}s work · {exercise.restSeconds}s rest · 10s prep before every set</p>
+          </div>
+          <button className="close-button" onClick={onClose} aria-label="Close">×</button>
+        </div>
+        <div className="exercise-detail-body">
+          <section className="exercise-info-card">
+            <h3>How to do it</h3>
+            <p>{exercise.explanation}</p>
+            <h3>Alternatives</h3>
+            <div className="alternative-list">
+              {exercise.alternatives.map((alternative) => <span key={alternative}>{alternative}</span>)}
+            </div>
+          </section>
+          <ExerciseTimer exercise={exercise} isDone={isDone} onDone={onDone} />
+        </div>
+      </article>
+    </section>
+  );
+}
+
 export default function App() {
   const [weekIndex, setWeekIndex] = useState(getInitialWeekIndex);
   const [selectedRunId, setSelectedRunId] = useState(null);
+  const [selectedGymWorkoutId, setSelectedGymWorkoutId] = useState(null);
+  const [selectedExerciseId, setSelectedExerciseId] = useState(null);
   const [progress, setProgress] = useState({});
   const [view, setView] = useState('week');
+  const [mode, setMode] = useState('running');
 
   const week = trainingPlan[weekIndex];
+  const gymWorkouts = useMemo(() => getGymWorkoutsForWeek(week), [week]);
   const selectedRun = useMemo(() => {
     if (!selectedRunId) return null;
     return week.runs.find((run) => run.id === selectedRunId) || null;
   }, [week, selectedRunId]);
+  const selectedGymWorkout = useMemo(() => {
+    if (!selectedGymWorkoutId) return null;
+    return gymWorkouts.find((workout) => workout.id === selectedGymWorkoutId) || null;
+  }, [gymWorkouts, selectedGymWorkoutId]);
+  const selectedExercise = useMemo(() => {
+    if (!selectedExerciseId || !selectedGymWorkout) return null;
+    return selectedGymWorkout.exercises.find((exercise) => exercise.id === selectedExerciseId) || null;
+  }, [selectedExerciseId, selectedGymWorkout]);
 
   const mandatoryRuns = week.runs.filter((run) => !run.optional);
   const totalMandatoryKm = mandatoryRuns.reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
@@ -217,6 +450,7 @@ export default function App() {
   const completedMandatoryKm = mandatoryRuns
     .filter((run) => progress[run.id])
     .reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
+  const completedGymCount = gymWorkouts.filter((workout) => progress[workout.id]).length;
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -259,12 +493,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    document.body.classList.toggle('modal-open', Boolean(selectedRun));
+    document.body.classList.toggle('modal-open', Boolean(selectedRun || selectedGymWorkout || selectedExercise));
     return () => document.body.classList.remove('modal-open');
-  }, [selectedRun]);
+  }, [selectedRun, selectedGymWorkout, selectedExercise]);
 
-  async function updateRun(runId, done) {
-    setProgress((current) => ({ ...current, [runId]: done }));
+  async function updateProgress(itemId, done) {
+    setProgress((current) => ({ ...current, [itemId]: done }));
 
     if (!supabase) return;
 
@@ -272,10 +506,36 @@ export default function App() {
       .from('run_progress')
       .upsert({
         user_key: SYNC_KEY,
-        run_id: runId,
+        run_id: itemId,
         done,
         updated_at: new Date().toISOString()
       });
+  }
+
+  function updateRun(runId, done) {
+    updateProgress(runId, done);
+  }
+
+  function updateExercise(workout, exerciseId, done) {
+    const nextProgress = { ...progress, [exerciseId]: done };
+    const allDone = workout.exercises.every((exercise) => nextProgress[exercise.id]);
+    nextProgress[workout.id] = allDone;
+    setProgress(nextProgress);
+
+    if (supabase) {
+      supabase.from('run_progress').upsert({
+        user_key: SYNC_KEY,
+        run_id: exerciseId,
+        done,
+        updated_at: new Date().toISOString()
+      });
+      supabase.from('run_progress').upsert({
+        user_key: SYNC_KEY,
+        run_id: workout.id,
+        done: allDone,
+        updated_at: new Date().toISOString()
+      });
+    }
   }
 
   function statusFor(run, weekItem = week) {
@@ -284,35 +544,207 @@ export default function App() {
     return 'upcoming';
   }
 
+  function gymStatusFor(workout, weekItem = week) {
+    if (progress[workout.id]) return 'done';
+    if (isGymDatePast(weekItem, workout)) return 'missed';
+    return 'upcoming';
+  }
+
   function previousWeek() {
     setWeekIndex((index) => Math.max(0, index - 1));
     setSelectedRunId(null);
+    setSelectedGymWorkoutId(null);
+    setSelectedExerciseId(null);
   }
 
   function nextWeek() {
     setWeekIndex((index) => Math.min(trainingPlan.length - 1, index + 1));
     setSelectedRunId(null);
+    setSelectedGymWorkoutId(null);
+    setSelectedExerciseId(null);
   }
 
   function openOverview() {
     setView('overview');
     setSelectedRunId(null);
+    setSelectedGymWorkoutId(null);
+    setSelectedExerciseId(null);
   }
 
   function openWeek(index) {
     setWeekIndex(index);
     setSelectedRunId(null);
+    setSelectedGymWorkoutId(null);
+    setSelectedExerciseId(null);
     setView('week');
   }
 
+  function switchMode(nextMode) {
+    setMode(nextMode);
+    setView('week');
+    setSelectedRunId(null);
+    setSelectedGymWorkoutId(null);
+    setSelectedExerciseId(null);
+  }
+
+  function renderRunningWeek() {
+    return (
+      <section className="run-list" aria-label="Runs this week">
+        {week.runs.map((run) => {
+          const status = statusFor(run);
+          const cat = categoryClass(run);
+          return (
+            <button
+              key={run.id}
+              className={`run-card ${status} ${cat}`}
+              onClick={() => setSelectedRunId(run.id)}
+            >
+              <div className="run-number">{DAY_SHORT[run.plannedDay] || run.order}</div>
+              <div className="run-summary">
+                <div className="title-row">
+                  <strong>{run.title}</strong>
+                  <span className="category-badge">{categoryLabel(run)}</span>
+                </div>
+                <span>{getRunMinutes(run)} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HR {formatHr(run.optimalHr)}</span>
+              </div>
+              <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
+            </button>
+          );
+        })}
+      </section>
+    );
+  }
+
+  function renderRunningOverview() {
+    return (
+      <section className="overview-page" aria-label="Training plan weekly overview">
+        <div className="overview-legend" aria-label="Status legend">
+          <span><i className="legend-done" /> Done</span>
+          <span><i className="legend-missed" /> Missed</span>
+          <span><i className="legend-open" /> Open</span>
+        </div>
+        <div className="week-overview-list compact-squares">
+          {trainingPlan.map((weekItem, index) => {
+            const mandatoryWeekRuns = weekItem.runs.filter((run) => !run.optional);
+            const doneCount = mandatoryWeekRuns.filter((run) => statusFor(run, weekItem) === 'done').length;
+            const missedCount = mandatoryWeekRuns.filter((run) => statusFor(run, weekItem) === 'missed').length;
+            const weekKm = mandatoryWeekRuns.reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
+            const weekWidth = maxOverviewKm > 0 ? Math.max(6, (weekKm / maxOverviewKm) * 100) : 100;
+            const allDone = mandatoryWeekRuns.length > 0 && doneCount === mandatoryWeekRuns.length;
+            return (
+              <button
+                key={`${weekItem.year}-${weekItem.kw}`}
+                className={`overview-week ${index === weekIndex ? 'selected' : ''} ${allDone ? 'all-done' : ''}`}
+                onClick={() => openWeek(index)}
+              >
+                <div className="overview-week-head">
+                  <strong>W{weekItem.kw}</strong>
+                  <span>{formatDate(weekItem.startDate)}</span>
+                  <em>{formatNumber(weekKm)} km</em>
+                </div>
+                <div className="overview-bars" aria-label={`Week ${weekItem.kw}: ${doneCount} done, ${missedCount} missed`}>
+                  <div className="overview-volume-row" style={{ width: `${weekWidth}%` }}>
+                    {mandatoryWeekRuns.map((run) => {
+                      const status = statusFor(run, weekItem);
+                      return (
+                        <span
+                          key={run.id}
+                          className={`overview-run-segment ${status} ${categoryClass(run)}`}
+                          style={{ flexGrow: Number(run.distanceKm || 0) }}
+                          title={`${DAY_SHORT[run.plannedDay] || run.order} · ${run.title} · ${formatNumber(run.distanceKm)} km · ${getStatusLabel(status)}`}
+                        >
+                          <span className="overview-run-fill" />
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+    );
+  }
+
+  function renderGymWeek() {
+    return (
+      <section className="gym-list" aria-label="Gym this week">
+        {gymWorkouts.map((workout) => {
+          const status = gymStatusFor(workout);
+          const doneExercises = workout.exercises.filter((exercise) => progress[exercise.id]).length;
+          return (
+            <button
+              key={workout.id}
+              className={`gym-workout-card ${status}`}
+              onClick={() => setSelectedGymWorkoutId(workout.id)}
+            >
+              <div className="run-number gym-day">{DAY_SHORT[workout.plannedDay]}</div>
+              <div className="run-summary">
+                <div className="title-row">
+                  <strong>{workout.title}</strong>
+                  <span className="category-badge gym-badge">{workout.durationMin} min</span>
+                </div>
+                <span>{workout.subtitle} · {doneExercises}/{workout.exercises.length} exercises</span>
+              </div>
+              <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
+            </button>
+          );
+        })}
+      </section>
+    );
+  }
+
+  function renderGymOverview() {
+    return (
+      <section className="overview-page gym-overview-page" aria-label="Gym weekly overview">
+        <div className="overview-legend" aria-label="Status legend">
+          <span><i className="legend-done" /> Done</span>
+          <span><i className="legend-missed" /> Missed</span>
+          <span><i className="legend-open" /> Open</span>
+        </div>
+        <div className="week-overview-list">
+          {trainingPlan.map((weekItem, index) => {
+            const workouts = getGymWorkoutsForWeek(weekItem);
+            const doneCount = workouts.filter((workout) => gymStatusFor(workout, weekItem) === 'done').length;
+            const allDone = workouts.length > 0 && doneCount === workouts.length;
+            return (
+              <button
+                key={`gym-${weekItem.year}-${weekItem.kw}`}
+                className={`overview-week gym-overview-week ${index === weekIndex ? 'selected' : ''} ${allDone ? 'all-done' : ''}`}
+                onClick={() => openWeek(index)}
+              >
+                <div className="overview-week-head">
+                  <strong>W{weekItem.kw}</strong>
+                  <span>{formatDate(weekItem.startDate)}</span>
+                  <em>{doneCount}/2</em>
+                </div>
+                <div className="gym-overview-row">
+                  {workouts.map((workout) => {
+                    const status = gymStatusFor(workout, weekItem);
+                    return (
+                      <span key={workout.id} className={`gym-overview-segment ${status}`}>
+                        {workout.title.replace('Gym ', '')}
+                      </span>
+                    );
+                  })}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <main className="app-shell">
+    <main className="app-shell sport-app-shell">
       <header className="hero-card">
         {view === 'week' ? (
           <div className="week-nav compact">
             <button aria-label="Previous week" onClick={previousWeek} disabled={weekIndex === 0}>‹</button>
             <div>
-              <h1>Week {week.kw}</h1>
+              <h1>{mode === 'running' ? 'Running' : 'Gym'} · Week {week.kw}</h1>
               <p>{formatDate(week.startDate)} to {formatDate(week.endDate)}</p>
             </div>
             <button className="calendar-button" aria-label="Open weekly overview" onClick={openOverview} title="Weekly overview">▦</button>
@@ -322,13 +754,13 @@ export default function App() {
           <div className="overview-nav">
             <button aria-label="Back to selected week" onClick={() => setView('week')}>‹</button>
             <div>
-              <h1>Weekly Overview</h1>
+              <h1>{mode === 'running' ? 'Running Overview' : 'Gym Overview'}</h1>
               <p>Tap a week to open details</p>
             </div>
           </div>
         )}
 
-        {view === 'week' && (
+        {view === 'week' && mode === 'running' && (
           <section className="km-progress-card">
             <div className="km-progress-label">
               <span>Target volume</span>
@@ -349,81 +781,30 @@ export default function App() {
             </div>
           </section>
         )}
+
+        {view === 'week' && mode === 'gym' && (
+          <section className="km-progress-card gym-progress-card">
+            <div className="km-progress-label">
+              <span>Gym workouts</span>
+              <strong>{completedGymCount} / {gymWorkouts.length} done</strong>
+            </div>
+            <div className="gym-week-status-row">
+              {gymWorkouts.map((workout) => (
+                <span key={workout.id} className={`gym-status-pill ${gymStatusFor(workout)}`}>{workout.title}</span>
+              ))}
+            </div>
+          </section>
+        )}
       </header>
 
-      {view === 'week' ? (
-        <section className="run-list" aria-label="Runs this week">
-          {week.runs.map((run) => {
-            const status = statusFor(run);
-            const cat = categoryClass(run);
-            return (
-              <button
-                key={run.id}
-                className={`run-card ${status} ${cat}`}
-                onClick={() => setSelectedRunId(run.id)}
-              >
-                <div className="run-number">{DAY_SHORT[run.plannedDay] || run.order}</div>
-                <div className="run-summary">
-                  <div className="title-row">
-                    <strong>{run.title}</strong>
-                    <span className="category-badge">{categoryLabel(run)}</span>
-                  </div>
-                  <span>{getRunMinutes(run)} min · {formatNumber(run.distanceKm)} km · {formatPace(run.pace)} · HR {formatHr(run.optimalHr)}</span>
-                </div>
-                <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
-              </button>
-            );
-          })}
-        </section>
-      ) : (
-        <section className="overview-page" aria-label="Training plan weekly overview">
-          <div className="overview-legend" aria-label="Status legend">
-            <span><i className="legend-done" /> Done</span>
-            <span><i className="legend-missed" /> Missed</span>
-            <span><i className="legend-open" /> Open</span>
-          </div>
-          <div className="week-overview-list compact-squares">
-            {trainingPlan.map((weekItem, index) => {
-              const mandatoryWeekRuns = weekItem.runs.filter((run) => !run.optional);
-              const doneCount = mandatoryWeekRuns.filter((run) => statusFor(run, weekItem) === 'done').length;
-              const missedCount = mandatoryWeekRuns.filter((run) => statusFor(run, weekItem) === 'missed').length;
-              const weekKm = mandatoryWeekRuns.reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
-              const weekWidth = maxOverviewKm > 0 ? Math.max(6, (weekKm / maxOverviewKm) * 100) : 100;
-              const allDone = mandatoryWeekRuns.length > 0 && doneCount === mandatoryWeekRuns.length;
-              return (
-                <button
-                  key={`${weekItem.year}-${weekItem.kw}`}
-                  className={`overview-week ${index === weekIndex ? 'selected' : ''} ${allDone ? 'all-done' : ''}`}
-                  onClick={() => openWeek(index)}
-                >
-                  <div className="overview-week-head">
-                    <strong>W{weekItem.kw}</strong>
-                    <span>{formatDate(weekItem.startDate)}</span>
-                    <em>{formatNumber(weekKm)} km</em>
-                  </div>
-                  <div className="overview-bars" aria-label={`Week ${weekItem.kw}: ${doneCount} done, ${missedCount} missed`}>
-                    <div className="overview-volume-row" style={{ width: `${weekWidth}%` }}>
-                      {mandatoryWeekRuns.map((run) => {
-                        const status = statusFor(run, weekItem);
-                        return (
-                          <span
-                            key={run.id}
-                            className={`overview-run-segment ${status} ${categoryClass(run)}`}
-                            style={{ flexGrow: Number(run.distanceKm || 0) }}
-                            title={`${DAY_SHORT[run.plannedDay] || run.order} · ${run.title} · ${formatNumber(run.distanceKm)} km · ${getStatusLabel(status)}`}
-                          >
-                            <span className="overview-run-fill" />
-                          </span>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </section>
-      )}
+      {mode === 'running'
+        ? (view === 'week' ? renderRunningWeek() : renderRunningOverview())
+        : (view === 'week' ? renderGymWeek() : renderGymOverview())}
+
+      <nav className="mode-switch" aria-label="Sport mode switch">
+        <button className={mode === 'running' ? 'active' : ''} onClick={() => switchMode('running')}>Running</button>
+        <button className={mode === 'gym' ? 'active' : ''} onClick={() => switchMode('gym')}>Gym</button>
+      </nav>
 
       {selectedRun && (
         <section className="modal-backdrop" onClick={() => setSelectedRunId(null)}>
@@ -513,6 +894,65 @@ export default function App() {
             </div>
           </article>
         </section>
+      )}
+
+      {selectedGymWorkout && !selectedExercise && (
+        <section className="modal-backdrop" onClick={() => setSelectedGymWorkoutId(null)}>
+          <article className="run-modal gym-modal" onClick={(event) => event.stopPropagation()}>
+            <div className="modal-header gym-modal-header">
+              <div>
+                <span>{selectedGymWorkout.plannedDay} · {formatDateObject(plannedDateForGym(week, selectedGymWorkout))}</span>
+                <h2>{selectedGymWorkout.title}</h2>
+                <p>{selectedGymWorkout.subtitle} · ca. {selectedGymWorkout.durationMin} min</p>
+              </div>
+              <button className="close-button" onClick={() => setSelectedGymWorkoutId(null)} aria-label="Close">×</button>
+            </div>
+
+            <div className="gym-exercise-list">
+              {selectedGymWorkout.exercises.map((exercise) => (
+                <button
+                  key={exercise.id}
+                  className={`exercise-card ${exerciseTypeClass(exercise)} ${progress[exercise.id] ? 'done' : ''}`}
+                  onClick={() => setSelectedExerciseId(exercise.id)}
+                >
+                  <div className="exercise-order">{exercise.order}</div>
+                  <div className="exercise-card-main">
+                    <strong>{exercise.name}</strong>
+                    <span>{exercise.sets} × {exercise.reps} · {exercise.setSeconds}s work · {exercise.restSeconds}s rest</span>
+                  </div>
+                  <div className="exercise-type-pill">{exerciseTypeLabel(exercise)}</div>
+                  <div className="exercise-done">{progress[exercise.id] ? '✓' : 'open'}</div>
+                </button>
+              ))}
+            </div>
+
+            <div className="modal-footer">
+              <button
+                className={`modal-check-button gym-finish-button ${progress[selectedGymWorkout.id] ? 'checked' : ''}`}
+                onClick={() => {
+                  const nextDone = !progress[selectedGymWorkout.id];
+                  updateProgress(selectedGymWorkout.id, nextDone);
+                  selectedGymWorkout.exercises.forEach((exercise) => updateProgress(exercise.id, nextDone));
+                  setSelectedGymWorkoutId(null);
+                }}
+              >
+                {progress[selectedGymWorkout.id] ? 'Undo workout' : 'Mark workout as done'}
+              </button>
+            </div>
+          </article>
+        </section>
+      )}
+
+      {selectedGymWorkout && selectedExercise && (
+        <ExerciseDetailModal
+          exercise={selectedExercise}
+          isDone={Boolean(progress[selectedExercise.id])}
+          onClose={() => setSelectedExerciseId(null)}
+          onDone={() => {
+            updateExercise(selectedGymWorkout, selectedExercise.id, true);
+            setSelectedExerciseId(null);
+          }}
+        />
       )}
     </main>
   );
