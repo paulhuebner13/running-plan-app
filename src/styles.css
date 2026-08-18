@@ -2096,3 +2096,133 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
   background: color-mix(in srgb, var(--phase-color, var(--yellow)) 18%, rgba(17,19,24,0.84)) !important;
   border-color: color-mix(in srgb, var(--phase-color, var(--yellow)) 70%, rgba(255,255,255,0.08)) !important;
 }
+
+/* v37 Gym timer reliability + workout stats refinements */
+.gym-workout-card {
+  background: linear-gradient(90deg, rgba(243, 193, 58, 0.24), rgba(31, 34, 42, 1) 42%, rgba(24, 27, 34, 1)) !important;
+}
+
+.gym-workout-card.done {
+  opacity: 0.72 !important;
+  filter: grayscale(0.1) !important;
+  border-color: color-mix(in srgb, var(--green) 82%, white) !important;
+  background: linear-gradient(90deg, rgba(69, 201, 121, 0.34), rgba(31, 34, 42, 1) 44%, rgba(24, 27, 34, 1)) !important;
+}
+
+.gym-workout-card .run-status,
+.exercise-done {
+  min-width: 48px;
+  text-align: center;
+  border-radius: 999px;
+  padding: 6px 8px;
+  border: 2px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.055);
+}
+
+.gym-workout-card.done .run-status,
+.exercise-card.done .exercise-done {
+  color: #07140b !important;
+  background: var(--green) !important;
+  border-color: transparent !important;
+  font-size: 0.78rem !important;
+}
+
+.exercise-card.not-done {
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--exercise) 28%, transparent);
+}
+
+.exercise-card.done {
+  opacity: 0.42 !important;
+  filter: grayscale(0.75) saturate(0.45) !important;
+  background: linear-gradient(90deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02) 46%) !important;
+  border-color: rgba(255,255,255,0.12) !important;
+}
+
+.exercise-card.done .exercise-order,
+.exercise-card.done .exercise-type-pill {
+  background: rgba(255,255,255,0.18) !important;
+  color: rgba(255,255,255,0.70) !important;
+}
+
+.gym-workout-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 12px 16px 10px;
+  border-bottom: 2px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.12);
+}
+
+.gym-workout-stats div {
+  min-width: 0;
+  border: 2px solid rgba(243,193,58,0.22);
+  border-radius: 15px;
+  padding: 9px 7px;
+  text-align: center;
+  background: rgba(255,255,255,0.045);
+}
+
+.gym-workout-stats span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.66rem;
+  line-height: 1;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.gym-workout-stats strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink);
+  font-size: 0.96rem;
+  line-height: 1;
+  font-weight: 1000;
+}
+
+
+.timer-side-controls button.done-state {
+  color: #07140b !important;
+  background: var(--green) !important;
+  border-color: transparent !important;
+}
+
+.timer-side-controls button.undo-state {
+  color: #111318 !important;
+  background: var(--yellow) !important;
+  border-color: transparent !important;
+}
+
+.modal-check-button.gym-finish-button {
+  border: 3px solid transparent;
+}
+
+.modal-check-button.gym-finish-button:not(.checked) {
+  color: #07140b !important;
+  background: var(--green) !important;
+}
+
+.modal-check-button.gym-finish-button.checked {
+  color: #111318 !important;
+  background: var(--yellow) !important;
+}
+
+.timer-inner-fill {
+  fill: var(--phase-color, var(--yellow)) !important;
+  opacity: 0.9 !important;
+}
+
+.timer-dot {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (max-width: 520px) {
+  .gym-workout-stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 12px 9px;
+  }
+}

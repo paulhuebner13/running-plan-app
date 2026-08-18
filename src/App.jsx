@@ -268,10 +268,39 @@ function formatDurationFromSeconds(seconds) {
   return `${minutes} min`;
 }
 
-function getWorkoutDurationMinutes(workout) {
+function getWorkoutDurationSeconds(workout) {
   const exerciseSeconds = (workout.exercises || []).reduce((sum, exercise) => sum + getExerciseTotalSeconds(exercise), 0);
   const transitionSeconds = Math.max(0, (workout.exercises || []).length - 1) * 120;
-  return Math.ceil((exerciseSeconds + transitionSeconds) / 60);
+  return exerciseSeconds + transitionSeconds;
+}
+
+function getWorkoutDurationMinutes(workout) {
+  return Math.ceil(getWorkoutDurationSeconds(workout) / 60);
+}
+
+function getExercisePlannedSeconds(workout, exercise, index) {
+  const transitionAfter = index < (workout.exercises || []).length - 1 ? 120 : 0;
+  return getExerciseTotalSeconds(exercise) + transitionAfter;
+}
+
+function getWorkoutStats(workout, progress) {
+  const exercises = workout.exercises || [];
+  const totalSets = exercises.reduce((sum, exercise) => sum + Number(exercise.sets || 0), 0);
+  const doneSets = exercises.reduce((sum, exercise) => sum + (progress[exercise.id] ? Number(exercise.sets || 0) : 0), 0);
+  const totalSeconds = getWorkoutDurationSeconds(workout);
+  const doneSeconds = exercises.reduce((sum, exercise, index) => {
+    if (!progress[exercise.id]) return sum;
+    return sum + getExercisePlannedSeconds(workout, exercise, index);
+  }, 0);
+  const percent = totalSets > 0 ? Math.round((doneSets / totalSets) * 100) : 0;
+  return {
+    totalSets,
+    doneSets,
+    percent,
+    totalSeconds,
+    doneSeconds: Math.min(doneSeconds, totalSeconds),
+    remainingSeconds: Math.max(0, totalSeconds - doneSeconds)
+  };
 }
 
 function secondsToClock(seconds) {
@@ -313,7 +342,7 @@ function getAudioContext(audioRef) {
   return audioRef.current;
 }
 
-function playTone(context, frequency, duration = 0.24, delay = 0, volume = 0.56, type = 'sine') {
+function playTone(context, frequency, duration = 0.36, delay = 0, volume = 0.92, type = 'square') {
   if (!context) return;
   const start = context.currentTime + delay;
   const oscillator = context.createOscillator();
@@ -321,12 +350,13 @@ function playTone(context, frequency, duration = 0.24, delay = 0, volume = 0.56,
   oscillator.type = type;
   oscillator.frequency.setValueAtTime(frequency, start);
   gain.gain.setValueAtTime(0.0001, start);
-  gain.gain.exponentialRampToValueAtTime(volume, start + 0.008);
+  gain.gain.exponentialRampToValueAtTime(volume, start + 0.006);
+  gain.gain.setValueAtTime(volume, start + Math.max(0.02, duration - 0.08));
   gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
   oscillator.connect(gain);
   gain.connect(context.destination);
   oscillator.start(start);
-  oscillator.stop(start + duration + 0.08);
+  oscillator.stop(start + duration + 0.10);
 }
 
 function playDoubleCue(context, tones) {
@@ -341,29 +371,29 @@ function playTimerCue(context, kind) {
   // Different pitch + length patterns make the phase recognizable without looking.
   if (kind === 'prep') {
     playDoubleCue(context, [
-      { frequency: 980, duration: 0.24, delay: 0, volume: 0.66, type: 'square' },
-      { frequency: 980, duration: 0.24, delay: 0.34, volume: 0.66, type: 'square' }
+      { frequency: 1040, duration: 0.46, delay: 0, volume: 0.96, type: 'square' },
+      { frequency: 1040, duration: 0.46, delay: 0.56, volume: 0.96, type: 'square' }
     ]);
     return;
   }
   if (kind === 'work') {
     playDoubleCue(context, [
-      { frequency: 700, duration: 0.30, delay: 0, volume: 0.78, type: 'square' },
-      { frequency: 1120, duration: 0.46, delay: 0.40, volume: 0.82, type: 'square' }
+      { frequency: 720, duration: 0.50, delay: 0, volume: 1.00, type: 'square' },
+      { frequency: 1220, duration: 0.72, delay: 0.58, volume: 1.00, type: 'square' }
     ]);
     return;
   }
   if (kind === 'rest') {
     playDoubleCue(context, [
-      { frequency: 380, duration: 0.42, delay: 0, volume: 0.78, type: 'triangle' },
-      { frequency: 285, duration: 0.62, delay: 0.52, volume: 0.82, type: 'triangle' }
+      { frequency: 360, duration: 0.68, delay: 0, volume: 1.00, type: 'sawtooth' },
+      { frequency: 260, duration: 0.88, delay: 0.76, volume: 1.00, type: 'sawtooth' }
     ]);
     return;
   }
   if (kind === 'done') {
     playDoubleCue(context, [
-      { frequency: 820, duration: 0.32, delay: 0, volume: 0.78, type: 'square' },
-      { frequency: 1240, duration: 0.56, delay: 0.42, volume: 0.84, type: 'square' }
+      { frequency: 820, duration: 0.58, delay: 0, volume: 1.00, type: 'square' },
+      { frequency: 1320, duration: 0.82, delay: 0.66, volume: 1.00, type: 'square' }
     ]);
   }
 }
@@ -376,13 +406,71 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   const [dragging, setDragging] = useState(false);
   const audioRef = useRef(null);
   const lastSoundedPhaseRef = useRef(null);
+  const startWallTimeRef = useRef(null);
+  const elapsedAtStartRef = useRef(0);
+  const doneReportedRef = useRef(false);
+  const wakeLockRef = useRef(null);
+
+  function syncElapsedFromClock() {
+    if (!running || dragging || startWallTimeRef.current === null) return;
+    const secondsSinceStart = (Date.now() - startWallTimeRef.current) / 1000;
+    const nextElapsed = Math.min(totalSeconds, elapsedAtStartRef.current + secondsSinceStart);
+    setElapsed(nextElapsed);
+  }
+
+  function stopTimer() {
+    setRunning(false);
+    startWallTimeRef.current = null;
+    elapsedAtStartRef.current = 0;
+  }
+
+  function startTimer(fromElapsed = elapsed) {
+    getAudioContext(audioRef);
+    elapsedAtStartRef.current = Math.min(totalSeconds, Math.max(0, fromElapsed));
+    startWallTimeRef.current = Date.now();
+    setRunning(true);
+  }
 
   useEffect(() => {
     setElapsed(0);
     setRunning(false);
     setDragging(false);
+    startWallTimeRef.current = null;
+    elapsedAtStartRef.current = 0;
+    doneReportedRef.current = false;
     lastSoundedPhaseRef.current = null;
   }, [exercise.id]);
+
+  useEffect(() => {
+    if (!running || !('wakeLock' in navigator)) return undefined;
+    let cancelled = false;
+    navigator.wakeLock?.request?.('screen')
+      .then((lock) => {
+        if (cancelled) {
+          lock.release?.();
+          return;
+        }
+        wakeLockRef.current = lock;
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+      wakeLockRef.current?.release?.();
+      wakeLockRef.current = null;
+    };
+  }, [running]);
+
+  useEffect(() => {
+    function handleVisibilityChange() {
+      syncElapsedFromClock();
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('focus', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('focus', handleVisibilityChange);
+    };
+  });
 
   const progress = totalSeconds > 0 ? Math.min(1, elapsed / totalSeconds) : 0;
   const current = phaseAtElapsed(phases, elapsed);
@@ -398,25 +486,24 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   useEffect(() => {
     if (!running || dragging) return undefined;
     const interval = window.setInterval(() => {
-      setElapsed((currentElapsed) => {
-        const next = Math.min(totalSeconds, currentElapsed + 1);
-        if (next >= totalSeconds) {
-          window.clearInterval(interval);
-          setRunning(false);
-          playTimerCue(getAudioContext(audioRef), 'done');
-          onDone();
-        }
-        return next;
-      });
-    }, 1000);
+      syncElapsedFromClock();
+    }, 250);
     return () => window.clearInterval(interval);
-  }, [running, dragging, totalSeconds, onDone]);
+  });
+
+  useEffect(() => {
+    if (elapsed < totalSeconds || doneReportedRef.current) return;
+    doneReportedRef.current = true;
+    stopTimer();
+    playTimerCue(getAudioContext(audioRef), 'done');
+    onDone();
+  }, [elapsed, totalSeconds, onDone]);
+
   const size = 210;
   const center = size / 2;
   const outerRadius = 88;
   const innerRadius = 67;
   const outerStroke = 12;
-  const innerStroke = 13;
   const outerCircumference = 2 * Math.PI * outerRadius;
   const angle = progress * 2 * Math.PI - Math.PI / 2;
   const dotRadius = outerRadius;
@@ -430,7 +517,11 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
     let nextAngle = Math.atan2(y, x) + Math.PI / 2;
     if (nextAngle < 0) nextAngle += 2 * Math.PI;
     const nextProgress = nextAngle / (2 * Math.PI);
-    setElapsed(Math.round(nextProgress * totalSeconds));
+    const nextElapsed = Math.min(totalSeconds, Math.max(0, Math.round(nextProgress * totalSeconds)));
+    setElapsed(nextElapsed);
+    elapsedAtStartRef.current = nextElapsed;
+    startWallTimeRef.current = Date.now();
+    doneReportedRef.current = false;
   }
 
   let phaseCursor = 0;
@@ -452,7 +543,10 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
             onPointerMove={(event) => {
               if (dragging) setFromPointer(event);
             }}
-            onPointerUp={() => setDragging(false)}
+            onPointerUp={() => {
+              setDragging(false);
+              if (running) startTimer(elapsedAtStartRef.current);
+            }}
             onPointerCancel={() => setDragging(false)}
           >
             <circle className="timer-track" cx={center} cy={center} r={outerRadius} strokeWidth={outerStroke} />
@@ -496,8 +590,12 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
             className="timer-center"
             type="button"
             onClick={() => {
-              getAudioContext(audioRef);
-              setRunning((value) => !value);
+              if (running) {
+                syncElapsedFromClock();
+                stopTimer();
+              } else {
+                startTimer(elapsed);
+              }
             }}
             aria-label={running ? 'Pause timer' : 'Play timer'}
           >
@@ -508,8 +606,8 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
           </button>
         </div>
         <div className="timer-side-controls">
-          <button type="button" onClick={() => { setRunning(false); setElapsed(0); lastSoundedPhaseRef.current = null; }}>Reset</button>
-          <button type="button" className={isDone ? 'checked' : ''} onClick={onToggleDone}>{isDone ? 'Undo' : 'Done'}</button>
+          <button type="button" onClick={() => { stopTimer(); setElapsed(0); doneReportedRef.current = false; lastSoundedPhaseRef.current = null; }}>Reset</button>
+          <button type="button" className={isDone ? 'checked undo-state' : 'done-state'} onClick={onToggleDone}>{isDone ? 'Undo' : 'Done'}</button>
         </div>
       </div>
     </section>
@@ -524,7 +622,7 @@ function ExerciseDetailModal({ exercise, isDone, onClose, onDone, onToggleDone }
           <div>
             <span>{exerciseTypeLabel(exercise)} · {exercise.sets} × {exercise.reps}</span>
             <h2>{exercise.name}</h2>
-            <p>{exercise.sets} sets · {exercise.setSeconds}s work · {exercise.restSeconds}s rest · 10s prep before every set · ca. {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))}</p>
+            <p>{exercise.sets} sets · {exercise.setSeconds}s work · {exercise.restSeconds}s rest · 15s prep before every set · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))}</p>
           </div>
           <button className="close-button" onClick={onClose} aria-label="Close">×</button>
         </div>
@@ -567,6 +665,7 @@ export default function App() {
     if (!selectedExerciseId || !selectedGymWorkout) return null;
     return selectedGymWorkout.exercises.find((exercise) => exercise.id === selectedExerciseId) || null;
   }, [selectedExerciseId, selectedGymWorkout]);
+  const selectedGymStats = selectedGymWorkout ? getWorkoutStats(selectedGymWorkout, progress) : null;
 
   const mandatoryRuns = week.runs.filter((run) => !run.optional);
   const totalMandatoryKm = mandatoryRuns.reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
@@ -644,8 +743,9 @@ export default function App() {
 
   function updateExercise(workout, exerciseId, done) {
     const nextProgress = { ...progress, [exerciseId]: done };
-    const allDone = workout.exercises.every((exercise) => nextProgress[exercise.id]);
-    nextProgress[workout.id] = allDone;
+    const stats = getWorkoutStats(workout, nextProgress);
+    const autoWorkoutDone = stats.totalSets > 0 && stats.doneSets / stats.totalSets >= 0.5;
+    nextProgress[workout.id] = autoWorkoutDone;
     setProgress(nextProgress);
 
     if (supabase) {
@@ -658,7 +758,7 @@ export default function App() {
       supabase.from('run_progress').upsert({
         user_key: SYNC_KEY,
         run_id: workout.id,
-        done: allDone,
+        done: autoWorkoutDone,
         updated_at: new Date().toISOString()
       });
     }
@@ -799,6 +899,7 @@ export default function App() {
         {gymWorkouts.map((workout) => {
           const status = gymStatusFor(workout);
           const doneExercises = workout.exercises.filter((exercise) => progress[exercise.id]).length;
+          const stats = getWorkoutStats(workout, progress);
           return (
             <button
               key={workout.id}
@@ -809,9 +910,9 @@ export default function App() {
               <div className="run-summary">
                 <div className="title-row">
                   <strong>{workout.title}</strong>
-                  <span className="category-badge gym-badge">ca. {getWorkoutDurationMinutes(workout)} min</span>
+                  <span className="category-badge gym-badge">{getWorkoutDurationMinutes(workout)} min</span>
                 </div>
-                <span>{workout.subtitle} · {doneExercises}/{workout.exercises.length} exercises · incl. 2 min transitions</span>
+                <span>{workout.subtitle} · {doneExercises}/{workout.exercises.length} exercises · {stats.doneSets}/{stats.totalSets} sets · {stats.percent}% · {formatDurationFromSeconds(stats.totalSeconds)}</span>
               </div>
               <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
             </button>
@@ -1029,25 +1130,44 @@ export default function App() {
               <div>
                 <span>{selectedGymWorkout.plannedDay} · {formatDateObject(plannedDateForGym(week, selectedGymWorkout))}</span>
                 <h2>{selectedGymWorkout.title}</h2>
-                <p>{selectedGymWorkout.subtitle} · ca. {getWorkoutDurationMinutes(selectedGymWorkout)} min · incl. 2 min between exercises</p>
+                <p>{selectedGymWorkout.subtitle} · {getWorkoutDurationMinutes(selectedGymWorkout)} min · incl. 2 min between exercises</p>
               </div>
               <button className="close-button" onClick={() => setSelectedGymWorkoutId(null)} aria-label="Close">×</button>
             </div>
+
+            <section className="gym-workout-stats">
+              <div>
+                <span>Planned done</span>
+                <strong>{formatDurationFromSeconds(selectedGymStats.doneSeconds)}</strong>
+              </div>
+              <div>
+                <span>Still open</span>
+                <strong>{formatDurationFromSeconds(selectedGymStats.remainingSeconds)}</strong>
+              </div>
+              <div>
+                <span>Sets</span>
+                <strong>{selectedGymStats.doneSets}/{selectedGymStats.totalSets}</strong>
+              </div>
+              <div>
+                <span>Progress</span>
+                <strong>{selectedGymStats.percent}%</strong>
+              </div>
+            </section>
 
             <div className="gym-exercise-list">
               {selectedGymWorkout.exercises.map((exercise) => (
                 <button
                   key={exercise.id}
-                  className={`exercise-card ${exerciseTypeClass(exercise)} ${progress[exercise.id] ? 'done' : ''}`}
+                  className={`exercise-card ${exerciseTypeClass(exercise)} ${progress[exercise.id] ? 'done' : 'not-done'}`}
                   onClick={() => setSelectedExerciseId(exercise.id)}
                 >
                   <div className="exercise-order">{exercise.order}</div>
                   <div className="exercise-card-main">
                     <strong>{exercise.name}</strong>
-                    <span>{exercise.sets} × {exercise.reps} · ca. {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {exercise.setSeconds}s work · {exercise.restSeconds}s rest</span>
+                    <span>{exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {exercise.setSeconds}s work · {exercise.restSeconds}s rest</span>
                   </div>
                   <div className="exercise-type-pill">{exerciseTypeLabel(exercise)}</div>
-                  <div className="exercise-done">{progress[exercise.id] ? '✓' : 'open'}</div>
+                  <div className="exercise-done">{progress[exercise.id] ? 'Done' : 'Open'}</div>
                 </button>
               ))}
             </div>

@@ -1,10 +1,10 @@
-const PREP_SECONDS = 10;
+const PREP_SECONDS = 15;
 
 export const gymTemplates = [
   {
     key: 'gym-a',
     plannedDay: 'Wednesday',
-    title: 'Gym A',
+    title: 'Upper + Shin',
     subtitle: 'Upper Body + Shin/Calves',
     durationMin: 70,
     exercises: [
@@ -109,7 +109,7 @@ export const gymTemplates = [
   {
     key: 'gym-b',
     plannedDay: 'Friday',
-    title: 'Gym B',
+    title: 'Strength + Upper',
     subtitle: 'Running Strength + Upper Body',
     durationMin: 75,
     exercises: [
