@@ -11,3 +11,6 @@ Changes:
 - Timer phases: 10s preparation before every set, work phase, rest phase.
 - Timer supports play, pause, reset, and draggable progress point on the circle.
 - Tibialis exercise is named Tibialis Raises and includes cable/foot strap plus alternatives.
+
+
+v34: Added different sound cues for preparation, training, rest and done in the exercise timer. Play/Pause still works by tapping the center of the timer circle.

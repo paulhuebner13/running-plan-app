@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { trainingPlan } from './trainingPlan.js';
 import { getGymWorkoutsForWeek } from './gymPlan.js';
@@ -299,27 +299,93 @@ function phaseAtElapsed(phases, elapsed) {
   return { phase: phases[phases.length - 1], index: phases.length - 1, elapsedInPhase: 0, remainingInPhase: 0 };
 }
 
+
+function getAudioContext(audioRef) {
+  if (typeof window === 'undefined') return null;
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) return null;
+  if (!audioRef.current) {
+    audioRef.current = new AudioContextClass();
+  }
+  if (audioRef.current.state === 'suspended') {
+    audioRef.current.resume?.();
+  }
+  return audioRef.current;
+}
+
+function playTone(context, frequency, duration = 0.12, delay = 0, volume = 0.18) {
+  if (!context) return;
+  const start = context.currentTime + delay;
+  const oscillator = context.createOscillator();
+  const gain = context.createGain();
+  oscillator.type = 'sine';
+  oscillator.frequency.setValueAtTime(frequency, start);
+  gain.gain.setValueAtTime(0.0001, start);
+  gain.gain.exponentialRampToValueAtTime(volume, start + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+  oscillator.connect(gain);
+  gain.connect(context.destination);
+  oscillator.start(start);
+  oscillator.stop(start + duration + 0.03);
+}
+
+function playTimerCue(context, kind) {
+  if (!context) return;
+  if (kind === 'prep') {
+    playTone(context, 880, 0.10, 0, 0.13);
+    return;
+  }
+  if (kind === 'work') {
+    playTone(context, 660, 0.08, 0, 0.18);
+    playTone(context, 990, 0.12, 0.10, 0.20);
+    return;
+  }
+  if (kind === 'rest') {
+    playTone(context, 420, 0.18, 0, 0.14);
+    return;
+  }
+  if (kind === 'done') {
+    playTone(context, 740, 0.10, 0, 0.16);
+    playTone(context, 1040, 0.16, 0.13, 0.18);
+  }
+}
+
 function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   const phases = useMemo(() => buildExercisePhases(exercise), [exercise]);
   const totalSeconds = useMemo(() => phases.reduce((sum, phase) => sum + phase.seconds, 0), [phases]);
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
   const [dragging, setDragging] = useState(false);
+  const audioRef = useRef(null);
+  const lastSoundedPhaseRef = useRef(null);
 
   useEffect(() => {
     setElapsed(0);
     setRunning(false);
     setDragging(false);
+    lastSoundedPhaseRef.current = null;
   }, [exercise.id]);
+
+  const progress = totalSeconds > 0 ? Math.min(1, elapsed / totalSeconds) : 0;
+  const current = phaseAtElapsed(phases, elapsed);
+
+  useEffect(() => {
+    if (!running || !current.phase) return;
+    const phaseKey = `${exercise.id}-${current.index}`;
+    if (lastSoundedPhaseRef.current === phaseKey) return;
+    lastSoundedPhaseRef.current = phaseKey;
+    playTimerCue(getAudioContext(audioRef), current.phase.kind);
+  }, [running, current.index, current.phase, exercise.id]);
 
   useEffect(() => {
     if (!running || dragging) return undefined;
     const interval = window.setInterval(() => {
-      setElapsed((current) => {
-        const next = Math.min(totalSeconds, current + 1);
+      setElapsed((currentElapsed) => {
+        const next = Math.min(totalSeconds, currentElapsed + 1);
         if (next >= totalSeconds) {
           window.clearInterval(interval);
           setRunning(false);
+          playTimerCue(getAudioContext(audioRef), 'done');
           onDone();
         }
         return next;
@@ -327,9 +393,6 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
     }, 1000);
     return () => window.clearInterval(interval);
   }, [running, dragging, totalSeconds, onDone]);
-
-  const progress = totalSeconds > 0 ? Math.min(1, elapsed / totalSeconds) : 0;
-  const current = phaseAtElapsed(phases, elapsed);
   const size = 210;
   const center = size / 2;
   const outerRadius = 88;
@@ -408,7 +471,10 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
           <button
             className="timer-center"
             type="button"
-            onClick={() => setRunning((value) => !value)}
+            onClick={() => {
+              getAudioContext(audioRef);
+              setRunning((value) => !value);
+            }}
             aria-label={running ? 'Pause timer' : 'Play timer'}
           >
             <span>{current.phase.label}</span>
@@ -418,7 +484,7 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
           </button>
         </div>
         <div className="timer-side-controls">
-          <button type="button" onClick={() => { setRunning(false); setElapsed(0); }}>Reset</button>
+          <button type="button" onClick={() => { setRunning(false); setElapsed(0); lastSoundedPhaseRef.current = null; }}>Reset</button>
           <button type="button" className={isDone ? 'checked' : ''} onClick={onToggleDone}>{isDone ? 'Undo' : 'Done'}</button>
         </div>
       </div>
