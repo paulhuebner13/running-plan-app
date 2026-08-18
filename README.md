@@ -1,1 +1,1 @@
-v39: shorter/quieter gym sounds, no sounds while dragging timer, richer workout overview stats.
+Running Plan App v40 - close gym workout on Done/Undo and preserve workout list scroll position.

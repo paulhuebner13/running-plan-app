@@ -651,6 +651,7 @@ export default function App() {
   const [selectedRunId, setSelectedRunId] = useState(null);
   const [selectedGymWorkoutId, setSelectedGymWorkoutId] = useState(null);
   const [selectedExerciseId, setSelectedExerciseId] = useState(null);
+  const gymListScrollYRef = useRef(0);
   const [progress, setProgress] = useState({});
   const [view, setView] = useState('week');
   const [mode, setMode] = useState('running');
@@ -745,11 +746,75 @@ export default function App() {
     updateProgress(runId, done);
   }
 
+  function workoutManualKey(workoutId) {
+    return `${workoutId}__manual`;
+  }
+
+  async function updateWorkoutManual(workoutId, done) {
+    const manualKey = workoutManualKey(workoutId);
+    setProgress((current) => ({
+      ...current,
+      [workoutId]: done,
+      [manualKey]: true
+    }));
+
+    if (!supabase) return;
+
+    await supabase.from('run_progress').upsert([
+      {
+        user_key: SYNC_KEY,
+        run_id: workoutId,
+        done,
+        updated_at: new Date().toISOString()
+      },
+      {
+        user_key: SYNC_KEY,
+        run_id: manualKey,
+        done: true,
+        updated_at: new Date().toISOString()
+      }
+    ]);
+  }
+
+  function rememberScrollPosition() {
+    gymListScrollYRef.current = window.scrollY || document.documentElement.scrollTop || 0;
+  }
+
+  function restoreScrollPosition() {
+    const targetY = gymListScrollYRef.current || 0;
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: targetY, left: 0, behavior: 'auto' });
+      requestAnimationFrame(() => window.scrollTo({ top: targetY, left: 0, behavior: 'auto' }));
+    });
+  }
+
+  function openGymWorkout(workoutId) {
+    rememberScrollPosition();
+    setSelectedGymWorkoutId(workoutId);
+    setSelectedExerciseId(null);
+  }
+
+  function closeGymWorkout() {
+    setSelectedGymWorkoutId(null);
+    setSelectedExerciseId(null);
+    restoreScrollPosition();
+  }
+
+  function closeExerciseDetail() {
+    setSelectedExerciseId(null);
+  }
+
   function updateExercise(workout, exerciseId, done) {
     const nextProgress = { ...progress, [exerciseId]: done };
     const stats = getWorkoutStats(workout, nextProgress);
     const autoWorkoutDone = stats.totalSets > 0 && stats.doneSets / stats.totalSets >= 0.5;
-    nextProgress[workout.id] = autoWorkoutDone;
+    const manualKey = workoutManualKey(workout.id);
+    const hasManualWorkoutStatus = Boolean(nextProgress[manualKey]);
+
+    if (!hasManualWorkoutStatus) {
+      nextProgress[workout.id] = autoWorkoutDone;
+    }
+
     setProgress(nextProgress);
 
     if (supabase) {
@@ -759,12 +824,15 @@ export default function App() {
         done,
         updated_at: new Date().toISOString()
       });
-      supabase.from('run_progress').upsert({
-        user_key: SYNC_KEY,
-        run_id: workout.id,
-        done: autoWorkoutDone,
-        updated_at: new Date().toISOString()
-      });
+
+      if (!hasManualWorkoutStatus) {
+        supabase.from('run_progress').upsert({
+          user_key: SYNC_KEY,
+          run_id: workout.id,
+          done: autoWorkoutDone,
+          updated_at: new Date().toISOString()
+        });
+      }
     }
   }
 
@@ -908,7 +976,7 @@ export default function App() {
             <button
               key={workout.id}
               className={`gym-workout-card ${status}`}
-              onClick={() => setSelectedGymWorkoutId(workout.id)}
+              onClick={() => openGymWorkout(workout.id)}
             >
               <div className="run-number gym-day">{DAY_SHORT[workout.plannedDay]}</div>
               <div className="run-summary">
@@ -1134,7 +1202,7 @@ export default function App() {
       )}
 
       {selectedGymWorkout && !selectedExercise && (
-        <section className="modal-backdrop" onClick={() => setSelectedGymWorkoutId(null)}>
+        <section className="modal-backdrop" onClick={closeGymWorkout}>
           <article className="run-modal gym-modal" onClick={(event) => event.stopPropagation()}>
             <div className="modal-header gym-modal-header">
               <div>
@@ -1142,7 +1210,7 @@ export default function App() {
                 <h2>{selectedGymWorkout.title}</h2>
                 <p>{selectedGymWorkout.subtitle} · {getWorkoutDurationMinutes(selectedGymWorkout)} min · incl. 2 min between exercises</p>
               </div>
-              <button className="close-button" onClick={() => setSelectedGymWorkoutId(null)} aria-label="Close">×</button>
+              <button className="close-button" onClick={closeGymWorkout} aria-label="Close">×</button>
             </div>
 
             <section className="gym-workout-stats">
@@ -1187,9 +1255,8 @@ export default function App() {
                 className={`modal-check-button gym-finish-button ${progress[selectedGymWorkout.id] ? 'checked' : ''}`}
                 onClick={() => {
                   const nextDone = !progress[selectedGymWorkout.id];
-                  updateProgress(selectedGymWorkout.id, nextDone);
-                  selectedGymWorkout.exercises.forEach((exercise) => updateProgress(exercise.id, nextDone));
-                  setSelectedGymWorkoutId(null);
+                  updateWorkoutManual(selectedGymWorkout.id, nextDone);
+                  closeGymWorkout();
                 }}
               >
                 {progress[selectedGymWorkout.id] ? 'Undo workout' : 'Mark workout as done'}
@@ -1203,12 +1270,13 @@ export default function App() {
         <ExerciseDetailModal
           exercise={selectedExercise}
           isDone={Boolean(progress[selectedExercise.id])}
-          onClose={() => setSelectedExerciseId(null)}
+          onClose={closeExerciseDetail}
           onDone={() => {
             updateExercise(selectedGymWorkout, selectedExercise.id, true);
           }}
           onToggleDone={() => {
             updateExercise(selectedGymWorkout, selectedExercise.id, !progress[selectedExercise.id]);
+            closeExerciseDetail();
           }}
         />
       )}
