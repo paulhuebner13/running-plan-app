@@ -313,40 +313,56 @@ function getAudioContext(audioRef) {
   return audioRef.current;
 }
 
-function playTone(context, frequency, duration = 0.12, delay = 0, volume = 0.18) {
+function playTone(context, frequency, duration = 0.12, delay = 0, volume = 0.26, type = 'sine') {
   if (!context) return;
   const start = context.currentTime + delay;
   const oscillator = context.createOscillator();
   const gain = context.createGain();
-  oscillator.type = 'sine';
+  oscillator.type = type;
   oscillator.frequency.setValueAtTime(frequency, start);
   gain.gain.setValueAtTime(0.0001, start);
-  gain.gain.exponentialRampToValueAtTime(volume, start + 0.015);
+  gain.gain.exponentialRampToValueAtTime(volume, start + 0.012);
   gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
   oscillator.connect(gain);
   gain.connect(context.destination);
   oscillator.start(start);
-  oscillator.stop(start + duration + 0.03);
+  oscillator.stop(start + duration + 0.04);
+}
+
+function playDoubleCue(context, tones) {
+  tones.forEach((tone) => {
+    playTone(context, tone.frequency, tone.duration, tone.delay, tone.volume, tone.type || 'sine');
+  });
 }
 
 function playTimerCue(context, kind) {
   if (!context) return;
   if (kind === 'prep') {
-    playTone(context, 880, 0.10, 0, 0.13);
+    playDoubleCue(context, [
+      { frequency: 920, duration: 0.11, delay: 0, volume: 0.25 },
+      { frequency: 920, duration: 0.11, delay: 0.17, volume: 0.25 }
+    ]);
     return;
   }
   if (kind === 'work') {
-    playTone(context, 660, 0.08, 0, 0.18);
-    playTone(context, 990, 0.12, 0.10, 0.20);
+    playDoubleCue(context, [
+      { frequency: 620, duration: 0.16, delay: 0, volume: 0.32, type: 'triangle' },
+      { frequency: 1040, duration: 0.24, delay: 0.22, volume: 0.34, type: 'triangle' }
+    ]);
     return;
   }
   if (kind === 'rest') {
-    playTone(context, 420, 0.18, 0, 0.14);
+    playDoubleCue(context, [
+      { frequency: 360, duration: 0.24, delay: 0, volume: 0.31 },
+      { frequency: 300, duration: 0.34, delay: 0.30, volume: 0.31 }
+    ]);
     return;
   }
   if (kind === 'done') {
-    playTone(context, 740, 0.10, 0, 0.16);
-    playTone(context, 1040, 0.16, 0.13, 0.18);
+    playDoubleCue(context, [
+      { frequency: 760, duration: 0.14, delay: 0, volume: 0.30 },
+      { frequency: 1180, duration: 0.30, delay: 0.18, volume: 0.34 }
+    ]);
   }
 }
 
@@ -400,8 +416,6 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   const outerStroke = 12;
   const innerStroke = 13;
   const outerCircumference = 2 * Math.PI * outerRadius;
-  const innerCircumference = 2 * Math.PI * innerRadius;
-  const progressOffset = innerCircumference * (1 - progress);
   const angle = progress * 2 * Math.PI - Math.PI / 2;
   const dotX = center + innerRadius * Math.cos(angle);
   const dotY = center + innerRadius * Math.sin(angle);
@@ -440,32 +454,39 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
           >
             <circle className="timer-track" cx={center} cy={center} r={outerRadius} strokeWidth={outerStroke} />
             {phases.map((phase, index) => {
+              const phaseStartSeconds = phases.slice(0, index).reduce((sum, item) => sum + item.seconds, 0);
+              const phaseEndSeconds = phaseStartSeconds + phase.seconds;
               const segmentLength = totalSeconds > 0 ? (phase.seconds / totalSeconds) * outerCircumference : 0;
+              const completedSeconds = Math.max(0, Math.min(elapsed, phaseEndSeconds) - phaseStartSeconds);
+              const completedLength = totalSeconds > 0 ? (completedSeconds / totalSeconds) * outerCircumference : 0;
               const dashOffset = -phaseCursor;
               phaseCursor += segmentLength;
               return (
-                <circle
-                  key={`${phase.kind}-${phase.setIndex}-${index}`}
-                  className={`timer-phase-segment ${phase.colorClass}`}
-                  cx={center}
-                  cy={center}
-                  r={outerRadius}
-                  strokeWidth={outerStroke}
-                  strokeDasharray={`${Math.max(0, segmentLength - 2)} ${outerCircumference}`}
-                  strokeDashoffset={dashOffset}
-                />
+                <React.Fragment key={`${phase.kind}-${phase.setIndex}-${index}`}>
+                  <circle
+                    className={`timer-phase-segment timer-phase-base ${phase.colorClass}`}
+                    cx={center}
+                    cy={center}
+                    r={outerRadius}
+                    strokeWidth={outerStroke}
+                    strokeDasharray={`${Math.max(0, segmentLength - 2)} ${outerCircumference}`}
+                    strokeDashoffset={dashOffset}
+                  />
+                  {completedLength > 0 && (
+                    <circle
+                      className={`timer-phase-segment timer-phase-complete ${phase.colorClass}`}
+                      cx={center}
+                      cy={center}
+                      r={outerRadius}
+                      strokeWidth={outerStroke}
+                      strokeDasharray={`${Math.max(0, completedLength - 2)} ${outerCircumference}`}
+                      strokeDashoffset={dashOffset}
+                    />
+                  )}
+                </React.Fragment>
               );
             })}
-            <circle className="timer-inner-track" cx={center} cy={center} r={innerRadius} strokeWidth={innerStroke} />
-            <circle
-              className="timer-progress"
-              cx={center}
-              cy={center}
-              r={innerRadius}
-              strokeWidth={innerStroke}
-              strokeDasharray={innerCircumference}
-              strokeDashoffset={progressOffset}
-            />
+            <circle className="timer-inner-fill" cx={center} cy={center} r={innerRadius - 8} />
             <circle className="timer-dot" cx={dotX} cy={dotY} r="8" />
           </svg>
           <button
