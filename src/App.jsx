@@ -367,33 +367,33 @@ function playDoubleCue(context, tones) {
 
 function playTimerCue(context, kind) {
   if (!context) return;
-  // Stronger, longer double cues so they are audible over music.
-  // Different pitch + length patterns make the phase recognizable without looking.
+  // Clear but not annoying: shorter and slightly quieter than v37/v38.
+  // Still double cues, with distinct pitch/length for each phase.
   if (kind === 'prep') {
     playDoubleCue(context, [
-      { frequency: 1040, duration: 0.46, delay: 0, volume: 0.96, type: 'square' },
-      { frequency: 1040, duration: 0.46, delay: 0.56, volume: 0.96, type: 'square' }
+      { frequency: 1040, duration: 0.24, delay: 0, volume: 0.72, type: 'square' },
+      { frequency: 1040, duration: 0.24, delay: 0.31, volume: 0.72, type: 'square' }
     ]);
     return;
   }
   if (kind === 'work') {
     playDoubleCue(context, [
-      { frequency: 720, duration: 0.50, delay: 0, volume: 1.00, type: 'square' },
-      { frequency: 1220, duration: 0.72, delay: 0.58, volume: 1.00, type: 'square' }
+      { frequency: 760, duration: 0.26, delay: 0, volume: 0.78, type: 'square' },
+      { frequency: 1220, duration: 0.34, delay: 0.33, volume: 0.78, type: 'square' }
     ]);
     return;
   }
   if (kind === 'rest') {
     playDoubleCue(context, [
-      { frequency: 360, duration: 0.68, delay: 0, volume: 1.00, type: 'sawtooth' },
-      { frequency: 260, duration: 0.88, delay: 0.76, volume: 1.00, type: 'sawtooth' }
+      { frequency: 360, duration: 0.34, delay: 0, volume: 0.74, type: 'sawtooth' },
+      { frequency: 260, duration: 0.44, delay: 0.41, volume: 0.74, type: 'sawtooth' }
     ]);
     return;
   }
   if (kind === 'done') {
     playDoubleCue(context, [
-      { frequency: 820, duration: 0.58, delay: 0, volume: 1.00, type: 'square' },
-      { frequency: 1320, duration: 0.82, delay: 0.66, volume: 1.00, type: 'square' }
+      { frequency: 820, duration: 0.28, delay: 0, volume: 0.78, type: 'square' },
+      { frequency: 1320, duration: 0.40, delay: 0.35, volume: 0.78, type: 'square' }
     ]);
   }
 }
@@ -476,12 +476,12 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   const current = phaseAtElapsed(phases, elapsed);
 
   useEffect(() => {
-    if (!running || !current.phase) return;
+    if (!running || dragging || !current.phase) return;
     const phaseKey = `${exercise.id}-${current.index}`;
     if (lastSoundedPhaseRef.current === phaseKey) return;
     lastSoundedPhaseRef.current = phaseKey;
     playTimerCue(getAudioContext(audioRef), current.phase.kind);
-  }, [running, current.index, current.phase, exercise.id]);
+  }, [running, dragging, current.index, current.phase, exercise.id]);
 
   useEffect(() => {
     if (!running || dragging) return undefined;
@@ -521,6 +521,10 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
     setElapsed(nextElapsed);
     elapsedAtStartRef.current = nextElapsed;
     startWallTimeRef.current = Date.now();
+    const draggedPhase = phaseAtElapsed(phases, nextElapsed);
+    if (draggedPhase?.phase) {
+      lastSoundedPhaseRef.current = `${exercise.id}-${draggedPhase.index}`;
+    }
     doneReportedRef.current = false;
   }
 
@@ -912,7 +916,13 @@ export default function App() {
                   <strong>{workout.title}</strong>
                   <span className="category-badge gym-badge">{getWorkoutDurationMinutes(workout)} min</span>
                 </div>
-                <span>{workout.subtitle} · {doneExercises}/{workout.exercises.length} exercises · {stats.doneSets}/{stats.totalSets} sets · {stats.percent}% · {formatDurationFromSeconds(stats.totalSeconds)}</span>
+                <span>{workout.subtitle}</span>
+                <div className="gym-card-stats" aria-label="Workout stats">
+                  <span>{formatDurationFromSeconds(stats.totalSeconds)}</span>
+                  <span>{stats.doneSets}/{stats.totalSets} sets</span>
+                  <span>{doneExercises}/{workout.exercises.length} exercises</span>
+                  <span>{stats.percent}%</span>
+                </div>
               </div>
               <div className="run-status">{status === 'done' ? '✓' : status === 'missed' ? '!' : 'open'}</div>
             </button>

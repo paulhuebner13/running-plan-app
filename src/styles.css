@@ -2226,3 +2226,47 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     padding: 10px 12px 9px;
   }
 }
+
+/* v39 Gym sound + overview polish */
+.gym-card-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 9px;
+}
+
+.gym-card-stats span {
+  min-width: 0;
+  border: 1.5px solid rgba(255,255,255,0.13);
+  border-radius: 999px;
+  padding: 5px 6px;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.18);
+  white-space: nowrap;
+}
+
+.gym-workout-card.done .gym-card-stats span {
+  border-color: rgba(69,201,121,0.32);
+  background: rgba(69,201,121,0.12);
+}
+
+@media (max-width: 430px) {
+  .gym-workout-card {
+    grid-template-columns: 42px 1fr auto;
+    gap: 8px;
+    padding: 11px;
+  }
+
+  .gym-card-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gym-card-stats span {
+    font-size: 0.69rem;
+    padding: 5px 4px;
+  }
+}

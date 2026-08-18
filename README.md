@@ -1,3 +1,1 @@
-# Running Plan App v36
-
-Timer ring and stronger sound cue update.
+v39: shorter/quieter gym sounds, no sounds while dragging timer, richer workout overview stats.
