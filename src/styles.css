@@ -2050,3 +2050,49 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
 .timer-center small {
   text-align: center !important;
 }
+
+
+/* v36 Timer ring: outer moving dot + fixed full inner phase circle */
+.timer-circle-wrap {
+  position: relative !important;
+}
+
+.timer-track {
+  stroke: rgba(255,255,255,0.09) !important;
+}
+
+.timer-phase-segment {
+  stroke: var(--phase-color, var(--yellow)) !important;
+  stroke-linecap: butt !important;
+}
+
+.timer-phase-base {
+  opacity: 0.24 !important;
+  filter: none !important;
+}
+
+.timer-phase-complete {
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--phase-color, var(--yellow)) 58%, transparent)) !important;
+}
+
+.timer-inner-fill {
+  fill: var(--phase-color, var(--yellow)) !important;
+  opacity: 0.82 !important;
+  stroke: color-mix(in srgb, var(--phase-color, var(--yellow)) 86%, white) !important;
+  stroke-width: 3px !important;
+  filter: drop-shadow(0 0 14px color-mix(in srgb, var(--phase-color, var(--yellow)) 34%, transparent)) !important;
+}
+
+.timer-dot {
+  fill: #fff !important;
+  stroke: var(--phase-color, var(--yellow)) !important;
+  stroke-width: 4px !important;
+  r: 8px;
+  filter: drop-shadow(0 0 9px rgba(0,0,0,0.70)) drop-shadow(0 0 7px color-mix(in srgb, var(--phase-color, var(--yellow)) 50%, transparent)) !important;
+}
+
+.timer-center {
+  background: color-mix(in srgb, var(--phase-color, var(--yellow)) 18%, rgba(17,19,24,0.84)) !important;
+  border-color: color-mix(in srgb, var(--phase-color, var(--yellow)) 70%, rgba(255,255,255,0.08)) !important;
+}

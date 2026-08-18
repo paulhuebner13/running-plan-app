@@ -313,7 +313,7 @@ function getAudioContext(audioRef) {
   return audioRef.current;
 }
 
-function playTone(context, frequency, duration = 0.12, delay = 0, volume = 0.26, type = 'sine') {
+function playTone(context, frequency, duration = 0.24, delay = 0, volume = 0.56, type = 'sine') {
   if (!context) return;
   const start = context.currentTime + delay;
   const oscillator = context.createOscillator();
@@ -321,12 +321,12 @@ function playTone(context, frequency, duration = 0.12, delay = 0, volume = 0.26,
   oscillator.type = type;
   oscillator.frequency.setValueAtTime(frequency, start);
   gain.gain.setValueAtTime(0.0001, start);
-  gain.gain.exponentialRampToValueAtTime(volume, start + 0.012);
+  gain.gain.exponentialRampToValueAtTime(volume, start + 0.008);
   gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
   oscillator.connect(gain);
   gain.connect(context.destination);
   oscillator.start(start);
-  oscillator.stop(start + duration + 0.04);
+  oscillator.stop(start + duration + 0.08);
 }
 
 function playDoubleCue(context, tones) {
@@ -337,31 +337,33 @@ function playDoubleCue(context, tones) {
 
 function playTimerCue(context, kind) {
   if (!context) return;
+  // Stronger, longer double cues so they are audible over music.
+  // Different pitch + length patterns make the phase recognizable without looking.
   if (kind === 'prep') {
     playDoubleCue(context, [
-      { frequency: 920, duration: 0.11, delay: 0, volume: 0.25 },
-      { frequency: 920, duration: 0.11, delay: 0.17, volume: 0.25 }
+      { frequency: 980, duration: 0.24, delay: 0, volume: 0.66, type: 'square' },
+      { frequency: 980, duration: 0.24, delay: 0.34, volume: 0.66, type: 'square' }
     ]);
     return;
   }
   if (kind === 'work') {
     playDoubleCue(context, [
-      { frequency: 620, duration: 0.16, delay: 0, volume: 0.32, type: 'triangle' },
-      { frequency: 1040, duration: 0.24, delay: 0.22, volume: 0.34, type: 'triangle' }
+      { frequency: 700, duration: 0.30, delay: 0, volume: 0.78, type: 'square' },
+      { frequency: 1120, duration: 0.46, delay: 0.40, volume: 0.82, type: 'square' }
     ]);
     return;
   }
   if (kind === 'rest') {
     playDoubleCue(context, [
-      { frequency: 360, duration: 0.24, delay: 0, volume: 0.31 },
-      { frequency: 300, duration: 0.34, delay: 0.30, volume: 0.31 }
+      { frequency: 380, duration: 0.42, delay: 0, volume: 0.78, type: 'triangle' },
+      { frequency: 285, duration: 0.62, delay: 0.52, volume: 0.82, type: 'triangle' }
     ]);
     return;
   }
   if (kind === 'done') {
     playDoubleCue(context, [
-      { frequency: 760, duration: 0.14, delay: 0, volume: 0.30 },
-      { frequency: 1180, duration: 0.30, delay: 0.18, volume: 0.34 }
+      { frequency: 820, duration: 0.32, delay: 0, volume: 0.78, type: 'square' },
+      { frequency: 1240, duration: 0.56, delay: 0.42, volume: 0.84, type: 'square' }
     ]);
   }
 }
@@ -417,8 +419,9 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   const innerStroke = 13;
   const outerCircumference = 2 * Math.PI * outerRadius;
   const angle = progress * 2 * Math.PI - Math.PI / 2;
-  const dotX = center + innerRadius * Math.cos(angle);
-  const dotY = center + innerRadius * Math.sin(angle);
+  const dotRadius = outerRadius;
+  const dotX = center + dotRadius * Math.cos(angle);
+  const dotY = center + dotRadius * Math.sin(angle);
 
   function setFromPointer(event) {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -486,7 +489,7 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
                 </React.Fragment>
               );
             })}
-            <circle className="timer-inner-fill" cx={center} cy={center} r={innerRadius - 8} />
+            <circle className="timer-inner-fill" cx={center} cy={center} r={innerRadius - 6} />
             <circle className="timer-dot" cx={dotX} cy={dotY} r="8" />
           </svg>
           <button
