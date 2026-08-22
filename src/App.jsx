@@ -119,28 +119,46 @@ function getRunMinutes(run) {
   return Math.round((run.steps || []).reduce((sum, step) => sum + getStepMinutes(step), 0));
 }
 
+function formatReadableDurationFromSeconds(totalSeconds) {
+  const seconds = Math.round(Number(totalSeconds || 0));
+  if (seconds <= 0) return '—';
+  if (seconds < 60) return `${seconds} sec`;
+
+  const totalMinutes = Math.round(seconds / 60);
+  if (totalMinutes < 60) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    if (secs === 0) return `${mins} min`;
+    return `${mins}:${String(secs).padStart(2, '0')} min`;
+  }
+
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.round((seconds % 3600) / 60);
+  if (minutes === 60) return `${hours + 1}:00 h`;
+  return `${hours}:${String(minutes).padStart(2, '0')} h`;
+}
+
 function formatStepDuration(step) {
   if (step.displayDuration) return step.displayDuration;
-  if (step.seconds && !step.minutes) return `${step.seconds} s`;
-  const total = getStepMinutes(step);
-  if (total < 1 && total > 0) return `${Math.round(total * 60)} s`;
-  return `${Math.round(total)} min`;
+  const totalSeconds = Number(step.seconds || 0) + Number(step.minutes || 0) * 60;
+  return formatReadableDurationFromSeconds(totalSeconds);
 }
 
 function parseRepeatedStep(step) {
   const label = String(step.label || '');
   const minuteMatch = label.match(/(\d+)\s*[×x]\s*(\d+)\s*min/i);
-  const secondMatch = label.match(/(\d+)\s*[×x]\s*(\d+)\s*s/i);
+  const secondMatch = label.match(/(\d+)\s*[×x]\s*(\d+)\s*(?:sec|s)/i);
   const match = minuteMatch || secondMatch;
   if (!match) return null;
 
   const reps = Number(match[1]);
   const amountPerRep = Number(match[2]);
+  const secondsPerRep = minuteMatch ? amountPerRep * 60 : amountPerRep;
   const kmPerRep = Number(step.km || 0) / reps;
 
   return {
     reps,
-    displayDuration: minuteMatch ? `${amountPerRep} min each` : `${amountPerRep} s each`,
+    displayDuration: formatReadableDurationFromSeconds(secondsPerRep),
     kmPerRep: Number.isFinite(kmPerRep) ? kmPerRep : step.km
   };
 }
@@ -626,7 +644,7 @@ function ExerciseDetailModal({ exercise, isDone, onClose, onDone, onToggleDone }
           <div>
             <span>{exerciseTypeLabel(exercise)} · {exercise.sets} × {exercise.reps}</span>
             <h2>{exercise.name}</h2>
-            <p>{exercise.sets} sets · {exercise.setSeconds}s work · {exercise.restSeconds}s rest · 15s prep before every set · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))}</p>
+            <p>{exercise.sets} sets · {formatReadableDurationFromSeconds(exercise.setSeconds)} work · {formatReadableDurationFromSeconds(exercise.restSeconds)} rest · 15 sec prep before every set · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))}</p>
           </div>
           <button className="close-button" onClick={onClose} aria-label="Close">×</button>
         </div>
@@ -1242,7 +1260,7 @@ export default function App() {
                   <div className="exercise-order">{exercise.order}</div>
                   <div className="exercise-card-main">
                     <strong>{exercise.name}</strong>
-                    <span>{exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {exercise.setSeconds}s work · {exercise.restSeconds}s rest</span>
+                    <span>{exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {formatReadableDurationFromSeconds(exercise.setSeconds)} work · {formatReadableDurationFromSeconds(exercise.restSeconds)} rest</span>
                   </div>
                   <div className="exercise-type-pill">{exerciseTypeLabel(exercise)}</div>
                   <div className="exercise-done">{progress[exercise.id] ? 'Done' : 'Open'}</div>

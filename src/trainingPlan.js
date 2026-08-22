@@ -84,7 +84,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -93,7 +93,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -276,7 +276,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -285,7 +285,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -460,7 +460,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -469,7 +469,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -652,7 +652,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -661,7 +661,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -836,7 +836,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -845,7 +845,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -976,7 +976,7 @@ export const trainingPlan = [
             "km": 5.5
           },
           {
-            "label": "4 × 20 s Strides",
+            "label": "4 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 80,
             "hr": 192,
@@ -985,7 +985,7 @@ export const trainingPlan = [
             "notes": "Short relaxed strides only."
           },
           {
-            "label": "3 × 90 s Full Recovery",
+            "label": "3 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 270,
             "hr": 145,
@@ -1177,7 +1177,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -1186,7 +1186,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -1335,7 +1335,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -1344,7 +1344,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -1492,7 +1492,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -1501,7 +1501,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -1650,7 +1650,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -1659,7 +1659,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -1834,7 +1834,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -1843,7 +1843,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -1992,7 +1992,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -2001,7 +2001,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -2175,7 +2175,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -2184,7 +2184,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -2342,7 +2342,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -2351,7 +2351,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -2541,7 +2541,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -2550,7 +2550,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -2699,7 +2699,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -2708,7 +2708,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -2857,7 +2857,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -2866,7 +2866,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -3040,7 +3040,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -3049,7 +3049,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -3224,7 +3224,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -3233,7 +3233,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -3382,7 +3382,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -3391,7 +3391,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -3565,7 +3565,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -3574,7 +3574,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -3723,7 +3723,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -3732,7 +3732,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -3907,7 +3907,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -3916,7 +3916,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -4065,7 +4065,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -4074,7 +4074,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -4239,7 +4239,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -4248,7 +4248,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -4432,7 +4432,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -4441,7 +4441,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -4615,7 +4615,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -4624,7 +4624,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -4773,7 +4773,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -4782,7 +4782,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -4940,7 +4940,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -4949,7 +4949,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -5097,7 +5097,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -5106,7 +5106,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -5280,7 +5280,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -5289,7 +5289,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -5438,7 +5438,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -5447,7 +5447,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -5621,7 +5621,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -5630,7 +5630,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -5779,7 +5779,7 @@ export const trainingPlan = [
             "km": 7.2
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -5788,7 +5788,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -5937,7 +5937,7 @@ export const trainingPlan = [
             "km": 6.5
           },
           {
-            "label": "6 × 20 s Strides",
+            "label": "6 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 120,
             "hr": 192,
@@ -5946,7 +5946,7 @@ export const trainingPlan = [
             "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. 6 fast strides, 5 recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
+            "label": "5 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 450,
             "hr": 145,
@@ -6069,7 +6069,7 @@ export const trainingPlan = [
             "km": 5.0
           },
           {
-            "label": "4 × 20 s Strides",
+            "label": "4 × 20 secec Strides",
             "pace": "4:10",
             "seconds": 80,
             "hr": 192,
@@ -6078,7 +6078,7 @@ export const trainingPlan = [
             "notes": "Short relaxed strides only."
           },
           {
-            "label": "3 × 90 s Full Recovery",
+            "label": "3 × 90 secec Full Recovery",
             "pace": "7:45",
             "seconds": 270,
             "hr": 145,
