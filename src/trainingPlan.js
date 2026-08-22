@@ -4,57 +4,15 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-08-10",
     "endDate": "2026-08-16",
-    "targetKm": 50.01,
+    "targetKm": 44.95,
     "focus": "70% 5K / 30% Half Marathon",
     "runs": [
       {
-        "id": "kw33-run1",
+        "id": "2026-kw33-run1",
         "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.47 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.47,
-        "minutes": 74,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:08",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 64,
-            "pace": "7:08",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 8.97
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:45",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.97,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw33-run2",
-        "order": 2,
         "title": "Interval Run",
         "category": "Interval Run",
-        "plannedDay": "Thursday",
+        "plannedDay": "Tuesday",
         "subtitle": "55 min · 8.94 km",
         "type": "interval-run",
         "distanceKm": 8.94,
@@ -63,38 +21,38 @@ export const trainingPlan = [
         "hrRange": "184-194",
         "pace": "4:30",
         "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "5K-specific quality before the Vienna Night Run.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 15,
             "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
             "km": 2.1
           },
           {
             "label": "6 × 3 min 5K Pace",
-            "minutes": 18,
             "pace": "4:30",
+            "minutes": 18,
             "hr": 188,
             "hrRange": "184-194",
             "km": 4.0,
-            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 6 hard reps are done."
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Six hard reps, five recoveries."
           },
           {
             "label": "5 × 2 min Easy Recovery",
-            "minutes": 10,
             "pace": "7:45",
+            "minutes": 10,
             "hr": 148,
             "hrRange": "140-155",
             "km": 1.29,
-            "notes": "Recovery between reps only: 5 recoveries total, not after the final rep."
+            "notes": "Recovery between reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 12,
             "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
             "km": 1.55
@@ -102,11 +60,495 @@ export const trainingPlan = [
         ]
       },
       {
-        "id": "kw33-run3",
+        "id": "2026-kw33-run2",
+        "order": 2,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 7.81,
+        "minutes": 54,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 45,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 6.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
+          }
+        ]
+      },
+      {
+        "id": "2026-kw33-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
+        "subtitle": "87 min · 12.20 km",
+        "type": "easy-run",
+        "distanceKm": 12.2,
+        "minutes": 87,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 87,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 12.2
+          }
+        ]
+      },
+      {
+        "id": "2026-kw33-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
+        "plannedDay": "Sunday",
+        "subtitle": "116 min · 16.00 km",
+        "type": "long-run",
+        "distanceKm": 16.0,
+        "minutes": 116,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
+          {
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 116,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 16.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 34,
+    "year": 2026,
+    "startDate": "2026-08-17",
+    "endDate": "2026-08-23",
+    "targetKm": 45.92,
+    "focus": "70% 5K / 30% Half Marathon",
+    "runs": [
+      {
+        "id": "2026-kw34-run1",
+        "order": 1,
+        "title": "Interval Run",
+        "category": "Interval Run",
+        "plannedDay": "Tuesday",
+        "subtitle": "59 min · 9.64 km",
+        "type": "interval-run",
+        "distanceKm": 9.64,
+        "minutes": 59,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:30",
+        "optional": false,
+        "notes": "5K-specific quality before the Vienna Night Run.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "5 × 4 min 5K Pace",
+            "pace": "4:30",
+            "minutes": 20,
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 4.44,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
+          },
+          {
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw34-run2",
+        "order": 2,
+        "title": "Threshold Run",
+        "category": "Threshold Run",
+        "plannedDay": "Thursday",
+        "subtitle": "47 min · 7.72 km",
+        "type": "threshold-run",
+        "distanceKm": 7.72,
+        "minutes": 47,
+        "optimalHr": 180,
+        "hrRange": "175-185",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "Controlled threshold to support 5K without over-fatiguing.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "20 min Continuous Threshold",
+            "pace": "4:55",
+            "minutes": 20,
+            "hr": 180,
+            "hrRange": "175-185",
+            "km": 4.07
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw34-run3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Saturday",
+        "subtitle": "82 min · 11.59 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 11.59,
+        "minutes": 82,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 72,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 10.09
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
+          }
+        ]
+      },
+      {
+        "id": "2026-kw34-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
+        "plannedDay": "Sunday",
+        "subtitle": "123 min · 16.97 km",
+        "type": "long-run",
+        "distanceKm": 16.97,
+        "minutes": 123,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
+          {
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 123,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 16.97
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 35,
+    "year": 2026,
+    "startDate": "2026-08-24",
+    "endDate": "2026-08-30",
+    "targetKm": 47.96,
+    "focus": "70% 5K / 30% Half Marathon",
+    "runs": [
+      {
+        "id": "2026-kw35-run1",
+        "order": 1,
+        "title": "Interval Run",
+        "category": "Interval Run",
+        "plannedDay": "Tuesday",
+        "subtitle": "52 min · 8.62 km",
+        "type": "interval-run",
+        "distanceKm": 8.62,
+        "minutes": 52,
+        "optimalHr": 188,
+        "hrRange": "184-194",
+        "pace": "4:30",
+        "optional": false,
+        "notes": "5K-specific quality before the Vienna Night Run.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "4 × 1 km 5K Pace",
+            "pace": "4:30",
+            "minutes": 18,
+            "hr": 188,
+            "hrRange": "184-194",
+            "km": 4.0,
+            "notes": "Alternate with the recovery below: 1 km hard, then 2:30 easy. Four hard reps, three recoveries."
+          },
+          {
+            "label": "3 × 2:30 Easy Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.97,
+            "notes": "Recovery between kilometer reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw35-run2",
+        "order": 2,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 7.81,
+        "minutes": 54,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 45,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 6.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
+          }
+        ]
+      },
+      {
+        "id": "2026-kw35-run3",
+        "order": 3,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Saturday",
+        "subtitle": "97 min · 13.60 km",
+        "type": "easy-run",
+        "distanceKm": 13.6,
+        "minutes": 97,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 97,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 13.6
+          }
+        ]
+      },
+      {
+        "id": "2026-kw35-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
+        "plannedDay": "Sunday",
+        "subtitle": "130 min · 17.93 km",
+        "type": "long-run",
+        "distanceKm": 17.93,
+        "minutes": 130,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
+          {
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 130,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 17.93
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kw": 36,
+    "year": 2026,
+    "startDate": "2026-08-31",
+    "endDate": "2026-09-06",
+    "targetKm": 41.96,
+    "focus": "70% 5K / 30% Half Marathon",
+    "runs": [
+      {
+        "id": "2026-kw36-run1",
+        "order": 1,
+        "title": "Interval Run",
+        "category": "Interval Run",
+        "plannedDay": "Tuesday",
+        "subtitle": "56 min · 9.45 km",
+        "type": "interval-run",
+        "distanceKm": 9.45,
+        "minutes": 56,
+        "optimalHr": 145,
+        "hrRange": "138-152",
+        "pace": "7:08",
+        "optional": false,
+        "notes": "5K-specific quality before the Vienna Night Run.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "10 × 400 m Fast",
+            "pace": "4:20",
+            "minutes": 18,
+            "hr": 190,
+            "hrRange": "184-196",
+            "km": 4.0,
+            "notes": "Alternate with the recovery below: 400 m fast, then 200 m very easy. Ten fast reps, nine recoveries."
+          },
+          {
+            "label": "9 × 200 m Easy Recovery",
+            "pace": "7:45",
+            "minutes": 11,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.8,
+            "notes": "Recovery jog between 400s only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw36-run2",
+        "order": 2,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Thursday",
         "subtitle": "50 min · 7.01 km",
         "type": "easy-run",
         "distanceKm": 7.01,
@@ -119,8 +561,8 @@ export const trainingPlan = [
         "steps": [
           {
             "label": "Easy",
-            "minutes": 50,
             "pace": "7:08",
+            "minutes": 50,
             "hr": 146,
             "hrRange": "138-152",
             "km": 7.01
@@ -128,496 +570,70 @@ export const trainingPlan = [
         ]
       },
       {
-        "id": "kw33-run4",
-        "order": 4,
-        "title": "Long Run",
-        "category": "Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "171 min · 23.59 km",
-        "type": "long-run",
-        "distanceKm": 23.59,
-        "minutes": 171,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:15",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy Long Run",
-            "minutes": 171,
-            "pace": "7:15",
-            "hr": 152,
-            "hrRange": "145-158",
-            "km": 23.59
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "kw": 34,
-    "year": 2026,
-    "startDate": "2026-08-17",
-    "endDate": "2026-08-23",
-    "targetKm": 55.03,
-    "focus": "70% 5K / 30% Half Marathon",
-    "runs": [
-      {
-        "id": "kw34-run1",
-        "order": 1,
+        "id": "2026-kw36-run3",
+        "order": 3,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "82 min · 11.62 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.62,
-        "minutes": 82,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:07",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 72,
-            "pace": "7:07",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 10.12
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:44",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.97,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw34-run2",
-        "order": 2,
-        "title": "5K Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "61 min · 9.97 km",
-        "type": "interval-run",
-        "distanceKm": 9.97,
-        "minutes": 61,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:28",
-        "optional": false,
-        "notes": "5K-specific session. Keep the reps controlled and even; this is the main quality stimulus of the week.",
-        "steps": [
-          {
-            "label": "Warm-up",
-            "minutes": 15,
-            "pace": "7:06",
-            "hr": 145,
-            "hrRange": "138-152",
-            "km": 2.11
-          },
-          {
-            "label": "5 × 4 min 5K Pace",
-            "minutes": 20,
-            "pace": "4:28",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 4.48,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 5 hard reps are done."
-          },
-          {
-            "label": "4 × 3 min Easy Recovery",
-            "minutes": 12,
-            "pace": "7:44",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 1.55,
-            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 14,
-            "pace": "7:39",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.83
-          }
-        ]
-      },
-      {
-        "id": "kw34-run3",
-        "order": 3,
-        "title": "Easy Run",
-        "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "55 min · 7.73 km",
-        "type": "easy-run",
-        "distanceKm": 7.73,
-        "minutes": 55,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:07",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 55,
-            "pace": "7:07",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 7.73
-          }
-        ]
-      },
-      {
-        "id": "kw34-run4",
-        "order": 4,
-        "title": "Long Run",
-        "category": "Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "186 min · 25.71 km",
-        "type": "long-run",
-        "distanceKm": 25.71,
-        "minutes": 186,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:14",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy Long Run",
-            "minutes": 186,
-            "pace": "7:14",
-            "hr": 152,
-            "hrRange": "145-158",
-            "km": 25.71
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "kw": 35,
-    "year": 2026,
-    "startDate": "2026-08-24",
-    "endDate": "2026-08-30",
-    "targetKm": 59.76,
-    "focus": "70% 5K / 30% Half Marathon",
-    "runs": [
-      {
-        "id": "kw35-run1",
-        "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "88 min · 12.63 km",
+        "subtitle": "74 min · 10.47 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.63,
-        "minutes": 88,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:06",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 79,
-            "pace": "7:06",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 11.13
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:44",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.97,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw35-run2",
-        "order": 2,
-        "title": "5K Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "55 min · 8.95 km",
-        "type": "interval-run",
-        "distanceKm": 8.95,
-        "minutes": 55,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:28",
-        "optional": false,
-        "notes": "5K-specific 4-minute reps. Strong but repeatable; do not sprint the first rep.",
-        "steps": [
-          {
-            "label": "Warm-up",
-            "minutes": 15,
-            "pace": "7:06",
-            "hr": 145,
-            "hrRange": "138-152",
-            "km": 2.11
-          },
-          {
-            "label": "4 × 4 min 5K Pace",
-            "minutes": 16,
-            "pace": "4:28",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.58,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
-          },
-          {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:44",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 1.16,
-            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 15,
-            "pace": "7:09",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 2.1
-          }
-        ]
-      },
-      {
-        "id": "kw35-run3",
-        "order": 3,
-        "title": "Easy Run",
-        "category": "Easy Run",
-        "plannedDay": "Saturday",
-        "subtitle": "74 min · 10.42 km",
-        "type": "easy-run",
-        "distanceKm": 10.42,
+        "distanceKm": 10.47,
         "minutes": 74,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:06",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 74,
-            "pace": "7:06",
+            "pace": "7:08",
+            "minutes": 64,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.42
-          }
-        ]
-      },
-      {
-        "id": "kw35-run4",
-        "order": 4,
-        "title": "Long Run",
-        "category": "Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "193 min · 27.76 km",
-        "type": "long-run",
-        "distanceKm": 27.76,
-        "minutes": 193,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:57",
-        "optional": false,
-        "notes": "Keep this fully easy. During the 5K block the long run supports endurance but should not become another hard workout.",
-        "steps": [
-          {
-            "label": "Easy Long Run",
-            "minutes": 193,
-            "pace": "6:57",
-            "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.76
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "kw": 36,
-    "year": 2026,
-    "startDate": "2026-08-31",
-    "endDate": "2026-09-06",
-    "targetKm": 51.95,
-    "focus": "70% 5K / 30% Half Marathon",
-    "runs": [
-      {
-        "id": "kw36-run1",
-        "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "76 min · 10.94 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.94,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:06",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 67,
-            "pace": "7:06",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.44
+            "km": 8.97
           },
           {
             "label": "6 × 20 s Strides",
-            "seconds": 120,
             "pace": "3:45",
+            "seconds": 120,
             "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
             "seconds": 450,
-            "pace": "7:43",
             "hr": 140,
             "hrRange": "132-148",
             "km": 0.97,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw36-run2",
-        "order": 2,
-        "title": "Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "42 min · 6.39 km",
-        "type": "interval-run",
-        "distanceKm": 6.39,
-        "minutes": 42,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:25",
-        "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
-        "steps": [
-          {
-            "label": "Warm-up",
-            "minutes": 15,
-            "pace": "7:06",
-            "hr": 145,
-            "hrRange": "138-152",
-            "km": 2.11
-          },
-          {
-            "label": "8 × 1 min 5K Pace",
-            "minutes": 8,
-            "pace": "4:25",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 1.81,
-            "notes": "Alternate with the recovery below: 1 min hard, then 1 min easy. Repeat until all 8 hard reps are done."
-          },
-          {
-            "label": "7 × 1 min Easy Recovery",
-            "minutes": 7,
-            "pace": "7:43",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 0.91,
-            "notes": "Recovery between reps only: 7 recoveries total, not after the final rep."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 12,
-            "pace": "7:43",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.56
-          }
-        ]
-      },
-      {
-        "id": "kw36-run3",
-        "order": 3,
-        "title": "Easy Run",
-        "category": "Easy Run",
-        "plannedDay": "Saturday",
-        "subtitle": "52 min · 7.32 km",
-        "type": "easy-run",
-        "distanceKm": 7.32,
-        "minutes": 52,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:06",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 52,
-            "pace": "7:06",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 7.32
-          }
-        ]
-      },
-      {
-        "id": "kw36-run4",
+        "id": "2026-kw36-run4",
         "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "197 min · 27.30 km",
+        "subtitle": "109 min · 15.03 km",
         "type": "long-run",
-        "distanceKm": 27.3,
-        "minutes": 197,
+        "distanceKm": 15.03,
+        "minutes": 109,
         "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:13",
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 197,
-            "pace": "7:13",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 109,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.3
+            "hrRange": "144-160",
+            "km": 15.03
           }
         ]
       }
@@ -628,179 +644,168 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-07",
     "endDate": "2026-09-13",
-    "targetKm": 63.95,
+    "targetKm": 46.92,
     "focus": "70% 5K / 30% Half Marathon",
     "runs": [
       {
-        "id": "kw37-run1",
+        "id": "2026-kw37-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "61 min · 7.91 km",
-        "type": "recovery-run",
-        "distanceKm": 7.91,
-        "minutes": 61,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:43",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 61,
-            "pace": "7:43",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 7.91,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw37-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "72 min · 10.25 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.25,
-        "minutes": 72,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:05",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 62,
-            "pace": "7:05",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 8.75
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:43",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.97,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw37-run3",
-        "order": 3,
-        "title": "5K Interval Run",
+        "title": "Interval Run",
         "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "59 min · 9.68 km",
+        "plannedDay": "Tuesday",
+        "subtitle": "59 min · 9.64 km",
         "type": "interval-run",
-        "distanceKm": 9.68,
+        "distanceKm": 9.64,
         "minutes": 59,
         "optimalHr": 188,
         "hrRange": "184-194",
-        "pace": "4:28",
+        "pace": "4:30",
         "optional": false,
-        "notes": "Last bigger 5K-specific workout before race week. Controlled race rhythm, not all-out.",
+        "notes": "5K-specific quality before the Vienna Night Run.",
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "7:06",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.11
+            "km": 2.1
           },
           {
             "label": "5 × 4 min 5K Pace",
+            "pace": "4:30",
             "minutes": 20,
-            "pace": "4:28",
             "hr": 188,
             "hrRange": "184-194",
-            "km": 4.48,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 5 hard reps are done."
+            "km": 4.44,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
           },
           {
             "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:44",
             "hr": 148,
             "hrRange": "140-155",
             "km": 1.55,
-            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
+            "notes": "Recovery between reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:48",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.54
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw37-run4",
-        "order": 4,
-        "title": "Easy Run",
-        "category": "Easy Run",
+        "id": "2026-kw37-run2",
+        "order": 2,
+        "title": "Threshold Run",
+        "category": "Threshold Run",
+        "plannedDay": "Thursday",
+        "subtitle": "47 min · 7.72 km",
+        "type": "threshold-run",
+        "distanceKm": 7.72,
+        "minutes": 47,
+        "optimalHr": 180,
+        "hrRange": "175-185",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "Controlled threshold to support 5K without over-fatiguing.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "20 min Continuous Threshold",
+            "pace": "4:55",
+            "minutes": 20,
+            "hr": 180,
+            "hrRange": "175-185",
+            "km": 4.07
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw37-run3",
+        "order": 3,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
         "plannedDay": "Saturday",
-        "subtitle": "59 min · 8.33 km",
-        "type": "easy-run",
-        "distanceKm": 8.33,
-        "minutes": 59,
+        "subtitle": "96 min · 13.56 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 13.56,
+        "minutes": 96,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:05",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 59,
-            "pace": "7:05",
+            "pace": "7:08",
+            "minutes": 86,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.33
+            "km": 12.06
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw37-run5",
-        "order": 5,
+        "id": "2026-kw37-run4",
+        "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "200 min · 27.78 km",
+        "subtitle": "116 min · 16.00 km",
         "type": "long-run",
-        "distanceKm": 27.78,
-        "minutes": 200,
+        "distanceKm": 16.0,
+        "minutes": 116,
         "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:12",
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 200,
-            "pace": "7:12",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 116,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.78
+            "hrRange": "144-160",
+            "km": 16.0
           }
         ]
       }
@@ -811,144 +816,153 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-14",
     "endDate": "2026-09-20",
-    "targetKm": 53.31,
-    "focus": "70% 5K / 30% Half Marathon",
+    "targetKm": 33.32,
+    "focus": "5K Race Week — 70% 5K / 30% Half Marathon",
     "runs": [
       {
-        "id": "kw38-run1",
+        "id": "2026-kw38-run1",
         "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.56 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.56,
-        "minutes": 74,
+        "subtitle": "38 min · 5.69 km",
+        "type": "interval-run",
+        "distanceKm": 5.69,
+        "minutes": 38,
+        "optimalHr": 186,
+        "hrRange": "180-192",
+        "pace": "4:30",
+        "optional": false,
+        "notes": "5K-specific quality before the Vienna Night Run.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "6 × 1 min 5K Sharpener",
+            "pace": "4:30",
+            "minutes": 6,
+            "hr": 186,
+            "hrRange": "180-192",
+            "km": 1.33,
+            "notes": "Alternate with the recovery below: 1 min sharp, then 90 s easy. Six reps, five recoveries."
+          },
+          {
+            "label": "5 × 90 s Easy Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 146,
+            "hrRange": "138-154",
+            "km": 0.97,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 10,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.29
+          }
+        ]
+      },
+      {
+        "id": "2026-kw38-run2",
+        "order": 2,
+        "title": "Erste Bank Vienna Night Run 5K",
+        "category": "Race",
+        "plannedDay": "Thursday",
+        "subtitle": "50 min · 8.65 km",
+        "type": "race",
+        "distanceKm": 8.65,
+        "minutes": 50,
+        "optimalHr": 192,
+        "hrRange": "186-198",
+        "pace": "4:35",
+        "optional": false,
+        "notes": "First priority of this week.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "Erste Bank Vienna Night Run 5K",
+            "pace": "4:35",
+            "minutes": 23,
+            "hr": 192,
+            "hrRange": "186-198",
+            "km": 5.0,
+            "notes": "Race effort. Start controlled for the first kilometer, then build."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw38-run3",
+        "order": 3,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Saturday",
+        "subtitle": "35 min · 4.91 km",
+        "type": "easy-run",
+        "distanceKm": 4.91,
+        "minutes": 35,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:04",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 64,
-            "pace": "7:04",
+            "pace": "7:08",
+            "minutes": 35,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.06
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:42",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.97,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "km": 4.91
           }
         ]
       },
       {
-        "id": "kw38-run2",
-        "order": 2,
-        "title": "Erste Bank Vienna Night Run 5K",
-        "category": "Race",
-        "plannedDay": "Thursday",
-        "subtitle": "48 min · 8.42 km",
-        "type": "race",
-        "distanceKm": 8.42,
-        "minutes": 48,
-        "optimalHr": 188,
-        "hrRange": "180-196",
-        "pace": "4:30",
-        "optional": false,
-        "notes": "5K race. Treat this as the main focus of the week. Controlled hard effort, then return to full half-marathon focus next week.",
-        "steps": [
-          {
-            "label": "Warm-up",
-            "minutes": 15,
-            "pace": "7:04",
-            "hr": 145,
-            "hrRange": "138-152",
-            "km": 2.12
-          },
-          {
-            "label": "Erste Bank Vienna Night Run 5K",
-            "minutes": 23,
-            "pace": "4:30",
-            "hr": 188,
-            "hrRange": "180-196",
-            "km": 5.0,
-            "notes": "Race effort. Start controlled for the first kilometer, then build. Target around 22:30-23:00 depending on conditions."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:42",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.3
-          }
-        ]
-      },
-      {
-        "id": "kw38-run3",
-        "order": 3,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Saturday",
-        "subtitle": "50 min · 6.49 km",
-        "type": "recovery-run",
-        "distanceKm": 6.49,
-        "minutes": 50,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:42",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 50,
-            "pace": "7:42",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 6.49,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw38-run4",
+        "id": "2026-kw38-run4",
         "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "200 min · 27.84 km",
+        "subtitle": "102 min · 14.07 km",
         "type": "long-run",
-        "distanceKm": 27.84,
-        "minutes": 200,
+        "distanceKm": 14.07,
+        "minutes": 102,
         "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:11",
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 200,
-            "pace": "7:11",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 102,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.84
+            "hrRange": "144-160",
+            "km": 14.07
           }
         ]
       }
@@ -959,179 +973,162 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-21",
     "endDate": "2026-09-27",
-    "targetKm": 63.97,
+    "targetKm": 41.78,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw39-run1",
+        "id": "2026-kw39-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "57 min · 7.42 km",
-        "type": "recovery-run",
-        "distanceKm": 7.42,
-        "minutes": 57,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:41",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 57,
-            "pace": "7:41",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 7.42,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw39-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "72 min · 10.30 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.3,
-        "minutes": 72,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:03",
+        "subtitle": "59 min · 9.73 km",
+        "type": "interval-run",
+        "distanceKm": 9.73,
+        "minutes": 59,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 62,
-            "pace": "7:03",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 8.79
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "5 × 4 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 20,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.53,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:41",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw39-run3",
-        "order": 3,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
+        "id": "2026-kw39-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "61 min · 10.04 km",
-        "type": "threshold-run",
-        "distanceKm": 10.04,
-        "minutes": 61,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "5:09",
+        "subtitle": "65 min · 11.00 km",
+        "type": "hm-pace-run",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "7:03",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.13
+            "km": 2.1
           },
           {
-            "label": "3 × 10 min Threshold",
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
             "minutes": 30,
-            "pace": "5:09",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 5.83,
-            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:41",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.78,
-            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:41",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.3
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw39-run4",
-        "order": 4,
+        "id": "2026-kw39-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "59 min · 8.37 km",
+        "subtitle": "36 min · 5.05 km",
         "type": "easy-run",
-        "distanceKm": 8.37,
-        "minutes": 59,
+        "distanceKm": 5.05,
+        "minutes": 36,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:03",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 59,
-            "pace": "7:03",
+            "pace": "7:08",
+            "minutes": 36,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.37
+            "km": 5.05
           }
         ]
       },
       {
-        "id": "kw39-run5",
-        "order": 5,
+        "id": "2026-kw39-run4",
+        "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "200 min · 27.84 km",
+        "subtitle": "116 min · 16.00 km",
         "type": "long-run",
-        "distanceKm": 27.84,
-        "minutes": 200,
+        "distanceKm": 16.0,
+        "minutes": 116,
         "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:11",
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 200,
-            "pace": "7:11",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 116,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.84
+            "hrRange": "144-160",
+            "km": 16.0
           }
         ]
       }
@@ -1142,188 +1139,152 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-28",
     "endDate": "2026-10-04",
-    "targetKm": 68.0,
+    "targetKm": 44.99,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw40-run1",
+        "id": "2026-kw40-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "67 min · 8.72 km",
-        "type": "recovery-run",
-        "distanceKm": 8.72,
-        "minutes": 67,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:41",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 67,
-            "pace": "7:41",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.72,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw40-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 10.87 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.87,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:03",
+        "subtitle": "57 min · 9.30 km",
+        "type": "threshold-run",
+        "distanceKm": 9.3,
+        "minutes": 57,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
         "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 66,
-            "pace": "7:03",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.36
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:41",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw40-run3",
-        "order": 3,
-        "title": "Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "66 min · 10.34 km",
-        "type": "interval-run",
-        "distanceKm": 10.34,
-        "minutes": 66,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:35",
-        "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
-            "pace": "7:03",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.12
+            "km": 2.1
           },
           {
-            "label": "4 × 4 min VO2max",
-            "minutes": 16,
-            "pace": "4:35",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.49,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
+            "label": "3 × 8 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 8 min threshold, then 3 min easy. Three threshold reps, two recoveries."
           },
           {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:41",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 1.17,
-            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
+            "label": "2 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 6,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.77,
+            "notes": "Recovery between threshold reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:41",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.56
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw40-run4",
-        "order": 4,
-        "title": "Easy Run",
-        "category": "Easy Run",
-        "plannedDay": "Saturday",
-        "subtitle": "72 min · 10.21 km",
-        "type": "easy-run",
-        "distanceKm": 10.21,
-        "minutes": 72,
+        "id": "2026-kw40-run2",
+        "order": 2,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:03",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 72,
-            "pace": "7:03",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.21
+            "km": 6.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw40-run5",
-        "order": 5,
-        "title": "Fast Finish Long Run",
-        "category": "Fast Finish Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "192 min · 27.86 km",
-        "type": "fast-finish-long-run",
-        "distanceKm": 27.86,
-        "minutes": 192,
-        "optimalHr": 169,
-        "hrRange": "162-176",
-        "pace": "5:53",
+        "id": "2026-kw40-run3",
+        "order": 3,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Saturday",
+        "subtitle": "71 min · 9.95 km",
+        "type": "easy-run",
+        "distanceKm": 9.95,
+        "minutes": 71,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 157,
-            "pace": "7:10",
-            "hr": 152,
-            "hrRange": "145-158",
-            "km": 21.91
-          },
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 71,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 9.95
+          }
+        ]
+      },
+      {
+        "id": "2026-kw40-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
+        "plannedDay": "Sunday",
+        "subtitle": "130 min · 17.93 km",
+        "type": "long-run",
+        "distanceKm": 17.93,
+        "minutes": 130,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
           {
-            "label": "Fast Finish",
-            "minutes": 35,
-            "pace": "5:53",
-            "hr": 169,
-            "hrRange": "162-176",
-            "km": 5.95,
-            "notes": "Controlled acceleration on tired legs. Strong, not all-out."
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 130,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 17.93
           }
         ]
       }
@@ -1334,179 +1295,170 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-05",
     "endDate": "2026-10-11",
-    "targetKm": 69.78,
+    "targetKm": 46.94,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw41-run1",
+        "id": "2026-kw41-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "67 min · 8.74 km",
-        "type": "recovery-run",
-        "distanceKm": 8.74,
-        "minutes": 67,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:40",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 67,
-            "pace": "7:40",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.74,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw41-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 10.90 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.9,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:02",
+        "subtitle": "55 min · 9.02 km",
+        "type": "interval-run",
+        "distanceKm": 9.02,
+        "minutes": 55,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 66,
-            "pace": "7:02",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 9.39
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "6 × 3 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 18,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.08,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Six hard reps, five recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:40",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "5 × 2 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 10,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.29,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw41-run3",
-        "order": 3,
+        "id": "2026-kw41-run2",
+        "order": 2,
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "75 min · 13.21 km",
+        "subtitle": "62 min · 10.62 km",
         "type": "hm-pace-run",
-        "distanceKm": 13.21,
-        "minutes": 75,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:50",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "7:02",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.13
+            "km": 2.1
           },
           {
-            "label": "3 × 3 km HM Pace",
-            "minutes": 44,
-            "pace": "4:50",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 9,
-            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:40",
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.78,
-            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
+            "km": 0.65
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:40",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.3
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw41-run4",
-        "order": 4,
+        "id": "2026-kw41-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "64 min · 9.10 km",
+        "subtitle": "59 min · 8.27 km",
         "type": "easy-run",
-        "distanceKm": 9.1,
-        "minutes": 64,
+        "distanceKm": 8.27,
+        "minutes": 59,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:02",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 64,
-            "pace": "7:02",
+            "pace": "7:08",
+            "minutes": 59,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.1
+            "km": 8.27
           }
         ]
       },
       {
-        "id": "kw41-run5",
-        "order": 5,
-        "title": "Long Run",
-        "category": "Long Run",
+        "id": "2026-kw41-run4",
+        "order": 4,
+        "title": "Fast Finish Long Run",
+        "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "199 min · 27.83 km",
-        "type": "long-run",
-        "distanceKm": 27.83,
-        "minutes": 199,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:09",
+        "subtitle": "129 min · 19.03 km",
+        "type": "fast-finish-long-run",
+        "distanceKm": 19.03,
+        "minutes": 129,
+        "optimalHr": 166,
+        "hrRange": "158-172",
+        "pace": "5:20",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 199,
-            "pace": "7:09",
+            "pace": "7:15",
+            "minutes": 104,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.83
+            "hrRange": "144-160",
+            "km": 14.34
+          },
+          {
+            "label": "Fast Finish",
+            "pace": "5:20",
+            "minutes": 25,
+            "hr": 166,
+            "hrRange": "158-172",
+            "km": 4.69,
+            "notes": "Controlled faster finish, not race effort."
           }
         ]
       }
@@ -1517,152 +1469,188 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-12",
     "endDate": "2026-10-18",
-    "targetKm": 57.95,
+    "targetKm": 49.06,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw42-run1",
+        "id": "2026-kw42-run1",
         "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "84 min · 12.20 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 12.2,
-        "minutes": 84,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:01",
+        "subtitle": "55 min · 9.05 km",
+        "type": "threshold-run",
+        "distanceKm": 9.05,
+        "minutes": 55,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "2 × 12 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 12 min threshold, then 4 min easy. Two threshold reps, one recovery."
+          },
+          {
+            "label": "1 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 4,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.52,
+            "notes": "Recovery between the two threshold reps only."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw42-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
+        "plannedDay": "Thursday",
+        "subtitle": "65 min · 11.00 km",
+        "type": "hm-pace-run",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 75,
-            "pace": "7:01",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 10.69
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:40",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw42-run2",
-        "order": 2,
-        "title": "Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "63 min · 9.87 km",
-        "type": "interval-run",
-        "distanceKm": 9.87,
-        "minutes": 63,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:35",
-        "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
-        "steps": [
-          {
             "label": "Warm-up",
-            "minutes": 28,
-            "pace": "7:01",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 3.99
+            "km": 2.1
           },
           {
-            "label": "5 × 3 min VO2max",
-            "minutes": 15,
-            "pace": "4:35",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.27,
-            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 5 hard reps are done."
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "4 × 2 min Easy Recovery",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
             "minutes": 8,
-            "pace": "7:40",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.04,
-            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:40",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.57
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw42-run3",
+        "id": "2026-kw42-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "57 min · 8.12 km",
+        "subtitle": "64 min · 8.97 km",
         "type": "easy-run",
-        "distanceKm": 8.12,
-        "minutes": 57,
+        "distanceKm": 8.97,
+        "minutes": 64,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:01",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 57,
-            "pace": "7:01",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 8.12
-          }
-        ]
-      },
-      {
-        "id": "kw42-run4",
-        "order": 4,
-        "title": "Long Run",
-        "category": "Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "198 min · 27.76 km",
-        "type": "long-run",
-        "distanceKm": 27.76,
-        "minutes": 198,
-        "optimalHr": 152,
-        "hrRange": "145-158",
         "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 198,
+            "label": "Easy",
             "pace": "7:08",
+            "minutes": 64,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 8.97
+          }
+        ]
+      },
+      {
+        "id": "2026-kw42-run4",
+        "order": 4,
+        "title": "Long Run with HM Pace Blocks",
+        "category": "Long Run with HM Pace Blocks",
+        "plannedDay": "Sunday",
+        "subtitle": "133 min · 20.04 km",
+        "type": "long-run-with-hm-pace-blocks",
+        "distanceKm": 20.04,
+        "minutes": 133,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
+          {
+            "label": "Easy Long Run",
+            "pace": "7:15",
+            "minutes": 67,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.76
+            "hrRange": "144-160",
+            "km": 9.24
+          },
+          {
+            "label": "2 × 12 min HM Pace",
+            "pace": "4:45",
+            "minutes": 24,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 5.05,
+            "notes": "Two controlled HM pace blocks inside the long run, with the easy recovery below between them."
+          },
+          {
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.65,
+            "notes": "Recovery between HM pace blocks only."
+          },
+          {
+            "label": "Easy Finish",
+            "pace": "7:15",
+            "minutes": 37,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 5.1
           }
         ]
       }
@@ -1673,188 +1661,152 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-19",
     "endDate": "2026-10-25",
-    "targetKm": 67.93,
+    "targetKm": 41.94,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw43-run1",
+        "id": "2026-kw43-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "67 min · 8.76 km",
-        "type": "recovery-run",
-        "distanceKm": 8.76,
-        "minutes": 67,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:39",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 67,
-            "pace": "7:39",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.76,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw43-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 10.94 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.94,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:00",
+        "subtitle": "59 min · 9.73 km",
+        "type": "interval-run",
+        "distanceKm": 9.73,
+        "minutes": 59,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 66,
-            "pace": "7:00",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.43
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:39",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw43-run3",
-        "order": 3,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
-        "plannedDay": "Thursday",
-        "subtitle": "61 min · 10.09 km",
-        "type": "threshold-run",
-        "distanceKm": 10.09,
-        "minutes": 61,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "5:07",
-        "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "7:00",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.14
+            "km": 2.1
           },
           {
-            "label": "3 × 10 min Threshold",
-            "minutes": 30,
-            "pace": "5:07",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 5.86,
-            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
+            "label": "5 × 4 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 20,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.53,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:39",
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.78,
-            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:39",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.31
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw43-run4",
-        "order": 4,
-        "title": "Easy Run",
-        "category": "Easy Run",
-        "plannedDay": "Saturday",
-        "subtitle": "72 min · 10.29 km",
-        "type": "easy-run",
-        "distanceKm": 10.29,
-        "minutes": 72,
+        "id": "2026-kw43-run2",
+        "order": 2,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:00",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 72,
-            "pace": "7:00",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.29
+            "km": 6.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw43-run5",
-        "order": 5,
-        "title": "Fast Finish Long Run",
-        "category": "Fast Finish Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "191 min · 27.85 km",
-        "type": "fast-finish-long-run",
-        "distanceKm": 27.85,
-        "minutes": 191,
-        "optimalHr": 169,
-        "hrRange": "162-176",
-        "pace": "5:51",
+        "id": "2026-kw43-run3",
+        "order": 3,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Saturday",
+        "subtitle": "53 min · 7.43 km",
+        "type": "easy-run",
+        "distanceKm": 7.43,
+        "minutes": 53,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 156,
+            "label": "Easy",
             "pace": "7:08",
-            "hr": 152,
-            "hrRange": "145-158",
-            "km": 21.87
-          },
+            "minutes": 53,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 7.43
+          }
+        ]
+      },
+      {
+        "id": "2026-kw43-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
+        "plannedDay": "Sunday",
+        "subtitle": "123 min · 16.97 km",
+        "type": "long-run",
+        "distanceKm": 16.97,
+        "minutes": 123,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
           {
-            "label": "Fast Finish",
-            "minutes": 35,
-            "pace": "5:51",
-            "hr": 169,
-            "hrRange": "162-176",
-            "km": 5.98,
-            "notes": "Controlled acceleration on tired legs. Strong, not all-out."
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 123,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 16.97
           }
         ]
       }
@@ -1865,179 +1817,170 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 69.59,
+    "targetKm": 47.07,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw44-run1",
+        "id": "2026-kw44-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "69 min · 9.02 km",
-        "type": "recovery-run",
-        "distanceKm": 9.02,
-        "minutes": 69,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:39",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 69,
-            "pace": "7:39",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 9.02,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw44-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "78 min · 11.22 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.22,
-        "minutes": 78,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "7:00",
+        "subtitle": "57 min · 9.30 km",
+        "type": "threshold-run",
+        "distanceKm": 9.3,
+        "minutes": 57,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
         "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 68,
-            "pace": "7:00",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.71
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:39",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw44-run3",
-        "order": 3,
-        "title": "Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "66 min · 10.39 km",
-        "type": "interval-run",
-        "distanceKm": 10.39,
-        "minutes": 66,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:34",
-        "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
-            "pace": "7:00",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.14
+            "km": 2.1
           },
           {
-            "label": "4 × 4 min VO2max",
-            "minutes": 16,
-            "pace": "4:34",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.5,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
+            "label": "3 × 8 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 8 min threshold, then 3 min easy. Three threshold reps, two recoveries."
           },
           {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:39",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 1.18,
-            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
+            "label": "2 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 6,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.77,
+            "notes": "Recovery between threshold reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:39",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.57
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw44-run4",
-        "order": 4,
+        "id": "2026-kw44-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
+        "plannedDay": "Thursday",
+        "subtitle": "62 min · 10.62 km",
+        "type": "hm-pace-run",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
+          },
+          {
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.65
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw44-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "78 min · 11.14 km",
+        "subtitle": "51 min · 7.15 km",
         "type": "easy-run",
-        "distanceKm": 11.14,
-        "minutes": 78,
+        "distanceKm": 7.15,
+        "minutes": 51,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "7:00",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 78,
-            "pace": "7:00",
+            "pace": "7:08",
+            "minutes": 51,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.14
+            "km": 7.15
           }
         ]
       },
       {
-        "id": "kw44-run5",
-        "order": 5,
-        "title": "Long Run",
-        "category": "Long Run",
+        "id": "2026-kw44-run4",
+        "order": 4,
+        "title": "Fast Finish Long Run",
+        "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "198 min · 27.82 km",
-        "type": "long-run",
-        "distanceKm": 27.82,
-        "minutes": 198,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:07",
+        "subtitle": "136 min · 20.00 km",
+        "type": "fast-finish-long-run",
+        "distanceKm": 20.0,
+        "minutes": 136,
+        "optimalHr": 166,
+        "hrRange": "158-172",
+        "pace": "5:20",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 198,
-            "pace": "7:07",
+            "pace": "7:15",
+            "minutes": 111,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.82
+            "hrRange": "144-160",
+            "km": 15.31
+          },
+          {
+            "label": "Fast Finish",
+            "pace": "5:20",
+            "minutes": 25,
+            "hr": 166,
+            "hrRange": "158-172",
+            "km": 4.69,
+            "notes": "Controlled faster finish, not race effort."
           }
         ]
       }
@@ -2048,205 +1991,162 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-02",
     "endDate": "2026-11-08",
-    "targetKm": 69.75,
+    "targetKm": 48.98,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw45-run1",
+        "id": "2026-kw45-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "66 min · 8.64 km",
-        "type": "recovery-run",
-        "distanceKm": 8.64,
-        "minutes": 66,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:38",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 66,
-            "pace": "7:38",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.64,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw45-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 10.96 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.96,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:59",
+        "subtitle": "55 min · 9.02 km",
+        "type": "interval-run",
+        "distanceKm": 9.02,
+        "minutes": 55,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 66,
-            "pace": "6:59",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 9.45
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "6 × 3 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 18,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.08,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Six hard reps, five recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:38",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "5 × 2 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 10,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.29,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw45-run3",
-        "order": 3,
+        "id": "2026-kw45-run2",
+        "order": 2,
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "74 min · 13.25 km",
+        "subtitle": "65 min · 11.00 km",
         "type": "hm-pace-run",
-        "distanceKm": 13.25,
-        "minutes": 74,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:49",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:59",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.15
+            "km": 2.1
           },
           {
-            "label": "3 × 3 km HM Pace",
-            "minutes": 43,
-            "pace": "4:49",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 9,
-            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:38",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79,
-            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:38",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.31
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw45-run4",
-        "order": 4,
+        "id": "2026-kw45-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "64 min · 9.16 km",
+        "subtitle": "57 min · 7.99 km",
         "type": "easy-run",
-        "distanceKm": 9.16,
-        "minutes": 64,
+        "distanceKm": 7.99,
+        "minutes": 57,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:59",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 64,
-            "pace": "6:59",
+            "pace": "7:08",
+            "minutes": 57,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.16
+            "km": 7.99
           }
         ]
       },
       {
-        "id": "kw45-run5",
-        "order": 5,
-        "title": "Long Run with HM Pace Blocks",
-        "category": "Long Run with HM Pace Blocks",
+        "id": "2026-kw45-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "180 min · 27.74 km",
-        "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.74,
-        "minutes": 180,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:49",
+        "subtitle": "152 min · 20.97 km",
+        "type": "long-run",
+        "distanceKm": 20.97,
+        "minutes": 152,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 128,
-            "pace": "7:06",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 152,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 18.03
-          },
-          {
-            "label": "2 × 4 km HM Pace",
-            "minutes": 39,
-            "pace": "4:49",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 8,
-            "notes": "In the long run: 4 km HM pace, then 5 min easy, then the second HM pace block."
-          },
-          {
-            "label": "1 × 5 min Easy Recovery",
-            "minutes": 5,
-            "pace": "7:38",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 0.66,
-            "notes": "Recovery between the two HM pace blocks only."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 8,
-            "pace": "7:38",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.05
+            "hrRange": "144-160",
+            "km": 20.97
           }
         ]
       }
@@ -2257,152 +2157,178 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 59.81,
+    "targetKm": 50.04,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw46-run1",
+        "id": "2026-kw46-run1",
         "order": 1,
+        "title": "Threshold Run",
+        "category": "Threshold Run",
+        "plannedDay": "Tuesday",
+        "subtitle": "55 min · 9.05 km",
+        "type": "threshold-run",
+        "distanceKm": 9.05,
+        "minutes": 55,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "2 × 12 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 12 min threshold, then 4 min easy. Two threshold reps, one recovery."
+          },
+          {
+            "label": "1 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 4,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.52,
+            "notes": "Recovery between the two threshold reps only."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw46-run2",
+        "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "86 min · 12.56 km",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.56,
-        "minutes": 86,
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:58",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 77,
-            "pace": "6:58",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.05
+            "km": 6.31
           },
           {
             "label": "6 × 20 s Strides",
-            "seconds": 120,
             "pace": "3:45",
+            "seconds": 120,
             "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
             "seconds": 450,
-            "pace": "7:37",
             "hr": 140,
             "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw46-run2",
-        "order": 2,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
-        "plannedDay": "Thursday",
-        "subtitle": "55 min · 8.96 km",
-        "type": "threshold-run",
-        "distanceKm": 8.96,
-        "minutes": 55,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "5:06",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Warm-up",
-            "minutes": 15,
-            "pace": "6:58",
-            "hr": 145,
-            "hrRange": "138-152",
-            "km": 2.15
-          },
-          {
-            "label": "4 × 6 min Threshold",
-            "minutes": 24,
-            "pace": "5:06",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 4.71,
-            "notes": "Alternate with the recovery below: 6 min threshold, then 2 min easy. Repeat until all 4 threshold reps are done."
-          },
-          {
-            "label": "3 × 2 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:37",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 0.79,
-            "notes": "Recovery between threshold reps only: 3 recoveries total, not after the final rep."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:37",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.31
-          }
-        ]
-      },
-      {
-        "id": "kw46-run3",
+        "id": "2026-kw46-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "73 min · 10.48 km",
+        "subtitle": "80 min · 11.21 km",
         "type": "easy-run",
-        "distanceKm": 10.48,
-        "minutes": 73,
+        "distanceKm": 11.21,
+        "minutes": 80,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:58",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 73,
-            "pace": "6:58",
+            "pace": "7:08",
+            "minutes": 80,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.48
+            "km": 11.21
           }
         ]
       },
       {
-        "id": "kw46-run4",
+        "id": "2026-kw46-run4",
         "order": 4,
-        "title": "Long Run",
-        "category": "Long Run",
+        "title": "Long Run with HM Pace Blocks",
+        "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "197 min · 27.81 km",
-        "type": "long-run",
-        "distanceKm": 27.81,
-        "minutes": 197,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:05",
+        "subtitle": "147 min · 21.97 km",
+        "type": "long-run-with-hm-pace-blocks",
+        "distanceKm": 21.97,
+        "minutes": 147,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 197,
-            "pace": "7:05",
+            "pace": "7:15",
+            "minutes": 76,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.81
+            "hrRange": "144-160",
+            "km": 10.48
+          },
+          {
+            "label": "2 × 12 min HM Pace",
+            "pace": "4:45",
+            "minutes": 24,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 5.05,
+            "notes": "Two controlled HM pace blocks inside the long run, with the easy recovery below between them."
+          },
+          {
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.65,
+            "notes": "Recovery between HM pace blocks only."
+          },
+          {
+            "label": "Easy Finish",
+            "pace": "7:15",
+            "minutes": 42,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 5.79
           }
         ]
       }
@@ -2413,188 +2339,161 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-16",
     "endDate": "2026-11-22",
-    "targetKm": 68.95,
+    "targetKm": 43.33,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw47-run1",
+        "id": "2026-kw47-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "68 min · 8.93 km",
-        "type": "recovery-run",
-        "distanceKm": 8.93,
-        "minutes": 68,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:37",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 68,
-            "pace": "7:37",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.93,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw47-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.01 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.01,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:57",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 66,
-            "pace": "6:57",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.5
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:37",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.98,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw47-run3",
-        "order": 3,
         "title": "Interval Run",
         "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "66 min · 10.45 km",
+        "plannedDay": "Tuesday",
+        "subtitle": "59 min · 9.73 km",
         "type": "interval-run",
-        "distanceKm": 10.45,
-        "minutes": 66,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:33",
+        "distanceKm": 9.73,
+        "minutes": 59,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
-            "pace": "6:57",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.17
+            "km": 2.1
           },
           {
-            "label": "4 × 4 min VO2max",
-            "minutes": 16,
-            "pace": "4:33",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.52,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
+            "label": "5 × 4 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 20,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.53,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
           },
           {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:37",
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.18,
-            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:37",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.58
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw47-run4",
-        "order": 4,
+        "id": "2026-kw47-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
+        "plannedDay": "Thursday",
+        "subtitle": "62 min · 10.62 km",
+        "type": "hm-pace-run",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
+          },
+          {
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.65
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw47-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "75 min · 10.79 km",
+        "subtitle": "36 min · 5.05 km",
         "type": "easy-run",
-        "distanceKm": 10.79,
-        "minutes": 75,
+        "distanceKm": 5.05,
+        "minutes": 36,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:57",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 75,
-            "pace": "6:57",
+            "pace": "7:08",
+            "minutes": 36,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.79
+            "km": 5.05
           }
         ]
       },
       {
-        "id": "kw47-run5",
-        "order": 5,
-        "title": "Fast Finish Long Run",
-        "category": "Fast Finish Long Run",
+        "id": "2026-kw47-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "189 min · 27.77 km",
-        "type": "fast-finish-long-run",
-        "distanceKm": 27.77,
-        "minutes": 189,
-        "optimalHr": 169,
-        "hrRange": "162-176",
-        "pace": "5:48",
+        "subtitle": "130 min · 17.93 km",
+        "type": "long-run",
+        "distanceKm": 17.93,
+        "minutes": 130,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 154,
-            "pace": "7:05",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 130,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 21.74
-          },
-          {
-            "label": "Fast Finish",
-            "minutes": 35,
-            "pace": "5:48",
-            "hr": 169,
-            "hrRange": "162-176",
-            "km": 6.03,
-            "notes": "Controlled acceleration on tired legs. Strong, not all-out."
+            "hrRange": "144-160",
+            "km": 17.93
           }
         ]
       }
@@ -2605,179 +2504,171 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-23",
     "endDate": "2026-11-29",
-    "targetKm": 69.94,
+    "targetKm": 48.0,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw48-run1",
+        "id": "2026-kw48-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "68 min · 8.94 km",
-        "type": "recovery-run",
-        "distanceKm": 8.94,
-        "minutes": 68,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:36",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 68,
-            "pace": "7:36",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.94,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw48-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.16 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.16,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:57",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 67,
-            "pace": "6:57",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.64
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:36",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.99,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw48-run3",
-        "order": 3,
         "title": "Threshold Run",
         "category": "Threshold Run",
-        "plannedDay": "Thursday",
-        "subtitle": "67 min · 11.03 km",
+        "plannedDay": "Tuesday",
+        "subtitle": "57 min · 9.30 km",
         "type": "threshold-run",
-        "distanceKm": 11.03,
-        "minutes": 67,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "5:05",
+        "distanceKm": 9.3,
+        "minutes": 57,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "3 × 8 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 8 min threshold, then 3 min easy. Three threshold reps, two recoveries."
+          },
+          {
+            "label": "2 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 6,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.77,
+            "notes": "Recovery between threshold reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw48-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
+        "plannedDay": "Thursday",
+        "subtitle": "65 min · 11.00 km",
+        "type": "hm-pace-run",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 21,
-            "pace": "6:57",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 3.02
+            "km": 2.1
           },
           {
-            "label": "3 × 10 min Threshold",
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
             "minutes": 30,
-            "pace": "5:05",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 5.9,
-            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:36",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79,
-            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:36",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.32
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw48-run4",
-        "order": 4,
+        "id": "2026-kw48-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "77 min · 11.07 km",
+        "subtitle": "48 min · 6.73 km",
         "type": "easy-run",
-        "distanceKm": 11.07,
-        "minutes": 77,
+        "distanceKm": 6.73,
+        "minutes": 48,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:57",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 77,
-            "pace": "6:57",
+            "pace": "7:08",
+            "minutes": 48,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.07
+            "km": 6.73
           }
         ]
       },
       {
-        "id": "kw48-run5",
-        "order": 5,
-        "title": "Long Run",
-        "category": "Long Run",
+        "id": "2026-kw48-run4",
+        "order": 4,
+        "title": "Fast Finish Long Run",
+        "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "196 min · 27.74 km",
-        "type": "long-run",
-        "distanceKm": 27.74,
-        "minutes": 196,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:04",
+        "subtitle": "143 min · 20.97 km",
+        "type": "fast-finish-long-run",
+        "distanceKm": 20.97,
+        "minutes": 143,
+        "optimalHr": 166,
+        "hrRange": "158-172",
+        "pace": "5:20",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 196,
-            "pace": "7:04",
+            "pace": "7:15",
+            "minutes": 118,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.74
+            "hrRange": "144-160",
+            "km": 16.28
+          },
+          {
+            "label": "Fast Finish",
+            "pace": "5:20",
+            "minutes": 25,
+            "hr": 166,
+            "hrRange": "158-172",
+            "km": 4.69,
+            "notes": "Controlled faster finish, not race effort."
           }
         ]
       }
@@ -2788,205 +2679,178 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-30",
     "endDate": "2026-12-06",
-    "targetKm": 69.67,
+    "targetKm": 50.01,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw49-run1",
+        "id": "2026-kw49-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "65 min · 8.55 km",
-        "type": "recovery-run",
-        "distanceKm": 8.55,
-        "minutes": 65,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:36",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 65,
-            "pace": "7:36",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.55,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw49-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.89 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.89,
-        "minutes": 74,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:56",
+        "subtitle": "55 min · 9.02 km",
+        "type": "interval-run",
+        "distanceKm": 9.02,
+        "minutes": 55,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 65,
-            "pace": "6:56",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.37
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:36",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.99,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw49-run3",
-        "order": 3,
-        "title": "HM Pace Run",
-        "category": "HM Pace Run",
-        "plannedDay": "Thursday",
-        "subtitle": "74 min · 13.27 km",
-        "type": "hm-pace-run",
-        "distanceKm": 13.27,
-        "minutes": 74,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:48",
-        "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:56",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.16
+            "km": 2.1
           },
           {
-            "label": "3 × 3 km HM Pace",
-            "minutes": 43,
-            "pace": "4:48",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 9,
-            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
+            "label": "6 × 3 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 18,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.08,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Six hard reps, five recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:36",
+            "label": "5 × 2 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 10,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79,
-            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
+            "km": 1.29,
+            "notes": "Recovery between reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:36",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.32
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw49-run4",
-        "order": 4,
-        "title": "Easy Run",
-        "category": "Easy Run",
-        "plannedDay": "Saturday",
-        "subtitle": "63 min · 9.09 km",
-        "type": "easy-run",
-        "distanceKm": 9.09,
-        "minutes": 63,
+        "id": "2026-kw49-run2",
+        "order": 2,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:56",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 63,
-            "pace": "6:56",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.09
+            "km": 6.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw49-run5",
-        "order": 5,
-        "title": "Long Run with HM Pace Blocks",
-        "category": "Long Run with HM Pace Blocks",
-        "plannedDay": "Sunday",
-        "subtitle": "179 min · 27.87 km",
-        "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.87,
-        "minutes": 179,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:48",
+        "id": "2026-kw49-run3",
+        "order": 3,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Saturday",
+        "subtitle": "80 min · 11.21 km",
+        "type": "easy-run",
+        "distanceKm": 11.21,
+        "minutes": 80,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 80,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 11.21
+          }
+        ]
+      },
+      {
+        "id": "2026-kw49-run4",
+        "order": 4,
+        "title": "Long Run with HM Pace Blocks",
+        "category": "Long Run with HM Pace Blocks",
+        "plannedDay": "Sunday",
+        "subtitle": "147 min · 21.97 km",
+        "type": "long-run-with-hm-pace-blocks",
+        "distanceKm": 21.97,
+        "minutes": 147,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
+          {
             "label": "Easy Long Run",
-            "minutes": 128,
-            "pace": "7:03",
+            "pace": "7:15",
+            "minutes": 76,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 18.16
+            "hrRange": "144-160",
+            "km": 10.48
           },
           {
-            "label": "2 × 4 km HM Pace",
-            "minutes": 38,
-            "pace": "4:48",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 8,
-            "notes": "In the long run: 4 km HM pace, then 5 min easy, then the second HM pace block."
+            "label": "2 × 12 min HM Pace",
+            "pace": "4:45",
+            "minutes": 24,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 5.05,
+            "notes": "Two controlled HM pace blocks inside the long run, with the easy recovery below between them."
           },
           {
             "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
             "minutes": 5,
-            "pace": "7:36",
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.66,
-            "notes": "Recovery between the two HM pace blocks only."
+            "km": 0.65,
+            "notes": "Recovery between HM pace blocks only."
           },
           {
-            "label": "Cool-down",
-            "minutes": 8,
-            "pace": "7:36",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.05
+            "label": "Easy Finish",
+            "pace": "7:15",
+            "minutes": 42,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 5.79
           }
         ]
       }
@@ -2997,152 +2861,161 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 60.05,
+    "targetKm": 49.01,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw50-run1",
+        "id": "2026-kw50-run1",
         "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "86 min · 12.65 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 12.65,
-        "minutes": 86,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:55",
+        "subtitle": "55 min · 9.05 km",
+        "type": "threshold-run",
+        "distanceKm": 9.05,
+        "minutes": 55,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "2 × 12 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 12 min threshold, then 4 min easy. Two threshold reps, one recovery."
+          },
+          {
+            "label": "1 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 4,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.52,
+            "notes": "Recovery between the two threshold reps only."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw50-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
+        "plannedDay": "Thursday",
+        "subtitle": "62 min · 10.62 km",
+        "type": "hm-pace-run",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 77,
-            "pace": "6:55",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 11.13
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:35",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.99,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw50-run2",
-        "order": 2,
-        "title": "Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "64 min · 10.13 km",
-        "type": "interval-run",
-        "distanceKm": 10.13,
-        "minutes": 64,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:32",
-        "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
-        "steps": [
-          {
             "label": "Warm-up",
-            "minutes": 29,
-            "pace": "6:55",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.19
+            "km": 2.1
           },
           {
-            "label": "5 × 3 min VO2max",
-            "minutes": 15,
-            "pace": "4:32",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.31,
-            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 5 hard reps are done."
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
           },
           {
-            "label": "4 × 2 min Easy Recovery",
-            "minutes": 8,
-            "pace": "7:35",
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.05,
-            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
+            "km": 0.65
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:35",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.58
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw50-run3",
+        "id": "2026-kw50-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "65 min · 9.40 km",
+        "subtitle": "45 min · 6.31 km",
         "type": "easy-run",
-        "distanceKm": 9.4,
-        "minutes": 65,
+        "distanceKm": 6.31,
+        "minutes": 45,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:55",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 65,
-            "pace": "6:55",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.4
+            "km": 6.31
           }
         ]
       },
       {
-        "id": "kw50-run4",
+        "id": "2026-kw50-run4",
         "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "196 min · 27.87 km",
+        "subtitle": "167 min · 23.03 km",
         "type": "long-run",
-        "distanceKm": 27.87,
-        "minutes": 196,
+        "distanceKm": 23.03,
+        "minutes": 167,
         "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:02",
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 196,
-            "pace": "7:02",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 167,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.87
+            "hrRange": "144-160",
+            "km": 23.03
           }
         ]
       }
@@ -3153,188 +3026,162 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-14",
     "endDate": "2026-12-20",
-    "targetKm": 67.98,
+    "targetKm": 43.71,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw51-run1",
+        "id": "2026-kw51-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "66 min · 8.72 km",
-        "type": "recovery-run",
-        "distanceKm": 8.72,
-        "minutes": 66,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:34",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 66,
-            "pace": "7:34",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.72,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw51-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.94 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.94,
-        "minutes": 74,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:54",
+        "subtitle": "59 min · 9.73 km",
+        "type": "interval-run",
+        "distanceKm": 9.73,
+        "minutes": 59,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 65,
-            "pace": "6:54",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 9.42
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "5 × 4 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 20,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.53,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:34",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.99,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw51-run3",
-        "order": 3,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
+        "id": "2026-kw51-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "61 min · 10.22 km",
-        "type": "threshold-run",
-        "distanceKm": 10.22,
-        "minutes": 61,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "5:03",
+        "subtitle": "65 min · 11.00 km",
+        "type": "hm-pace-run",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:54",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.17
+            "km": 2.1
           },
           {
-            "label": "3 × 10 min Threshold",
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
             "minutes": 30,
-            "pace": "5:03",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 5.94,
-            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:34",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79,
-            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:34",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.32
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw51-run4",
-        "order": 4,
+        "id": "2026-kw51-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "71 min · 10.29 km",
+        "subtitle": "36 min · 5.05 km",
         "type": "easy-run",
-        "distanceKm": 10.29,
-        "minutes": 71,
+        "distanceKm": 5.05,
+        "minutes": 36,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:54",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 71,
-            "pace": "6:54",
+            "pace": "7:08",
+            "minutes": 36,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.29
+            "km": 5.05
           }
         ]
       },
       {
-        "id": "kw51-run5",
-        "order": 5,
-        "title": "Fast Finish Long Run",
-        "category": "Fast Finish Long Run",
+        "id": "2026-kw51-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "188 min · 27.81 km",
-        "type": "fast-finish-long-run",
-        "distanceKm": 27.81,
-        "minutes": 188,
-        "optimalHr": 169,
-        "hrRange": "162-176",
-        "pace": "5:45",
+        "subtitle": "130 min · 17.93 km",
+        "type": "long-run",
+        "distanceKm": 17.93,
+        "minutes": 130,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 154,
-            "pace": "7:02",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 130,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 21.9
-          },
-          {
-            "label": "Fast Finish",
-            "minutes": 34,
-            "pace": "5:45",
-            "hr": 169,
-            "hrRange": "162-176",
-            "km": 5.91,
-            "notes": "Controlled acceleration on tired legs. Strong, not all-out."
+            "hrRange": "144-160",
+            "km": 17.93
           }
         ]
       }
@@ -3345,178 +3192,161 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 65.96,
+    "targetKm": 48.03,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw52-run1",
+        "id": "2026-kw52-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "55 min · 7.27 km",
-        "type": "recovery-run",
-        "distanceKm": 7.27,
-        "minutes": 55,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:34",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
+        "plannedDay": "Tuesday",
+        "subtitle": "57 min · 9.30 km",
+        "type": "threshold-run",
+        "distanceKm": 9.3,
+        "minutes": 57,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Recovery",
-            "minutes": 55,
-            "pace": "7:34",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 7.27,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "3 × 8 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 8 min threshold, then 3 min easy. Three threshold reps, two recoveries."
+          },
+          {
+            "label": "2 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 6,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.77,
+            "notes": "Recovery between threshold reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw52-run2",
+        "id": "2026-kw52-run2",
         "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "72 min · 10.53 km",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 10.53,
-        "minutes": 72,
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:53",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 62,
-            "pace": "6:53",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.01
+            "km": 6.31
           },
           {
             "label": "6 × 20 s Strides",
-            "seconds": 120,
             "pace": "3:45",
+            "seconds": 120,
             "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
             "seconds": 450,
-            "pace": "7:34",
             "hr": 140,
             "hrRange": "132-148",
-            "km": 0.99,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw52-run3",
+        "id": "2026-kw52-run3",
         "order": 3,
-        "title": "Steady Run",
-        "category": "Steady Run",
-        "plannedDay": "Thursday",
-        "subtitle": "72 min · 11.84 km",
-        "type": "steady-run",
-        "distanceKm": 11.84,
-        "minutes": 72,
-        "optimalHr": 166,
-        "hrRange": "160-172",
-        "pace": "5:45",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Warm-up",
-            "minutes": 12,
-            "pace": "6:53",
-            "hr": 145,
-            "hrRange": "138-152",
-            "km": 1.74
-          },
-          {
-            "label": "Steady",
-            "minutes": 52,
-            "pace": "5:45",
-            "hr": 166,
-            "hrRange": "160-172",
-            "km": 9.04
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 8,
-            "pace": "7:34",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.06
-          }
-        ]
-      },
-      {
-        "id": "kw52-run4",
-        "order": 4,
-        "title": "Progressive Run",
-        "category": "Progressive Run",
+        "title": "Easy Run",
+        "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "54 min · 8.53 km",
-        "type": "progressive-run",
-        "distanceKm": 8.53,
-        "minutes": 54,
-        "optimalHr": 166,
-        "hrRange": "160-174",
-        "pace": "5:45",
+        "subtitle": "71 min · 9.95 km",
+        "type": "easy-run",
+        "distanceKm": 9.95,
+        "minutes": 71,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy Start",
-            "minutes": 30,
-            "pace": "6:53",
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 71,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 4.36
-          },
-          {
-            "label": "Progressive Finish",
-            "minutes": 24,
-            "pace": "5:45",
-            "hr": 166,
-            "hrRange": "160-174",
-            "km": 4.17,
-            "notes": "Finish controlled, not as a race."
+            "km": 9.95
           }
         ]
       },
       {
-        "id": "kw52-run5",
-        "order": 5,
-        "title": "Long Run",
-        "category": "Long Run",
+        "id": "2026-kw52-run4",
+        "order": 4,
+        "title": "Fast Finish Long Run",
+        "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "195 min · 27.79 km",
-        "type": "long-run",
-        "distanceKm": 27.79,
-        "minutes": 195,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:01",
+        "subtitle": "143 min · 20.97 km",
+        "type": "fast-finish-long-run",
+        "distanceKm": 20.97,
+        "minutes": 143,
+        "optimalHr": 166,
+        "hrRange": "158-172",
+        "pace": "5:20",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 195,
-            "pace": "7:01",
+            "pace": "7:15",
+            "minutes": 118,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.79
+            "hrRange": "144-160",
+            "km": 16.28
+          },
+          {
+            "label": "Fast Finish",
+            "pace": "5:20",
+            "minutes": 25,
+            "hr": 166,
+            "hrRange": "158-172",
+            "km": 4.69,
+            "notes": "Controlled faster finish, not race effort."
           }
         ]
       }
@@ -3527,179 +3357,187 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-28",
     "endDate": "2027-01-03",
-    "targetKm": 69.85,
+    "targetKm": 50.01,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw53-run1",
+        "id": "2026-kw53-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "68 min · 9.01 km",
-        "type": "recovery-run",
-        "distanceKm": 9.01,
-        "minutes": 68,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:33",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 68,
-            "pace": "7:33",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 9.01,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw53-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.25 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.25,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:53",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 67,
-            "pace": "6:53",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.73
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:33",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.99,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw53-run3",
-        "order": 3,
         "title": "Interval Run",
         "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "66 min · 10.55 km",
+        "plannedDay": "Tuesday",
+        "subtitle": "55 min · 9.02 km",
         "type": "interval-run",
-        "distanceKm": 10.55,
-        "minutes": 66,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:30",
+        "distanceKm": 9.02,
+        "minutes": 55,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
-            "pace": "6:53",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.21
+            "km": 2.1
           },
           {
-            "label": "4 × 4 min VO2max",
-            "minutes": 16,
-            "pace": "4:30",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.56,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
+            "label": "6 × 3 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 18,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.08,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Six hard reps, five recoveries."
           },
           {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:33",
+            "label": "5 × 2 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 10,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.19,
-            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
+            "km": 1.29,
+            "notes": "Recovery between reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:33",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.59
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw53-run4",
-        "order": 4,
+        "id": "2026-kw53-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
+        "plannedDay": "Thursday",
+        "subtitle": "62 min · 10.62 km",
+        "type": "hm-pace-run",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
+        "optional": false,
+        "notes": null,
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
+          },
+          {
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.65
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2026-kw53-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "77 min · 11.18 km",
+        "subtitle": "53 min · 7.43 km",
         "type": "easy-run",
-        "distanceKm": 11.18,
-        "minutes": 77,
+        "distanceKm": 7.43,
+        "minutes": 53,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:53",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 77,
-            "pace": "6:53",
+            "pace": "7:08",
+            "minutes": 53,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.18
+            "km": 7.43
           }
         ]
       },
       {
-        "id": "kw53-run5",
-        "order": 5,
-        "title": "Long Run",
-        "category": "Long Run",
+        "id": "2026-kw53-run4",
+        "order": 4,
+        "title": "Long Run with HM Pace Blocks",
+        "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "195 min · 27.86 km",
-        "type": "long-run",
-        "distanceKm": 27.86,
-        "minutes": 195,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "7:00",
+        "subtitle": "154 min · 22.94 km",
+        "type": "long-run-with-hm-pace-blocks",
+        "distanceKm": 22.94,
+        "minutes": 154,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 195,
-            "pace": "7:00",
+            "pace": "7:15",
+            "minutes": 81,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.86
+            "hrRange": "144-160",
+            "km": 11.17
+          },
+          {
+            "label": "2 × 12 min HM Pace",
+            "pace": "4:45",
+            "minutes": 24,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 5.05,
+            "notes": "Two controlled HM pace blocks inside the long run, with the easy recovery below between them."
+          },
+          {
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.65,
+            "notes": "Recovery between HM pace blocks only."
+          },
+          {
+            "label": "Easy Finish",
+            "pace": "7:15",
+            "minutes": 44,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 6.07
           }
         ]
       }
@@ -3710,205 +3548,162 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-04",
     "endDate": "2027-01-10",
-    "targetKm": 69.76,
+    "targetKm": 49.1,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw1-run1",
+        "id": "2027-kw1-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "66 min · 8.74 km",
-        "type": "recovery-run",
-        "distanceKm": 8.74,
-        "minutes": 66,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:33",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 66,
-            "pace": "7:33",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.74,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw1-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.84 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.84,
-        "minutes": 74,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:52",
+        "subtitle": "55 min · 9.05 km",
+        "type": "threshold-run",
+        "distanceKm": 9.05,
+        "minutes": 55,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 64,
-            "pace": "6:52",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 9.32
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "2 × 12 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 12 min threshold, then 4 min easy. Two threshold reps, one recovery."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:33",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 0.99,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "1 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 4,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.52,
+            "notes": "Recovery between the two threshold reps only."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw1-run3",
-        "order": 3,
+        "id": "2027-kw1-run2",
+        "order": 2,
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "74 min · 13.29 km",
+        "subtitle": "65 min · 11.00 km",
         "type": "hm-pace-run",
-        "distanceKm": 13.29,
-        "minutes": 74,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:47",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:52",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.18
+            "km": 2.1
           },
           {
-            "label": "3 × 3 km HM Pace",
-            "minutes": 43,
-            "pace": "4:47",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 9,
-            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:33",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.79,
-            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:33",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.32
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw1-run4",
-        "order": 4,
+        "id": "2027-kw1-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "62 min · 9.03 km",
+        "subtitle": "36 min · 5.05 km",
         "type": "easy-run",
-        "distanceKm": 9.03,
-        "minutes": 62,
+        "distanceKm": 5.05,
+        "minutes": 36,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:52",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 62,
-            "pace": "6:52",
+            "pace": "7:08",
+            "minutes": 36,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.03
+            "km": 5.05
           }
         ]
       },
       {
-        "id": "kw1-run5",
-        "order": 5,
-        "title": "Long Run with HM Pace Blocks",
-        "category": "Long Run with HM Pace Blocks",
+        "id": "2027-kw1-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "178 min · 27.86 km",
-        "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.86,
-        "minutes": 178,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:47",
+        "subtitle": "174 min · 24.00 km",
+        "type": "long-run",
+        "distanceKm": 24.0,
+        "minutes": 174,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 127,
-            "pace": "7:00",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 174,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 18.14
-          },
-          {
-            "label": "2 × 4 km HM Pace",
-            "minutes": 38,
-            "pace": "4:47",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 8,
-            "notes": "In the long run: 4 km HM pace, then 5 min easy, then the second HM pace block."
-          },
-          {
-            "label": "1 × 5 min Easy Recovery",
-            "minutes": 5,
-            "pace": "7:33",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 0.66,
-            "notes": "Recovery between the two HM pace blocks only."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 8,
-            "pace": "7:33",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.06
+            "hrRange": "144-160",
+            "km": 24.0
           }
         ]
       }
@@ -3919,188 +3714,152 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 69.03,
+    "targetKm": 43.02,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw2-run1",
+        "id": "2027-kw2-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "67 min · 8.89 km",
-        "type": "recovery-run",
-        "distanceKm": 8.89,
-        "minutes": 67,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:32",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 67,
-            "pace": "7:32",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.89,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw2-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 11.02 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.02,
-        "minutes": 74,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:51",
+        "subtitle": "59 min · 9.73 km",
+        "type": "interval-run",
+        "distanceKm": 9.73,
+        "minutes": 59,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 65,
-            "pace": "6:51",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.49
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:32",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.0,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw2-run3",
-        "order": 3,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
-        "plannedDay": "Thursday",
-        "subtitle": "61 min · 10.30 km",
-        "type": "threshold-run",
-        "distanceKm": 10.3,
-        "minutes": 61,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "5:01",
-        "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:51",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.19
+            "km": 2.1
           },
           {
-            "label": "3 × 10 min Threshold",
-            "minutes": 30,
-            "pace": "5:01",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 5.98,
-            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
+            "label": "5 × 4 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 20,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.53,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:32",
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.8,
-            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:32",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.33
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw2-run4",
-        "order": 4,
-        "title": "Easy Run",
-        "category": "Easy Run",
-        "plannedDay": "Saturday",
-        "subtitle": "75 min · 10.95 km",
-        "type": "easy-run",
-        "distanceKm": 10.95,
-        "minutes": 75,
+        "id": "2027-kw2-run2",
+        "order": 2,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:51",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 75,
-            "pace": "6:51",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.95
+            "km": 6.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw2-run5",
-        "order": 5,
-        "title": "Fast Finish Long Run",
-        "category": "Fast Finish Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "187 min · 27.87 km",
-        "type": "fast-finish-long-run",
-        "distanceKm": 27.87,
-        "minutes": 187,
-        "optimalHr": 169,
-        "hrRange": "162-176",
-        "pace": "5:42",
+        "id": "2027-kw2-run3",
+        "order": 3,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Saturday",
+        "subtitle": "46 min · 6.45 km",
+        "type": "easy-run",
+        "distanceKm": 6.45,
+        "minutes": 46,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 153,
-            "pace": "6:59",
-            "hr": 152,
-            "hrRange": "145-158",
-            "km": 21.91
-          },
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 46,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 6.45
+          }
+        ]
+      },
+      {
+        "id": "2027-kw2-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
+        "plannedDay": "Sunday",
+        "subtitle": "138 min · 19.03 km",
+        "type": "long-run",
+        "distanceKm": 19.03,
+        "minutes": 138,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
           {
-            "label": "Fast Finish",
-            "minutes": 34,
-            "pace": "5:42",
-            "hr": 169,
-            "hrRange": "162-176",
-            "km": 5.96,
-            "notes": "Controlled acceleration on tired legs. Strong, not all-out."
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 138,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 19.03
           }
         ]
       }
@@ -4111,152 +3870,170 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-18",
     "endDate": "2027-01-24",
-    "targetKm": 59.98,
+    "targetKm": 48.02,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw3-run1",
+        "id": "2027-kw3-run1",
         "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "86 min · 12.65 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 12.65,
-        "minutes": 86,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:50",
+        "subtitle": "57 min · 9.30 km",
+        "type": "threshold-run",
+        "distanceKm": 9.3,
+        "minutes": 57,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "3 × 8 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 8 min threshold, then 3 min easy. Three threshold reps, two recoveries."
+          },
+          {
+            "label": "2 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 6,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.77,
+            "notes": "Recovery between threshold reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2027-kw3-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
+        "plannedDay": "Thursday",
+        "subtitle": "62 min · 10.62 km",
+        "type": "hm-pace-run",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 76,
-            "pace": "6:50",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 11.12
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:31",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.0,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw3-run2",
-        "order": 2,
-        "title": "Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "64 min · 10.26 km",
-        "type": "interval-run",
-        "distanceKm": 10.26,
-        "minutes": 64,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:29",
-        "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
-        "steps": [
-          {
             "label": "Warm-up",
-            "minutes": 29,
-            "pace": "6:50",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.25
+            "km": 2.1
           },
           {
-            "label": "5 × 3 min VO2max",
-            "minutes": 15,
-            "pace": "4:29",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.35,
-            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 5 hard reps are done."
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
           },
           {
-            "label": "4 × 2 min Easy Recovery",
-            "minutes": 8,
-            "pace": "7:31",
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.06,
-            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
+            "km": 0.65
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:31",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.6
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw3-run3",
+        "id": "2027-kw3-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "63 min · 9.22 km",
+        "subtitle": "44 min · 6.17 km",
         "type": "easy-run",
-        "distanceKm": 9.22,
-        "minutes": 63,
+        "distanceKm": 6.17,
+        "minutes": 44,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:50",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 63,
-            "pace": "6:50",
+            "pace": "7:08",
+            "minutes": 44,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.22
+            "km": 6.17
           }
         ]
       },
       {
-        "id": "kw3-run4",
+        "id": "2027-kw3-run4",
         "order": 4,
-        "title": "Long Run",
-        "category": "Long Run",
+        "title": "Fast Finish Long Run",
+        "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "194 min · 27.85 km",
-        "type": "long-run",
-        "distanceKm": 27.85,
-        "minutes": 194,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:58",
+        "subtitle": "150 min · 21.93 km",
+        "type": "fast-finish-long-run",
+        "distanceKm": 21.93,
+        "minutes": 150,
+        "optimalHr": 166,
+        "hrRange": "158-172",
+        "pace": "5:20",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 194,
-            "pace": "6:58",
+            "pace": "7:15",
+            "minutes": 125,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.85
+            "hrRange": "144-160",
+            "km": 17.24
+          },
+          {
+            "label": "Fast Finish",
+            "pace": "5:20",
+            "minutes": 25,
+            "hr": 166,
+            "hrRange": "158-172",
+            "km": 4.69,
+            "notes": "Controlled faster finish, not race effort."
           }
         ]
       }
@@ -4267,179 +4044,188 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-25",
     "endDate": "2027-01-31",
-    "targetKm": 68.02,
+    "targetKm": 49.95,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw4-run1",
+        "id": "2027-kw4-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "66 min · 8.78 km",
-        "type": "recovery-run",
-        "distanceKm": 8.78,
-        "minutes": 66,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:31",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 66,
-            "pace": "7:31",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.78,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw4-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.90 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.9,
-        "minutes": 74,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:50",
+        "subtitle": "55 min · 9.02 km",
+        "type": "interval-run",
+        "distanceKm": 9.02,
+        "minutes": 55,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 64,
-            "pace": "6:50",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 9.37
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "6 × 3 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 18,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.08,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Six hard reps, five recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:31",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.0,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "5 × 2 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 10,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.29,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw4-run3",
-        "order": 3,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
+        "id": "2027-kw4-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "61 min · 10.33 km",
-        "type": "threshold-run",
-        "distanceKm": 10.33,
-        "minutes": 61,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "5:00",
+        "subtitle": "65 min · 11.00 km",
+        "type": "hm-pace-run",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:50",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.2
+            "km": 2.1
           },
           {
-            "label": "3 × 10 min Threshold",
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
             "minutes": 30,
-            "pace": "5:00",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 6.0,
-            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:31",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.8,
-            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:31",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.33
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw4-run4",
-        "order": 4,
+        "id": "2027-kw4-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "70 min · 10.24 km",
+        "subtitle": "42 min · 5.89 km",
         "type": "easy-run",
-        "distanceKm": 10.24,
-        "minutes": 70,
+        "distanceKm": 5.89,
+        "minutes": 42,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:50",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 70,
-            "pace": "6:50",
+            "pace": "7:08",
+            "minutes": 42,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.24
+            "km": 5.89
           }
         ]
       },
       {
-        "id": "kw4-run5",
-        "order": 5,
-        "title": "Long Run",
-        "category": "Long Run",
+        "id": "2027-kw4-run4",
+        "order": 4,
+        "title": "Long Run with HM Pace Blocks",
+        "category": "Long Run with HM Pace Blocks",
         "plannedDay": "Sunday",
-        "subtitle": "193 min · 27.77 km",
-        "type": "long-run",
-        "distanceKm": 27.77,
-        "minutes": 193,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:57",
+        "subtitle": "162 min · 24.04 km",
+        "type": "long-run-with-hm-pace-blocks",
+        "distanceKm": 24.04,
+        "minutes": 162,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 193,
-            "pace": "6:57",
+            "pace": "7:15",
+            "minutes": 86,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.77
+            "hrRange": "144-160",
+            "km": 11.86
+          },
+          {
+            "label": "2 × 12 min HM Pace",
+            "pace": "4:45",
+            "minutes": 24,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 5.05,
+            "notes": "Two controlled HM pace blocks inside the long run, with the easy recovery below between them."
+          },
+          {
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.65,
+            "notes": "Recovery between HM pace blocks only."
+          },
+          {
+            "label": "Easy Finish",
+            "pace": "7:15",
+            "minutes": 47,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 6.48
           }
         ]
       }
@@ -4450,188 +4236,152 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-01",
     "endDate": "2027-02-07",
-    "targetKm": 69.79,
+    "targetKm": 48.98,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw5-run1",
+        "id": "2027-kw5-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "67 min · 8.93 km",
-        "type": "recovery-run",
-        "distanceKm": 8.93,
-        "minutes": 67,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:30",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 67,
-            "pace": "7:30",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.93,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw5-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.21 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.21,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:49",
+        "subtitle": "55 min · 9.05 km",
+        "type": "threshold-run",
+        "distanceKm": 9.05,
+        "minutes": 55,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
         "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 66,
-            "pace": "6:49",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.68
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:30",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.0,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw5-run3",
-        "order": 3,
-        "title": "Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "66 min · 10.63 km",
-        "type": "interval-run",
-        "distanceKm": 10.63,
-        "minutes": 66,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:28",
-        "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
-            "pace": "6:49",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.25
+            "km": 2.1
           },
           {
-            "label": "4 × 4 min VO2max",
-            "minutes": 16,
-            "pace": "4:28",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.58,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
+            "label": "2 × 12 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 12 min threshold, then 4 min easy. Two threshold reps, one recovery."
           },
           {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:30",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 1.2,
-            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
+            "label": "1 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 4,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.52,
+            "notes": "Recovery between the two threshold reps only."
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:30",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.6
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw5-run4",
-        "order": 4,
-        "title": "Easy Run",
-        "category": "Easy Run",
-        "plannedDay": "Saturday",
-        "subtitle": "76 min · 11.15 km",
-        "type": "easy-run",
-        "distanceKm": 11.15,
-        "minutes": 76,
+        "id": "2027-kw5-run2",
+        "order": 2,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:49",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 76,
-            "pace": "6:49",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.15
+            "km": 6.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw5-run5",
-        "order": 5,
-        "title": "Fast Finish Long Run",
-        "category": "Fast Finish Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "186 min · 27.87 km",
-        "type": "fast-finish-long-run",
-        "distanceKm": 27.87,
-        "minutes": 186,
-        "optimalHr": 169,
-        "hrRange": "162-176",
-        "pace": "5:40",
+        "id": "2027-kw5-run3",
+        "order": 3,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Saturday",
+        "subtitle": "51 min · 7.15 km",
+        "type": "easy-run",
+        "distanceKm": 7.15,
+        "minutes": 51,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 152,
-            "pace": "6:57",
-            "hr": 152,
-            "hrRange": "145-158",
-            "km": 21.87
-          },
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 51,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 7.15
+          }
+        ]
+      },
+      {
+        "id": "2027-kw5-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
+        "plannedDay": "Sunday",
+        "subtitle": "181 min · 24.97 km",
+        "type": "long-run",
+        "distanceKm": 24.97,
+        "minutes": 181,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
           {
-            "label": "Fast Finish",
-            "minutes": 34,
-            "pace": "5:40",
-            "hr": 169,
-            "hrRange": "162-176",
-            "km": 6.0,
-            "notes": "Controlled acceleration on tired legs. Strong, not all-out."
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 181,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 24.97
           }
         ]
       }
@@ -4642,205 +4392,161 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-08",
     "endDate": "2027-02-14",
-    "targetKm": 69.69,
+    "targetKm": 43.33,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw6-run1",
+        "id": "2027-kw6-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "64 min · 8.53 km",
-        "type": "recovery-run",
-        "distanceKm": 8.53,
-        "minutes": 64,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:30",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 64,
-            "pace": "7:30",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.53,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw6-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "74 min · 10.95 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.95,
-        "minutes": 74,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:48",
+        "subtitle": "59 min · 9.73 km",
+        "type": "interval-run",
+        "distanceKm": 9.73,
+        "minutes": 59,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 64,
-            "pace": "6:48",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 9.42
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "5 × 4 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 20,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.53,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:30",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.0,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw6-run3",
-        "order": 3,
+        "id": "2027-kw6-run2",
+        "order": 2,
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "74 min · 13.34 km",
+        "subtitle": "62 min · 10.62 km",
         "type": "hm-pace-run",
-        "distanceKm": 13.34,
-        "minutes": 74,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:46",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:48",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.21
+            "km": 2.1
           },
           {
-            "label": "3 × 3 km HM Pace",
-            "minutes": 43,
-            "pace": "4:46",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 9,
-            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:30",
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.8,
-            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
+            "km": 0.65
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:30",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.33
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw6-run4",
-        "order": 4,
+        "id": "2027-kw6-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "62 min · 9.12 km",
+        "subtitle": "36 min · 5.05 km",
         "type": "easy-run",
-        "distanceKm": 9.12,
-        "minutes": 62,
+        "distanceKm": 5.05,
+        "minutes": 36,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:48",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 62,
-            "pace": "6:48",
+            "pace": "7:08",
+            "minutes": 36,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.12
+            "km": 5.05
           }
         ]
       },
       {
-        "id": "kw6-run5",
-        "order": 5,
-        "title": "Long Run with HM Pace Blocks",
-        "category": "Long Run with HM Pace Blocks",
+        "id": "2027-kw6-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "172 min · 27.75 km",
-        "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 27.75,
-        "minutes": 172,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:46",
+        "subtitle": "130 min · 17.93 km",
+        "type": "long-run",
+        "distanceKm": 17.93,
+        "minutes": 130,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 111,
-            "pace": "6:56",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 130,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 16.01
-          },
-          {
-            "label": "2 × 5 km HM Pace",
-            "minutes": 48,
-            "pace": "4:46",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 10,
-            "notes": "In the long run: 5 km HM pace, then 5 min easy, then the second HM pace block."
-          },
-          {
-            "label": "1 × 5 min Easy Recovery",
-            "minutes": 5,
-            "pace": "7:30",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 0.67,
-            "notes": "Recovery between the two HM pace blocks only."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 8,
-            "pace": "7:30",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.07
+            "hrRange": "144-160",
+            "km": 17.93
           }
         ]
       }
@@ -4851,152 +4557,171 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-15",
     "endDate": "2027-02-21",
-    "targetKm": 59.98,
+    "targetKm": 47.98,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw7-run1",
+        "id": "2027-kw7-run1",
         "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "84 min · 12.59 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 12.59,
-        "minutes": 84,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:47",
+        "subtitle": "57 min · 9.30 km",
+        "type": "threshold-run",
+        "distanceKm": 9.3,
+        "minutes": 57,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 75,
-            "pace": "6:47",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 11.06
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "3 × 8 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 8 min threshold, then 3 min easy. Three threshold reps, two recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:29",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.0,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "2 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 6,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.77,
+            "notes": "Recovery between threshold reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw7-run2",
+        "id": "2027-kw7-run2",
         "order": 2,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "55 min · 9.17 km",
-        "type": "threshold-run",
-        "distanceKm": 9.17,
-        "minutes": 55,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "4:59",
+        "subtitle": "65 min · 11.00 km",
+        "type": "hm-pace-run",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:47",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.21
+            "km": 2.1
           },
           {
-            "label": "4 × 6 min Threshold",
-            "minutes": 24,
-            "pace": "4:59",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 4.82,
-            "notes": "Alternate with the recovery below: 6 min threshold, then 2 min easy. Repeat until all 4 threshold reps are done."
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "3 × 2 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:29",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.8,
-            "notes": "Recovery between threshold reps only: 3 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:29",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.34
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw7-run3",
+        "id": "2027-kw7-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "71 min · 10.46 km",
+        "subtitle": "41 min · 5.75 km",
         "type": "easy-run",
-        "distanceKm": 10.46,
-        "minutes": 71,
+        "distanceKm": 5.75,
+        "minutes": 41,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:47",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 71,
-            "pace": "6:47",
+            "pace": "7:08",
+            "minutes": 41,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.46
+            "km": 5.75
           }
         ]
       },
       {
-        "id": "kw7-run4",
+        "id": "2027-kw7-run4",
         "order": 4,
-        "title": "Long Run",
-        "category": "Long Run",
+        "title": "Fast Finish Long Run",
+        "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "192 min · 27.76 km",
-        "type": "long-run",
-        "distanceKm": 27.76,
-        "minutes": 192,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:55",
+        "subtitle": "150 min · 21.93 km",
+        "type": "fast-finish-long-run",
+        "distanceKm": 21.93,
+        "minutes": 150,
+        "optimalHr": 166,
+        "hrRange": "158-172",
+        "pace": "5:20",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 192,
-            "pace": "6:55",
+            "pace": "7:15",
+            "minutes": 125,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.76
+            "hrRange": "144-160",
+            "km": 17.24
+          },
+          {
+            "label": "Fast Finish",
+            "pace": "5:20",
+            "minutes": 25,
+            "hr": 166,
+            "hrRange": "158-172",
+            "km": 4.69,
+            "notes": "Controlled faster finish, not race effort."
           }
         ]
       }
@@ -5007,179 +4732,178 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-22",
     "endDate": "2027-02-28",
-    "targetKm": 69.91,
+    "targetKm": 50.0,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw8-run1",
+        "id": "2027-kw8-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "67 min · 8.95 km",
-        "type": "recovery-run",
-        "distanceKm": 8.95,
-        "minutes": 67,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:29",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 67,
-            "pace": "7:29",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.95,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw8-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.26 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.26,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:47",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 66,
-            "pace": "6:47",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.73
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:29",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.0,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw8-run3",
-        "order": 3,
         "title": "Interval Run",
         "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "66 min · 10.67 km",
+        "plannedDay": "Tuesday",
+        "subtitle": "55 min · 9.02 km",
         "type": "interval-run",
-        "distanceKm": 10.67,
-        "minutes": 66,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:27",
+        "distanceKm": 9.02,
+        "minutes": 55,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
             "label": "Warm-up",
-            "minutes": 29,
-            "pace": "6:47",
+            "pace": "7:08",
+            "minutes": 15,
             "hr": 145,
             "hrRange": "138-152",
-            "km": 4.27
+            "km": 2.1
           },
           {
-            "label": "4 × 4 min VO2max",
-            "minutes": 16,
-            "pace": "4:27",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.6,
-            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Repeat until all 4 hard reps are done."
+            "label": "6 × 3 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 18,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.08,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Six hard reps, five recoveries."
           },
           {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:29",
+            "label": "5 × 2 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 10,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.2,
-            "notes": "Recovery between reps only: 3 recoveries total, not after the final rep."
+            "km": 1.29,
+            "notes": "Recovery between reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
+            "pace": "7:45",
             "minutes": 12,
-            "pace": "7:29",
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.6
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw8-run4",
-        "order": 4,
-        "title": "Easy Run",
-        "category": "Easy Run",
-        "plannedDay": "Saturday",
-        "subtitle": "76 min · 11.20 km",
-        "type": "easy-run",
-        "distanceKm": 11.2,
-        "minutes": 76,
+        "id": "2027-kw8-run2",
+        "order": 2,
+        "title": "Easy Run + Strides",
+        "category": "Easy Run + Strides",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
+        "type": "easy-run-plus-strides",
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:47",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 76,
-            "pace": "6:47",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 11.2
+            "km": 6.31
+          },
+          {
+            "label": "6 × 20 s Strides",
+            "pace": "3:45",
+            "seconds": 120,
+            "km": 0.53,
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
+          },
+          {
+            "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
+            "seconds": 450,
+            "hr": 140,
+            "hrRange": "132-148",
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw8-run5",
-        "order": 5,
-        "title": "Long Run",
-        "category": "Long Run",
-        "plannedDay": "Sunday",
-        "subtitle": "192 min · 27.83 km",
-        "type": "long-run",
-        "distanceKm": 27.83,
-        "minutes": 192,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:54",
+        "id": "2027-kw8-run3",
+        "order": 3,
+        "title": "Easy Run",
+        "category": "Easy Run",
+        "plannedDay": "Saturday",
+        "subtitle": "73 min · 10.23 km",
+        "type": "easy-run",
+        "distanceKm": 10.23,
+        "minutes": 73,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 73,
+            "hr": 146,
+            "hrRange": "138-152",
+            "km": 10.23
+          }
+        ]
+      },
+      {
+        "id": "2027-kw8-run4",
+        "order": 4,
+        "title": "Long Run with HM Pace Blocks",
+        "category": "Long Run with HM Pace Blocks",
+        "plannedDay": "Sunday",
+        "subtitle": "154 min · 22.94 km",
+        "type": "long-run-with-hm-pace-blocks",
+        "distanceKm": 22.94,
+        "minutes": 154,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
+        "optional": false,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
+        "steps": [
+          {
             "label": "Easy Long Run",
-            "minutes": 192,
-            "pace": "6:54",
+            "pace": "7:15",
+            "minutes": 81,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.83
+            "hrRange": "144-160",
+            "km": 11.17
+          },
+          {
+            "label": "2 × 12 min HM Pace",
+            "pace": "4:45",
+            "minutes": 24,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 5.05,
+            "notes": "Two controlled HM pace blocks inside the long run, with the easy recovery below between them."
+          },
+          {
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 0.65,
+            "notes": "Recovery between HM pace blocks only."
+          },
+          {
+            "label": "Easy Finish",
+            "pace": "7:15",
+            "minutes": 44,
+            "hr": 152,
+            "hrRange": "144-160",
+            "km": 6.07
           }
         ]
       }
@@ -5190,188 +4914,161 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-01",
     "endDate": "2027-03-07",
-    "targetKm": 68.06,
+    "targetKm": 49.0,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw9-run1",
+        "id": "2027-kw9-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "66 min · 8.84 km",
-        "type": "recovery-run",
-        "distanceKm": 8.84,
-        "minutes": 66,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:28",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 66,
-            "pace": "7:28",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 8.84,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw9-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "72 min · 10.84 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.84,
-        "minutes": 72,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:46",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Easy",
-            "minutes": 63,
-            "pace": "6:46",
-            "hr": 146,
-            "hrRange": "138-152",
-            "km": 9.31
-          },
-          {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
-          },
-          {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:28",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.0,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
-          }
-        ]
-      },
-      {
-        "id": "kw9-run3",
-        "order": 3,
         "title": "Threshold Run",
         "category": "Threshold Run",
-        "plannedDay": "Thursday",
-        "subtitle": "61 min · 10.40 km",
+        "plannedDay": "Tuesday",
+        "subtitle": "55 min · 9.05 km",
         "type": "threshold-run",
-        "distanceKm": 10.4,
-        "minutes": 61,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "4:58",
+        "distanceKm": 9.05,
+        "minutes": 55,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "2 × 12 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 12 min threshold, then 4 min easy. Two threshold reps, one recovery."
+          },
+          {
+            "label": "1 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 4,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.52,
+            "notes": "Recovery between the two threshold reps only."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2027-kw9-run2",
+        "order": 2,
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
+        "plannedDay": "Thursday",
+        "subtitle": "62 min · 10.62 km",
+        "type": "hm-pace-run",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:46",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.22
+            "km": 2.1
           },
           {
-            "label": "3 × 10 min Threshold",
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
             "minutes": 30,
-            "pace": "4:58",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 6.04,
-            "notes": "Alternate with the recovery below: 10 min threshold, then 3 min easy. Repeat until all 3 threshold reps are done."
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:28",
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.8,
-            "notes": "Recovery between threshold reps only: 2 recoveries total, not after the final rep."
+            "km": 0.65
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:28",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.34
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw9-run4",
-        "order": 4,
+        "id": "2027-kw9-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "69 min · 10.20 km",
+        "subtitle": "38 min · 5.33 km",
         "type": "easy-run",
-        "distanceKm": 10.2,
-        "minutes": 69,
+        "distanceKm": 5.33,
+        "minutes": 38,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:46",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 69,
-            "pace": "6:46",
+            "pace": "7:08",
+            "minutes": 38,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.2
+            "km": 5.33
           }
         ]
       },
       {
-        "id": "kw9-run5",
-        "order": 5,
-        "title": "Fast Finish Long Run",
-        "category": "Fast Finish Long Run",
+        "id": "2027-kw9-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "184 min · 27.78 km",
-        "type": "fast-finish-long-run",
-        "distanceKm": 27.78,
-        "minutes": 184,
-        "optimalHr": 169,
-        "hrRange": "162-176",
-        "pace": "5:38",
+        "subtitle": "174 min · 24.00 km",
+        "type": "long-run",
+        "distanceKm": 24.0,
+        "minutes": 174,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 150,
-            "pace": "6:54",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 174,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 21.74
-          },
-          {
-            "label": "Fast Finish",
-            "minutes": 34,
-            "pace": "5:38",
-            "hr": 169,
-            "hrRange": "162-176",
-            "km": 6.04,
-            "notes": "Controlled acceleration on tired legs. Strong, not all-out."
+            "hrRange": "144-160",
+            "km": 24.0
           }
         ]
       }
@@ -5382,205 +5079,162 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-08",
     "endDate": "2027-03-14",
-    "targetKm": 65.97,
+    "targetKm": 43.71,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw10-run1",
+        "id": "2027-kw10-run1",
         "order": 1,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Monday",
-        "subtitle": "49 min · 6.58 km",
-        "type": "recovery-run",
-        "distanceKm": 6.58,
-        "minutes": 49,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:27",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 49,
-            "pace": "7:27",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 6.58,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw10-run2",
-        "order": 2,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "70 min · 10.58 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 10.58,
-        "minutes": 70,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:45",
+        "subtitle": "59 min · 9.73 km",
+        "type": "interval-run",
+        "distanceKm": 9.73,
+        "minutes": 59,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 61,
-            "pace": "6:45",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 9.04
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "5 × 4 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 20,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.53,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:27",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.01,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw10-run3",
-        "order": 3,
+        "id": "2027-kw10-run2",
+        "order": 2,
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "74 min · 13.37 km",
+        "subtitle": "65 min · 11.00 km",
         "type": "hm-pace-run",
-        "distanceKm": 13.37,
-        "minutes": 74,
-        "optimalHr": 178,
-        "hrRange": "174-183",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
         "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:45",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.22
+            "km": 2.1
           },
           {
-            "label": "3 × 3 km HM Pace",
-            "minutes": 43,
+            "label": "3 × 10 min HM Pace",
             "pace": "4:45",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 9,
-            "notes": "Alternate with the recovery below: 3 km at HM pace, then 3 min easy. Repeat until all 3 HM reps are done."
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "2 × 3 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:27",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.81,
-            "notes": "Recovery between HM pace reps only: 2 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:27",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.34
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw10-run4",
-        "order": 4,
+        "id": "2027-kw10-run3",
+        "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "58 min · 8.59 km",
+        "subtitle": "36 min · 5.05 km",
         "type": "easy-run",
-        "distanceKm": 8.59,
-        "minutes": 58,
+        "distanceKm": 5.05,
+        "minutes": 36,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:45",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 58,
-            "pace": "6:45",
+            "pace": "7:08",
+            "minutes": 36,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 8.59
+            "km": 5.05
           }
         ]
       },
       {
-        "id": "kw10-run5",
-        "order": 5,
-        "title": "Long Run with HM Pace Blocks",
-        "category": "Long Run with HM Pace Blocks",
+        "id": "2027-kw10-run4",
+        "order": 4,
+        "title": "Long Run",
+        "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "165 min · 26.85 km",
-        "type": "long-run-with-hm-pace-blocks",
-        "distanceKm": 26.85,
-        "minutes": 165,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:45",
+        "subtitle": "130 min · 17.93 km",
+        "type": "long-run",
+        "distanceKm": 17.93,
+        "minutes": 130,
+        "optimalHr": 152,
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 104,
-            "pace": "6:53",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 130,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 15.11
-          },
-          {
-            "label": "2 × 5 km HM Pace",
-            "minutes": 48,
-            "pace": "4:45",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 10,
-            "notes": "In the long run: 5 km HM pace, then 5 min easy, then the second HM pace block."
-          },
-          {
-            "label": "1 × 5 min Easy Recovery",
-            "minutes": 5,
-            "pace": "7:27",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 0.67,
-            "notes": "Recovery between the two HM pace blocks only."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 8,
-            "pace": "7:27",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.07
+            "hrRange": "144-160",
+            "km": 17.93
           }
         ]
       }
@@ -5591,152 +5245,161 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-15",
     "endDate": "2027-03-21",
-    "targetKm": 58.0,
+    "targetKm": 48.03,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw11-run1",
+        "id": "2027-kw11-run1",
         "order": 1,
+        "title": "Threshold Run",
+        "category": "Threshold Run",
+        "plannedDay": "Tuesday",
+        "subtitle": "57 min · 9.30 km",
+        "type": "threshold-run",
+        "distanceKm": 9.3,
+        "minutes": 57,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
+        "optional": false,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "3 × 8 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 8 min threshold, then 3 min easy. Three threshold reps, two recoveries."
+          },
+          {
+            "label": "2 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 6,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.77,
+            "notes": "Recovery between threshold reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2027-kw11-run2",
+        "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "82 min · 12.23 km",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 12.23,
-        "minutes": 82,
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:44",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 72,
-            "pace": "6:44",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 10.69
+            "km": 6.31
           },
           {
             "label": "6 × 20 s Strides",
-            "seconds": 120,
             "pace": "3:45",
+            "seconds": 120,
             "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
             "seconds": 450,
-            "pace": "7:27",
             "hr": 140,
             "hrRange": "132-148",
-            "km": 1.01,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw11-run2",
-        "order": 2,
-        "title": "Interval Run",
-        "category": "Interval Run",
-        "plannedDay": "Thursday",
-        "subtitle": "50 min · 8.29 km",
-        "type": "interval-run",
-        "distanceKm": 8.29,
-        "minutes": 50,
-        "optimalHr": 188,
-        "hrRange": "184-194",
-        "pace": "4:26",
-        "optional": false,
-        "notes": "VO2max / 5K-specific session. Hard but controlled, not all-out.",
-        "steps": [
-          {
-            "label": "Warm-up",
-            "minutes": 15,
-            "pace": "6:44",
-            "hr": 145,
-            "hrRange": "138-152",
-            "km": 2.23
-          },
-          {
-            "label": "5 × 3 min VO2max",
-            "minutes": 15,
-            "pace": "4:26",
-            "hr": 188,
-            "hrRange": "184-194",
-            "km": 3.38,
-            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Repeat until all 5 hard reps are done."
-          },
-          {
-            "label": "4 × 2 min Easy Recovery",
-            "minutes": 8,
-            "pace": "7:27",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 1.07,
-            "notes": "Recovery between reps only: 4 recoveries total, not after the final rep."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 12,
-            "pace": "7:27",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.61
-          }
-        ]
-      },
-      {
-        "id": "kw11-run3",
+        "id": "2027-kw11-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "65 min · 9.66 km",
+        "subtitle": "71 min · 9.95 km",
         "type": "easy-run",
-        "distanceKm": 9.66,
-        "minutes": 65,
+        "distanceKm": 9.95,
+        "minutes": 71,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:44",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 65,
-            "pace": "6:44",
+            "pace": "7:08",
+            "minutes": 71,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 9.66
+            "km": 9.95
           }
         ]
       },
       {
-        "id": "kw11-run4",
+        "id": "2027-kw11-run4",
         "order": 4,
-        "title": "Long Run",
-        "category": "Long Run",
+        "title": "Fast Finish Long Run",
+        "category": "Fast Finish Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "191 min · 27.82 km",
-        "type": "long-run",
-        "distanceKm": 27.82,
-        "minutes": 191,
-        "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:52",
+        "subtitle": "143 min · 20.97 km",
+        "type": "fast-finish-long-run",
+        "distanceKm": 20.97,
+        "minutes": 143,
+        "optimalHr": 166,
+        "hrRange": "158-172",
+        "pace": "5:20",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
             "label": "Easy Long Run",
-            "minutes": 191,
-            "pace": "6:52",
+            "pace": "7:15",
+            "minutes": 118,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 27.82
+            "hrRange": "144-160",
+            "km": 16.28
+          },
+          {
+            "label": "Fast Finish",
+            "pace": "5:20",
+            "minutes": 25,
+            "hr": 166,
+            "hrRange": "158-172",
+            "km": 4.69,
+            "notes": "Controlled faster finish, not race effort."
           }
         ]
       }
@@ -5747,152 +5410,161 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-22",
     "endDate": "2027-03-28",
-    "targetKm": 54.04,
+    "targetKm": 49.98,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw12-run1",
+        "id": "2027-kw12-run1",
         "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Interval Run",
+        "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "76 min · 11.34 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 11.34,
-        "minutes": 76,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:44",
+        "subtitle": "55 min · 9.02 km",
+        "type": "interval-run",
+        "distanceKm": 9.02,
+        "minutes": 55,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 66,
-            "pace": "6:44",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 9.8
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "6 × 3 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 18,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.08,
+            "notes": "Alternate with the recovery below: 3 min hard, then 2 min easy. Six hard reps, five recoveries."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:26",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.01,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "5 × 2 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 10,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.29,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw12-run2",
+        "id": "2027-kw12-run2",
         "order": 2,
         "title": "HM Pace Run",
         "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "72 min · 12.79 km",
+        "subtitle": "62 min · 10.62 km",
         "type": "hm-pace-run",
-        "distanceKm": 12.79,
-        "minutes": 72,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:44",
+        "distanceKm": 10.62,
+        "minutes": 62,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:44",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.23
+            "km": 2.1
           },
           {
-            "label": "4 × 2 km HM Pace",
-            "minutes": 38,
-            "pace": "4:44",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 8,
-            "notes": "Alternate with the recovery below: 2 km at HM pace, then 3 min easy. Repeat until all 4 HM reps are done."
+            "label": "2 × 15 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 15 min HM pace, then 5 min easy. Two HM reps, one recovery."
           },
           {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:26",
+            "label": "1 × 5 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 5,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 1.21,
-            "notes": "Recovery between HM pace reps only: 3 recoveries total, not after the final rep."
+            "km": 0.65
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:26",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.35
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw12-run3",
+        "id": "2027-kw12-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "51 min · 7.57 km",
+        "subtitle": "59 min · 8.27 km",
         "type": "easy-run",
-        "distanceKm": 7.57,
-        "minutes": 51,
+        "distanceKm": 8.27,
+        "minutes": 59,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:44",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 51,
-            "pace": "6:44",
+            "pace": "7:08",
+            "minutes": 59,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 7.57
+            "km": 8.27
           }
         ]
       },
       {
-        "id": "kw12-run4",
+        "id": "2027-kw12-run4",
         "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "153 min · 22.34 km",
+        "subtitle": "160 min · 22.07 km",
         "type": "long-run",
-        "distanceKm": 22.34,
-        "minutes": 153,
+        "distanceKm": 22.07,
+        "minutes": 160,
         "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:51",
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 153,
-            "pace": "6:51",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 160,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 22.34
+            "hrRange": "144-160",
+            "km": 22.07
           }
         ]
       }
@@ -5903,152 +5575,162 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-29",
     "endDate": "2027-04-04",
-    "targetKm": 45.96,
+    "targetKm": 45.94,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw13-run1",
+        "id": "2027-kw13-run1",
         "order": 1,
-        "title": "Easy Run + Strides",
-        "category": "Easy Run + Strides",
+        "title": "Threshold Run",
+        "category": "Threshold Run",
         "plannedDay": "Tuesday",
-        "subtitle": "64 min · 9.73 km",
-        "type": "easy-run-plus-strides",
-        "distanceKm": 9.73,
-        "minutes": 64,
-        "optimalHr": 146,
-        "hrRange": "138-152",
-        "pace": "6:43",
+        "subtitle": "55 min · 9.05 km",
+        "type": "threshold-run",
+        "distanceKm": 9.05,
+        "minutes": 55,
+        "optimalHr": 181,
+        "hrRange": "176-186",
+        "pace": "4:55",
         "optional": false,
-        "notes": null,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
         "steps": [
           {
-            "label": "Easy",
-            "minutes": 55,
-            "pace": "6:43",
-            "hr": 146,
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
             "hrRange": "138-152",
-            "km": 8.19
+            "km": 2.1
           },
           {
-            "label": "6 × 20 s Strides",
-            "seconds": 120,
-            "pace": "3:45",
-            "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "label": "2 × 12 min Threshold",
+            "pace": "4:55",
+            "minutes": 24,
+            "hr": 181,
+            "hrRange": "176-186",
+            "km": 4.88,
+            "notes": "Alternate with the recovery below: 12 min threshold, then 4 min easy. Two threshold reps, one recovery."
           },
           {
-            "label": "5 × 90 s Full Recovery",
-            "seconds": 450,
-            "pace": "7:26",
-            "hr": 140,
-            "hrRange": "132-148",
-            "km": 1.01,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "label": "1 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 4,
+            "hr": 150,
+            "hrRange": "142-156",
+            "km": 0.52,
+            "notes": "Recovery between the two threshold reps only."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw13-run2",
+        "id": "2027-kw13-run2",
         "order": 2,
-        "title": "Threshold Run",
-        "category": "Threshold Run",
+        "title": "HM Pace Run",
+        "category": "HM Pace Run",
         "plannedDay": "Thursday",
-        "subtitle": "55 min · 9.25 km",
-        "type": "threshold-run",
-        "distanceKm": 9.25,
-        "minutes": 55,
-        "optimalHr": 180,
-        "hrRange": "175-184",
-        "pace": "4:56",
+        "subtitle": "65 min · 11.00 km",
+        "type": "hm-pace-run",
+        "distanceKm": 11.0,
+        "minutes": 65,
+        "optimalHr": 176,
+        "hrRange": "170-182",
+        "pace": "4:45",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 15,
-            "pace": "6:43",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 2.23
+            "km": 2.1
           },
           {
-            "label": "4 × 6 min Threshold",
-            "minutes": 24,
-            "pace": "4:56",
-            "hr": 180,
-            "hrRange": "175-184",
-            "km": 4.86,
-            "notes": "Alternate with the recovery below: 6 min threshold, then 2 min easy. Repeat until all 4 threshold reps are done."
+            "label": "3 × 10 min HM Pace",
+            "pace": "4:45",
+            "minutes": 30,
+            "hr": 176,
+            "hrRange": "170-182",
+            "km": 6.32,
+            "notes": "Alternate with the recovery below: 10 min HM pace, then 4 min easy. Three HM reps, two recoveries."
           },
           {
-            "label": "3 × 2 min Easy Recovery",
-            "minutes": 6,
-            "pace": "7:26",
+            "label": "2 × 4 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 8,
             "hr": 148,
             "hrRange": "140-155",
-            "km": 0.81,
-            "notes": "Recovery between threshold reps only: 3 recoveries total, not after the final rep."
+            "km": 1.03,
+            "notes": "Recovery between HM pace reps only; no recovery after the final rep."
           },
           {
             "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:26",
+            "pace": "7:45",
+            "minutes": 12,
             "hr": 142,
             "hrRange": "136-148",
-            "km": 1.35
+            "km": 1.55
           }
         ]
       },
       {
-        "id": "kw13-run3",
+        "id": "2027-kw13-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "43 min · 6.40 km",
+        "subtitle": "42 min · 5.89 km",
         "type": "easy-run",
-        "distanceKm": 6.4,
-        "minutes": 43,
+        "distanceKm": 5.89,
+        "minutes": 42,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:43",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 43,
-            "pace": "6:43",
+            "pace": "7:08",
+            "minutes": 42,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 6.4
+            "km": 5.89
           }
         ]
       },
       {
-        "id": "kw13-run4",
+        "id": "2027-kw13-run4",
         "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "141 min · 20.58 km",
+        "subtitle": "145 min · 20.00 km",
         "type": "long-run",
-        "distanceKm": 20.58,
-        "minutes": 141,
+        "distanceKm": 20.0,
+        "minutes": 145,
         "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:51",
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 141,
-            "pace": "6:51",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 145,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 20.58
+            "hrRange": "144-160",
+            "km": 20.0
           }
         ]
       }
@@ -6059,152 +5741,152 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-05",
     "endDate": "2027-04-11",
-    "targetKm": 42.08,
+    "targetKm": 38.59,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw14-run1",
+        "id": "2027-kw14-run1",
         "order": 1,
+        "title": "Interval Run",
+        "category": "Interval Run",
+        "plannedDay": "Tuesday",
+        "subtitle": "59 min · 9.73 km",
+        "type": "interval-run",
+        "distanceKm": 9.73,
+        "minutes": 59,
+        "optimalHr": 190,
+        "hrRange": "186-196",
+        "pace": "4:25",
+        "optional": false,
+        "notes": "HM support quality: enough speed to stay sharp without turning the plan into 5K training.",
+        "steps": [
+          {
+            "label": "Warm-up",
+            "pace": "7:08",
+            "minutes": 15,
+            "hr": 145,
+            "hrRange": "138-152",
+            "km": 2.1
+          },
+          {
+            "label": "5 × 4 min VO2max Intervals",
+            "pace": "4:25",
+            "minutes": 20,
+            "hr": 190,
+            "hrRange": "186-196",
+            "km": 4.53,
+            "notes": "Alternate with the recovery below: 4 min hard, then 3 min easy. Five hard reps, four recoveries."
+          },
+          {
+            "label": "4 × 3 min Easy Recovery",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 148,
+            "hrRange": "140-155",
+            "km": 1.55,
+            "notes": "Recovery between reps only; no recovery after the final rep."
+          },
+          {
+            "label": "Cool-down",
+            "pace": "7:45",
+            "minutes": 12,
+            "hr": 142,
+            "hrRange": "136-148",
+            "km": 1.55
+          }
+        ]
+      },
+      {
+        "id": "2027-kw14-run2",
+        "order": 2,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
-        "plannedDay": "Tuesday",
-        "subtitle": "52 min · 7.96 km",
+        "plannedDay": "Thursday",
+        "subtitle": "54 min · 7.81 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 7.96,
-        "minutes": 52,
+        "distanceKm": 7.81,
+        "minutes": 54,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:42",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
-            "minutes": 43,
-            "pace": "6:42",
+            "pace": "7:08",
+            "minutes": 45,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 6.42
+            "km": 6.31
           },
           {
             "label": "6 × 20 s Strides",
-            "seconds": 120,
             "pace": "3:45",
+            "seconds": 120,
             "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
             "seconds": 450,
-            "pace": "7:25",
             "hr": 140,
             "hrRange": "132-148",
-            "km": 1.01,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw14-run2",
-        "order": 2,
-        "title": "HM Pace Run",
-        "category": "HM Pace Run",
-        "plannedDay": "Thursday",
-        "subtitle": "72 min · 12.80 km",
-        "type": "hm-pace-run",
-        "distanceKm": 12.8,
-        "minutes": 72,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:44",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Warm-up",
-            "minutes": 15,
-            "pace": "6:42",
-            "hr": 145,
-            "hrRange": "138-152",
-            "km": 2.24
-          },
-          {
-            "label": "4 × 2 km HM Pace",
-            "minutes": 38,
-            "pace": "4:44",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 8,
-            "notes": "Alternate with the recovery below: 2 km at HM pace, then 3 min easy. Repeat until all 4 HM reps are done."
-          },
-          {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:25",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 1.21,
-            "notes": "Recovery between HM pace reps only: 3 recoveries total, not after the final rep."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:25",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.35
-          }
-        ]
-      },
-      {
-        "id": "kw14-run3",
+        "id": "2027-kw14-run3",
         "order": 3,
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "36 min · 5.37 km",
+        "subtitle": "36 min · 5.05 km",
         "type": "easy-run",
-        "distanceKm": 5.37,
+        "distanceKm": 5.05,
         "minutes": 36,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:42",
+        "pace": "7:08",
         "optional": false,
         "notes": null,
         "steps": [
           {
             "label": "Easy",
+            "pace": "7:08",
             "minutes": 36,
-            "pace": "6:42",
             "hr": 146,
             "hrRange": "138-152",
-            "km": 5.37
+            "km": 5.05
           }
         ]
       },
       {
-        "id": "kw14-run4",
+        "id": "2027-kw14-run4",
         "order": 4,
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "109 min · 15.95 km",
+        "subtitle": "116 min · 16.00 km",
         "type": "long-run",
-        "distanceKm": 15.95,
-        "minutes": 109,
+        "distanceKm": 16.0,
+        "minutes": 116,
         "optimalHr": 152,
-        "hrRange": "145-158",
-        "pace": "6:50",
+        "hrRange": "144-160",
+        "pace": "7:15",
         "optional": false,
-        "notes": null,
+        "notes": "HM-specific long run range only; no marathon-style long run.",
         "steps": [
           {
-            "label": "Easy Long Run",
-            "minutes": 109,
-            "pace": "6:50",
+            "label": "Long Easy",
+            "pace": "7:15",
+            "minutes": 116,
             "hr": 152,
-            "hrRange": "145-158",
-            "km": 15.95
+            "hrRange": "144-160",
+            "km": 16.0
           }
         ]
       }
@@ -6215,170 +5897,117 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-12",
     "endDate": "2027-04-18",
-    "targetKm": 48.02,
+    "targetKm": 32.65,
     "focus": "Half Marathon",
     "runs": [
       {
-        "id": "kw15-run1",
+        "id": "2027-kw15-run1",
         "order": 1,
         "title": "Easy Run + Strides",
         "category": "Easy Run + Strides",
         "plannedDay": "Tuesday",
-        "subtitle": "50 min · 7.51 km",
+        "subtitle": "34 min · 5.00 km",
         "type": "easy-run-plus-strides",
-        "distanceKm": 7.51,
-        "minutes": 50,
+        "distanceKm": 5.0,
+        "minutes": 34,
         "optimalHr": 146,
         "hrRange": "138-152",
-        "pace": "6:42",
+        "pace": "7:08",
         "optional": false,
-        "notes": null,
+        "notes": "Short race-week shakeout with relaxed strides.",
         "steps": [
           {
             "label": "Easy",
-            "minutes": 40,
-            "pace": "6:42",
+            "pace": "7:08",
+            "minutes": 25,
             "hr": 146,
             "hrRange": "138-152",
-            "km": 5.97
+            "km": 3.5
           },
           {
             "label": "6 × 20 s Strides",
-            "seconds": 120,
             "pace": "3:45",
+            "seconds": 120,
             "km": 0.53,
-            "notes": "Alternate: 20 s stride, then 90 s full recovery. No recovery needed after the final stride."
+            "notes": "Alternate: 20 s relaxed fast stride, then 90 s full recovery. No recovery after the final stride."
           },
           {
             "label": "5 × 90 s Full Recovery",
+            "pace": "7:45",
             "seconds": 450,
-            "pace": "7:25",
             "hr": 140,
             "hrRange": "132-148",
-            "km": 1.01,
-            "notes": "This is the recovery between strides: 5 recoveries total, not 90 s after every stride including the last one."
+            "km": 0.97,
+            "notes": "Recovery between strides only: 5 recoveries total, not after the final stride."
           }
         ]
       },
       {
-        "id": "kw15-run2",
+        "id": "2027-kw15-run2",
         "order": 2,
-        "title": "HM Pace Run",
-        "category": "HM Pace Run",
+        "title": "Easy Run",
+        "category": "Easy Run",
         "plannedDay": "Thursday",
-        "subtitle": "72 min · 12.80 km",
-        "type": "hm-pace-run",
-        "distanceKm": 12.8,
-        "minutes": 72,
-        "optimalHr": 178,
-        "hrRange": "174-183",
-        "pace": "4:44",
+        "subtitle": "30 min · 4.21 km",
+        "type": "easy-run",
+        "distanceKm": 4.21,
+        "minutes": 30,
+        "optimalHr": 146,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
-        "notes": null,
+        "notes": "Very easy. Keep the legs fresh.",
         "steps": [
           {
-            "label": "Warm-up",
-            "minutes": 15,
-            "pace": "6:42",
-            "hr": 145,
+            "label": "Easy",
+            "pace": "7:08",
+            "minutes": 30,
+            "hr": 146,
             "hrRange": "138-152",
-            "km": 2.24
-          },
-          {
-            "label": "4 × 2 km HM Pace",
-            "minutes": 38,
-            "pace": "4:44",
-            "hr": 178,
-            "hrRange": "174-183",
-            "km": 8,
-            "notes": "Alternate with the recovery below: 2 km at HM pace, then 3 min easy. Repeat until all 4 HM reps are done."
-          },
-          {
-            "label": "3 × 3 min Easy Recovery",
-            "minutes": 9,
-            "pace": "7:25",
-            "hr": 148,
-            "hrRange": "140-155",
-            "km": 1.21,
-            "notes": "Recovery between HM pace reps only: 3 recoveries total, not after the final rep."
-          },
-          {
-            "label": "Cool-down",
-            "minutes": 10,
-            "pace": "7:25",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 1.35
+            "km": 4.21
           }
         ]
       },
       {
-        "id": "kw15-run3",
+        "id": "2027-kw15-run3",
         "order": 3,
-        "title": "Recovery Run",
-        "category": "Recovery Run",
-        "plannedDay": "Saturday",
-        "subtitle": "33 min · 4.45 km",
-        "type": "recovery-run",
-        "distanceKm": 4.45,
-        "minutes": 33,
-        "optimalHr": 140,
-        "hrRange": "132-146",
-        "pace": "7:25",
-        "optional": false,
-        "notes": null,
-        "steps": [
-          {
-            "label": "Recovery",
-            "minutes": 33,
-            "pace": "7:25",
-            "hr": 140,
-            "hrRange": "132-146",
-            "km": 4.45,
-            "notes": "Very relaxed. Keep it easy even if the pace feels slow."
-          }
-        ]
-      },
-      {
-        "id": "kw15-run4",
-        "order": 4,
         "title": "Wiener Städtische Halbmarathon",
         "category": "Race",
         "plannedDay": "Sunday",
-        "subtitle": "115 min · 23.26 km",
+        "subtitle": "118 min · 23.44 km",
         "type": "race",
-        "distanceKm": 23.26,
-        "minutes": 115,
-        "optimalHr": 180,
-        "hrRange": "174-186",
-        "pace": "4:44",
+        "distanceKm": 23.44,
+        "minutes": 118,
+        "optimalHr": 145,
+        "hrRange": "138-152",
+        "pace": "7:08",
         "optional": false,
-        "notes": null,
+        "notes": "A-race.",
         "steps": [
           {
             "label": "Warm-up",
+            "pace": "7:08",
             "minutes": 10,
-            "pace": "6:42",
             "hr": 145,
             "hrRange": "138-152",
-            "km": 1.49
+            "km": 1.4
           },
           {
             "label": "Wiener Städtische Halbmarathon",
-            "minutes": 100,
-            "pace": "4:44",
-            "hr": 180,
-            "hrRange": "174-186",
+            "pace": "4:45",
+            "seconds": 6030,
+            "hr": 178,
+            "hrRange": "172-184",
             "km": 21.1,
-            "notes": "Target around 1:40. Start controlled, build after 12-15 km if strong."
+            "notes": "Target around 1:40. Start controlled, settle into HM effort, then push after 15 km if good."
           },
           {
-            "label": "Cool-down",
-            "minutes": 5,
-            "pace": "7:25",
-            "hr": 142,
-            "hrRange": "136-148",
-            "km": 0.67
+            "label": "Cool-down Walk/Jog",
+            "pace": "8:30",
+            "minutes": 8,
+            "hr": 135,
+            "hrRange": "125-145",
+            "km": 0.94
           }
         ]
       }
