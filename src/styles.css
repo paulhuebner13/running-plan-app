@@ -2270,3 +2270,220 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     padding: 5px 4px;
   }
 }
+
+/* v45 Gym set logging + load statistics */
+.exercise-load-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+  align-items: stretch;
+  margin-top: 12px;
+}
+
+.exercise-load-summary div,
+.exercise-load-summary button {
+  min-width: 0;
+  border: 2px solid color-mix(in srgb, var(--exercise) 30%, transparent);
+  border-radius: 15px;
+  padding: 9px 8px;
+  background: rgba(0,0,0,0.16);
+  color: var(--ink);
+}
+
+.exercise-load-summary span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.exercise-load-summary strong {
+  display: block;
+  margin-top: 6px;
+  color: color-mix(in srgb, var(--exercise) 78%, white);
+  font-size: 1rem;
+  font-weight: 1000;
+  line-height: 1.05;
+}
+
+.exercise-load-summary button {
+  font-weight: 1000;
+  color: #111318;
+  background: var(--exercise);
+}
+
+.set-log-card,
+.exercise-stats-panel {
+  border: 2px solid color-mix(in srgb, var(--exercise) 28%, transparent);
+  border-radius: 18px;
+  padding: 13px;
+  background: rgba(255,255,255,0.045);
+}
+
+.set-log-head,
+.stats-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.set-log-head h3 {
+  margin: 0;
+  color: color-mix(in srgb, var(--exercise) 72%, white);
+  font-size: 0.9rem;
+}
+
+.set-log-head span,
+.stats-panel-head span,
+.stats-panel-head em {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  font-style: normal;
+}
+
+.stats-panel-head strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+
+.set-log-list {
+  display: grid;
+  gap: 8px;
+}
+
+.set-log-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 1fr;
+  gap: 8px;
+  align-items: center;
+  border: 2px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 8px;
+  background: rgba(0,0,0,0.14);
+}
+
+.set-log-row.done {
+  border-color: color-mix(in srgb, var(--green) 50%, transparent);
+  background: rgba(69,201,121,0.08);
+}
+
+.set-log-row > strong {
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 1000;
+}
+
+.set-log-row label {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.set-log-row label span {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.set-log-row input {
+  width: 100%;
+  border: 2px solid color-mix(in srgb, var(--exercise) 24%, rgba(255,255,255,0.08));
+  border-radius: 12px;
+  padding: 9px 8px;
+  background: rgba(255,255,255,0.07);
+  color: var(--ink);
+  text-align: center;
+  font-weight: 950;
+  outline: none;
+}
+
+.set-log-row input:focus {
+  border-color: var(--exercise);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--exercise) 20%, transparent);
+}
+
+.exercise-load-chart {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin: 2px auto 10px;
+  overflow: visible;
+}
+
+.exercise-load-chart line {
+  stroke: rgba(255,255,255,0.16);
+  stroke-width: 2;
+}
+
+.exercise-load-chart path {
+  fill: none;
+  stroke: var(--exercise);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.exercise-load-chart circle {
+  fill: var(--exercise);
+  stroke: #111318;
+  stroke-width: 2;
+}
+
+.exercise-load-chart text {
+  fill: var(--ink);
+  font-size: 10px;
+  font-weight: 900;
+  text-anchor: middle;
+}
+
+.stats-log-list {
+  display: grid;
+  gap: 7px;
+}
+
+.stats-log-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 13px;
+  padding: 8px 10px;
+  background: rgba(0,0,0,0.14);
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.stats-log-list span {
+  color: var(--muted);
+}
+
+.empty-stats {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+@media (max-width: 430px) {
+  .exercise-load-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .exercise-load-summary button {
+    grid-column: 1 / -1;
+  }
+
+  .set-log-row {
+    grid-template-columns: 54px 1fr 1fr;
+    gap: 6px;
+    padding: 7px;
+  }
+}

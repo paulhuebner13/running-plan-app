@@ -11,6 +11,7 @@ const supabase = supabaseUrl && supabaseAnonKey
   : null;
 
 const STORAGE_KEY = 'sport-app-progress-v1';
+const GYM_SET_LOGS_KEY = 'sport-app-gym-set-logs-v1';
 const SYNC_KEY = 'paul-sport-v1';
 
 const DAY_OFFSETS = {
@@ -296,24 +297,137 @@ function getWorkoutDurationMinutes(workout) {
   return Math.ceil(getWorkoutDurationSeconds(workout) / 60);
 }
 
+function parseRepRange(repsText) {
+  const match = String(repsText || '').match(/(\d+)\s*[–-]\s*(\d+)/);
+  if (match) return { low: Number(match[1]), high: Number(match[2]) };
+  const single = String(repsText || '').match(/(\d+)/);
+  const value = single ? Number(single[1]) : 10;
+  return { low: value, high: value };
+}
+
+function getExerciseTrackKey(exercise) {
+  return exercise.trackKey || exercise.key || exercise.name;
+}
+
+function getSetEntries(logs, exercise) {
+  const existing = Array.isArray(logs?.[exercise.id]) ? logs[exercise.id] : [];
+  return Array.from({ length: Number(exercise.sets || 0) }, (_, index) => ({
+    weight: existing[index]?.weight ?? '',
+    reps: existing[index]?.reps ?? '',
+    completed: Boolean(existing[index]?.completed)
+  }));
+}
+
+function isSetDone(entry) {
+  return Boolean(entry?.completed) || Number(entry?.reps || 0) > 0;
+}
+
+function getExerciseDoneSetCount(logs, exercise) {
+  return getSetEntries(logs, exercise).filter(isSetDone).length;
+}
+
+function isExerciseDone(logs, exercise, progress) {
+  return Boolean(progress?.[exercise.id]) || getExerciseDoneSetCount(logs, exercise) >= Number(exercise.sets || 0);
+}
+
+function getSetScoreKg(entry) {
+  const weight = Number(String(entry?.weight ?? '').replace(',', '.'));
+  const reps = Number(String(entry?.reps ?? '').replace(',', '.'));
+  if (!Number.isFinite(weight) || !Number.isFinite(reps) || weight <= 0 || reps <= 0) return null;
+  return weight * (1 + reps / 30);
+}
+
+function getExerciseLoadScore(entries) {
+  const scores = (entries || [])
+    .map(getSetScoreKg)
+    .filter((value) => Number.isFinite(value) && value > 0)
+    .sort((a, b) => b - a);
+  if (!scores.length) return null;
+  const bestRelevant = scores.slice(0, Math.min(2, scores.length));
+  return bestRelevant.reduce((sum, value) => sum + value, 0) / bestRelevant.length;
+}
+
+function formatLoad(value) {
+  if (!Number.isFinite(Number(value))) return '—';
+  return `${Number(value).toFixed(1)} kg`;
+}
+
+function getLoggedSetSummary(logs, exercise) {
+  const entries = getSetEntries(logs, exercise);
+  const doneSets = entries.filter(isSetDone).length;
+  const load = getExerciseLoadScore(entries);
+  return { entries, doneSets, load };
+}
+
+function getAllGymExercises() {
+  return trainingPlan.flatMap((weekItem) => getGymWorkoutsForWeek(weekItem).flatMap((workout) =>
+    workout.exercises.map((exercise) => ({
+      ...exercise,
+      workoutId: workout.id,
+      workoutTitle: workout.title,
+      weekKw: weekItem.kw,
+      weekYear: weekItem.year,
+      weekStartDate: weekItem.startDate,
+      plannedDate: plannedDateForGym(weekItem, workout)
+    }))
+  ));
+}
+
+function getExerciseHistory(logs, allExercises, exercise) {
+  const trackKey = getExerciseTrackKey(exercise);
+  return (allExercises || [])
+    .filter((item) => getExerciseTrackKey(item) === trackKey)
+    .map((item) => {
+      const entries = getSetEntries(logs, item);
+      const load = getExerciseLoadScore(entries);
+      const doneSets = entries.filter(isSetDone).length;
+      return { ...item, entries, load, doneSets };
+    })
+    .filter((item) => Number.isFinite(item.load) && item.doneSets > 0)
+    .sort((a, b) => new Date(a.plannedDate) - new Date(b.plannedDate));
+}
+
+function getRecommendedWeight(logs, allExercises, exercise) {
+  const history = getExerciseHistory(logs, allExercises, exercise);
+  if (!history.length) return 'First log';
+  const latest = history[history.length - 1];
+  const weightedEntries = latest.entries.filter((entry) => Number(entry.weight) > 0 && Number(entry.reps) > 0);
+  if (!weightedEntries.length) return 'First log';
+  const avgReps = weightedEntries.reduce((sum, entry) => sum + Number(entry.reps), 0) / weightedEntries.length;
+  const weights = weightedEntries.map((entry) => Number(entry.weight)).filter(Number.isFinite);
+  const baseWeight = weights[weights.length - 1] || Math.max(...weights);
+  const range = parseRepRange(exercise.reps);
+  const increment = baseWeight < 20 ? 1 : 2.5;
+  const shouldIncrease = avgReps >= range.high - 0.5;
+  const recommendation = shouldIncrease ? baseWeight + increment : baseWeight;
+  return `${recommendation.toFixed(recommendation % 1 === 0 ? 0 : 1)} kg`;
+}
+
 function getExercisePlannedSeconds(workout, exercise, index) {
   const transitionAfter = index < (workout.exercises || []).length - 1 ? 120 : 0;
   return getExerciseTotalSeconds(exercise) + transitionAfter;
 }
 
-function getWorkoutStats(workout, progress) {
+function getWorkoutStats(workout, progress, gymLogs = {}) {
   const exercises = workout.exercises || [];
   const totalSets = exercises.reduce((sum, exercise) => sum + Number(exercise.sets || 0), 0);
-  const doneSets = exercises.reduce((sum, exercise) => sum + (progress[exercise.id] ? Number(exercise.sets || 0) : 0), 0);
+  const doneSets = exercises.reduce((sum, exercise) => sum + getExerciseDoneSetCount(gymLogs, exercise), 0);
+  const doneExercises = exercises.filter((exercise) => isExerciseDone(gymLogs, exercise, progress)).length;
   const totalSeconds = getWorkoutDurationSeconds(workout);
   const doneSeconds = exercises.reduce((sum, exercise, index) => {
-    if (!progress[exercise.id]) return sum;
-    return sum + getExercisePlannedSeconds(workout, exercise, index);
+    const setCount = Number(exercise.sets || 0);
+    if (!setCount) return sum;
+    const exerciseSeconds = getExerciseTotalSeconds(exercise);
+    const doneSetCount = getExerciseDoneSetCount(gymLogs, exercise);
+    const transitionAfter = index < exercises.length - 1 ? Math.min(120, doneSetCount * 60) : 0;
+    return sum + (exerciseSeconds * (doneSetCount / setCount)) + transitionAfter;
   }, 0);
   const percent = totalSets > 0 ? Math.round((doneSets / totalSets) * 100) : 0;
   return {
     totalSets,
     doneSets,
+    doneExercises,
+    totalExercises: exercises.length,
     percent,
     totalSeconds,
     doneSeconds: Math.min(doneSeconds, totalSeconds),
@@ -414,6 +528,61 @@ function playTimerCue(context, kind) {
       { frequency: 1320, duration: 0.40, delay: 0.35, volume: 0.78, type: 'square' }
     ]);
   }
+}
+
+
+function ExerciseStatsPanel({ exercise, history }) {
+  const values = history.map((item) => item.load).filter((value) => Number.isFinite(value));
+  const width = 320;
+  const height = 170;
+  const padX = 28;
+  const padY = 22;
+  const min = values.length ? Math.min(...values) : 0;
+  const max = values.length ? Math.max(...values) : 1;
+  const range = Math.max(1, max - min);
+  const points = history.map((item, index) => {
+    const x = history.length <= 1 ? width / 2 : padX + (index / (history.length - 1)) * (width - padX * 2);
+    const y = height - padY - ((item.load - min) / range) * (height - padY * 2);
+    return { ...item, x, y };
+  });
+  const path = points.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x.toFixed(1)} ${point.y.toFixed(1)}`).join(' ');
+
+  return (
+    <section className="exercise-stats-panel">
+      <div className="stats-panel-head">
+        <div>
+          <span>Load history</span>
+          <strong>{exercise.name}</strong>
+        </div>
+        <em>{history.length} logs</em>
+      </div>
+      {history.length ? (
+        <>
+          <svg className="exercise-load-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Exercise load chart">
+            <line x1={padX} y1={height - padY} x2={width - padX} y2={height - padY} />
+            <line x1={padX} y1={padY} x2={padX} y2={height - padY} />
+            {path && <path d={path} />}
+            {points.map((point, index) => (
+              <g key={`${point.id}-${index}`}>
+                <circle cx={point.x} cy={point.y} r="4.5" />
+                <text x={point.x} y={point.y - 9}>{point.load.toFixed(1)}</text>
+              </g>
+            ))}
+          </svg>
+          <div className="stats-log-list">
+            {history.slice(-5).reverse().map((item) => (
+              <div key={item.id}>
+                <span>W{item.weekKw} · {formatDateObject(item.plannedDate)}</span>
+                <strong>{formatLoad(item.load)}</strong>
+              </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <p className="empty-stats">Noch keine eingetragenen Sätze für diese Übung.</p>
+      )}
+    </section>
+  );
 }
 
 function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
@@ -636,7 +805,7 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   );
 }
 
-function ExerciseDetailModal({ exercise, isDone, onClose, onDone, onToggleDone }) {
+function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onToggleDone, setEntries, onSetEntryChange, loadScore, recommendation, history, showStats, onToggleStats }) {
   return (
     <section className="modal-backdrop exercise-backdrop" onClick={onClose}>
       <article className={`exercise-modal ${exerciseTypeClass(exercise)}`} onClick={(event) => event.stopPropagation()}>
@@ -652,11 +821,53 @@ function ExerciseDetailModal({ exercise, isDone, onClose, onDone, onToggleDone }
           <section className="exercise-info-card">
             <h3>How to do it</h3>
             <p>{exercise.explanation}</p>
-            <h3>Alternatives</h3>
-            <div className="alternative-list">
-              {exercise.alternatives.map((alternative) => <span key={alternative}>{alternative}</span>)}
+            <div className="exercise-load-summary">
+              <div>
+                <span>Current load</span>
+                <strong>{formatLoad(loadScore)}</strong>
+              </div>
+              <div>
+                <span>Next weight</span>
+                <strong>{recommendation}</strong>
+              </div>
+              <button type="button" onClick={onToggleStats}>Statistics</button>
             </div>
           </section>
+
+          {showStats && <ExerciseStatsPanel exercise={exercise} history={history} />}
+
+          <section className="set-log-card">
+            <div className="set-log-head">
+              <h3>Sets</h3>
+              <span>Weight + reps per set</span>
+            </div>
+            <div className="set-log-list">
+              {setEntries.map((entry, index) => (
+                <div className={`set-log-row ${isSetDone(entry) ? 'done' : ''}`} key={`${exercise.id}-set-${index + 1}`}>
+                  <strong>Set {index + 1}</strong>
+                  <label>
+                    <span>kg</span>
+                    <input
+                      inputMode="decimal"
+                      value={entry.weight}
+                      placeholder="kg"
+                      onChange={(event) => onSetEntryChange(index, 'weight', event.target.value)}
+                    />
+                  </label>
+                  <label>
+                    <span>reps</span>
+                    <input
+                      inputMode="numeric"
+                      value={entry.reps}
+                      placeholder="reps"
+                      onChange={(event) => onSetEntryChange(index, 'reps', event.target.value)}
+                    />
+                  </label>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <ExerciseTimer exercise={exercise} isDone={isDone} onDone={onDone} onToggleDone={onToggleDone} />
         </div>
       </article>
@@ -671,6 +882,8 @@ export default function App() {
   const [selectedExerciseId, setSelectedExerciseId] = useState(null);
   const gymListScrollYRef = useRef(0);
   const [progress, setProgress] = useState({});
+  const [gymLogs, setGymLogs] = useState({});
+  const [showExerciseStats, setShowExerciseStats] = useState(false);
   const [view, setView] = useState('week');
   const [mode, setMode] = useState('running');
 
@@ -688,7 +901,8 @@ export default function App() {
     if (!selectedExerciseId || !selectedGymWorkout) return null;
     return selectedGymWorkout.exercises.find((exercise) => exercise.id === selectedExerciseId) || null;
   }, [selectedExerciseId, selectedGymWorkout]);
-  const selectedGymStats = selectedGymWorkout ? getWorkoutStats(selectedGymWorkout, progress) : null;
+  const allGymExercises = useMemo(() => getAllGymExercises(), []);
+  const selectedGymStats = selectedGymWorkout ? getWorkoutStats(selectedGymWorkout, progress, gymLogs) : null;
 
   const mandatoryRuns = week.runs.filter((run) => !run.optional);
   const totalMandatoryKm = mandatoryRuns.reduce((sum, run) => sum + Number(run.distanceKm || 0), 0);
@@ -709,11 +923,24 @@ export default function App() {
         setProgress({});
       }
     }
+
+    const storedGymLogs = localStorage.getItem(GYM_SET_LOGS_KEY);
+    if (storedGymLogs) {
+      try {
+        setGymLogs(JSON.parse(storedGymLogs));
+      } catch {
+        setGymLogs({});
+      }
+    }
   }, []);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
   }, [progress]);
+
+  useEffect(() => {
+    localStorage.setItem(GYM_SET_LOGS_KEY, JSON.stringify(gymLogs));
+  }, [gymLogs]);
 
   useEffect(() => {
     if (!supabase) return;
@@ -820,11 +1047,11 @@ export default function App() {
 
   function closeExerciseDetail() {
     setSelectedExerciseId(null);
+    setShowExerciseStats(false);
   }
 
-  function updateExercise(workout, exerciseId, done) {
-    const nextProgress = { ...progress, [exerciseId]: done };
-    const stats = getWorkoutStats(workout, nextProgress);
+  function applyAutoWorkoutStatus(workout, nextProgress, nextGymLogs) {
+    const stats = getWorkoutStats(workout, nextProgress, nextGymLogs);
     const autoWorkoutDone = stats.totalSets > 0 && stats.doneSets / stats.totalSets >= 0.5;
     const manualKey = workoutManualKey(workout.id);
     const hasManualWorkoutStatus = Boolean(nextProgress[manualKey]);
@@ -833,6 +1060,40 @@ export default function App() {
       nextProgress[workout.id] = autoWorkoutDone;
     }
 
+    return nextProgress;
+  }
+
+  function updateExerciseSetLog(workout, exercise, setIndex, field, value) {
+    const nextGymLogs = { ...gymLogs };
+    const entries = getSetEntries(nextGymLogs, exercise);
+    entries[setIndex] = {
+      ...entries[setIndex],
+      [field]: value,
+      completed: field === 'reps' && Number(value) > 0 ? true : entries[setIndex].completed
+    };
+    nextGymLogs[exercise.id] = entries;
+
+    const allSetsDone = entries.filter(isSetDone).length >= Number(exercise.sets || 0);
+    const nextProgress = applyAutoWorkoutStatus(workout, { ...progress, [exercise.id]: allSetsDone }, nextGymLogs);
+
+    setGymLogs(nextGymLogs);
+    setProgress(nextProgress);
+  }
+
+  function updateExercise(workout, exerciseId, done) {
+    const exercise = workout.exercises.find((item) => item.id === exerciseId);
+    if (!exercise) return;
+
+    const nextGymLogs = { ...gymLogs };
+    const entries = getSetEntries(nextGymLogs, exercise).map((entry) => ({
+      ...entry,
+      completed: done ? true : (Number(entry.reps || 0) > 0)
+    }));
+    nextGymLogs[exercise.id] = entries;
+
+    const nextProgress = applyAutoWorkoutStatus(workout, { ...progress, [exerciseId]: done }, nextGymLogs);
+
+    setGymLogs(nextGymLogs);
     setProgress(nextProgress);
 
     if (supabase) {
@@ -843,11 +1104,11 @@ export default function App() {
         updated_at: new Date().toISOString()
       });
 
-      if (!hasManualWorkoutStatus) {
+      if (!nextProgress[workoutManualKey(workout.id)]) {
         supabase.from('run_progress').upsert({
           user_key: SYNC_KEY,
           run_id: workout.id,
-          done: autoWorkoutDone,
+          done: Boolean(nextProgress[workout.id]),
           updated_at: new Date().toISOString()
         });
       }
@@ -988,8 +1249,8 @@ export default function App() {
       <section className="gym-list" aria-label="Gym this week">
         {gymWorkouts.map((workout) => {
           const status = gymStatusFor(workout);
-          const doneExercises = workout.exercises.filter((exercise) => progress[exercise.id]).length;
-          const stats = getWorkoutStats(workout, progress);
+          const stats = getWorkoutStats(workout, progress, gymLogs);
+          const doneExercises = stats.doneExercises;
           return (
             <button
               key={workout.id}
@@ -1006,7 +1267,7 @@ export default function App() {
                 <div className="gym-card-stats" aria-label="Workout stats">
                   <span>{formatDurationFromSeconds(stats.totalSeconds)}</span>
                   <span>{stats.doneSets}/{stats.totalSets} sets</span>
-                  <span>{doneExercises}/{workout.exercises.length} exercises</span>
+                  <span>{doneExercises}/{stats.totalExercises} exercises</span>
                   <span>{stats.percent}%</span>
                 </div>
               </div>
@@ -1251,21 +1512,26 @@ export default function App() {
             </section>
 
             <div className="gym-exercise-list">
-              {selectedGymWorkout.exercises.map((exercise) => (
+              {selectedGymWorkout.exercises.map((exercise) => {
+                const summary = getLoggedSetSummary(gymLogs, exercise);
+                const exerciseDone = isExerciseDone(gymLogs, exercise, progress);
+                const recommendation = getRecommendedWeight(gymLogs, allGymExercises, exercise);
+                return (
                 <button
                   key={exercise.id}
-                  className={`exercise-card ${exerciseTypeClass(exercise)} ${progress[exercise.id] ? 'done' : 'not-done'}`}
-                  onClick={() => setSelectedExerciseId(exercise.id)}
+                  className={`exercise-card ${exerciseTypeClass(exercise)} ${exerciseDone ? 'done' : 'not-done'}`}
+                  onClick={() => { setSelectedExerciseId(exercise.id); setShowExerciseStats(false); }}
                 >
                   <div className="exercise-order">{exercise.order}</div>
                   <div className="exercise-card-main">
                     <strong>{exercise.name}</strong>
-                    <span>{exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {formatReadableDurationFromSeconds(exercise.setSeconds)} work · {formatReadableDurationFromSeconds(exercise.restSeconds)} rest</span>
+                    <span>{exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {summary.doneSets}/{exercise.sets} sets · Load {formatLoad(summary.load)} · Next {recommendation}</span>
                   </div>
                   <div className="exercise-type-pill">{exerciseTypeLabel(exercise)}</div>
-                  <div className="exercise-done">{progress[exercise.id] ? 'Done' : 'Open'}</div>
+                  <div className="exercise-done">{exerciseDone ? 'Done' : 'Open'}</div>
                 </button>
-              ))}
+                );
+              })}
             </div>
 
             <div className="modal-footer">
@@ -1284,20 +1550,35 @@ export default function App() {
         </section>
       )}
 
-      {selectedGymWorkout && selectedExercise && (
+      {selectedGymWorkout && selectedExercise && (() => {
+        const setEntries = getSetEntries(gymLogs, selectedExercise);
+        const loadScore = getExerciseLoadScore(setEntries);
+        const recommendation = getRecommendedWeight(gymLogs, allGymExercises, selectedExercise);
+        const history = getExerciseHistory(gymLogs, allGymExercises, selectedExercise);
+        const exerciseDone = isExerciseDone(gymLogs, selectedExercise, progress);
+        return (
         <ExerciseDetailModal
           exercise={selectedExercise}
-          isDone={Boolean(progress[selectedExercise.id])}
+          workout={selectedGymWorkout}
+          isDone={exerciseDone}
+          setEntries={setEntries}
+          loadScore={loadScore}
+          recommendation={recommendation}
+          history={history}
+          showStats={showExerciseStats}
+          onToggleStats={() => setShowExerciseStats((value) => !value)}
+          onSetEntryChange={(setIndex, field, value) => updateExerciseSetLog(selectedGymWorkout, selectedExercise, setIndex, field, value)}
           onClose={closeExerciseDetail}
           onDone={() => {
             updateExercise(selectedGymWorkout, selectedExercise.id, true);
           }}
           onToggleDone={() => {
-            updateExercise(selectedGymWorkout, selectedExercise.id, !progress[selectedExercise.id]);
+            updateExercise(selectedGymWorkout, selectedExercise.id, !exerciseDone);
             closeExerciseDetail();
           }}
         />
-      )}
+        );
+      })()}
     </main>
   );
 }

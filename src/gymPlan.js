@@ -10,6 +10,7 @@ export const gymTemplates = [
     exercises: [
       {
         key: 'db-bench-press',
+        trackKey: 'db-bench-press',
         name: 'Dumbbell Bench Press',
         type: 'push',
         sets: 4,
@@ -22,6 +23,7 @@ export const gymTemplates = [
       },
       {
         key: 'lat-pulldown',
+        trackKey: 'lat-pulldown',
         name: 'Lat Pulldown',
         type: 'pull',
         sets: 3,
@@ -34,6 +36,7 @@ export const gymTemplates = [
       },
       {
         key: 'seated-row',
+        trackKey: 'seated-row',
         name: 'Seated Row',
         type: 'pull',
         sets: 3,
@@ -46,6 +49,7 @@ export const gymTemplates = [
       },
       {
         key: 'shoulder-press',
+        trackKey: 'shoulder-press',
         name: 'Shoulder Press Maschine',
         type: 'push',
         sets: 3,
@@ -58,6 +62,7 @@ export const gymTemplates = [
       },
       {
         key: 'triceps-pushdown',
+        trackKey: 'triceps-pushdown',
         name: 'Cable Triceps Pushdown',
         type: 'push',
         sets: 3,
@@ -70,6 +75,7 @@ export const gymTemplates = [
       },
       {
         key: 'biceps-curl',
+        trackKey: 'biceps-curl',
         name: 'Biceps Curl Maschine',
         type: 'pull',
         sets: 3,
@@ -82,6 +88,7 @@ export const gymTemplates = [
       },
       {
         key: 'calf-raises',
+        trackKey: 'calf-raises',
         name: 'Calf Raises',
         type: 'legs',
         sets: 4,
@@ -94,6 +101,7 @@ export const gymTemplates = [
       },
       {
         key: 'tibialis-raises',
+        trackKey: 'tibialis-raises',
         name: 'Tibialis Raises',
         type: 'legs',
         sets: 3,
@@ -115,6 +123,7 @@ export const gymTemplates = [
     exercises: [
       {
         key: 'leg-press',
+        trackKey: 'leg-press',
         name: 'Leg Press',
         type: 'legs',
         sets: 4,
@@ -127,6 +136,7 @@ export const gymTemplates = [
       },
       {
         key: 'hamstring-curl',
+        trackKey: 'hamstring-curl',
         name: 'Hamstring Curl Maschine',
         type: 'legs',
         sets: 3,
@@ -139,6 +149,7 @@ export const gymTemplates = [
       },
       {
         key: 'leg-extension',
+        trackKey: 'leg-extension',
         name: 'Leg Extension Maschine',
         type: 'legs',
         sets: 3,
@@ -151,6 +162,7 @@ export const gymTemplates = [
       },
       {
         key: 'hip-abductor',
+        trackKey: 'hip-abductor',
         name: 'Hip Abductor Maschine',
         type: 'legs',
         sets: 3,
@@ -163,6 +175,7 @@ export const gymTemplates = [
       },
       {
         key: 'hip-adductor',
+        trackKey: 'hip-adductor',
         name: 'Hip Adductor Maschine',
         type: 'legs',
         sets: 2,
@@ -175,6 +188,7 @@ export const gymTemplates = [
       },
       {
         key: 'incline-db-press',
+        trackKey: 'incline-db-press',
         name: 'Incline Dumbbell Press',
         type: 'push',
         sets: 3,
@@ -187,6 +201,7 @@ export const gymTemplates = [
       },
       {
         key: 'lat-pulldown-b',
+        trackKey: 'lat-pulldown',
         name: 'Lat Pulldown',
         type: 'pull',
         sets: 3,
@@ -199,30 +214,33 @@ export const gymTemplates = [
       },
       {
         key: 'triceps-pushdown-b',
+        trackKey: 'triceps-pushdown',
         name: 'Cable Triceps Pushdown',
         type: 'push',
-        sets: 2,
+        sets: 3,
         reps: '10–15',
         prepSeconds: PREP_SECONDS,
         setSeconds: 40,
         restSeconds: 60,
-        explanation: 'Kurzer zweiter Trizepsreiz. Sauber ausführen, kein kompletter Arm-Zerstörer.',
+        explanation: 'Zweiter Trizepsreiz. Sauber ausführen, kein kompletter Arm-Zerstörer.',
         alternatives: ['Triceps Extension Maschine', 'Overhead Cable Extension', 'Dips Maschine leicht']
       },
       {
         key: 'biceps-curl-b',
+        trackKey: 'biceps-curl',
         name: 'Biceps Curl Maschine',
         type: 'pull',
-        sets: 2,
+        sets: 3,
         reps: '10–15',
         prepSeconds: PREP_SECONDS,
         setSeconds: 40,
         restSeconds: 60,
-        explanation: 'Kurzer zweiter Bizepsreiz. Kontrolliert, ohne Schwung.',
+        explanation: 'Zweiter Bizepsreiz. Kontrolliert, ohne Schwung.',
         alternatives: ['Cable Curl', 'Kurzhantel Curls', 'Preacher Curl Maschine']
       },
       {
         key: 'tibialis-raises-b',
+        trackKey: 'tibialis-raises',
         name: 'Tibialis Raises',
         type: 'legs',
         sets: 3,
