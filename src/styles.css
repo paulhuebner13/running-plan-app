@@ -2487,3 +2487,27 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     padding: 7px;
   }
 }
+
+/* v46 compact set logging + 8-rep load wording */
+.set-log-row {
+  grid-template-columns: 58px 1fr 1fr;
+  gap: 7px;
+  padding: 7px;
+}
+
+.set-log-row label {
+  display: block;
+}
+
+.set-log-row input {
+  padding: 8px 7px;
+  min-height: 38px;
+}
+
+@media (max-width: 430px) {
+  .set-log-row {
+    grid-template-columns: 50px 1fr 1fr;
+    gap: 6px;
+    padding: 6px;
+  }
+}

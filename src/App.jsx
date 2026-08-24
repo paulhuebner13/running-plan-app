@@ -334,7 +334,13 @@ function getSetScoreKg(entry) {
   const weight = Number(String(entry?.weight ?? '').replace(',', '.'));
   const reps = Number(String(entry?.reps ?? '').replace(',', '.'));
   if (!Number.isFinite(weight) || !Number.isFinite(reps) || weight <= 0 || reps <= 0) return null;
-  return weight * (1 + reps / 30);
+
+  // Estimate the weight that roughly matches an 8-rep set.
+  // Epley-style conversion: first estimate 1RM, then convert back to 8RM.
+  // 80 kg × 8 reps => 80 kg, 12 kg × 15 reps => about 14.2 kg.
+  const estimatedOneRepMax = weight * (1 + reps / 30);
+  const estimatedEightRepLoad = estimatedOneRepMax / (1 + 8 / 30);
+  return estimatedEightRepLoad;
 }
 
 function getExerciseLoadScore(entries) {
@@ -391,16 +397,7 @@ function getRecommendedWeight(logs, allExercises, exercise) {
   const history = getExerciseHistory(logs, allExercises, exercise);
   if (!history.length) return 'First log';
   const latest = history[history.length - 1];
-  const weightedEntries = latest.entries.filter((entry) => Number(entry.weight) > 0 && Number(entry.reps) > 0);
-  if (!weightedEntries.length) return 'First log';
-  const avgReps = weightedEntries.reduce((sum, entry) => sum + Number(entry.reps), 0) / weightedEntries.length;
-  const weights = weightedEntries.map((entry) => Number(entry.weight)).filter(Number.isFinite);
-  const baseWeight = weights[weights.length - 1] || Math.max(...weights);
-  const range = parseRepRange(exercise.reps);
-  const increment = baseWeight < 20 ? 1 : 2.5;
-  const shouldIncrease = avgReps >= range.high - 0.5;
-  const recommendation = shouldIncrease ? baseWeight + increment : baseWeight;
-  return `${recommendation.toFixed(recommendation % 1 === 0 ? 0 : 1)} kg`;
+  return formatLoad(latest.load);
 }
 
 function getExercisePlannedSeconds(workout, exercise, index) {
@@ -551,7 +548,7 @@ function ExerciseStatsPanel({ exercise, history }) {
     <section className="exercise-stats-panel">
       <div className="stats-panel-head">
         <div>
-          <span>Load history</span>
+          <span>8-rep load history</span>
           <strong>{exercise.name}</strong>
         </div>
         <em>{history.length} logs</em>
@@ -823,11 +820,11 @@ function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onTog
             <p>{exercise.explanation}</p>
             <div className="exercise-load-summary">
               <div>
-                <span>Current load</span>
+                <span>Current 8-rep load</span>
                 <strong>{formatLoad(loadScore)}</strong>
               </div>
               <div>
-                <span>Next weight</span>
+                <span>Next target</span>
                 <strong>{recommendation}</strong>
               </div>
               <button type="button" onClick={onToggleStats}>Statistics</button>
@@ -839,14 +836,13 @@ function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onTog
           <section className="set-log-card">
             <div className="set-log-head">
               <h3>Sets</h3>
-              <span>Weight + reps per set</span>
+              <span>Enter each set</span>
             </div>
             <div className="set-log-list">
               {setEntries.map((entry, index) => (
                 <div className={`set-log-row ${isSetDone(entry) ? 'done' : ''}`} key={`${exercise.id}-set-${index + 1}`}>
                   <strong>Set {index + 1}</strong>
-                  <label>
-                    <span>kg</span>
+                  <label aria-label={`Set ${index + 1} weight in kg`}>
                     <input
                       inputMode="decimal"
                       value={entry.weight}
@@ -854,8 +850,7 @@ function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onTog
                       onChange={(event) => onSetEntryChange(index, 'weight', event.target.value)}
                     />
                   </label>
-                  <label>
-                    <span>reps</span>
+                  <label aria-label={`Set ${index + 1} repetitions`}>
                     <input
                       inputMode="numeric"
                       value={entry.reps}
@@ -1525,7 +1520,7 @@ export default function App() {
                   <div className="exercise-order">{exercise.order}</div>
                   <div className="exercise-card-main">
                     <strong>{exercise.name}</strong>
-                    <span>{exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {summary.doneSets}/{exercise.sets} sets · Load {formatLoad(summary.load)} · Next {recommendation}</span>
+                    <span>{exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {summary.doneSets}/{exercise.sets} sets · 8-rep load {formatLoad(summary.load)} · Target {recommendation}</span>
                   </div>
                   <div className="exercise-type-pill">{exerciseTypeLabel(exercise)}</div>
                   <div className="exercise-done">{exerciseDone ? 'Done' : 'Open'}</div>
