@@ -12,6 +12,7 @@ const supabase = supabaseUrl && supabaseAnonKey
 
 const STORAGE_KEY = 'sport-app-progress-v1';
 const GYM_SET_LOGS_KEY = 'sport-app-gym-set-logs-v1';
+const GYM_OPTIONS_KEY = 'sport-app-gym-exercise-options-v1';
 const SYNC_KEY = 'paul-sport-v1';
 
 const DAY_OFFSETS = {
@@ -305,12 +306,110 @@ function parseRepRange(repsText) {
   return { low: value, high: value };
 }
 
-function getExerciseTrackKey(exercise) {
+
+function slugifyOption(value) {
+  return String(value || 'option')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'option';
+}
+
+function getBaseExerciseKey(exercise) {
   return exercise.trackKey || exercise.key || exercise.name;
 }
 
+function getDefaultExerciseOptions(exercise) {
+  const defaultNames = exercise.key?.includes('tibialis')
+    ? [...(exercise.alternatives || [])]
+    : [exercise.name, ...(exercise.alternatives || [])];
+  const uniqueNames = [];
+  for (const name of defaultNames) {
+    const clean = String(name || '').trim();
+    if (clean && !uniqueNames.some((existing) => existing.toLowerCase() === clean.toLowerCase())) {
+      uniqueNames.push(clean);
+    }
+  }
+  if (!uniqueNames.length) uniqueNames.push(exercise.name || 'Exercise');
+  return uniqueNames.map((name, index) => ({
+    key: `${index === 0 ? 'main' : 'option'}-${slugifyOption(name)}`,
+    name,
+    source: 'default',
+    explanation: index === 0 ? exercise.explanation : `Variation für ${exercise.name}. Nutze diese Option, wenn dieses Gerät besser verfügbar ist oder du bewusst etwas wechseln willst.`
+  }));
+}
+
+function getOptionState(optionsState, exercise) {
+  return optionsState?.[getBaseExerciseKey(exercise)] || {};
+}
+
+function getAllExerciseOptions(exercise, optionsState = {}) {
+  const state = getOptionState(optionsState, exercise);
+  const defaultOptions = getDefaultExerciseOptions(exercise);
+  const customOptions = Array.isArray(state.customOptions) ? state.customOptions : [];
+  const merged = [...defaultOptions, ...customOptions];
+  const seen = new Set();
+  return merged.filter((option) => {
+    if (!option?.key || seen.has(option.key)) return false;
+    seen.add(option.key);
+    return true;
+  });
+}
+
+function getEnabledOptionKeys(exercise, optionsState = {}) {
+  const state = getOptionState(optionsState, exercise);
+  const allOptions = getAllExerciseOptions(exercise, optionsState);
+  if (Array.isArray(state.enabledKeys) && state.enabledKeys.length) {
+    const available = new Set(allOptions.map((option) => option.key));
+    const filtered = state.enabledKeys.filter((key) => available.has(key));
+    if (filtered.length) return filtered;
+  }
+  return allOptions.map((option) => option.key);
+}
+
+function getVisibleExerciseOptions(exercise, optionsState = {}) {
+  const enabled = new Set(getEnabledOptionKeys(exercise, optionsState));
+  return getAllExerciseOptions(exercise, optionsState).filter((option) => enabled.has(option.key));
+}
+
+function getSelectedExerciseOption(exercise, optionsState = {}) {
+  const state = getOptionState(optionsState, exercise);
+  const visibleOptions = getVisibleExerciseOptions(exercise, optionsState);
+  const selected = visibleOptions.find((option) => option.key === state.selectedKey);
+  return selected || visibleOptions[0] || getAllExerciseOptions(exercise, optionsState)[0] || { key: 'main', name: exercise.name || 'Exercise' };
+}
+
+function decorateExerciseWithOption(exercise, optionsState = {}) {
+  const allOptions = getAllExerciseOptions(exercise, optionsState);
+  const visibleOptions = getVisibleExerciseOptions(exercise, optionsState);
+  const selectedOption = getSelectedExerciseOption(exercise, optionsState);
+  return {
+    ...exercise,
+    allOptions,
+    visibleOptions,
+    selectedOption,
+    selectedOptionKey: selectedOption.key,
+    selectedOptionName: selectedOption.name,
+    selectedOptionExplanation: selectedOption.explanation || exercise.explanation,
+    logKey: `${exercise.id}__option_${selectedOption.key}`,
+    optionTrackKey: `${getBaseExerciseKey(exercise)}::${selectedOption.key}`
+  };
+}
+
+function getExerciseTrackKey(exercise) {
+  return exercise.optionTrackKey || `${getBaseExerciseKey(exercise)}::${exercise.selectedOptionKey || 'main'}`;
+}
+
+function getExerciseLogKey(exercise) {
+  return exercise.logKey || exercise.id;
+}
+
 function getSetEntries(logs, exercise) {
-  const existing = Array.isArray(logs?.[exercise.id]) ? logs[exercise.id] : [];
+  const logKey = getExerciseLogKey(exercise);
+  const existing = Array.isArray(logs?.[logKey])
+    ? logs[logKey]
+    : (exercise.selectedOptionKey?.startsWith('main-') && Array.isArray(logs?.[exercise.id]) ? logs[exercise.id] : []);
   return Array.from({ length: Number(exercise.sets || 0) }, (_, index) => ({
     weight: existing[index]?.weight ?? '',
     reps: existing[index]?.reps ?? '',
@@ -365,10 +464,10 @@ function getLoggedSetSummary(logs, exercise) {
   return { entries, doneSets, load };
 }
 
-function getAllGymExercises() {
+function getAllGymExercises(optionsState = {}) {
   return trainingPlan.flatMap((weekItem) => getGymWorkoutsForWeek(weekItem).flatMap((workout) =>
     workout.exercises.map((exercise) => ({
-      ...exercise,
+      ...decorateExerciseWithOption(exercise, optionsState),
       workoutId: workout.id,
       workoutTitle: workout.title,
       weekKw: weekItem.kw,
@@ -549,7 +648,7 @@ function ExerciseStatsPanel({ exercise, history }) {
       <div className="stats-panel-head">
         <div>
           <span>8-rep load history</span>
-          <strong>{exercise.name}</strong>
+          <strong>{exercise.name} · {exercise.selectedOptionName}</strong>
         </div>
         <em>{history.length} logs</em>
       </div>
@@ -623,7 +722,7 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
     elapsedAtStartRef.current = 0;
     doneReportedRef.current = false;
     lastSoundedPhaseRef.current = null;
-  }, [exercise.id]);
+  }, [exercise.id, exercise.selectedOptionKey]);
 
   useEffect(() => {
     if (!running || !('wakeLock' in navigator)) return undefined;
@@ -802,7 +901,53 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   );
 }
 
-function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onToggleDone, setEntries, onSetEntryChange, loadScore, recommendation, history, showStats, onToggleStats }) {
+function ExerciseOptionsPanel({ exercise, optionEditMode, optionDraft, onOptionDraftChange, onSelectOption, onToggleOption, onAddOption, onToggleEdit }) {
+  const enabledKeys = new Set((exercise.visibleOptions || []).map((option) => option.key));
+  const shownOptions = optionEditMode ? (exercise.allOptions || []) : (exercise.visibleOptions || []);
+
+  return (
+    <section className="exercise-info-card option-panel">
+      <div className="option-panel-head">
+        <div>
+          <h3>Options</h3>
+          <p>{exercise.selectedOptionExplanation}</p>
+        </div>
+        <button type="button" className={`option-edit-button ${optionEditMode ? 'active' : ''}`} onClick={onToggleEdit} aria-label="Edit exercise options">✎</button>
+      </div>
+
+      <div className={`exercise-option-grid ${optionEditMode ? 'editing' : ''}`}>
+        {shownOptions.map((option) => {
+          const isEnabled = enabledKeys.has(option.key);
+          const isSelected = exercise.selectedOptionKey === option.key;
+          return (
+            <button
+              type="button"
+              key={option.key}
+              className={`exercise-option-chip ${isSelected ? 'selected' : ''} ${isEnabled ? 'enabled' : 'disabled'}`}
+              onClick={() => optionEditMode ? onToggleOption(option.key) : onSelectOption(option.key)}
+            >
+              <strong>{option.name}</strong>
+              <span>{optionEditMode ? (isEnabled ? 'shown' : 'hidden') : (isSelected ? 'selected' : 'tap to use')}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {optionEditMode && (
+        <div className="custom-option-row">
+          <input
+            value={optionDraft}
+            placeholder="Add option/device"
+            onChange={(event) => onOptionDraftChange(event.target.value)}
+          />
+          <button type="button" onClick={onAddOption}>Add</button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onToggleDone, setEntries, onSetEntryChange, loadScore, recommendation, history, showStats, onToggleStats, optionEditMode, optionDraft, onOptionDraftChange, onSelectOption, onToggleOption, onAddOption, onToggleOptionEdit }) {
   return (
     <section className="modal-backdrop exercise-backdrop" onClick={onClose}>
       <article className={`exercise-modal ${exerciseTypeClass(exercise)}`} onClick={(event) => event.stopPropagation()}>
@@ -810,14 +955,23 @@ function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onTog
           <div>
             <span>{exerciseTypeLabel(exercise)} · {exercise.sets} × {exercise.reps}</span>
             <h2>{exercise.name}</h2>
-            <p>{exercise.sets} sets · {formatReadableDurationFromSeconds(exercise.setSeconds)} work · {formatReadableDurationFromSeconds(exercise.restSeconds)} rest · 15 sec prep before every set · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))}</p>
+            <p>{exercise.selectedOptionName} · {exercise.sets} sets · {formatReadableDurationFromSeconds(exercise.setSeconds)} work · {formatReadableDurationFromSeconds(exercise.restSeconds)} rest · 15 sec prep before every set · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))}</p>
           </div>
           <button className="close-button" onClick={onClose} aria-label="Close">×</button>
         </div>
         <div className="exercise-detail-body">
-          <section className="exercise-info-card">
-            <h3>How to do it</h3>
-            <p>{exercise.explanation}</p>
+          <ExerciseOptionsPanel
+            exercise={exercise}
+            optionEditMode={optionEditMode}
+            optionDraft={optionDraft}
+            onOptionDraftChange={onOptionDraftChange}
+            onSelectOption={onSelectOption}
+            onToggleOption={onToggleOption}
+            onAddOption={onAddOption}
+            onToggleEdit={onToggleOptionEdit}
+          />
+
+          <section className="exercise-info-card exercise-load-card">
             <div className="exercise-load-summary">
               <div>
                 <span>Current 8-rep load</span>
@@ -840,7 +994,7 @@ function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onTog
             </div>
             <div className="set-log-list">
               {setEntries.map((entry, index) => (
-                <div className={`set-log-row ${isSetDone(entry) ? 'done' : ''}`} key={`${exercise.id}-set-${index + 1}`}>
+                <div className={`set-log-row ${isSetDone(entry) ? 'done' : ''}`} key={`${exercise.id}-${exercise.selectedOptionKey}-set-${index + 1}`}>
                   <strong>Set {index + 1}</strong>
                   <label aria-label={`Set ${index + 1} weight in kg`}>
                     <input
@@ -870,6 +1024,7 @@ function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onTog
   );
 }
 
+
 export default function App() {
   const [weekIndex, setWeekIndex] = useState(getInitialWeekIndex);
   const [selectedRunId, setSelectedRunId] = useState(null);
@@ -878,12 +1033,18 @@ export default function App() {
   const gymListScrollYRef = useRef(0);
   const [progress, setProgress] = useState({});
   const [gymLogs, setGymLogs] = useState({});
+  const [gymOptions, setGymOptions] = useState({});
+  const [editingExerciseOptions, setEditingExerciseOptions] = useState(false);
+  const [customOptionDraft, setCustomOptionDraft] = useState('');
   const [showExerciseStats, setShowExerciseStats] = useState(false);
   const [view, setView] = useState('week');
   const [mode, setMode] = useState('running');
 
   const week = trainingPlan[weekIndex];
-  const gymWorkouts = useMemo(() => getGymWorkoutsForWeek(week), [week]);
+  const gymWorkouts = useMemo(() => getGymWorkoutsForWeek(week).map((workout) => ({
+    ...workout,
+    exercises: workout.exercises.map((exercise) => decorateExerciseWithOption(exercise, gymOptions))
+  })), [week, gymOptions]);
   const selectedRun = useMemo(() => {
     if (!selectedRunId) return null;
     return week.runs.find((run) => run.id === selectedRunId) || null;
@@ -896,7 +1057,7 @@ export default function App() {
     if (!selectedExerciseId || !selectedGymWorkout) return null;
     return selectedGymWorkout.exercises.find((exercise) => exercise.id === selectedExerciseId) || null;
   }, [selectedExerciseId, selectedGymWorkout]);
-  const allGymExercises = useMemo(() => getAllGymExercises(), []);
+  const allGymExercises = useMemo(() => getAllGymExercises(gymOptions), [gymOptions]);
   const selectedGymStats = selectedGymWorkout ? getWorkoutStats(selectedGymWorkout, progress, gymLogs) : null;
 
   const mandatoryRuns = week.runs.filter((run) => !run.optional);
@@ -927,6 +1088,15 @@ export default function App() {
         setGymLogs({});
       }
     }
+
+    const storedGymOptions = localStorage.getItem(GYM_OPTIONS_KEY);
+    if (storedGymOptions) {
+      try {
+        setGymOptions(JSON.parse(storedGymOptions));
+      } catch {
+        setGymOptions({});
+      }
+    }
   }, []);
 
   useEffect(() => {
@@ -936,6 +1106,10 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem(GYM_SET_LOGS_KEY, JSON.stringify(gymLogs));
   }, [gymLogs]);
+
+  useEffect(() => {
+    localStorage.setItem(GYM_OPTIONS_KEY, JSON.stringify(gymOptions));
+  }, [gymOptions]);
 
   useEffect(() => {
     if (!supabase) return;
@@ -1043,18 +1217,77 @@ export default function App() {
   function closeExerciseDetail() {
     setSelectedExerciseId(null);
     setShowExerciseStats(false);
+    setEditingExerciseOptions(false);
+    setCustomOptionDraft('');
+  }
+
+
+  function selectExerciseOption(exercise, optionKey) {
+    const baseKey = getBaseExerciseKey(exercise);
+    setGymOptions((current) => {
+      const state = current[baseKey] || {};
+      return {
+        ...current,
+        [baseKey]: {
+          ...state,
+          selectedKey: optionKey
+        }
+      };
+    });
+    setShowExerciseStats(false);
+  }
+
+  function toggleExerciseOptionEnabled(exercise, optionKey) {
+    const baseKey = getBaseExerciseKey(exercise);
+    setGymOptions((current) => {
+      const state = current[baseKey] || {};
+      const allOptions = getAllExerciseOptions(exercise, current);
+      const allKeys = allOptions.map((option) => option.key);
+      const currentEnabled = new Set(getEnabledOptionKeys(exercise, current));
+      if (currentEnabled.has(optionKey) && currentEnabled.size > 1) {
+        currentEnabled.delete(optionKey);
+      } else {
+        currentEnabled.add(optionKey);
+      }
+      const enabledKeys = allKeys.filter((key) => currentEnabled.has(key));
+      const selectedKey = enabledKeys.includes(state.selectedKey) ? state.selectedKey : enabledKeys[0];
+      return {
+        ...current,
+        [baseKey]: {
+          ...state,
+          enabledKeys,
+          selectedKey
+        }
+      };
+    });
+  }
+
+  function addCustomExerciseOption(exercise) {
+    const name = customOptionDraft.trim();
+    if (!name) return;
+    const baseKey = getBaseExerciseKey(exercise);
+    const optionKey = `custom-${slugifyOption(name)}-${Date.now().toString(36)}`;
+    setGymOptions((current) => {
+      const state = current[baseKey] || {};
+      const existingCustom = Array.isArray(state.customOptions) ? state.customOptions : [];
+      const currentEnabled = getEnabledOptionKeys(exercise, current);
+      return {
+        ...current,
+        [baseKey]: {
+          ...state,
+          customOptions: [...existingCustom, { key: optionKey, name, source: 'custom', explanation: `Eigene Variante für ${exercise.name}.` }],
+          enabledKeys: [...currentEnabled, optionKey],
+          selectedKey: optionKey
+        }
+      };
+    });
+    setCustomOptionDraft('');
   }
 
   function applyAutoWorkoutStatus(workout, nextProgress, nextGymLogs) {
     const stats = getWorkoutStats(workout, nextProgress, nextGymLogs);
     const autoWorkoutDone = stats.totalSets > 0 && stats.doneSets / stats.totalSets >= 0.5;
-    const manualKey = workoutManualKey(workout.id);
-    const hasManualWorkoutStatus = Boolean(nextProgress[manualKey]);
-
-    if (!hasManualWorkoutStatus) {
-      nextProgress[workout.id] = autoWorkoutDone;
-    }
-
+    nextProgress[workout.id] = autoWorkoutDone;
     return nextProgress;
   }
 
@@ -1066,7 +1299,7 @@ export default function App() {
       [field]: value,
       completed: field === 'reps' && Number(value) > 0 ? true : entries[setIndex].completed
     };
-    nextGymLogs[exercise.id] = entries;
+    nextGymLogs[getExerciseLogKey(exercise)] = entries;
 
     const allSetsDone = entries.filter(isSetDone).length >= Number(exercise.sets || 0);
     const nextProgress = applyAutoWorkoutStatus(workout, { ...progress, [exercise.id]: allSetsDone }, nextGymLogs);
@@ -1084,7 +1317,7 @@ export default function App() {
       ...entry,
       completed: done ? true : (Number(entry.reps || 0) > 0)
     }));
-    nextGymLogs[exercise.id] = entries;
+    nextGymLogs[getExerciseLogKey(exercise)] = entries;
 
     const nextProgress = applyAutoWorkoutStatus(workout, { ...progress, [exerciseId]: done }, nextGymLogs);
 
@@ -1099,14 +1332,12 @@ export default function App() {
         updated_at: new Date().toISOString()
       });
 
-      if (!nextProgress[workoutManualKey(workout.id)]) {
-        supabase.from('run_progress').upsert({
-          user_key: SYNC_KEY,
-          run_id: workout.id,
-          done: Boolean(nextProgress[workout.id]),
-          updated_at: new Date().toISOString()
-        });
-      }
+      supabase.from('run_progress').upsert({
+        user_key: SYNC_KEY,
+        run_id: workout.id,
+        done: Boolean(nextProgress[workout.id]),
+        updated_at: new Date().toISOString()
+      });
     }
   }
 
@@ -1515,12 +1746,12 @@ export default function App() {
                 <button
                   key={exercise.id}
                   className={`exercise-card ${exerciseTypeClass(exercise)} ${exerciseDone ? 'done' : 'not-done'}`}
-                  onClick={() => { setSelectedExerciseId(exercise.id); setShowExerciseStats(false); }}
+                  onClick={() => { setSelectedExerciseId(exercise.id); setShowExerciseStats(false); setEditingExerciseOptions(false); setCustomOptionDraft(''); }}
                 >
                   <div className="exercise-order">{exercise.order}</div>
                   <div className="exercise-card-main">
                     <strong>{exercise.name}</strong>
-                    <span>{exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {summary.doneSets}/{exercise.sets} sets · 8-rep load {formatLoad(summary.load)} · Target {recommendation}</span>
+                    <span>{exercise.selectedOptionName} · {exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {summary.doneSets}/{exercise.sets} sets · 8-rep load {formatLoad(summary.load)} · Target {recommendation}</span>
                   </div>
                   <div className="exercise-type-pill">{exerciseTypeLabel(exercise)}</div>
                   <div className="exercise-done">{exerciseDone ? 'Done' : 'Open'}</div>
@@ -1562,6 +1793,13 @@ export default function App() {
           history={history}
           showStats={showExerciseStats}
           onToggleStats={() => setShowExerciseStats((value) => !value)}
+          optionEditMode={editingExerciseOptions}
+          optionDraft={customOptionDraft}
+          onOptionDraftChange={setCustomOptionDraft}
+          onSelectOption={(optionKey) => selectExerciseOption(selectedExercise, optionKey)}
+          onToggleOption={(optionKey) => toggleExerciseOptionEnabled(selectedExercise, optionKey)}
+          onAddOption={() => addCustomExerciseOption(selectedExercise)}
+          onToggleOptionEdit={() => setEditingExerciseOptions((value) => !value)}
           onSetEntryChange={(setIndex, field, value) => updateExerciseSetLog(selectedGymWorkout, selectedExercise, setIndex, field, value)}
           onClose={closeExerciseDetail}
           onDone={() => {
