@@ -2669,3 +2669,130 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     font-size: 0.58rem;
   }
 }
+
+/* v48 compact exercise option chooser */
+.compact-options-head {
+  align-items: center !important;
+  margin-bottom: 10px !important;
+}
+
+.compact-options-head h3 {
+  margin: 0 !important;
+}
+
+.option-panel-head p {
+  display: none !important;
+}
+
+.exercise-option-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+.exercise-option-grid.editing {
+  grid-template-columns: 1fr !important;
+}
+
+.exercise-option-chip {
+  min-height: 42px !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 9px 8px !important;
+}
+
+.exercise-option-chip strong {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.exercise-option-chip > span {
+  display: none !important;
+}
+
+.exercise-option-chip.option-edit-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  justify-content: initial !important;
+  text-align: left !important;
+  min-height: 46px !important;
+  gap: 10px !important;
+}
+
+.exercise-option-chip.option-edit-row strong {
+  text-align: left !important;
+  width: auto !important;
+}
+
+.option-row-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.option-row-controls button {
+  border: 0;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 1000;
+}
+
+.option-row-controls button:disabled {
+  opacity: 0.35;
+}
+
+.option-row-controls button.showing {
+  min-width: 58px;
+  color: #111318;
+  background: var(--exercise);
+}
+
+.option-row-controls button.hidden {
+  min-width: 58px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.055);
+}
+
+.exercise-option-chip.selected:not(.option-edit-row) {
+  border-color: var(--exercise) !important;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--exercise) 38%, transparent), rgba(255,255,255,0.055)) !important;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--exercise) 40%, transparent) inset;
+}
+
+.exercise-card-main span {
+  -webkit-line-clamp: 2 !important;
+}
+
+@media (max-width: 370px) {
+  .exercise-option-grid {
+    gap: 6px !important;
+  }
+
+  .exercise-option-chip {
+    padding: 8px 6px !important;
+  }
+
+  .exercise-option-chip strong {
+    font-size: 0.72rem !important;
+  }
+
+  .option-row-controls {
+    gap: 4px;
+  }
+
+  .option-row-controls button {
+    min-width: 28px;
+    height: 30px;
+  }
+
+  .option-row-controls button.showing,
+  .option-row-controls button.hidden {
+    min-width: 50px;
+    font-size: 0.63rem;
+  }
+}

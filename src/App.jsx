@@ -335,8 +335,7 @@ function getDefaultExerciseOptions(exercise) {
   return uniqueNames.map((name, index) => ({
     key: `${index === 0 ? 'main' : 'option'}-${slugifyOption(name)}`,
     name,
-    source: 'default',
-    explanation: index === 0 ? exercise.explanation : `Variation für ${exercise.name}. Nutze diese Option, wenn dieses Gerät besser verfügbar ist oder du bewusst etwas wechseln willst.`
+    source: 'default'
   }));
 }
 
@@ -350,10 +349,18 @@ function getAllExerciseOptions(exercise, optionsState = {}) {
   const customOptions = Array.isArray(state.customOptions) ? state.customOptions : [];
   const merged = [...defaultOptions, ...customOptions];
   const seen = new Set();
-  return merged.filter((option) => {
+  const unique = merged.filter((option) => {
     if (!option?.key || seen.has(option.key)) return false;
     seen.add(option.key);
     return true;
+  });
+  if (!Array.isArray(state.orderKeys) || !state.orderKeys.length) return unique;
+  const orderIndex = new Map(state.orderKeys.map((key, index) => [key, index]));
+  return [...unique].sort((a, b) => {
+    const aIndex = orderIndex.has(a.key) ? orderIndex.get(a.key) : Number.MAX_SAFE_INTEGER;
+    const bIndex = orderIndex.has(b.key) ? orderIndex.get(b.key) : Number.MAX_SAFE_INTEGER;
+    if (aIndex !== bIndex) return aIndex - bIndex;
+    return unique.findIndex((option) => option.key === a.key) - unique.findIndex((option) => option.key === b.key);
   });
 }
 
@@ -391,7 +398,6 @@ function decorateExerciseWithOption(exercise, optionsState = {}) {
     selectedOption,
     selectedOptionKey: selectedOption.key,
     selectedOptionName: selectedOption.name,
-    selectedOptionExplanation: selectedOption.explanation || exercise.explanation,
     logKey: `${exercise.id}__option_${selectedOption.key}`,
     optionTrackKey: `${getBaseExerciseKey(exercise)}::${selectedOption.key}`
   };
@@ -901,33 +907,44 @@ function ExerciseTimer({ exercise, isDone, onDone, onToggleDone }) {
   );
 }
 
-function ExerciseOptionsPanel({ exercise, optionEditMode, optionDraft, onOptionDraftChange, onSelectOption, onToggleOption, onAddOption, onToggleEdit }) {
+function ExerciseOptionsPanel({ exercise, optionEditMode, optionDraft, onOptionDraftChange, onSelectOption, onToggleOption, onMoveOption, onAddOption, onToggleEdit }) {
   const enabledKeys = new Set((exercise.visibleOptions || []).map((option) => option.key));
   const shownOptions = optionEditMode ? (exercise.allOptions || []) : (exercise.visibleOptions || []);
 
   return (
     <section className="exercise-info-card option-panel">
-      <div className="option-panel-head">
-        <div>
-          <h3>Options</h3>
-          <p>{exercise.selectedOptionExplanation}</p>
-        </div>
+      <div className="option-panel-head compact-options-head">
+        <h3>Options</h3>
         <button type="button" className={`option-edit-button ${optionEditMode ? 'active' : ''}`} onClick={onToggleEdit} aria-label="Edit exercise options">✎</button>
       </div>
 
       <div className={`exercise-option-grid ${optionEditMode ? 'editing' : ''}`}>
-        {shownOptions.map((option) => {
+        {shownOptions.map((option, index) => {
           const isEnabled = enabledKeys.has(option.key);
           const isSelected = exercise.selectedOptionKey === option.key;
+          if (optionEditMode) {
+            return (
+              <div
+                key={option.key}
+                className={`exercise-option-chip option-edit-row ${isSelected ? 'selected' : ''} ${isEnabled ? 'enabled' : 'disabled'}`}
+              >
+                <strong>{option.name}</strong>
+                <div className="option-row-controls">
+                  <button type="button" onClick={() => onMoveOption(option.key, -1)} disabled={index === 0} aria-label={`Move ${option.name} up`}>↑</button>
+                  <button type="button" onClick={() => onMoveOption(option.key, 1)} disabled={index === shownOptions.length - 1} aria-label={`Move ${option.name} down`}>↓</button>
+                  <button type="button" className={isEnabled ? 'showing' : 'hidden'} onClick={() => onToggleOption(option.key)}>{isEnabled ? 'shown' : 'hidden'}</button>
+                </div>
+              </div>
+            );
+          }
           return (
             <button
               type="button"
               key={option.key}
               className={`exercise-option-chip ${isSelected ? 'selected' : ''} ${isEnabled ? 'enabled' : 'disabled'}`}
-              onClick={() => optionEditMode ? onToggleOption(option.key) : onSelectOption(option.key)}
+              onClick={() => onSelectOption(option.key)}
             >
               <strong>{option.name}</strong>
-              <span>{optionEditMode ? (isEnabled ? 'shown' : 'hidden') : (isSelected ? 'selected' : 'tap to use')}</span>
             </button>
           );
         })}
@@ -947,7 +964,7 @@ function ExerciseOptionsPanel({ exercise, optionEditMode, optionDraft, onOptionD
   );
 }
 
-function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onToggleDone, setEntries, onSetEntryChange, loadScore, recommendation, history, showStats, onToggleStats, optionEditMode, optionDraft, onOptionDraftChange, onSelectOption, onToggleOption, onAddOption, onToggleOptionEdit }) {
+function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onToggleDone, setEntries, onSetEntryChange, loadScore, recommendation, history, showStats, onToggleStats, optionEditMode, optionDraft, onOptionDraftChange, onSelectOption, onToggleOption, onMoveOption, onAddOption, onToggleOptionEdit }) {
   return (
     <section className="modal-backdrop exercise-backdrop" onClick={onClose}>
       <article className={`exercise-modal ${exerciseTypeClass(exercise)}`} onClick={(event) => event.stopPropagation()}>
@@ -967,6 +984,7 @@ function ExerciseDetailModal({ exercise, workout, isDone, onClose, onDone, onTog
             onOptionDraftChange={onOptionDraftChange}
             onSelectOption={onSelectOption}
             onToggleOption={onToggleOption}
+            onMoveOption={onMoveOption}
             onAddOption={onAddOption}
             onToggleEdit={onToggleOptionEdit}
           />
@@ -1250,13 +1268,37 @@ export default function App() {
         currentEnabled.add(optionKey);
       }
       const enabledKeys = allKeys.filter((key) => currentEnabled.has(key));
-      const selectedKey = enabledKeys.includes(state.selectedKey) ? state.selectedKey : enabledKeys[0];
+      const selectedKey = enabledKeys[0];
       return {
         ...current,
         [baseKey]: {
           ...state,
           enabledKeys,
           selectedKey
+        }
+      };
+    });
+  }
+
+  function moveExerciseOption(exercise, optionKey, direction) {
+    const baseKey = getBaseExerciseKey(exercise);
+    setGymOptions((current) => {
+      const state = current[baseKey] || {};
+      const allOptions = getAllExerciseOptions(exercise, current);
+      const orderKeys = allOptions.map((option) => option.key);
+      const index = orderKeys.indexOf(optionKey);
+      const nextIndex = index + direction;
+      if (index < 0 || nextIndex < 0 || nextIndex >= orderKeys.length) return current;
+      const nextOrderKeys = [...orderKeys];
+      [nextOrderKeys[index], nextOrderKeys[nextIndex]] = [nextOrderKeys[nextIndex], nextOrderKeys[index]];
+      const enabled = new Set(getEnabledOptionKeys(exercise, { ...current, [baseKey]: { ...state, orderKeys: nextOrderKeys } }));
+      const firstEnabled = nextOrderKeys.find((key) => enabled.has(key)) || nextOrderKeys[0];
+      return {
+        ...current,
+        [baseKey]: {
+          ...state,
+          orderKeys: nextOrderKeys,
+          selectedKey: firstEnabled
         }
       };
     });
@@ -1275,7 +1317,8 @@ export default function App() {
         ...current,
         [baseKey]: {
           ...state,
-          customOptions: [...existingCustom, { key: optionKey, name, source: 'custom', explanation: `Eigene Variante für ${exercise.name}.` }],
+          customOptions: [...existingCustom, { key: optionKey, name, source: 'custom' }],
+          orderKeys: [...getAllExerciseOptions(exercise, current).map((option) => option.key), optionKey],
           enabledKeys: [...currentEnabled, optionKey],
           selectedKey: optionKey
         }
@@ -1741,7 +1784,6 @@ export default function App() {
               {selectedGymWorkout.exercises.map((exercise) => {
                 const summary = getLoggedSetSummary(gymLogs, exercise);
                 const exerciseDone = isExerciseDone(gymLogs, exercise, progress);
-                const recommendation = getRecommendedWeight(gymLogs, allGymExercises, exercise);
                 return (
                 <button
                   key={exercise.id}
@@ -1751,7 +1793,7 @@ export default function App() {
                   <div className="exercise-order">{exercise.order}</div>
                   <div className="exercise-card-main">
                     <strong>{exercise.name}</strong>
-                    <span>{exercise.selectedOptionName} · {exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {summary.doneSets}/{exercise.sets} sets · 8-rep load {formatLoad(summary.load)} · Target {recommendation}</span>
+                    <span>{exercise.selectedOptionName} · {exercise.sets} × {exercise.reps} · {formatDurationFromSeconds(getExerciseTotalSeconds(exercise))} · {summary.doneSets}/{exercise.sets} sets · 8-rep load {formatLoad(summary.load)}</span>
                   </div>
                   <div className="exercise-type-pill">{exerciseTypeLabel(exercise)}</div>
                   <div className="exercise-done">{exerciseDone ? 'Done' : 'Open'}</div>
@@ -1798,6 +1840,7 @@ export default function App() {
           onOptionDraftChange={setCustomOptionDraft}
           onSelectOption={(optionKey) => selectExerciseOption(selectedExercise, optionKey)}
           onToggleOption={(optionKey) => toggleExerciseOptionEnabled(selectedExercise, optionKey)}
+          onMoveOption={(optionKey, direction) => moveExerciseOption(selectedExercise, optionKey, direction)}
           onAddOption={() => addCustomExerciseOption(selectedExercise)}
           onToggleOptionEdit={() => setEditingExerciseOptions((value) => !value)}
           onSetEntryChange={(setIndex, field, value) => updateExerciseSetLog(selectedGymWorkout, selectedExercise, setIndex, field, value)}
