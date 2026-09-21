@@ -1,1 +1,1 @@
-Running Plan App v40 - close gym workout on Done/Undo and preserve workout list scroll position.
+Running + Gym sport app. v50 updates only src/trainingPlan.js: 4 runs/week, compact HM-specific plan, A-goal 1:35, B-goal sub-1:40.
