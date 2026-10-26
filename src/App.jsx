@@ -14,7 +14,7 @@ const STORAGE_KEY = 'sport-app-progress-v1';
 const GYM_SET_LOGS_KEY = 'sport-app-gym-set-logs-v1';
 const GYM_OPTIONS_KEY = 'sport-app-gym-exercise-options-v1';
 const RUN_FEEDBACK_KEY = 'sport-app-run-feedback-v1';
-const RUN_SCALE = [-5, -3, -1.5, 0, 1.5, 3, 5]; // positive means a faster pace would have suited the completed run
+const RUN_SCALE = [5, 3, 1.5, 0, -1.5, -3, -5]; // Too easy -> faster (lower min/km); too hard -> slower (higher min/km)
 const SYNC_KEY = 'paul-sport-v1';
 
 const DAY_OFFSETS = {
