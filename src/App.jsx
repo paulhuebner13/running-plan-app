@@ -14,7 +14,7 @@ const STORAGE_KEY = 'sport-app-progress-v1';
 const GYM_SET_LOGS_KEY = 'sport-app-gym-set-logs-v1';
 const GYM_OPTIONS_KEY = 'sport-app-gym-exercise-options-v1';
 const RUN_FEEDBACK_KEY = 'sport-app-run-feedback-v1';
-const RUN_SCALE = [-5, -3, -1.5, 0, 1.5, 3, 5]; // positive means harder / faster was appropriate
+const RUN_SCALE = [-5, -3, -1.5, 0, 1.5, 3, 5]; // positive means a faster pace would have suited the completed run
 const SYNC_KEY = 'paul-sport-v1';
 
 const DAY_OFFSETS = {
@@ -129,7 +129,7 @@ function runTypeKey(run) {
 }
 function adjustedRun(run, feedback) {
   if (!run || !['Interval Run', 'Threshold Run', 'HM Pace Run'].includes(run.category)) return run;
-  // Apply the latest rating from an earlier week for this specific session type.
+  // Use the most recent retrospective rating to calibrate the next comparable workout.
   const runWeek = (run.id.match(/^(\d{4})-kw(\d+)/) || []);
   const runSequence = runWeek.length ? Number(runWeek[1]) * 100 + Number(runWeek[2]) : 0;
   const recent = Object.values(feedback || {}).filter((f) => f.category === runTypeKey(run) && f.weekSequence < runSequence)
@@ -148,7 +148,7 @@ function adjustedRun(run, feedback) {
     return { ...step, pace: displaySecondsPace(adjustedPace), km: Number((Number(step.minutes) * 60 / adjustedPace).toFixed(4)) };
   });
   const km = Number(steps.reduce((sum, step) => sum + Number(step.km || 0),0).toFixed(2));
-  return { ...run, steps, distanceKm: km, pace: displaySecondsPace(secondsForPace(run.pace)/factor), notes: `${run.notes || ''} · Adjusted by ${recent.adjust > 0 ? '+' : ''}${recent.adjust}% from your last feedback.` };
+  return { ...run, steps, distanceKm: km, pace: displaySecondsPace(secondsForPace(run.pace)/factor), notes: `${run.notes || ''} · Calibrated from your last rating (${recent.adjust > 0 ? '+' : ''}${recent.adjust}% speed).` };
 }
 
 function getStepMinutes(step) {
@@ -1800,11 +1800,11 @@ export default function App() {
 
             {!progress[selectedRun.id] && (
               <div className="run-effort-widget">
-                <div className="effort-top"><strong>How did it feel?</strong><span>{['Much too easy','Too easy','A little easy','Okay','A little hard','Too hard','Much too hard'][runRating]}</span></div>
+                <div className="effort-top"><strong>How did this run feel?</strong><span>{['Much too easy','Too easy','A little easy','Okay','A little hard','Too hard','Much too hard'][runRating]}</span></div>
                 <input type="range" min="0" max="6" step="1" value={runRating} onChange={(e)=>setRunRating(Number(e.target.value))} aria-label="Effort feedback" />
                 <div className="effort-scale"><span>Too easy</span><span>Okay</span><span>Too hard</span></div>
                 {['Interval Run','Threshold Run','HM Pace Run'].includes(selectedRun.category) && (
-                  <div className="effort-preview">Suggested next pace: <strong>{displaySecondsPace(secondsForPace(selectedRun.pace)/(1 + RUN_SCALE[runRating]/100))}/km</strong><span> ({RUN_SCALE[runRating]>0?'+':''}{RUN_SCALE[runRating]}% speed)</span></div>
+                  <div className="effort-preview">Better pace for this run: <strong>{displaySecondsPace(secondsForPace(selectedRun.pace)/(1 + RUN_SCALE[runRating]/100))}/km</strong><span> ({RUN_SCALE[runRating]>0?'+':''}{RUN_SCALE[runRating]}% speed)</span></div>
                 )}
               </div>
             )}
