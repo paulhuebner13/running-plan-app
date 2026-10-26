@@ -231,6 +231,27 @@ function shouldGroupWithNext(step, nextStep) {
   return isWorkBlock && isRecoveryBlock;
 }
 
+function blockHrTip(block, run) {
+  const name = String(block.label || '');
+  const type = runTypeKey(run);
+  if (/Warm-up|Cool-down|Recovery|Rest|Strides/i.test(name)) return '';
+  const guide = hrGuide(run);
+  if (!guide) return '';
+  if (type === 'Interval Run' && /Interval/i.test(name)) {
+    const n = intervalCount(run);
+    const bits = Array.from({length:n}, (_,i) => {
+      const low = Math.round(guide.target-13+i*7/Math.max(1,n-1));
+      const high = Math.round(guide.target-3+i*10/Math.max(1,n-1));
+      return `${i+1}: ${low}–${high}`;
+    });
+    return `End-of-interval HR (bpm): ${bits.join(' · ')}`;
+  }
+  if (type === 'Threshold Run' && /Threshold|HM Pace/i.test(name)) return `Working HR: ${guide.target} bpm · ${guide.range} bpm`;
+  if (type === 'Easy Run' && /Easy/i.test(name)) return `Easy HR: ${guide.target} bpm · ${guide.range} bpm`;
+  if (type === 'Long Run') return `Long-run HR: ${guide.target} bpm · ${guide.range} bpm`;
+  return '';
+}
+
 function makeSingleWorkoutBlock(step) {
   const repeated = parseRepeatedStep(step);
 
@@ -1781,7 +1802,7 @@ export default function App() {
                                 <strong>{item.km === null || item.km === undefined ? '—' : formatNumber(item.km)}</strong>
                               </div>
                             </div>
-                            {item.notes && <p className="block-note">{item.notes}</p>}
+                            {blockHrTip(item, selectedRun) && <p className="block-note hr-block-tip">{blockHrTip(item, selectedRun)}</p>}
                           </div>
                         </React.Fragment>
                       ))}
@@ -1808,36 +1829,19 @@ export default function App() {
                           <strong>{block.km === null || block.km === undefined ? '—' : formatNumber(block.km)}</strong>
                         </div>
                       </div>
-                      {block.notes && <p className="block-note">{block.notes}</p>}
+                      {blockHrTip(block, selectedRun) && <p className="block-note hr-block-tip">{blockHrTip(block, selectedRun)}</p>}
                     </>
                   )}
                 </article>
               ))}
             </div>
 
-            {hrGuide(selectedRun) && (
-              <div className="run-heart-guide">
-                <div className="heart-guide-top"><strong>Heart rate guide</strong><span>{hrGuide(selectedRun).target} bpm · {hrGuide(selectedRun).range} bpm</span></div>
-                {runTypeKey(selectedRun) === 'Interval Run' ? (
-                  <div className="heart-guide-laps">
-                    {Array.from({length: intervalCount(selectedRun)}, (_, i) => {
-                      const target = hrGuide(selectedRun).target;
-                      const n = intervalCount(selectedRun);
-                      const low = Math.round(target - 13 + i * 7 / Math.max(1, n-1));
-                      const high = Math.round(target - 3 + i * 10 / Math.max(1, n-1));
-                      return <div key={i}><span>Interval {i+1}</span><span>{low}–{high} bpm</span></div>;
-                    })}
-                  </div>
-                ) : null}
-                <p>{hrGuide(selectedRun).detail}</p>
-              </div>
-            )}
             {!progress[selectedRun.id] && (
               <div className="run-effort-widget">
                 <div className="effort-top"><strong>How did this run feel?</strong><span>{['Much too easy','Too easy','A little easy','Okay','A little hard','Too hard','Much too hard'][runRating]}</span></div>
+                <div className="effort-preview">Better pace for this run: <strong>{displaySecondsPace(secondsForPace(selectedRun.pace)/(1 + RUN_SCALE[runRating]/100))}/km</strong><span> ({RUN_SCALE[runRating]>0?'+':''}{RUN_SCALE[runRating]}% speed)</span></div>
                 <input type="range" min="0" max="6" step="1" value={runRating} onChange={(e)=>setRunRating(Number(e.target.value))} aria-label="Effort feedback" />
                 <div className="effort-scale"><span>Too easy</span><span>Okay</span><span>Too hard</span></div>
-                <div className="effort-preview">Better pace for this run: <strong>{displaySecondsPace(secondsForPace(selectedRun.pace)/(1 + RUN_SCALE[runRating]/100))}/km</strong><span> ({RUN_SCALE[runRating]>0?'+':''}{RUN_SCALE[runRating]}% speed)</span></div>
                 {['Easy Run','Long Run'].includes(runTypeKey(selectedRun)) && runRating<3 && <p className="easy-rating-note">Easy runs should stay easy. This rating won't force faster future runs.</p>}
               </div>
             )}

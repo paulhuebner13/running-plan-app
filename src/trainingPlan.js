@@ -4,7 +4,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-21",
     "endDate": "2026-09-27",
-    "targetKm": 43.04,
+    "targetKm": 42.75,
     "focus": "Half Marathon A-goal 1:35 / B-goal sub-1:40 — controlled hard, not all-out",
     "runs": [
       {
@@ -100,9 +100,9 @@ export const trainingPlan = [
         "title": "Controlled Interval Run",
         "category": "Interval Run",
         "plannedDay": "Saturday",
-        "subtitle": "55 min · 9.55 km",
+        "subtitle": "55 min · 9.26 km",
         "type": "interval-run",
-        "distanceKm": 9.55,
+        "distanceKm": 9.26,
         "minutes": 55,
         "optimalHr": 190,
         "hrRange": "184-196",
@@ -129,11 +129,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 2 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 140,
             "hrRange": "132-148",
             "minutes": 10,
-            "km": 1.4
+            "km": 1.1111
           },
           {
             "label": "Cool-down",
@@ -179,7 +179,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-09-28",
     "endDate": "2026-10-04",
-    "targetKm": 47.09,
+    "targetKm": 46.75,
     "focus": "Half Marathon A-goal 1:35 / B-goal sub-1:40 — controlled hard, not all-out",
     "runs": [
       {
@@ -188,9 +188,9 @@ export const trainingPlan = [
         "title": "Controlled Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "60 min · 10.40 km",
+        "subtitle": "60 min · 10.06 km",
         "type": "interval-run",
-        "distanceKm": 10.4,
+        "distanceKm": 10.06,
         "minutes": 60,
         "optimalHr": 190,
         "hrRange": "184-196",
@@ -217,11 +217,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 140,
             "hrRange": "132-148",
             "minutes": 12,
-            "km": 1.67
+            "km": 1.3333
           },
           {
             "label": "Cool-down",
@@ -362,7 +362,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-05",
     "endDate": "2026-10-11",
-    "targetKm": 40.31,
+    "targetKm": 40.01,
     "focus": "Half Marathon A-goal 1:35 / B-goal sub-1:40 — controlled hard, not all-out",
     "runs": [
       {
@@ -371,9 +371,9 @@ export const trainingPlan = [
         "title": "Controlled Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "49.5 min · 8.37 km",
+        "subtitle": "49.5 min · 8.07 km",
         "type": "interval-run",
-        "distanceKm": 8.37,
+        "distanceKm": 8.07,
         "minutes": 49.5,
         "optimalHr": 190,
         "hrRange": "184-196",
@@ -400,11 +400,11 @@ export const trainingPlan = [
           },
           {
             "label": "7 × 90 sec Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 140,
             "hrRange": "132-148",
             "seconds": 630,
-            "km": 1.47
+            "km": 1.1667
           },
           {
             "label": "Cool-down",
@@ -545,7 +545,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-12",
     "endDate": "2026-10-18",
-    "targetKm": 49.15,
+    "targetKm": 48.86,
     "focus": "Half Marathon A-goal 1:35 / B-goal sub-1:40 — controlled hard, not all-out",
     "runs": [
       {
@@ -554,9 +554,9 @@ export const trainingPlan = [
         "title": "Controlled Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "55 min · 9.56 km",
+        "subtitle": "55 min · 9.27 km",
         "type": "interval-run",
-        "distanceKm": 9.56,
+        "distanceKm": 9.27,
         "minutes": 55,
         "optimalHr": 190,
         "hrRange": "184-196",
@@ -583,11 +583,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 2 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 140,
             "hrRange": "132-148",
             "minutes": 10,
-            "km": 1.4
+            "km": 1.1111
           },
           {
             "label": "Cool-down",
@@ -728,7 +728,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-19",
     "endDate": "2026-10-25",
-    "targetKm": 46.88,
+    "targetKm": 46.54,
     "focus": "Half Marathon A-goal 1:35 / B-goal sub-1:40 — controlled hard, not all-out",
     "runs": [
       {
@@ -832,9 +832,9 @@ export const trainingPlan = [
         "title": "Controlled Interval Run",
         "category": "Interval Run",
         "plannedDay": "Saturday",
-        "subtitle": "60 min · 10.41 km",
+        "subtitle": "60 min · 10.07 km",
         "type": "interval-run",
-        "distanceKm": 10.41,
+        "distanceKm": 10.07,
         "minutes": 60,
         "optimalHr": 190,
         "hrRange": "184-196",
@@ -861,11 +861,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 140,
             "hrRange": "132-148",
             "minutes": 12,
-            "km": 1.67
+            "km": 1.3333
           },
           {
             "label": "Cool-down",
@@ -911,7 +911,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 36.02,
+    "targetKm": 35.76,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -920,9 +920,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -951,12 +951,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -1080,7 +1079,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-02",
     "endDate": "2026-11-08",
-    "targetKm": 37.19,
+    "targetKm": 36.85,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1089,9 +1088,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -1120,12 +1119,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -1249,7 +1247,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 39.23,
+    "targetKm": 38.89,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1258,9 +1256,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -1289,12 +1287,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -1418,7 +1415,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-16",
     "endDate": "2026-11-22",
-    "targetKm": 30.45,
+    "targetKm": 30.19,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1427,9 +1424,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -1458,12 +1455,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -1587,7 +1583,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-23",
     "endDate": "2026-11-29",
-    "targetKm": 36.15,
+    "targetKm": 35.81,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1596,9 +1592,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -1627,12 +1623,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -1756,7 +1751,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-30",
     "endDate": "2026-12-06",
-    "targetKm": 38.22,
+    "targetKm": 37.88,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1765,9 +1760,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -1796,12 +1791,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -1925,7 +1919,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 40.12,
+    "targetKm": 39.86,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1934,9 +1928,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -1965,12 +1959,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -2094,7 +2087,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-14",
     "endDate": "2026-12-20",
-    "targetKm": 30.93,
+    "targetKm": 30.67,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2103,9 +2096,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -2134,12 +2127,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -2263,7 +2255,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 36.15,
+    "targetKm": 35.81,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2272,9 +2264,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -2303,12 +2295,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -2432,7 +2423,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-28",
     "endDate": "2027-01-03",
-    "targetKm": 37.06,
+    "targetKm": 36.8,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2441,9 +2432,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -2472,12 +2463,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -2601,7 +2591,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-04",
     "endDate": "2027-01-10",
-    "targetKm": 39.23,
+    "targetKm": 38.89,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2610,9 +2600,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -2641,12 +2631,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -2770,7 +2759,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 30.45,
+    "targetKm": 30.19,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2779,9 +2768,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -2810,12 +2799,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -2939,7 +2927,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-18",
     "endDate": "2027-01-24",
-    "targetKm": 36.02,
+    "targetKm": 35.76,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2948,9 +2936,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -2979,12 +2967,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -3108,7 +3095,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-25",
     "endDate": "2027-01-31",
-    "targetKm": 38.22,
+    "targetKm": 37.88,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3117,9 +3104,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -3148,12 +3135,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -3277,7 +3263,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-01",
     "endDate": "2027-02-07",
-    "targetKm": 40.25,
+    "targetKm": 39.91,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3286,9 +3272,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -3317,12 +3303,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -3446,7 +3431,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-08",
     "endDate": "2027-02-14",
-    "targetKm": 35.58,
+    "targetKm": 35.32,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3455,9 +3440,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -3486,12 +3471,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -3615,7 +3599,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-15",
     "endDate": "2027-02-21",
-    "targetKm": 36.15,
+    "targetKm": 35.81,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3624,9 +3608,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -3655,12 +3639,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -3784,7 +3767,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-22",
     "endDate": "2027-02-28",
-    "targetKm": 37.19,
+    "targetKm": 36.85,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3793,9 +3776,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -3824,12 +3807,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -3953,7 +3935,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-01",
     "endDate": "2027-03-07",
-    "targetKm": 39.1,
+    "targetKm": 38.84,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3962,9 +3944,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -3993,12 +3975,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -4122,7 +4103,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-08",
     "endDate": "2027-03-14",
-    "targetKm": 30.45,
+    "targetKm": 30.19,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4131,9 +4112,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -4162,12 +4143,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -4291,7 +4271,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-15",
     "endDate": "2027-03-21",
-    "targetKm": 38.26,
+    "targetKm": 37.92,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4300,9 +4280,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -4331,12 +4311,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -4460,7 +4439,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-22",
     "endDate": "2027-03-28",
-    "targetKm": 38.09,
+    "targetKm": 37.83,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4469,9 +4448,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -4500,12 +4479,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
@@ -4629,7 +4607,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-29",
     "endDate": "2027-04-04",
-    "targetKm": 40.25,
+    "targetKm": 39.91,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4638,9 +4616,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.20 km",
+        "subtitle": "47 min · 7.86 km",
         "type": "interval-run",
-        "distanceKm": 8.2,
+        "distanceKm": 7.86,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -4669,12 +4647,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 12,
-            "km": 1.6744,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.3333,
             "reps": 4
           },
           {
@@ -4798,7 +4775,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-05",
     "endDate": "2027-04-11",
-    "targetKm": 30.93,
+    "targetKm": 30.67,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4807,9 +4784,9 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.91 km",
+        "subtitle": "40 min · 6.65 km",
         "type": "interval-run",
-        "distanceKm": 6.91,
+        "distanceKm": 6.65,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
@@ -4838,12 +4815,11 @@ export const trainingPlan = [
           },
           {
             "label": "3 × 3 min Easy Recovery",
-            "pace": "7:10",
+            "pace": "9:00",
             "hr": 150,
             "hrRange": "135-165",
             "minutes": 9,
-            "km": 1.2558,
-            "notes": "Easy jog between repetitions; no recovery after the final interval.",
+            "km": 1.0,
             "reps": 3
           },
           {
