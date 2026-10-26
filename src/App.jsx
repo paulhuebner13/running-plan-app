@@ -13,6 +13,8 @@ const supabase = supabaseUrl && supabaseAnonKey
 const STORAGE_KEY = 'sport-app-progress-v1';
 const GYM_SET_LOGS_KEY = 'sport-app-gym-set-logs-v1';
 const GYM_OPTIONS_KEY = 'sport-app-gym-exercise-options-v1';
+const RUN_FEEDBACK_KEY = 'sport-app-run-feedback-v1';
+const RUN_SCALE = [-5, -3, -1.5, 0, 1.5, 3, 5]; // positive means harder / faster was appropriate
 const SYNC_KEY = 'paul-sport-v1';
 
 const DAY_OFFSETS = {
@@ -111,6 +113,42 @@ function formatHr(value) {
 function formatPace(value) {
   if (!value) return '—';
   return String(value).replace(/\s*\/?km/gi, '').trim();
+}
+
+function secondsForPace(value) {
+  const [min, sec] = String(value || '0:00').split(':').map(Number);
+  return min * 60 + (sec || 0);
+}
+function displaySecondsPace(seconds) {
+  const val = Math.max(1, Math.round(seconds));
+  return `${Math.floor(val / 60)}:${String(val % 60).padStart(2, '0')}`;
+}
+function runTypeKey(run) {
+  if (run.category === 'HM Pace Run') return 'HM Pace Run';
+  return run.category;
+}
+function adjustedRun(run, feedback) {
+  if (!run || !['Interval Run', 'Threshold Run', 'HM Pace Run'].includes(run.category)) return run;
+  // Apply the latest rating from an earlier week for this specific session type.
+  const runWeek = (run.id.match(/^(\d{4})-kw(\d+)/) || []);
+  const runSequence = runWeek.length ? Number(runWeek[1]) * 100 + Number(runWeek[2]) : 0;
+  const recent = Object.values(feedback || {}).filter((f) => f.category === runTypeKey(run) && f.weekSequence < runSequence)
+    .sort((a,b) => b.weekSequence - a.weekSequence)[0];
+  if (!recent || !recent.adjust) return run;
+  const factor = 1 + recent.adjust / 100;
+  const steps = run.steps.map((step) => {
+    const isHard = run.category === 'Interval Run'
+      ? /Interval/i.test(step.label)
+      : run.category === 'Threshold Run'
+        ? /Threshold/i.test(step.label)
+        : /HM Pace/i.test(step.label);
+    if (!isHard) return step;
+    const currentPace = secondsForPace(step.pace);
+    const adjustedPace = Math.round(currentPace / factor);
+    return { ...step, pace: displaySecondsPace(adjustedPace), km: Number((Number(step.minutes) * 60 / adjustedPace).toFixed(4)) };
+  });
+  const km = Number(steps.reduce((sum, step) => sum + Number(step.km || 0),0).toFixed(2));
+  return { ...run, steps, distanceKm: km, pace: displaySecondsPace(secondsForPace(run.pace)/factor), notes: `${run.notes || ''} · Adjusted by ${recent.adjust > 0 ? '+' : ''}${recent.adjust}% from your last feedback.` };
 }
 
 function getStepMinutes(step) {
@@ -1050,6 +1088,8 @@ export default function App() {
   const [selectedExerciseId, setSelectedExerciseId] = useState(null);
   const gymListScrollYRef = useRef(0);
   const [progress, setProgress] = useState({});
+  const [runFeedback, setRunFeedback] = useState({});
+  const [runRating, setRunRating] = useState(3);
   const [gymLogs, setGymLogs] = useState({});
   const [gymOptions, setGymOptions] = useState({});
   const [editingExerciseOptions, setEditingExerciseOptions] = useState(false);
@@ -1058,7 +1098,23 @@ export default function App() {
   const [view, setView] = useState('week');
   const [mode, setMode] = useState('running');
 
-  const week = trainingPlan[weekIndex];
+  const rawWeek = trainingPlan[weekIndex];
+  const week = useMemo(() => {
+    const runs = rawWeek.runs.map((run) => adjustedRun(run, runFeedback));
+    // Prioritize a missed quality type in the following week, without adding a fifth run.
+    const prev = trainingPlan[weekIndex - 1];
+    if (prev && new Date(`${prev.endDate}T23:59:59`) < new Date()) {
+      const missed = prev.runs.find((r) => ['Threshold Run','HM Pace Run'].includes(r.category) && !progress[r.id]);
+      if (missed) {
+        const first = runs.find((r) => r.plannedDay === 'Tuesday');
+        const second = runs.find((r) => r.plannedDay === 'Thursday');
+        if (first?.category === 'Interval Run' && second && ['Threshold Run','HM Pace Run'].includes(second.category)) {
+          return {...rawWeek, runs: runs.map((r) => r.id === first.id ? {...r, plannedDay:'Thursday'} : r.id === second.id ? {...r, plannedDay:'Tuesday'} : r)};
+        }
+      }
+    }
+    return {...rawWeek, runs};
+  }, [rawWeek, weekIndex, progress, runFeedback]);
   const gymWorkouts = useMemo(() => getGymWorkoutsForWeek(week).map((workout) => ({
     ...workout,
     exercises: workout.exercises.map((exercise) => decorateExerciseWithOption(exercise, gymOptions))
@@ -1098,6 +1154,10 @@ export default function App() {
       }
     }
 
+    const storedFeedback = localStorage.getItem(RUN_FEEDBACK_KEY);
+    if (storedFeedback) {
+      try { setRunFeedback(JSON.parse(storedFeedback)); } catch { setRunFeedback({}); }
+    }
     const storedGymLogs = localStorage.getItem(GYM_SET_LOGS_KEY);
     if (storedGymLogs) {
       try {
@@ -1120,6 +1180,10 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
   }, [progress]);
+
+  useEffect(() => {
+    localStorage.setItem(RUN_FEEDBACK_KEY, JSON.stringify(runFeedback));
+  }, [runFeedback]);
 
   useEffect(() => {
     localStorage.setItem(GYM_SET_LOGS_KEY, JSON.stringify(gymLogs));
@@ -1443,7 +1507,7 @@ export default function App() {
             <button
               key={run.id}
               className={`run-card ${status} ${cat}`}
-              onClick={() => setSelectedRunId(run.id)}
+              onClick={() => { setSelectedRunId(run.id); setRunRating(3); }}
             >
               <div className="run-number">{DAY_SHORT[run.plannedDay] || run.order}</div>
               <div className="run-summary">
@@ -1734,11 +1798,31 @@ export default function App() {
               ))}
             </div>
 
+            {!progress[selectedRun.id] && (
+              <div className="run-effort-widget">
+                <div className="effort-top"><strong>How did it feel?</strong><span>{['Much too easy','Too easy','A little easy','Okay','A little hard','Too hard','Much too hard'][runRating]}</span></div>
+                <input type="range" min="0" max="6" step="1" value={runRating} onChange={(e)=>setRunRating(Number(e.target.value))} aria-label="Effort feedback" />
+                <div className="effort-scale"><span>Too easy</span><span>Okay</span><span>Too hard</span></div>
+                {['Interval Run','Threshold Run','HM Pace Run'].includes(selectedRun.category) && (
+                  <div className="effort-preview">Suggested next pace: <strong>{displaySecondsPace(secondsForPace(selectedRun.pace)/(1 + RUN_SCALE[runRating]/100))}/km</strong><span> ({RUN_SCALE[runRating]>0?'+':''}{RUN_SCALE[runRating]}% speed)</span></div>
+                )}
+              </div>
+            )}
             <div className="modal-footer">
               <button
                 className={`modal-check-button ${progress[selectedRun.id] ? 'checked' : ''}`}
                 onClick={() => {
-                  updateRun(selectedRun.id, !progress[selectedRun.id]);
+                  const done = !progress[selectedRun.id];
+                  if (done) {
+                    const sequence = selectedRun.id.match(/^(\d{4})-kw(\d+)/);
+                    setRunFeedback((current) => ({ ...current, [selectedRun.id]: {
+                      category: runTypeKey(selectedRun),
+                      weekSequence: sequence ? Number(sequence[1])*100+Number(sequence[2]):0,
+                      adjust: RUN_SCALE[runRating],
+                      ratedAt: new Date().toISOString()
+                    }}));
+                  }
+                  updateRun(selectedRun.id, done);
                   setSelectedRunId(null);
                 }}
               >

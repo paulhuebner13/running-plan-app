@@ -1,1 +1,1 @@
-Running + Gym sport app. v50 updates only src/trainingPlan.js: 4 runs/week, compact HM-specific plan, A-goal 1:35, B-goal sub-1:40.
+Running Plan v52: rebuilt from Garmin Activities (3).csv on 26 Oct 2026. Previous weeks retained. 4 runs/week from KW44; gradual restart from ~24 km to ~35 km. TrainingPlan.js only changed. Adaptive slider / automatic rescheduling is not implemented in this version.

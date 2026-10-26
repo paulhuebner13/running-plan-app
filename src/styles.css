@@ -2796,3 +2796,13 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
     font-size: 0.63rem;
   }
 }
+
+/* v53: compact, seven-step running feedback */
+.run-effort-widget { padding: 12px 16px; border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent); background: var(--card-bg, transparent); display:grid; gap:7px; }
+.run-effort-widget .effort-top, .run-effort-widget .effort-scale { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.run-effort-widget .effort-top { font-size:13px; }
+.run-effort-widget .effort-top span { font-size:12px; opacity:.8; }
+.run-effort-widget input { width:100%; accent-color:currentColor; }
+.run-effort-widget .effort-scale { font-size:10px; opacity:.65; }
+.run-effort-widget .effort-preview { font-size:12px; text-align:center; }
+.run-effort-widget .effort-preview span { opacity:.7; }
