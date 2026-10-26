@@ -2806,3 +2806,12 @@ button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
 .run-effort-widget .effort-scale { font-size:10px; opacity:.65; }
 .run-effort-widget .effort-preview { font-size:12px; text-align:center; }
 .run-effort-widget .effort-preview span { opacity:.7; }
+
+/* v56 — discreet HR comparison guide for every running category */
+.run-heart-guide { padding: 10px 14px; border-top: 1px solid var(--border-color, rgba(128,128,128,.22)); font-size: 13px; }
+.heart-guide-top { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:baseline; }
+.heart-guide-top span { font-variant-numeric:tabular-nums; font-weight:650; }
+.run-heart-guide p, .easy-rating-note { margin:7px 0 0; opacity:.72; font-size:11px; line-height:1.4; }
+.heart-guide-laps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px 16px; margin-top:8px; }
+.heart-guide-laps > div { display:flex; justify-content:space-between; gap:8px; font-size:11px; white-space:nowrap; }
+.heart-guide-laps > div span:last-child { font-weight:650; font-variant-numeric:tabular-nums; }

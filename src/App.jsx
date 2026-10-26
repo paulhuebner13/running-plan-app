@@ -124,31 +124,48 @@ function displaySecondsPace(seconds) {
   return `${Math.floor(val / 60)}:${String(val % 60).padStart(2, '0')}`;
 }
 function runTypeKey(run) {
-  if (run.category === 'HM Pace Run') return 'HM Pace Run';
+  if (run.category === 'HM Pace Run') return 'Threshold Run';
+  if (run.category === 'Easy Run + Strides' || run.category === 'Recovery Run') return 'Easy Run';
   return run.category;
 }
+function intervalCount(run) {
+  const label = (run.steps || []).find(st => /Interval/i.test(st.label) && !/Recovery/i.test(st.label))?.label || "";
+  return Math.min(8, Math.max(1, Number(label.match(/^(\d+)\s*[×x]/)?.[1] || 4)));
+}
+function hrGuide(run) {
+  const type = runTypeKey(run);
+  if (type === 'Interval Run') return { target: 193, range: '185–200', detail: 'HR near the END of each fast interval; do not chase HR at the start.' };
+  if (type === 'Threshold Run') return { target: 183, range: '177–189', detail: 'HR during the sustained fast blocks; keep effort controlled.' };
+  if (type === 'Long Run') return { target: 150, range: '140–160', detail: 'Watch HR in the second half at similar effort; keep it conversational.' };
+  if (type === 'Easy Run') return { target: 145, range: '135–155', detail: 'Conversational effort; a low HR is NOT a reason to speed up.' };
+  return null;
+}
 function adjustedRun(run, feedback) {
-  if (!run || !['Interval Run', 'Threshold Run', 'HM Pace Run'].includes(run.category)) return run;
-  // Use the most recent retrospective rating to calibrate the next comparable workout.
+  if (!run || !['Interval Run', 'Threshold Run', 'Long Run', 'Easy Run', 'Easy Run + Strides', 'HM Pace Run'].includes(run.category)) return run;
   const runWeek = (run.id.match(/^(\d{4})-kw(\d+)/) || []);
   const runSequence = runWeek.length ? Number(runWeek[1]) * 100 + Number(runWeek[2]) : 0;
   const recent = Object.values(feedback || {}).filter((f) => f.category === runTypeKey(run) && f.weekSequence < runSequence)
     .sort((a,b) => b.weekSequence - a.weekSequence)[0];
   if (!recent || !recent.adjust) return run;
-  const factor = 1 + recent.adjust / 100;
+  const type = runTypeKey(run);
+  // Easy / long efforts should never be accelerated just because they felt easy.
+  const adj = ['Easy Run','Long Run'].includes(type) ? Math.min(0, recent.adjust) : recent.adjust;
+  if (!adj) return run;
+  const factor = 1 + adj / 100;
   const steps = run.steps.map((step) => {
-    const isHard = run.category === 'Interval Run'
-      ? /Interval/i.test(step.label)
-      : run.category === 'Threshold Run'
-        ? /Threshold/i.test(step.label)
-        : /HM Pace/i.test(step.label);
-    if (!isHard) return step;
-    const currentPace = secondsForPace(step.pace);
-    const adjustedPace = Math.round(currentPace / factor);
-    return { ...step, pace: displaySecondsPace(adjustedPace), km: Number((Number(step.minutes) * 60 / adjustedPace).toFixed(4)) };
+    const isWork = type === 'Interval Run' ? /Interval/i.test(step.label) && !/Recovery/i.test(step.label)
+      : type === 'Threshold Run' ? /Threshold|HM Pace/i.test(step.label)
+      : type === 'Long Run' ? /Long|Easy/i.test(step.label) && !/Strides|Recovery/i.test(step.label)
+      : /Easy/i.test(step.label) && !/Recovery/i.test(step.label);
+    if (!isWork) return step;
+    const oldPace = secondsForPace(step.pace);
+    if (!oldPace) return step;
+    const newPace = Math.round(oldPace / factor);
+    const minutes = getStepMinutes(step);
+    return { ...step, pace: displaySecondsPace(newPace), km: Number((minutes * 60 / newPace).toFixed(4)) };
   });
   const km = Number(steps.reduce((sum, step) => sum + Number(step.km || 0),0).toFixed(2));
-  return { ...run, steps, distanceKm: km, pace: displaySecondsPace(secondsForPace(run.pace)/factor), notes: `${run.notes || ''} · Calibrated from your last rating (${recent.adjust > 0 ? '+' : ''}${recent.adjust}% speed).` };
+  return { ...run, steps, distanceKm: km, pace: displaySecondsPace(secondsForPace(run.pace)/factor), notes: `${run.notes || ''} · Adjusted from your last rating (${adj > 0 ? '+' : ''}${adj}% speed).` };
 }
 
 function getStepMinutes(step) {
@@ -1798,14 +1815,30 @@ export default function App() {
               ))}
             </div>
 
+            {hrGuide(selectedRun) && (
+              <div className="run-heart-guide">
+                <div className="heart-guide-top"><strong>Heart rate guide</strong><span>{hrGuide(selectedRun).target} bpm · {hrGuide(selectedRun).range} bpm</span></div>
+                {runTypeKey(selectedRun) === 'Interval Run' ? (
+                  <div className="heart-guide-laps">
+                    {Array.from({length: intervalCount(selectedRun)}, (_, i) => {
+                      const target = hrGuide(selectedRun).target;
+                      const n = intervalCount(selectedRun);
+                      const low = Math.round(target - 13 + i * 7 / Math.max(1, n-1));
+                      const high = Math.round(target - 3 + i * 10 / Math.max(1, n-1));
+                      return <div key={i}><span>Interval {i+1}</span><span>{low}–{high} bpm</span></div>;
+                    })}
+                  </div>
+                ) : null}
+                <p>{hrGuide(selectedRun).detail}</p>
+              </div>
+            )}
             {!progress[selectedRun.id] && (
               <div className="run-effort-widget">
                 <div className="effort-top"><strong>How did this run feel?</strong><span>{['Much too easy','Too easy','A little easy','Okay','A little hard','Too hard','Much too hard'][runRating]}</span></div>
                 <input type="range" min="0" max="6" step="1" value={runRating} onChange={(e)=>setRunRating(Number(e.target.value))} aria-label="Effort feedback" />
                 <div className="effort-scale"><span>Too easy</span><span>Okay</span><span>Too hard</span></div>
-                {['Interval Run','Threshold Run','HM Pace Run'].includes(selectedRun.category) && (
-                  <div className="effort-preview">Better pace for this run: <strong>{displaySecondsPace(secondsForPace(selectedRun.pace)/(1 + RUN_SCALE[runRating]/100))}/km</strong><span> ({RUN_SCALE[runRating]>0?'+':''}{RUN_SCALE[runRating]}% speed)</span></div>
-                )}
+                <div className="effort-preview">Better pace for this run: <strong>{displaySecondsPace(secondsForPace(selectedRun.pace)/(1 + RUN_SCALE[runRating]/100))}/km</strong><span> ({RUN_SCALE[runRating]>0?'+':''}{RUN_SCALE[runRating]}% speed)</span></div>
+                {['Easy Run','Long Run'].includes(runTypeKey(selectedRun)) && runRating<3 && <p className="easy-rating-note">Easy runs should stay easy. This rating won't force faster future runs.</p>}
               </div>
             )}
             <div className="modal-footer">

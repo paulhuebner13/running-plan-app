@@ -911,7 +911,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-10-26",
     "endDate": "2026-11-01",
-    "targetKm": 35.4,
+    "targetKm": 36.02,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -920,13 +920,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -941,11 +941,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -975,7 +975,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -1027,23 +1027,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "47 min · 7.0 km",
+        "subtitle": "47.06 min · 7.15 km",
         "type": "easy-run",
-        "distanceKm": 6.97,
-        "minutes": 47.064,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 7.15,
+        "minutes": 47.06,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 47.064,
-            "km": 6.9724
+            "km": 7.149
           }
         ]
       },
@@ -1053,23 +1053,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "99.1 min · 14.50 km",
+        "subtitle": "99.08 min · 14.86 km",
         "type": "long-run",
-        "distanceKm": 14.5,
+        "distanceKm": 14.86,
         "minutes": 99.08,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 99.083,
-            "km": 14.5
+            "km": 14.8624
           }
         ]
       }
@@ -1080,7 +1080,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-02",
     "endDate": "2026-11-08",
-    "targetKm": 36.6,
+    "targetKm": 37.19,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1089,13 +1089,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -1110,11 +1110,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -1144,7 +1144,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "36 min · 6.3 km",
+        "subtitle": "36 min · 6.30 km",
         "type": "threshold-run",
         "distanceKm": 6.3,
         "minutes": 36.0,
@@ -1196,23 +1196,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "58 min · 8.6 km",
+        "subtitle": "58.3 min · 8.85 km",
         "type": "easy-run",
-        "distanceKm": 8.64,
-        "minutes": 58.295,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 8.85,
+        "minutes": 58.3,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 58.295,
-            "km": 8.6363
+            "km": 8.8549
           }
         ]
       },
@@ -1222,23 +1222,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -1249,7 +1249,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-09",
     "endDate": "2026-11-15",
-    "targetKm": 38.6,
+    "targetKm": 39.23,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1258,13 +1258,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -1279,11 +1279,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -1313,7 +1313,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -1365,23 +1365,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "66 min · 9.8 km",
+        "subtitle": "66.39 min · 10.09 km",
         "type": "easy-run",
-        "distanceKm": 9.84,
-        "minutes": 66.395,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 10.09,
+        "minutes": 66.39,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 66.395,
-            "km": 9.8363
+            "km": 10.0853
           }
         ]
       },
@@ -1391,23 +1391,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -1418,7 +1418,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-16",
     "endDate": "2026-11-22",
-    "targetKm": 29.9,
+    "targetKm": 30.45,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1427,13 +1427,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -1448,11 +1448,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -1482,7 +1482,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "32 min · 5.5 km",
+        "subtitle": "32 min · 5.50 km",
         "type": "threshold-run",
         "distanceKm": 5.5,
         "minutes": 32.0,
@@ -1534,23 +1534,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "34 min · 5.1 km",
+        "subtitle": "34.42 min · 5.23 km",
         "type": "easy-run",
-        "distanceKm": 5.1,
-        "minutes": 34.421,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 5.23,
+        "minutes": 34.42,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 34.421,
-            "km": 5.0994
+            "km": 5.2285
           }
         ]
       },
@@ -1560,23 +1560,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "85.4 min · 12.50 km",
+        "subtitle": "85.42 min · 12.81 km",
         "type": "long-run",
-        "distanceKm": 12.5,
+        "distanceKm": 12.81,
         "minutes": 85.42,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 85.417,
-            "km": 12.5
+            "km": 12.8126
           }
         ]
       }
@@ -1587,7 +1587,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-23",
     "endDate": "2026-11-29",
-    "targetKm": 35.6,
+    "targetKm": 36.15,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1596,13 +1596,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -1617,11 +1617,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -1651,7 +1651,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -1703,23 +1703,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "46 min · 6.8 km",
+        "subtitle": "46.15 min · 7.01 km",
         "type": "easy-run",
-        "distanceKm": 6.84,
-        "minutes": 46.145,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 7.01,
+        "minutes": 46.15,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 46.145,
-            "km": 6.8363
+            "km": 7.0094
           }
         ]
       },
@@ -1729,23 +1729,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -1756,7 +1756,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-11-30",
     "endDate": "2026-12-06",
-    "targetKm": 37.6,
+    "targetKm": 38.22,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1765,13 +1765,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -1786,11 +1786,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -1820,7 +1820,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "36 min · 6.3 km",
+        "subtitle": "36 min · 6.30 km",
         "type": "threshold-run",
         "distanceKm": 6.3,
         "minutes": 36.0,
@@ -1872,23 +1872,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "65 min · 9.6 km",
+        "subtitle": "65.05 min · 9.88 km",
         "type": "easy-run",
-        "distanceKm": 9.64,
-        "minutes": 65.045,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 9.88,
+        "minutes": 65.05,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 65.045,
-            "km": 9.6363
+            "km": 9.8803
           }
         ]
       },
@@ -1898,23 +1898,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -1925,7 +1925,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-07",
     "endDate": "2026-12-13",
-    "targetKm": 39.4,
+    "targetKm": 40.12,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -1934,13 +1934,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -1955,11 +1955,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -1989,7 +1989,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -2041,23 +2041,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "74 min · 11.0 km",
+        "subtitle": "74.06 min · 11.25 km",
         "type": "easy-run",
-        "distanceKm": 10.97,
-        "minutes": 74.064,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 11.25,
+        "minutes": 74.06,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 74.064,
-            "km": 10.9724
+            "km": 11.2502
           }
         ]
       },
@@ -2067,23 +2067,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "99.1 min · 14.50 km",
+        "subtitle": "99.08 min · 14.86 km",
         "type": "long-run",
-        "distanceKm": 14.5,
+        "distanceKm": 14.86,
         "minutes": 99.08,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 99.083,
-            "km": 14.5
+            "km": 14.8624
           }
         ]
       }
@@ -2094,7 +2094,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-14",
     "endDate": "2026-12-20",
-    "targetKm": 30.4,
+    "targetKm": 30.93,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2103,13 +2103,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -2124,11 +2124,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -2158,7 +2158,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "32 min · 5.5 km",
+        "subtitle": "32 min · 5.50 km",
         "type": "threshold-run",
         "distanceKm": 5.5,
         "minutes": 32.0,
@@ -2210,23 +2210,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "38 min · 5.6 km",
+        "subtitle": "37.61 min · 5.71 km",
         "type": "easy-run",
-        "distanceKm": 5.57,
-        "minutes": 37.614,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 5.71,
+        "minutes": 37.61,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 37.614,
-            "km": 5.5724
+            "km": 5.7135
           }
         ]
       },
@@ -2236,23 +2236,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "85.4 min · 12.50 km",
+        "subtitle": "85.42 min · 12.81 km",
         "type": "long-run",
-        "distanceKm": 12.5,
+        "distanceKm": 12.81,
         "minutes": 85.42,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 85.417,
-            "km": 12.5
+            "km": 12.8126
           }
         ]
       }
@@ -2263,7 +2263,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-21",
     "endDate": "2026-12-27",
-    "targetKm": 35.6,
+    "targetKm": 36.15,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2272,13 +2272,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -2293,11 +2293,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -2325,14 +2325,14 @@ export const trainingPlan = [
         "id": "2026-kw52-run2",
         "order": 2,
         "title": "HM Pace Blocks",
-        "category": "HM Pace Run",
+        "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "hm-pace-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
-        "optimalHr": 180,
-        "hrRange": "172-188",
+        "optimalHr": 183,
+        "hrRange": "177-189",
         "pace": "5:00",
         "optional": false,
         "notes": "Threshold target 183 bpm / 177–189; HM-Pace blocks around 180 / 172–188. Hard but sustainable.",
@@ -2348,8 +2348,8 @@ export const trainingPlan = [
           {
             "label": "2 × 12 min HM Pace",
             "pace": "5:00",
-            "hr": 180,
-            "hrRange": "172-188",
+            "hr": 183,
+            "hrRange": "177-189",
             "minutes": 24,
             "km": 4.8,
             "notes": "Controlled sustained effort; do not chase the upper HR boundary.",
@@ -2379,23 +2379,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "36 min · 5.3 km",
+        "subtitle": "36.02 min · 5.47 km",
         "type": "easy-run",
-        "distanceKm": 5.34,
+        "distanceKm": 5.47,
         "minutes": 36.02,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 36.02,
-            "km": 5.3363
+            "km": 5.4714
           }
         ]
       },
@@ -2405,23 +2405,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "102.5 min · 15.00 km",
+        "subtitle": "102.5 min · 15.38 km",
         "type": "long-run",
-        "distanceKm": 15.0,
+        "distanceKm": 15.38,
         "minutes": 102.5,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 102.5,
-            "km": 15.0
+            "km": 15.375
           }
         ]
       }
@@ -2432,7 +2432,7 @@ export const trainingPlan = [
     "year": 2026,
     "startDate": "2026-12-28",
     "endDate": "2027-01-03",
-    "targetKm": 36.4,
+    "targetKm": 37.06,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2441,13 +2441,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -2462,11 +2462,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -2496,7 +2496,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "36 min · 6.3 km",
+        "subtitle": "36 min · 6.30 km",
         "type": "threshold-run",
         "distanceKm": 6.3,
         "minutes": 36.0,
@@ -2548,23 +2548,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "59 min · 8.8 km",
+        "subtitle": "59.21 min · 8.99 km",
         "type": "easy-run",
-        "distanceKm": 8.77,
-        "minutes": 59.214,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 8.99,
+        "minutes": 59.21,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 59.214,
-            "km": 8.7724
+            "km": 8.9945
           }
         ]
       },
@@ -2574,23 +2574,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "99.1 min · 14.50 km",
+        "subtitle": "99.08 min · 14.86 km",
         "type": "long-run",
-        "distanceKm": 14.5,
+        "distanceKm": 14.86,
         "minutes": 99.08,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 99.083,
-            "km": 14.5
+            "km": 14.8624
           }
         ]
       }
@@ -2601,7 +2601,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-04",
     "endDate": "2027-01-10",
-    "targetKm": 38.6,
+    "targetKm": 39.23,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2610,13 +2610,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -2631,11 +2631,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -2665,7 +2665,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -2717,23 +2717,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "66 min · 9.8 km",
+        "subtitle": "66.39 min · 10.09 km",
         "type": "easy-run",
-        "distanceKm": 9.84,
-        "minutes": 66.395,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 10.09,
+        "minutes": 66.39,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 66.395,
-            "km": 9.8363
+            "km": 10.0853
           }
         ]
       },
@@ -2743,23 +2743,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -2770,7 +2770,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-11",
     "endDate": "2027-01-17",
-    "targetKm": 29.9,
+    "targetKm": 30.45,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2779,13 +2779,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -2800,11 +2800,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -2832,14 +2832,14 @@ export const trainingPlan = [
         "id": "2027-kw02-run2",
         "order": 2,
         "title": "HM Pace Blocks",
-        "category": "HM Pace Run",
+        "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "32 min · 5.5 km",
+        "subtitle": "32 min · 5.50 km",
         "type": "hm-pace-run",
         "distanceKm": 5.5,
         "minutes": 32.0,
-        "optimalHr": 180,
-        "hrRange": "172-188",
+        "optimalHr": 183,
+        "hrRange": "177-189",
         "pace": "5:00",
         "optional": false,
         "notes": "Threshold target 183 bpm / 177–189; HM-Pace blocks around 180 / 172–188. Hard but sustainable.",
@@ -2855,8 +2855,8 @@ export const trainingPlan = [
           {
             "label": "2 × 8 min HM Pace",
             "pace": "5:00",
-            "hr": 180,
-            "hrRange": "172-188",
+            "hr": 183,
+            "hrRange": "177-189",
             "minutes": 16,
             "km": 3.2,
             "notes": "Controlled sustained effort; do not chase the upper HR boundary.",
@@ -2886,23 +2886,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "34 min · 5.1 km",
+        "subtitle": "34.42 min · 5.23 km",
         "type": "easy-run",
-        "distanceKm": 5.1,
-        "minutes": 34.421,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 5.23,
+        "minutes": 34.42,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 34.421,
-            "km": 5.0994
+            "km": 5.2285
           }
         ]
       },
@@ -2912,23 +2912,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "85.4 min · 12.50 km",
+        "subtitle": "85.42 min · 12.81 km",
         "type": "long-run",
-        "distanceKm": 12.5,
+        "distanceKm": 12.81,
         "minutes": 85.42,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 85.417,
-            "km": 12.5
+            "km": 12.8126
           }
         ]
       }
@@ -2939,7 +2939,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-18",
     "endDate": "2027-01-24",
-    "targetKm": 35.4,
+    "targetKm": 36.02,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -2948,13 +2948,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -2969,11 +2969,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -3003,7 +3003,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -3055,23 +3055,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "47 min · 7.0 km",
+        "subtitle": "47.06 min · 7.15 km",
         "type": "easy-run",
-        "distanceKm": 6.97,
-        "minutes": 47.064,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 7.15,
+        "minutes": 47.06,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 47.064,
-            "km": 6.9724
+            "km": 7.149
           }
         ]
       },
@@ -3081,23 +3081,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "99.1 min · 14.50 km",
+        "subtitle": "99.08 min · 14.86 km",
         "type": "long-run",
-        "distanceKm": 14.5,
+        "distanceKm": 14.86,
         "minutes": 99.08,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 99.083,
-            "km": 14.5
+            "km": 14.8624
           }
         ]
       }
@@ -3108,7 +3108,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-01-25",
     "endDate": "2027-01-31",
-    "targetKm": 37.6,
+    "targetKm": 38.22,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3117,13 +3117,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -3138,11 +3138,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -3172,7 +3172,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "36 min · 6.3 km",
+        "subtitle": "36 min · 6.30 km",
         "type": "threshold-run",
         "distanceKm": 6.3,
         "minutes": 36.0,
@@ -3224,23 +3224,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "55 min · 8.1 km",
+        "subtitle": "54.92 min · 8.34 km",
         "type": "easy-run",
-        "distanceKm": 8.14,
+        "distanceKm": 8.34,
         "minutes": 54.92,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 54.92,
-            "km": 8.1363
+            "km": 8.3423
           }
         ]
       },
@@ -3250,23 +3250,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "102.5 min · 15.00 km",
+        "subtitle": "102.5 min · 15.38 km",
         "type": "long-run",
-        "distanceKm": 15.0,
+        "distanceKm": 15.38,
         "minutes": 102.5,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 102.5,
-            "km": 15.0
+            "km": 15.375
           }
         ]
       }
@@ -3277,7 +3277,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-01",
     "endDate": "2027-02-07",
-    "targetKm": 39.6,
+    "targetKm": 40.25,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3286,13 +3286,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -3307,11 +3307,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -3339,14 +3339,14 @@ export const trainingPlan = [
         "id": "2027-kw05-run2",
         "order": 2,
         "title": "HM Pace Blocks",
-        "category": "HM Pace Run",
+        "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "hm-pace-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
-        "optimalHr": 180,
-        "hrRange": "172-188",
+        "optimalHr": 183,
+        "hrRange": "177-189",
         "pace": "5:00",
         "optional": false,
         "notes": "Threshold target 183 bpm / 177–189; HM-Pace blocks around 180 / 172–188. Hard but sustainable.",
@@ -3362,8 +3362,8 @@ export const trainingPlan = [
           {
             "label": "2 × 12 min HM Pace",
             "pace": "5:00",
-            "hr": 180,
-            "hrRange": "172-188",
+            "hr": 183,
+            "hrRange": "177-189",
             "minutes": 24,
             "km": 4.8,
             "notes": "Controlled sustained effort; do not chase the upper HR boundary.",
@@ -3393,23 +3393,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "73 min · 10.8 km",
+        "subtitle": "73.14 min · 11.11 km",
         "type": "easy-run",
-        "distanceKm": 10.84,
-        "minutes": 73.145,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 11.11,
+        "minutes": 73.14,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 73.145,
-            "km": 10.8363
+            "km": 11.1106
           }
         ]
       },
@@ -3419,23 +3419,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -3446,7 +3446,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-08",
     "endDate": "2027-02-14",
-    "targetKm": 35.0,
+    "targetKm": 35.58,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3455,13 +3455,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -3476,11 +3476,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -3510,7 +3510,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "32 min · 5.5 km",
+        "subtitle": "32 min · 5.50 km",
         "type": "threshold-run",
         "distanceKm": 5.5,
         "minutes": 32.0,
@@ -3562,23 +3562,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "34 min · 5.1 km",
+        "subtitle": "34.42 min · 5.23 km",
         "type": "easy-run",
-        "distanceKm": 5.1,
-        "minutes": 34.421,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 5.23,
+        "minutes": 34.42,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 34.421,
-            "km": 5.0994
+            "km": 5.2285
           }
         ]
       },
@@ -3588,23 +3588,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "119.6 min · 17.50 km",
+        "subtitle": "119.58 min · 17.94 km",
         "type": "long-run",
-        "distanceKm": 17.5,
+        "distanceKm": 17.94,
         "minutes": 119.58,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 119.583,
-            "km": 17.5
+            "km": 17.9374
           }
         ]
       }
@@ -3615,7 +3615,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-15",
     "endDate": "2027-02-21",
-    "targetKm": 35.6,
+    "targetKm": 36.15,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3624,13 +3624,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -3645,11 +3645,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -3679,7 +3679,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -3731,23 +3731,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "46 min · 6.8 km",
+        "subtitle": "46.15 min · 7.01 km",
         "type": "easy-run",
-        "distanceKm": 6.84,
-        "minutes": 46.145,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 7.01,
+        "minutes": 46.15,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 46.145,
-            "km": 6.8363
+            "km": 7.0094
           }
         ]
       },
@@ -3757,23 +3757,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -3784,7 +3784,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-02-22",
     "endDate": "2027-02-28",
-    "targetKm": 36.6,
+    "targetKm": 37.19,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3793,13 +3793,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -3814,11 +3814,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -3846,14 +3846,14 @@ export const trainingPlan = [
         "id": "2027-kw08-run2",
         "order": 2,
         "title": "HM Pace Blocks",
-        "category": "HM Pace Run",
+        "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "36 min · 6.3 km",
+        "subtitle": "36 min · 6.30 km",
         "type": "hm-pace-run",
         "distanceKm": 6.3,
         "minutes": 36.0,
-        "optimalHr": 180,
-        "hrRange": "172-188",
+        "optimalHr": 183,
+        "hrRange": "177-189",
         "pace": "5:00",
         "optional": false,
         "notes": "Threshold target 183 bpm / 177–189; HM-Pace blocks around 180 / 172–188. Hard but sustainable.",
@@ -3869,8 +3869,8 @@ export const trainingPlan = [
           {
             "label": "2 × 10 min HM Pace",
             "pace": "5:00",
-            "hr": 180,
-            "hrRange": "172-188",
+            "hr": 183,
+            "hrRange": "177-189",
             "minutes": 20,
             "km": 4.0,
             "notes": "Controlled sustained effort; do not chase the upper HR boundary.",
@@ -3900,23 +3900,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "58 min · 8.6 km",
+        "subtitle": "58.3 min · 8.85 km",
         "type": "easy-run",
-        "distanceKm": 8.64,
-        "minutes": 58.295,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 8.85,
+        "minutes": 58.3,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 58.295,
-            "km": 8.6363
+            "km": 8.8549
           }
         ]
       },
@@ -3926,23 +3926,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -3953,7 +3953,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-01",
     "endDate": "2027-03-07",
-    "targetKm": 38.4,
+    "targetKm": 39.1,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -3962,13 +3962,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -3983,11 +3983,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -4017,7 +4017,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -4069,23 +4069,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "64 min · 9.5 km",
+        "subtitle": "63.94 min · 9.71 km",
         "type": "easy-run",
-        "distanceKm": 9.47,
-        "minutes": 63.939,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 9.71,
+        "minutes": 63.94,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 63.939,
-            "km": 9.4724
+            "km": 9.7123
           }
         ]
       },
@@ -4095,23 +4095,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "102.5 min · 15.00 km",
+        "subtitle": "102.5 min · 15.38 km",
         "type": "long-run",
-        "distanceKm": 15.0,
+        "distanceKm": 15.38,
         "minutes": 102.5,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 102.5,
-            "km": 15.0
+            "km": 15.375
           }
         ]
       }
@@ -4122,7 +4122,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-08",
     "endDate": "2027-03-14",
-    "targetKm": 29.9,
+    "targetKm": 30.45,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4131,13 +4131,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -4152,11 +4152,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -4186,7 +4186,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "32 min · 5.5 km",
+        "subtitle": "32 min · 5.50 km",
         "type": "threshold-run",
         "distanceKm": 5.5,
         "minutes": 32.0,
@@ -4238,23 +4238,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "34 min · 5.1 km",
+        "subtitle": "34.42 min · 5.23 km",
         "type": "easy-run",
-        "distanceKm": 5.1,
-        "minutes": 34.421,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 5.23,
+        "minutes": 34.42,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 34.421,
-            "km": 5.0994
+            "km": 5.2285
           }
         ]
       },
@@ -4264,23 +4264,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "85.4 min · 12.50 km",
+        "subtitle": "85.42 min · 12.81 km",
         "type": "long-run",
-        "distanceKm": 12.5,
+        "distanceKm": 12.81,
         "minutes": 85.42,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 85.417,
-            "km": 12.5
+            "km": 12.8126
           }
         ]
       }
@@ -4291,7 +4291,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-15",
     "endDate": "2027-03-21",
-    "targetKm": 37.6,
+    "targetKm": 38.26,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4300,13 +4300,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -4321,11 +4321,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -4353,14 +4353,14 @@ export const trainingPlan = [
         "id": "2027-kw11-run2",
         "order": 2,
         "title": "HM Pace Blocks",
-        "category": "HM Pace Run",
+        "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "hm-pace-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
-        "optimalHr": 180,
-        "hrRange": "172-188",
+        "optimalHr": 183,
+        "hrRange": "177-189",
         "pace": "5:00",
         "optional": false,
         "notes": "Threshold target 183 bpm / 177–189; HM-Pace blocks around 180 / 172–188. Hard but sustainable.",
@@ -4376,8 +4376,8 @@ export const trainingPlan = [
           {
             "label": "2 × 12 min HM Pace",
             "pace": "5:00",
-            "hr": 180,
-            "hrRange": "172-188",
+            "hr": 183,
+            "hrRange": "177-189",
             "minutes": 24,
             "km": 4.8,
             "notes": "Controlled sustained effort; do not chase the upper HR boundary.",
@@ -4407,23 +4407,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "33 min · 4.9 km",
+        "subtitle": "33.07 min · 5.02 km",
         "type": "easy-run",
-        "distanceKm": 4.9,
-        "minutes": 33.071,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 5.02,
+        "minutes": 33.07,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 33.071,
-            "km": 4.8994
+            "km": 5.0234
           }
         ]
       },
@@ -4433,23 +4433,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "119.6 min · 17.50 km",
+        "subtitle": "119.58 min · 17.94 km",
         "type": "long-run",
-        "distanceKm": 17.5,
+        "distanceKm": 17.94,
         "minutes": 119.58,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 119.583,
-            "km": 17.5
+            "km": 17.9374
           }
         ]
       }
@@ -4460,7 +4460,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-22",
     "endDate": "2027-03-28",
-    "targetKm": 37.4,
+    "targetKm": 38.09,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4469,13 +4469,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -4490,11 +4490,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -4524,7 +4524,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "36 min · 6.3 km",
+        "subtitle": "36 min · 6.30 km",
         "type": "threshold-run",
         "distanceKm": 6.3,
         "minutes": 36.0,
@@ -4576,23 +4576,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "42 min · 6.3 km",
+        "subtitle": "42.34 min · 6.43 km",
         "type": "easy-run",
-        "distanceKm": 6.27,
-        "minutes": 42.339,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 6.43,
+        "minutes": 42.34,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 42.339,
-            "km": 6.2724
+            "km": 6.4312
           }
         ]
       },
@@ -4602,23 +4602,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "123.0 min · 18.00 km",
+        "subtitle": "123 min · 18.45 km",
         "type": "long-run",
-        "distanceKm": 18.0,
+        "distanceKm": 18.45,
         "minutes": 123.0,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 123.0,
-            "km": 18.0
+            "km": 18.45
           }
         ]
       }
@@ -4629,7 +4629,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-03-29",
     "endDate": "2027-04-04",
-    "targetKm": 39.6,
+    "targetKm": 40.25,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4638,13 +4638,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "47 min · 8.1 km",
+        "subtitle": "47 min · 8.20 km",
         "type": "interval-run",
-        "distanceKm": 8.12,
+        "distanceKm": 8.2,
         "minutes": 47.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -4659,11 +4659,11 @@ export const trainingPlan = [
           },
           {
             "label": "5 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 20,
-            "km": 4.2857,
+            "km": 4.3636,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 5
           },
@@ -4693,7 +4693,7 @@ export const trainingPlan = [
         "title": "Threshold",
         "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "40 min · 7.1 km",
+        "subtitle": "40 min · 7.10 km",
         "type": "threshold-run",
         "distanceKm": 7.1,
         "minutes": 40.0,
@@ -4745,23 +4745,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "73 min · 10.8 km",
+        "subtitle": "73.14 min · 11.11 km",
         "type": "easy-run",
-        "distanceKm": 10.84,
-        "minutes": 73.145,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 11.11,
+        "minutes": 73.14,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 73.145,
-            "km": 10.8363
+            "km": 11.1106
           }
         ]
       },
@@ -4771,23 +4771,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "92.2 min · 13.50 km",
+        "subtitle": "92.25 min · 13.84 km",
         "type": "long-run",
-        "distanceKm": 13.5,
+        "distanceKm": 13.84,
         "minutes": 92.25,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 92.25,
-            "km": 13.5
+            "km": 13.8375
           }
         ]
       }
@@ -4798,7 +4798,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-05",
     "endDate": "2027-04-11",
-    "targetKm": 30.4,
+    "targetKm": 30.93,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4807,13 +4807,13 @@ export const trainingPlan = [
         "title": "Interval Run",
         "category": "Interval Run",
         "plannedDay": "Tuesday",
-        "subtitle": "40 min · 6.8 km",
+        "subtitle": "40 min · 6.91 km",
         "type": "interval-run",
-        "distanceKm": 6.85,
+        "distanceKm": 6.91,
         "minutes": 40.0,
         "optimalHr": 193,
         "hrRange": "185-200",
-        "pace": "4:40",
+        "pace": "4:35",
         "optional": false,
         "notes": "Hard intervals with 3 min easy jog between repetitions. No final recovery after last rep.",
         "steps": [
@@ -4828,11 +4828,11 @@ export const trainingPlan = [
           },
           {
             "label": "4 × 4 min Interval",
-            "pace": "4:40",
+            "pace": "4:35",
             "hr": 193,
             "hrRange": "185-200",
             "minutes": 16,
-            "km": 3.4286,
+            "km": 3.4909,
             "notes": "Hard, even repetitions. Keep form and speed consistent; finish with some reserve.",
             "reps": 4
           },
@@ -4860,14 +4860,14 @@ export const trainingPlan = [
         "id": "2027-kw14-run2",
         "order": 2,
         "title": "HM Pace Blocks",
-        "category": "HM Pace Run",
+        "category": "Threshold Run",
         "plannedDay": "Thursday",
-        "subtitle": "32 min · 5.5 km",
+        "subtitle": "32 min · 5.50 km",
         "type": "hm-pace-run",
         "distanceKm": 5.5,
         "minutes": 32.0,
-        "optimalHr": 180,
-        "hrRange": "172-188",
+        "optimalHr": 183,
+        "hrRange": "177-189",
         "pace": "5:00",
         "optional": false,
         "notes": "Threshold target 183 bpm / 177–189; HM-Pace blocks around 180 / 172–188. Hard but sustainable.",
@@ -4883,8 +4883,8 @@ export const trainingPlan = [
           {
             "label": "2 × 8 min HM Pace",
             "pace": "5:00",
-            "hr": 180,
-            "hrRange": "172-188",
+            "hr": 183,
+            "hrRange": "177-189",
             "minutes": 16,
             "km": 3.2,
             "notes": "Controlled sustained effort; do not chase the upper HR boundary.",
@@ -4914,23 +4914,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "38 min · 5.6 km",
+        "subtitle": "37.61 min · 5.71 km",
         "type": "easy-run",
-        "distanceKm": 5.57,
-        "minutes": 37.614,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "distanceKm": 5.71,
+        "minutes": 37.61,
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Genuinely easy; can speak in sentences.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 37.614,
-            "km": 5.5724
+            "km": 5.7135
           }
         ]
       },
@@ -4940,23 +4940,23 @@ export const trainingPlan = [
         "title": "Long Run",
         "category": "Long Run",
         "plannedDay": "Sunday",
-        "subtitle": "85.4 min · 12.50 km",
+        "subtitle": "85.42 min · 12.81 km",
         "type": "long-run",
-        "distanceKm": 12.5,
+        "distanceKm": 12.81,
         "minutes": 85.42,
-        "optimalHr": 151,
+        "optimalHr": 150,
         "hrRange": "140-160",
-        "pace": "6:50",
+        "pace": "6:40",
         "optional": false,
         "notes": "Easy aerobic long run. Comfortable and conversational.",
         "steps": [
           {
             "label": "Long easy",
-            "pace": "6:50",
-            "hr": 151,
+            "pace": "6:40",
+            "hr": 150,
             "hrRange": "140-160",
             "minutes": 85.417,
-            "km": 12.5
+            "km": 12.8126
           }
         ]
       }
@@ -4967,7 +4967,7 @@ export const trainingPlan = [
     "year": 2027,
     "startDate": "2027-04-12",
     "endDate": "2027-04-18",
-    "targetKm": 34.5,
+    "targetKm": 34.85,
     "focus": "HM A-goal 1:35 · 4 runs/week · about 35 km · 2 quality sessions",
     "runs": [
       {
@@ -4976,23 +4976,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Tuesday",
-        "subtitle": "27.0 min · 4.00 km",
+        "subtitle": "27 min · 4.10 km",
         "type": "easy-run",
-        "distanceKm": 4.0,
+        "distanceKm": 4.1,
         "minutes": 27.0,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Taper.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 27.0,
-            "km": 4.0
+            "km": 4.1013
           }
         ]
       },
@@ -5002,23 +5002,23 @@ export const trainingPlan = [
         "title": "Easy Run",
         "category": "Easy Run",
         "plannedDay": "Thursday",
-        "subtitle": "24.3 min · 3.60 km",
+        "subtitle": "24.3 min · 3.69 km",
         "type": "easy-run",
-        "distanceKm": 3.6,
+        "distanceKm": 3.69,
         "minutes": 24.3,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Taper.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 24.3,
-            "km": 3.6
+            "km": 3.6911
           }
         ]
       },
@@ -5028,23 +5028,23 @@ export const trainingPlan = [
         "title": "Shakeout",
         "category": "Easy Run",
         "plannedDay": "Saturday",
-        "subtitle": "39.1 min · 5.80 km",
+        "subtitle": "39.15 min · 5.95 km",
         "type": "easy-run",
-        "distanceKm": 5.8,
+        "distanceKm": 5.95,
         "minutes": 39.15,
-        "optimalHr": 148,
-        "hrRange": "138-156",
-        "pace": "6:45",
+        "optimalHr": 145,
+        "hrRange": "135-155",
+        "pace": "6:35",
         "optional": false,
         "notes": "Keep it relaxed.",
         "steps": [
           {
             "label": "Easy",
-            "pace": "6:45",
-            "hr": 148,
-            "hrRange": "138-156",
+            "pace": "6:35",
+            "hr": 145,
+            "hrRange": "135-155",
             "minutes": 39.15,
-            "km": 5.8
+            "km": 5.9468
           }
         ]
       },
