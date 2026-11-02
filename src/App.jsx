@@ -128,34 +128,39 @@ function runTypeKey(run) {
   if (run.category === 'Easy Run + Strides' || run.category === 'Recovery Run') return 'Easy Run';
   return run.category;
 }
-// Rolling priorities: completed training *types* count, missed Easy runs never create debt.
-// Decisions for any week use only completed workouts from previous weeks, so checking
-// a run during the current week never reshuffles the remaining cards.
+// Keep a predictable default: intervals Tue, threshold Thu, easy Sat,
+// long run Sun. Only the immediately previous, *finished* week can change
+// the order. Future weeks stay on the default schedule until that week ends.
 function prioritizedRunningWeek(baseWeek, weekIndex, progress) {
   if (!baseWeek || weekIndex <= 0 || baseWeek.runs.some(r => r.category === 'Race')) return baseWeek;
-  const previous = trainingPlan.slice(0, weekIndex);
-  const types = ['Threshold Run', 'Long Run', 'Interval Run'];
-  const lastCompleted = Object.fromEntries(types.map(type => [type, -1]));
-  previous.forEach((w, index) => w.runs.forEach(run => {
-    const type = runTypeKey(run);
-    if (lastCompleted[type] !== undefined && progress[run.id]) lastCompleted[type] = index;
-  }));
   const original = [...baseWeek.runs].sort((a, b) => (DAY_OFFSETS[a.plannedDay] ?? 9) - (DAY_OFFSETS[b.plannedDay] ?? 9));
   if (original.length !== 4) return baseWeek;
-  const candidates = [...original].sort((a, b) => {
-    const ta = runTypeKey(a), tb = runTypeKey(b);
-    const isEasyA = ta === 'Easy Run', isEasyB = tb === 'Easy Run';
-    if (isEasyA !== isEasyB) return isEasyA ? 1 : -1;
-    // Missing HM-specific work has a small tie-break advantage, but elapsed
-    // time since last completion is the main priority.
-    const score = t => (lastCompleted[t] == null ? -1 : lastCompleted[t]);
-    const ageA = weekIndex - score(ta) + (ta === 'Threshold Run' ? 0.2 : ta === 'Long Run' ? 0.1 : 0);
-    const ageB = weekIndex - score(tb) + (tb === 'Threshold Run' ? 0.2 : tb === 'Long Run' ? 0.1 : 0);
-    return ageB - ageA;
-  });
-  const slots = original.map(r => r.plannedDay);
-  const ordered = candidates.map((run, index) => ({...run, plannedDay: slots[index], order: index + 1}));
-  return {...baseWeek, runs: ordered};
+  const previous = trainingPlan[weekIndex - 1];
+  if (!previous) return baseWeek;
+  // Do not reshuffle not-yet-started future weeks on the basis of missing runs.
+  const previousEnd = new Date(`${previous.endDate}T23:59:59`);
+  if (Date.now() <= previousEnd.getTime()) return baseWeek;
+
+  const prev = (type) => previous.runs.filter(run => runTypeKey(run) === type);
+  const done = (type) => prev(type).some(run => Boolean(progress[run.id]));
+  const missed = (type) => prev(type).length > 0 && !done(type);
+  // No reliable preference if the entire previous week was skipped.
+  if (!previous.runs.some(run => progress[run.id])) return baseWeek;
+
+  const arranged = [...original];
+  const findIndex = type => arranged.findIndex(run => runTypeKey(run) === type);
+  const swap = (a, b) => {
+    const i = findIndex(a), j = findIndex(b);
+    if (i >= 0 && j >= 0) [arranged[i], arranged[j]] = [arranged[j], arranged[i]];
+  };
+  // If Threshold was missed but Intervals were done, put Threshold first.
+  if (missed('Threshold Run') && done('Interval Run')) swap('Threshold Run', 'Interval Run');
+  // If Long Run was missed, move it to Saturday, still on the weekend.
+  // Easy Run remains the flexible last option, never earns catch-up priority.
+  if (missed('Long Run')) swap('Long Run', 'Easy Run');
+
+  const slots = original.map(run => run.plannedDay);
+  return {...baseWeek, runs: arranged.map((run, index) => ({...run, plannedDay: slots[index], order: index + 1}))};
 }
 
 function intervalCount(run) {
