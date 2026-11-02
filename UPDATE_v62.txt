@@ -1,0 +1,1 @@
+v62: Standard order Interval > Threshold > Easy > Long. Only prior completed week matters; missed Threshold/Long/Interval moves first. Easy is never prioritized. Four sessions and original run IDs/data preserved.

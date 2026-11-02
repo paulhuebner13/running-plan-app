@@ -128,39 +128,39 @@ function runTypeKey(run) {
   if (run.category === 'Easy Run + Strides' || run.category === 'Recovery Run') return 'Easy Run';
   return run.category;
 }
-// Keep a predictable default: intervals Tue, threshold Thu, easy Sat,
-// long run Sun. Only the immediately previous, *finished* week can change
-// the order. Future weeks stay on the default schedule until that week ends.
+// Default order is Interval, Threshold, Easy, Long Run. Only the immediately
+// preceding *completed calendar week* can move a missed priority session to
+// the first slot. Easy is always optional for priority and never carried over.
 function prioritizedRunningWeek(baseWeek, weekIndex, progress) {
   if (!baseWeek || weekIndex <= 0 || baseWeek.runs.some(r => r.category === 'Race')) return baseWeek;
-  const original = [...baseWeek.runs].sort((a, b) => (DAY_OFFSETS[a.plannedDay] ?? 9) - (DAY_OFFSETS[b.plannedDay] ?? 9));
-  if (original.length !== 4) return baseWeek;
+
+  const canonical = ['Interval Run', 'Threshold Run', 'Easy Run', 'Long Run'];
+  const baseRuns = [...baseWeek.runs];
+  if (baseRuns.length !== 4 || !canonical.every(type => baseRuns.some(r => runTypeKey(r) === type))) return baseWeek;
+  const byType = type => baseRuns.find(r => runTypeKey(r) === type);
   const previous = trainingPlan[weekIndex - 1];
-  if (!previous) return baseWeek;
-  // Do not reshuffle not-yet-started future weeks on the basis of missing runs.
-  const previousEnd = new Date(`${previous.endDate}T23:59:59`);
-  if (Date.now() <= previousEnd.getTime()) return baseWeek;
+  const slots = ['Tuesday', 'Thursday', 'Saturday', 'Sunday'];
 
-  const prev = (type) => previous.runs.filter(run => runTypeKey(run) === type);
-  const done = (type) => prev(type).some(run => Boolean(progress[run.id]));
-  const missed = (type) => prev(type).length > 0 && !done(type);
-  // No reliable preference if the entire previous week was skipped.
-  if (!previous.runs.some(run => progress[run.id])) return baseWeek;
+  // Future weeks retain the default schedule until the preceding week is over.
+  let order = [...canonical];
+  if (previous && Date.now() > new Date(`${previous.endDate}T23:59:59`).getTime()) {
+    const important = ['Threshold Run', 'Long Run', 'Interval Run'];
+    const missed = important.filter(type =>
+      previous.runs.some(r => runTypeKey(r) === type) &&
+      !previous.runs.some(r => runTypeKey(r) === type && progress[r.id] === true)
+    );
+    if (missed.length) {
+      // Prioritize the previously missed quality/endurance type. In case of
+      // multiple misses, prefer Threshold, then Long Run, then Intervals.
+      const first = missed[0];
+      order = [first, ...canonical.filter(type => type !== first)];
+    }
+  }
 
-  const arranged = [...original];
-  const findIndex = type => arranged.findIndex(run => runTypeKey(run) === type);
-  const swap = (a, b) => {
-    const i = findIndex(a), j = findIndex(b);
-    if (i >= 0 && j >= 0) [arranged[i], arranged[j]] = [arranged[j], arranged[i]];
+  return {
+    ...baseWeek,
+    runs: order.map((type, i) => ({...byType(type), plannedDay: slots[i], order: i + 1}))
   };
-  // If Threshold was missed but Intervals were done, put Threshold first.
-  if (missed('Threshold Run') && done('Interval Run')) swap('Threshold Run', 'Interval Run');
-  // If Long Run was missed, move it to Saturday, still on the weekend.
-  // Easy Run remains the flexible last option, never earns catch-up priority.
-  if (missed('Long Run')) swap('Long Run', 'Easy Run');
-
-  const slots = original.map(run => run.plannedDay);
-  return {...baseWeek, runs: arranged.map((run, index) => ({...run, plannedDay: slots[index], order: index + 1}))};
 }
 
 function intervalCount(run) {
