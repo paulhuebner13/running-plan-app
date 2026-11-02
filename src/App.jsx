@@ -128,6 +128,36 @@ function runTypeKey(run) {
   if (run.category === 'Easy Run + Strides' || run.category === 'Recovery Run') return 'Easy Run';
   return run.category;
 }
+// Rolling priorities: completed training *types* count, missed Easy runs never create debt.
+// Decisions for any week use only completed workouts from previous weeks, so checking
+// a run during the current week never reshuffles the remaining cards.
+function prioritizedRunningWeek(baseWeek, weekIndex, progress) {
+  if (!baseWeek || weekIndex <= 0 || baseWeek.runs.some(r => r.category === 'Race')) return baseWeek;
+  const previous = trainingPlan.slice(0, weekIndex);
+  const types = ['Threshold Run', 'Long Run', 'Interval Run'];
+  const lastCompleted = Object.fromEntries(types.map(type => [type, -1]));
+  previous.forEach((w, index) => w.runs.forEach(run => {
+    const type = runTypeKey(run);
+    if (lastCompleted[type] !== undefined && progress[run.id]) lastCompleted[type] = index;
+  }));
+  const original = [...baseWeek.runs].sort((a, b) => (DAY_OFFSETS[a.plannedDay] ?? 9) - (DAY_OFFSETS[b.plannedDay] ?? 9));
+  if (original.length !== 4) return baseWeek;
+  const candidates = [...original].sort((a, b) => {
+    const ta = runTypeKey(a), tb = runTypeKey(b);
+    const isEasyA = ta === 'Easy Run', isEasyB = tb === 'Easy Run';
+    if (isEasyA !== isEasyB) return isEasyA ? 1 : -1;
+    // Missing HM-specific work has a small tie-break advantage, but elapsed
+    // time since last completion is the main priority.
+    const score = t => (lastCompleted[t] == null ? -1 : lastCompleted[t]);
+    const ageA = weekIndex - score(ta) + (ta === 'Threshold Run' ? 0.2 : ta === 'Long Run' ? 0.1 : 0);
+    const ageB = weekIndex - score(tb) + (tb === 'Threshold Run' ? 0.2 : tb === 'Long Run' ? 0.1 : 0);
+    return ageB - ageA;
+  });
+  const slots = original.map(r => r.plannedDay);
+  const ordered = candidates.map((run, index) => ({...run, plannedDay: slots[index], order: index + 1}));
+  return {...baseWeek, runs: ordered};
+}
+
 function intervalCount(run) {
   const label = (run.steps || []).find(st => /Interval/i.test(st.label) && !/Recovery/i.test(st.label))?.label || "";
   return Math.min(8, Math.max(1, Number(label.match(/^(\d+)\s*[×x]/)?.[1] || 4)));
@@ -1138,20 +1168,8 @@ export default function App() {
 
   const rawWeek = trainingPlan[weekIndex];
   const week = useMemo(() => {
-    const runs = rawWeek.runs.map((run) => adjustedRun(run, runFeedback));
-    // Prioritize a missed quality type in the following week, without adding a fifth run.
-    const prev = trainingPlan[weekIndex - 1];
-    if (prev && new Date(`${prev.endDate}T23:59:59`) < new Date()) {
-      const missed = prev.runs.find((r) => ['Threshold Run','HM Pace Run'].includes(r.category) && !progress[r.id]);
-      if (missed) {
-        const first = runs.find((r) => r.plannedDay === 'Tuesday');
-        const second = runs.find((r) => r.plannedDay === 'Thursday');
-        if (first?.category === 'Interval Run' && second && ['Threshold Run','HM Pace Run'].includes(second.category)) {
-          return {...rawWeek, runs: runs.map((r) => r.id === first.id ? {...r, plannedDay:'Thursday'} : r.id === second.id ? {...r, plannedDay:'Tuesday'} : r)};
-        }
-      }
-    }
-    return {...rawWeek, runs};
+    const prioritized = prioritizedRunningWeek(rawWeek, weekIndex, progress);
+    return {...prioritized, runs: prioritized.runs.map(run => adjustedRun(run, runFeedback))};
   }, [rawWeek, weekIndex, progress, runFeedback]);
   const gymWorkouts = useMemo(() => getGymWorkoutsForWeek(week).map((workout) => ({
     ...workout,
@@ -1572,7 +1590,8 @@ export default function App() {
           <span><i className="legend-open" /> Open</span>
         </div>
         <div className="week-overview-list compact-squares">
-          {trainingPlan.map((weekItem, index) => {
+          {trainingPlan.map((baseWeekItem, index) => {
+            const weekItem = prioritizedRunningWeek(baseWeekItem, index, progress);
             const mandatoryWeekRuns = weekItem.runs.filter((run) => !run.optional);
             const doneCount = mandatoryWeekRuns.filter((run) => statusFor(run, weekItem) === 'done').length;
             const missedCount = mandatoryWeekRuns.filter((run) => statusFor(run, weekItem) === 'missed').length;

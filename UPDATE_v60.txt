@@ -1,0 +1,9 @@
+Sport App v60: rolling run priorities
+
+- Four scheduled runs per week are retained; no extra or catch-up kilometres.
+- Threshold, Long Run and Interval Run are prioritized by the last *completed* occurrence in all earlier weeks.
+- Easy Run remains flexible and is always placed last; skipping it never increases its priority.
+- Prioritization is recalculated from stored run-completion state; current-week completion does not reshuffle the current week's remaining runs.
+- The original week's four day slots are reused, so dates remain within the original week.
+- Original workout content, gym workouts, adaptive pace slider, run IDs, data storage and races are unchanged.
+- Previous week's-only Threshold swap has been replaced by the rolling priority rule.
